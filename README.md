@@ -9,6 +9,12 @@
 
 ## Inhalte 
 
+- [Software Architektur Muster](#software-architektur-muster)
+- [Entwurfsmuster](#entwurfsmuster)
 - [Software Architektur Bewertung](#software-architektur-bewertung)
 
+### Software Architektur Muster
+### Entwurfsmuster
 ### Software Architektur Bewertung
+
+
