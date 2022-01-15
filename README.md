@@ -31,6 +31,8 @@ Nach ISO 25010:
 - Kompatibilität
 - Leistungsfähigkeit
 
+> Bei Qualitätseigenschaften können schnell Interessenskonflikte enstehen. So kann die erhöhe Sicherheit für ein schlechtere Performance sorgen. Häufig ist nach Priorität abzuwägen.
+
 ## Software Architektur Bewertung
 
 Im Rahmen der SA lassen sich zwei Dinge bewerten:
