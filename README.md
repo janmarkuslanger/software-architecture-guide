@@ -39,5 +39,10 @@ Im Rahmen der SA lassen sich zwei Dinge bewerten:
 - Prozesse
 - Artefakte (Code, Anforderungen, Dokumente)
 
+Dazu gibt es auch die 
+
+- qualitativer Bewertung 
+- quantitative Bewertung 
+
 ## Literatur 
 
