@@ -21,6 +21,9 @@
 
 ## Definition
 
+Für SA gibt es keine einheitliche Definition. 
+An dieser Stelle möchte ich diverse Autoren zitieren. 
+
 ## Stakeholderanalyse
 
 ## Risikoanalyse
