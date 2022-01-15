@@ -1,5 +1,7 @@
 # Software Architektur Guide [DE]
 
+> Die README ist gerade noch stark in Bearbeitung. Die Gliederung kann (und wird sich noch sehr wahrscheinlich) ändern. 
+
 # Abkürzungen
 
 - Software Architektur -> SA
@@ -9,10 +11,19 @@
 
 # Inhalte 
 
-- [Software Architektur Muster](#software-architektur-muster)
+- [Definition](#definition)
+- [Stakeholderanalyse](#stakeholderanalyse)
+- [Risikoanalyse](#risikoanalyse)
 - [Entwurfsmuster](#entwurfsmuster)
 - [Software Architektur Bewertung](#software-architektur-bewertung)
 - [Literatur](#literatur)
+
+
+## Definition
+
+## Stakeholderanalyse
+
+## Risikoanalyse
 
 ## Software Architektur Muster
 
