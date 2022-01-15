@@ -69,3 +69,6 @@ Dazu gibt es auch die
 
 ## Literatur 
 
+- Fundamentals of Software Architecture (Mark Richards & Neal Ford)
+- Entwurfsmuster (Matthias Geirhos)
+- Clean Architecture (Robert C. Martin)
