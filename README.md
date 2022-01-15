@@ -24,6 +24,15 @@
 Für SA gibt es keine einheitliche Definition. 
 An dieser Stelle möchte ich diverse Autoren zitieren. 
 
+"Architecture is about the important stuff. Whatever that is." - Ralph Johnson
+
+## Aufgaben eines Software Architekten
+
+- Architekturentscheidungen treffen
+- Kontinuierliche Analse der Architekur
+- Wissen im Geschäftsfeld aufbauen
+- Aktuelle Trends erfassen 
+
 ## Stakeholderanalyse
 
 ## Risikoanalyse
