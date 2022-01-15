@@ -22,7 +22,7 @@
 ## Definition
 
 Für SA gibt es keine einheitliche Definition. 
-An dieser Stelle möchte ich diverse Autoren zitieren. 
+An dieser Stelle sollen mehrere Autoren zitiert werden. 
 
 "Architecture is about the important stuff. Whatever that is." - Ralph Johnson
 
