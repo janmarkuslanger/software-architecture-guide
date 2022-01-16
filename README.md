@@ -14,6 +14,7 @@ Diese Abkürzungen werden hier genutzt.
 # Inhalte 
 
 - [Definition](#definition)
+- [Begriffe](#begriffe)
 - [Stakeholderanalyse](#stakeholderanalyse)
 - [Risikoanalyse](#risikoanalyse)
 - [Entwurfsmuster](#entwurfsmuster)
@@ -31,6 +32,11 @@ An dieser Stelle sollen mehrere Autoren/Organisationen zitiert werden.
 "The goal of software architecture is to minimize the human resources required to build and maintain the required system" - Robert C. Martin
 
 "Fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution." - ISO/IEC/IEEE 42010 
+
+
+## Begriffe
+
+Komponente - Einheit eines Systems (Funktion, Klasse, Modul)
 
 ## Aufgaben eines Software Architekten
 
