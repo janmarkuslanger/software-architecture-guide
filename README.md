@@ -45,14 +45,14 @@ An dieser Stelle sollen mehrere Autoren zitiert werden.
 
 Nach ISO 25010:
 
-- Funktionale Tauglichkeit
-- Sicherheit
-- Nutzbarkeit
-- Wartbarkeit
-- Sicherheit
-- Portierbarkeit
-- Kompatibilität
-- Leistungsfähigkeit
+- Angemessenheit (Functional Suitability)
+- Sicherheit (Security)
+- Benutzbarkeit (Usability)
+- Wartbarkeit (Maintainability)
+- Portierbarkeit ()
+- Kompatibilität ()
+- Leistungsfähigkeit ()
+- Wiederverwendbarkeit (Reusability)
 
 > Bei Qualitätseigenschaften können schnell Interessenskonflikte enstehen. So kann die erhöhe Sicherheit für ein schlechtere Performance sorgen. Häufig ist nach Priorität abzuwägen.
 
@@ -72,3 +72,4 @@ Dazu gibt es auch die
 - Fundamentals of Software Architecture (Mark Richards & Neal Ford)
 - Entwurfsmuster (Matthias Geirhos)
 - Clean Architecture (Robert C. Martin)
+- Einführung in die Softwaretechnik (Manfred Broy & Marco Kuhrmann)
