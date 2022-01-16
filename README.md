@@ -1,6 +1,6 @@
 # Software Architektur Guide [DE]
 
-> ⚠️ Die README ist gerade noch stark in Bearbeitung. Die Gliederung kann (und wird sich noch sehr wahrscheinlich) ändern. 
+> ⚠️ Der Guide wird laufend ergänzt, erweitert und angepasst. 
 
 # Abkürzungen
 
