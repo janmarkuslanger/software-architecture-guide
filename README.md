@@ -28,6 +28,8 @@ An dieser Stelle sollen mehrere Autoren zitiert werden.
 
 "Architecture is about the important stuff. Whatever that is." - Ralph Johnson
 
+"The goal of software architecture is to minimize the human resources required to build and maintain the required system" - Robert C. Martin
+
 ## Aufgaben eines Software Architekten
 
 - Architekturentscheidungen treffen
