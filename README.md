@@ -24,11 +24,13 @@ Diese Abkürzungen werden hier genutzt.
 ## Definition
 
 Für SA gibt es keine einheitliche Definition. 
-An dieser Stelle sollen mehrere Autoren zitiert werden. 
+An dieser Stelle sollen mehrere Autoren/Organisationen zitiert werden. 
 
 "Architecture is about the important stuff. Whatever that is." - Ralph Johnson
 
 "The goal of software architecture is to minimize the human resources required to build and maintain the required system" - Robert C. Martin
+
+"Fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution." - ISO/IEC/IEEE 42010 
 
 ## Aufgaben eines Software Architekten
 
