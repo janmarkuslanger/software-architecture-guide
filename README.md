@@ -1,8 +1,10 @@
 # Software Architektur Guide [DE]
 
-> Die README ist gerade noch stark in Bearbeitung. Die Gliederung kann (und wird sich noch sehr wahrscheinlich) ändern. 
+> ⚠️ Die README ist gerade noch stark in Bearbeitung. Die Gliederung kann (und wird sich noch sehr wahrscheinlich) ändern. 
 
 # Abkürzungen
+
+Diese Abkürzungen werden hier genutzt. 
 
 - Software Architektur -> SA
 - Software engineering -> SE
@@ -54,7 +56,7 @@ Nach ISO 25010:
 - Leistungsfähigkeit ()
 - Wiederverwendbarkeit (Reusability)
 
-> Bei Qualitätseigenschaften können schnell Interessenskonflikte enstehen. So kann die erhöhe Sicherheit für ein schlechtere Performance sorgen. Häufig ist nach Priorität abzuwägen.
+> Bei Qualitätseigenschaften können schnell Interessenskonflikte enstehen. So kann die erhöhte Sicherheit für ein schlechtere Performance sorgen. Häufig ist nach Priorität abzuwägen.
 
 ## Software Architektur Bewertung
 
