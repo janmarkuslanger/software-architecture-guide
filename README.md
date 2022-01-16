@@ -40,10 +40,12 @@ Komponente - Einheit eines Systems (Funktion, Klasse, Modul)
 
 ## Aufgaben eines Software Architekten
 
+- Anforderungen analysieren und verfeinern 
 - Architekturentscheidungen treffen
 - Kontinuierliche Analse der Architekur
 - Wissen im Geschäftsfeld aufbauen
 - Aktuelle Trends erfassen 
+- Designentscheidungen kommunizieren & dokumentieren & Feedback einholen 
 
 ## Stakeholderanalyse
 
