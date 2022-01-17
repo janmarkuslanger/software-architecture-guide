@@ -18,6 +18,9 @@ Diese Abkürzungen werden hier genutzt.
 - [Stakeholderanalyse](#stakeholderanalyse)
 - [Risikoanalyse](#risikoanalyse)
 - [Entwurfsmuster](#entwurfsmuster)
+  - [Erzeugungsmuster](#erzeugungsmuster) 
+  - [Strukturmuster](#strukturmuster)
+  - [Verhaltensmuster](#verhaltensmuster)
 - [Software Architektur Bewertung](#software-architektur-bewertung)
 - [Literatur](#literatur)
 
@@ -54,6 +57,12 @@ Komponente - Einheit eines Systems (Funktion, Klasse, Modul)
 ## Software Architektur Muster
 
 ## Entwurfsmuster
+
+### Erzeugungsmuster 
+
+### Strukturmuster
+
+### Verhaltensmuster 
 
 ## Software Qualität
 
