@@ -113,8 +113,6 @@ Explizit ansprechen und dokumentieren als impliziert annehmen.
 
 #### Iterator
 
-#### Iterator
-
 ## Software Qualität
 
 Nach ISO 25010:
