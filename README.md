@@ -18,9 +18,18 @@ Diese Abkürzungen werden hier genutzt.
 - [Stakeholderanalyse](#stakeholderanalyse)
 - [Risikoanalyse](#risikoanalyse)
 - [Entwurfsmuster](#entwurfsmuster)
-  - [Erzeugungsmuster](#erzeugungsmuster) 
+  - [Erzeugungsmuster](#erzeugungsmuster)
+    - [Fabrik](#fabrik)
+    - [Singleton](#singleton)
+    - [Erbauer](#erbauer)
   - [Strukturmuster](#strukturmuster)
+    - [Adapter](#adapter)
+    - [Bridge](#bridge)
+    - [Fassade](#fassade)
+    - [Proxy](#proxy)
   - [Verhaltensmuster](#verhaltensmuster)
+    - [Beobachter](#beobachter)
+    - [Iterator](#iterator)
 - [Software Architektur Bewertung](#software-architektur-bewertung)
 - [Literatur](#literatur)
 
@@ -60,9 +69,29 @@ Komponente - Einheit eines Systems (Funktion, Klasse, Modul)
 
 ### Erzeugungsmuster 
 
+#### Fabrik
+
+#### Singleton
+
+#### Erbauer
+
 ### Strukturmuster
 
+#### Adapter
+
+#### Bridge 
+
+#### Fassade
+
+### Proxy
+
 ### Verhaltensmuster 
+
+#### Beobachter
+
+#### Iterator
+
+#### Iterator
 
 ## Software Qualität
 
