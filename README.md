@@ -37,6 +37,9 @@ Diese Abkürzungen werden hier genutzt.
 - [Literatur](#literatur)
 
 
+---
+
+
 ## Definition
 
 Für SA gibt es keine einheitliche Definition. 
