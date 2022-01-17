@@ -15,6 +15,9 @@ Diese Abkürzungen werden hier genutzt.
 
 - [Definition](#definition)
 - [Begriffe](#begriffe)
+- [Kommunikation](#kommunikation)
+  - [Angepasste Sprache](#angepasste-sprache)
+  - [Explizit vs Implizit](#explizit-vs-implizit)
 - [Stakeholderanalyse](#stakeholderanalyse)
 - [Risikoanalyse](#risikoanalyse)
 - [Entwurfsmuster](#entwurfsmuster)
@@ -49,6 +52,22 @@ An dieser Stelle sollen mehrere Autoren/Organisationen zitiert werden.
 ## Begriffe
 
 Komponente - Einheit eines Systems (Funktion, Klasse, Modul)
+
+System - Zusammenschluss von Einheiten / Komponenten, die einem bestimmten Zweck dienen
+
+## Kommunikation
+
+### Angepasste Sprache
+
+Je nach Art des Stakeholder sollte die Sprache entsprechend ausfallen. 
+z.B. sollte man mit einem Business analysten eher auf der fachlichen Ebene sprechen und technische Details vermeiden. 
+
+### Explizit vs Implizit
+
+Es sollte vermieden werden implizite Annahmen zu machen. 
+Das kann schnell zu unterschiedlichen Interpretationen führen. 
+Explizit ansprechen und dokumentieren als impliziert annehmen. 
+
 
 ## Aufgaben eines Software Architekten
 
