@@ -20,6 +20,11 @@ Diese Abkürzungen werden hier genutzt.
   - [Explizit vs Implizit](#explizit-vs-implizit)
 - [Stakeholderanalyse](#stakeholderanalyse)
 - [Risikoanalyse](#risikoanalyse)
+- [Software Architektur entwerfen](#software-architektur-entwerfen)
+  - [Top-down Ansatz](#top-down-ansatz)
+  - [Bottom-up Ansatz](#bottom-up-ansatz)
+  - [Ansichtbasierte Architektur](#ansichtbasierte-architektur)
+- [Software Architektur Muster](#software-architektur-muster)
 - [Entwurfsmuster](#entwurfsmuster)
   - [Erzeugungsmuster](#erzeugungsmuster)
     - [Fabrik](#fabrik)
@@ -33,7 +38,7 @@ Diese Abkürzungen werden hier genutzt.
   - [Verhaltensmuster](#verhaltensmuster)
     - [Beobachter](#beobachter)
     - [Iterator](#iterator)
-- [Software Architektur Bewertung](#software-architektur-bewertung)
+- [Software Architektur bewerten](#software-architektur-bewerten)
 - [Clean coding](#clean-coding)
 - [Literatur](#literatur)
 
@@ -86,6 +91,26 @@ Explizit ansprechen und dokumentieren als impliziert annehmen.
 
 ## Risikoanalyse
 
+## Software Architektur entwerfen
+
+- SA sollte wenn möglich iterativ entwickelt werden
+- Frühes Feedback einholen
+
+### Top-down Ansatz
+
+Ein System/Komponente/Subsystem wird von "oben" nach "unten" aufgebaut.
+
+### Bottom-up Ansatz
+
+Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufgebaut.
+
+### Ansichtbasierte Architektur
+
+- Komponenten Ansicht
+- Laufzeit Ansicht
+- Hardware Ansicht
+- Kontext Ansicht
+
 ## Software Architektur Muster
 
 ## Entwurfsmuster
@@ -129,7 +154,7 @@ Nach ISO 25010:
 
 > Bei Qualitätseigenschaften können schnell Interessenskonflikte enstehen. So kann die erhöhte Sicherheit für ein schlechtere Performance sorgen. Häufig ist nach Priorität abzuwägen.
 
-## Software Architektur Bewertung
+## Software Architektur bewerten
 
 Im Rahmen der SA lassen sich zwei Dinge bewerten:
 - Prozesse
