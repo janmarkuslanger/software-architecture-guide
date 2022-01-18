@@ -147,4 +147,5 @@ Dazu gibt es auch die
 - Fundamentals of Software Architecture (Mark Richards & Neal Ford)
 - Entwurfsmuster (Matthias Geirhos)
 - Clean Architecture (Robert C. Martin)
+- The Clean Coder (Robert C. Martin)
 - Einführung in die Softwaretechnik (Manfred Broy & Marco Kuhrmann)
