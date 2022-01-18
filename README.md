@@ -21,9 +21,10 @@ Diese Abkürzungen werden hier genutzt.
 - [Stakeholderanalyse](#stakeholderanalyse)
 - [Risikoanalyse](#risikoanalyse)
 - [Software Architektur entwerfen](#software-architektur-entwerfen)
-  - [Top-down Ansatz](#top-down-ansatz)
-  - [Bottom-up Ansatz](#bottom-up-ansatz)
-  - [Ansichtbasierte Architektur](#ansichtbasierte-architektur)
+  - [Ansätze](#ansätze)
+    - [Top-down Ansatz](#top-down-ansatz)
+    - [Bottom-up Ansatz](#bottom-up-ansatz)
+    - [Ansichtbasierte Architektur](#ansichtbasierte-architektur)
 - [Software Architektur Muster](#software-architektur-muster)
 - [Entwurfsmuster](#entwurfsmuster)
   - [Erzeugungsmuster](#erzeugungsmuster)
@@ -93,18 +94,20 @@ Explizit ansprechen und dokumentieren als impliziert annehmen.
 
 ## Software Architektur entwerfen
 
+### Ansätze
+
 - SA sollte wenn möglich iterativ entwickelt werden
 - Frühes Feedback einholen
 
-### Top-down Ansatz
+#### Top-down Ansatz
 
 Ein System/Komponente/Subsystem wird von "oben" nach "unten" aufgebaut.
 
-### Bottom-up Ansatz
+#### Bottom-up Ansatz
 
 Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufgebaut.
 
-### Ansichtbasierte Architektur
+#### Ansichtbasierte Architektur
 
 - Komponenten Ansicht
 - Laufzeit Ansicht
