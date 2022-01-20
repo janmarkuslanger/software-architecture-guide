@@ -26,10 +26,12 @@ Diese Abkürzungen werden hier genutzt.
     - [Bottom-up Ansatz](#bottom-up-ansatz)
     - [Ansichtbasierte Architektur](#ansichtbasierte-architektur)
   - [Black box](#black-box)
-  - [White box](#white-box)
-  - [Muster](#muster)
-    - [Schichten](#schichten)
+  - [White box](#white-box)  
 - [Software Architektur Muster](#software-architektur-muster)
+  - [Schichten](#schichten)
+  - [Microservice-Architektur](#microservice-architektur)
+  - [Event-Driven-Architektur](#event-driven-architektur)
+  - [Pipeline-Architektur](#pipeline-architektur)
 - [Entwurfsmuster](#entwurfsmuster)
   - [Erzeugungsmuster](#erzeugungsmuster)
     - [Fabrik](#fabrik)
@@ -132,14 +134,18 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 - eine "White box" zeigt sein inneres 
 - Inneres: Innere Struktur / Abhängikeiten / Datenstruktur 
 
-### Muster
+## Software Architektur Muster
 
-#### Schichten 
+### Schichten 
 
 - Abstraktionschichten: höhere Schichten greifen auf untere Schichten via Schnittstelle zu
 - Schichten um Funktionalität und Verantwortungsbereiche zu trennen
 
-## Software Architektur Muster
+### Microservice-Architektur
+
+### Event-Driven-Architektur
+
+### Pipeline-Architektur
 
 ## Entwurfsmuster
 
