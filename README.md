@@ -61,9 +61,9 @@ An dieser Stelle sollen mehrere Autoren/Organisationen zitiert werden.
 
 ## Begriffe
 
-Komponente - Einheit eines Systems (Funktion, Klasse, Modul)
+Baustein - Einheit eines Systems (Funktion, Klasse, Modul, Komponente)
 
-System - Zusammenschluss von Einheiten / Komponenten, die einem bestimmten Zweck dienen
+System - Zusammenschluss von Bausteinen, die einem bestimmten Zweck dienen
 
 ## Kommunikation
 
@@ -113,6 +113,28 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 - Laufzeit Ansicht
 - Hardware Ansicht
 - Kontext Ansicht
+
+### Black box
+
+- eine "Black box" versteckt sein inneres. 
+- Inneres: Abhängigkeiten / Prozesse / Datenstruktur / Daten
+- Fokus auf das Verhalten nach Außen 
+- Aufgaben des Bausteins nach Außen
+- angebotene Schnittstellen 
+- benötigte Schnittsellen 
+
+### Muster
+
+#### Schichten 
+
+- Abstraktionschichten: höhere Schichten greifen auf untere Schichten via Schnittstelle zu
+- Schichten um Funktionalität und Verantwortungsbereiche zu trennen
+
+
+### White box 
+
+- eine "White box" zeigt sein inneres 
+- Inneres: Innere Struktur / Abhängikeiten / Datenstruktur 
 
 ## Software Architektur Muster
 
