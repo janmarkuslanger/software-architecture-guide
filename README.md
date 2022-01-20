@@ -25,6 +25,10 @@ Diese Abkürzungen werden hier genutzt.
     - [Top-down Ansatz](#top-down-ansatz)
     - [Bottom-up Ansatz](#bottom-up-ansatz)
     - [Ansichtbasierte Architektur](#ansichtbasierte-architektur)
+  - [Black box](#black-box)
+  - [White box](#white-box)
+  - [Muster](#muster)
+    - [Schichten](#schichten)
 - [Software Architektur Muster](#software-architektur-muster)
 - [Entwurfsmuster](#entwurfsmuster)
   - [Erzeugungsmuster](#erzeugungsmuster)
@@ -123,18 +127,17 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 - angebotene Schnittstellen 
 - benötigte Schnittsellen 
 
+### White box 
+
+- eine "White box" zeigt sein inneres 
+- Inneres: Innere Struktur / Abhängikeiten / Datenstruktur 
+
 ### Muster
 
 #### Schichten 
 
 - Abstraktionschichten: höhere Schichten greifen auf untere Schichten via Schnittstelle zu
 - Schichten um Funktionalität und Verantwortungsbereiche zu trennen
-
-
-### White box 
-
-- eine "White box" zeigt sein inneres 
-- Inneres: Innere Struktur / Abhängikeiten / Datenstruktur 
 
 ## Software Architektur Muster
 
