@@ -162,9 +162,13 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 #### Adapter
 
 Problem: Ein bestehender Client will über eine bestehende eigene Schnittstelle auf eine Klasse/Objekt zugreifen.
-Lösung: Ein Adapter, der die Schnittstelle implementiert und die externe Klasse oder Objekt integriert. 
 
+Lösung: Ein Adapter, der die Target Schnittstelle implementiert und die externe Klasse oder Objekt integriert. Auf diesen Adapter kann der Client nun zugreifen.
 
+<img src="assets/adapter.drawio.png" alt="Adapter Pattern" />
+
+Beispiel:
+Der Client kann über die Schnittstelle "Target" auf den "Adapter" zugreifen. Der Adapter sorgt dann für einen Aufruf der Methode von der Klasse "AdaptierteKlasse".
 
 
 #### Bridge 
