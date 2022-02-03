@@ -161,6 +161,12 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 
 #### Adapter
 
+Problem: Ein bestehender Client will über eine bestehende eigene Schnittstelle auf eine Klasse/Objekt zugreifen.
+Lösung: Ein Adapter, der die Schnittstelle implementiert und die externe Klasse oder Objekt integriert. 
+
+
+
+
 #### Bridge 
 
 #### Fassade
