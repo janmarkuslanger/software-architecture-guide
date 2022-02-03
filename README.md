@@ -53,7 +53,7 @@ Diese Abkürzungen werden hier genutzt.
 ---
 
 
-## Definition
+# Definition
 
 Für SA gibt es keine einheitliche Definition. 
 An dieser Stelle sollen mehrere Autoren/Organisationen zitiert werden. 
@@ -65,27 +65,27 @@ An dieser Stelle sollen mehrere Autoren/Organisationen zitiert werden.
 "Fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution." - ISO/IEC/IEEE 42010 
 
 
-## Begriffe
+# Begriffe
 
 Baustein - Einheit eines Systems (Funktion, Klasse, Modul, Komponente)
 
 System - Zusammenschluss von Bausteinen, die einem bestimmten Zweck dienen
 
-## Kommunikation
+# Kommunikation
 
-### Angepasste Sprache
+## Angepasste Sprache
 
 Je nach Art des Stakeholder sollte die Sprache entsprechend ausfallen. 
 z.B. sollte man mit einem Business analysten eher auf der fachlichen Ebene sprechen und technische Details vermeiden. 
 
-### Explizit vs Implizit
+## Explizit vs Implizit
 
 Es sollte vermieden werden implizite Annahmen zu machen. 
 Das kann schnell zu unterschiedlichen Interpretationen führen. 
 Explizit ansprechen und dokumentieren als impliziert annehmen. 
 
 
-## Aufgaben eines Software Architekten
+# Aufgaben eines Software Architekten
 
 - Anforderungen analysieren, klären und gegebenfalls verfeinern 
 - Architekturentscheidungen treffen
@@ -94,33 +94,33 @@ Explizit ansprechen und dokumentieren als impliziert annehmen.
 - Aktuelle Trends erfassen 
 - Designentscheidungen kommunizieren & dokumentieren & Feedback einholen 
 
-## Stakeholderanalyse
+# Stakeholderanalyse
 
-## Risikoanalyse
+# Risikoanalyse
 
-## Software Architektur entwerfen
+# Software Architektur entwerfen
 
-### Ansätze
+## Ansätze
 
 - SA sollte wenn möglich iterativ entwickelt werden
 - Frühes Feedback einholen
 
-#### Top-down Ansatz
+### Top-down Ansatz
 
 Ein System/Komponente/Subsystem wird von "oben" nach "unten" aufgebaut.
 
-#### Bottom-up Ansatz
+### Bottom-up Ansatz
 
 Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufgebaut.
 
-#### Ansichtbasierte Architektur
+### Ansichtbasierte Architektur
 
 - Komponenten Ansicht
 - Laufzeit Ansicht
 - Hardware Ansicht
 - Kontext Ansicht
 
-### Black box
+## Black box
 
 - eine "Black box" versteckt sein inneres. 
 - Inneres: Abhängigkeiten / Prozesse / Datenstruktur / Daten
@@ -129,37 +129,37 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 - angebotene Schnittstellen 
 - benötigte Schnittsellen 
 
-### White box 
+## White box 
 
 - eine "White box" zeigt sein inneres 
 - Inneres: Innere Struktur / Abhängikeiten / Datenstruktur 
 
-## Software Architektur Muster
+# Software Architektur Muster
 
-### Schichten 
+## Schichten 
 
 - Abstraktionschichten: höhere Schichten greifen auf untere Schichten via Schnittstelle zu
 - Schichten um Funktionalität und Verantwortungsbereiche zu trennen
 
-### Microservice-Architektur
+## Microservice-Architektur
 
-### Event-Driven-Architektur
+## Event-Driven-Architektur
 
-### Pipeline-Architektur
+## Pipeline-Architektur
 
-## Entwurfsmuster
+# Entwurfsmuster
 
-### Erzeugungsmuster 
+## Erzeugungsmuster 
 
-#### Fabrik
+### Fabrik
 
-#### Singleton
+### Singleton
 
-#### Erbauer
+### Erbauer
 
-### Strukturmuster
+## Strukturmuster
 
-#### Adapter
+### Adapter
 
 Problem: Ein bestehender Client will über eine bestehende eigene Schnittstelle auf eine Klasse/Objekt zugreifen.
 
@@ -171,19 +171,19 @@ Beispiel:
 Der Client kann über die Schnittstelle "Target" auf den "Adapter" zugreifen. Der Adapter sorgt dann für einen Aufruf der Methode von der Klasse "AdaptierteKlasse".
 
 
-#### Bridge 
+### Bridge 
 
-#### Fassade
+### Fassade
 
-### Proxy
+## Proxy
 
-### Verhaltensmuster 
+## Verhaltensmuster 
 
-#### Beobachter
+### Beobachter
 
-#### Iterator
+### Iterator
 
-## Software Qualität
+# Software Qualität
 
 Nach ISO 25010:
 
@@ -198,7 +198,7 @@ Nach ISO 25010:
 
 > Bei Qualitätseigenschaften können schnell Interessenskonflikte enstehen. So kann die erhöhte Sicherheit für ein schlechtere Performance sorgen. Häufig ist nach Priorität abzuwägen.
 
-## Software Architektur bewerten
+# Software Architektur bewerten
 
 Im Rahmen der SA lassen sich zwei Dinge bewerten:
 - Prozesse
@@ -209,9 +209,9 @@ Dazu gibt es auch die
 - qualitativer Bewertung 
 - quantitative Bewertung 
 
-## Clean coding
+# Clean coding
 
-## Literatur 
+# Literatur 
 
 - Fundamentals of Software Architecture (Mark Richards & Neal Ford)
 - Entwurfsmuster (Matthias Geirhos)
