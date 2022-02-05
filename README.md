@@ -161,9 +161,11 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 
 ### Adapter
 
-Problem: Ein bestehender Client will über eine bestehende eigene Schnittstelle auf eine Klasse/Objekt zugreifen.
+Problem: 
+Ein bestehender Client will über eine bestehende eigene Schnittstelle auf eine Klasse/Objekt zugreifen.
 
-Lösung: Ein Adapter, der die Target Schnittstelle implementiert und die externe Klasse oder Objekt integriert. Auf diesen Adapter kann der Client nun zugreifen.
+Lösung:
+Ein Adapter, der die Target Schnittstelle implementiert und die externe Klasse oder Objekt integriert. Auf diesen Adapter kann der Client nun zugreifen.
 
 <img src="assets/adapter.drawio.png" alt="Adapter Pattern" />
 
@@ -173,7 +175,8 @@ Der Client kann über die Schnittstelle "Target" auf den "Adapter" zugreifen. De
 
 ### Bridge 
 
-Problem: Durch diverse Vererbungen, welche Abstraktion und Implementierung beinhalten, entsteht eine unübersichtliche und schwer erweiterbare Klassenherachie. 
+Problem: 
+Durch diverse Vererbungen, welche Abstraktion und Implementierung beinhalten, entsteht eine unübersichtliche und schwer erweiterbare Klassenherachie. 
 
 Lösung: 
 - Trennung von Abstraktion und Implementierung. 
