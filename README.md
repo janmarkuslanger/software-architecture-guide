@@ -173,6 +173,13 @@ Der Client kann über die Schnittstelle "Target" auf den "Adapter" zugreifen. De
 
 ### Bridge 
 
+Problem: Durch diverse Vererbungen, welche Abstraktion und Implementierung beinhalten, entsteht eine unübersichtliche und schwer erweiterbare Klassenherachie. 
+
+Lösung: 
+- Trennung von Abstraktion und Implementierung. 
+- Es gibt eine Abstraktionsklasse, von der spezifische Abstraktionen entstehen können. z.B. Dokument -> Rechnung / Angebot
+- Es eine Implementierungklasse/Schnittstelle, von der spezifische Implementierungen entstehen können. -> Drucker -> HTMLDrucker / TextDrucker 
+
 ### Fassade
 
 ## Proxy
