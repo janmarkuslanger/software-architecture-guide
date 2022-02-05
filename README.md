@@ -167,7 +167,7 @@ Ein bestehender Client will über eine bestehende eigene Schnittstelle auf eine 
 Lösung:
 Ein Adapter, der die Target Schnittstelle implementiert und die externe Klasse oder Objekt integriert. Auf diesen Adapter kann der Client nun zugreifen.
 
-<img src="assets/adapter.drawio.png" alt="Adapter Pattern" />
+
 
 Beispiel:
 Der Client kann über die Schnittstelle "Target" auf den "Adapter" zugreifen. Der Adapter sorgt dann für einen Aufruf der Methode von der Klasse "AdaptierteKlasse".
@@ -183,6 +183,9 @@ Lösung:
 - Es gibt eine Abstraktionsklasse, von der spezifische Abstraktionen entstehen können. z.B. Dokument -> Rechnung / Angebot
 - Es eine Implementierungklasse/Schnittstelle, von der spezifische Implementierungen entstehen können. -> Drucker -> HTMLDrucker / TextDrucker 
 - Es können mehrere Implementierung assoziert werden so Könnter der Abstraktion: Form -> Kugel; die Implementierung können zb Farbe -> Rot/Schwarz und/oder Größe -> klein/groß 
+
+
+<img src="assets/bridge.drawio.png" alt="Bridge Pattern" />
 
 ### Fassade
 
