@@ -45,6 +45,7 @@ Diese Abkürzungen werden hier genutzt.
   - [Verhaltensmuster](#verhaltensmuster)
     - [Beobachter](#beobachter)
     - [Iterator](#iterator)
+- [SOLID](#solid)
 - [Software Architektur bewerten](#software-architektur-bewerten)
 - [Clean coding](#clean-coding)
 - [Literatur](#literatur)
