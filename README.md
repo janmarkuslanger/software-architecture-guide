@@ -228,6 +228,19 @@ Dazu gibt es auch die
 - qualitativer Bewertung 
 - quantitative Bewertung 
 
+# SOLID
+
+## Single-responsiblity Principle
+
+## Open-closed Principle
+
+## Liskov Substitution Principle
+
+## Interface Segregation Principle
+
+## Dependency Inversion Principle
+
+
 # Clean coding
 
 # Literatur 
