@@ -240,6 +240,11 @@ Dazu gibt es auch die
 
 ## Dependency Inversion Principle
 
+- Höhere Module / Klassen sollten nicht von Niedrigeren Modulen / Klassen abhängen
+- Klassen/Modulen sollten über Schnittstellen abstrahiert werden
+- Schnittstellen sollten nicht von Details abhängen
+- Details sollten von Schnittstellen abhängen
+
 
 # Clean coding
 
