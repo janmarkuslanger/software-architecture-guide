@@ -1,6 +1,7 @@
 # Software Architektur Guide [DE]
 
 > ⚠️ Der Guide wird laufend ergänzt, erweitert und angepasst. 
+> Codebeispiele werden in Pseudocode geschrieben
 
 # Abkürzungen
 
@@ -51,6 +52,8 @@ Diese Abkürzungen werden hier genutzt.
   - [Liskov Substitution Principle](#liskov-substitution-principle)
   - [Interface Segregation Principle](#interface-segregation-principle)
   - [Dependency Inversion Principle](#dependency-inversion-principle)
+- [Designprinzipien](#designprinzipien)
+  - [Dependency injection](#dependency-injection)
 - [Software Architektur bewerten](#software-architektur-bewerten)
 - [Clean coding](#clean-coding)
 - [Literatur](#literatur)
@@ -245,6 +248,25 @@ Dazu gibt es auch die
 - Schnittstellen sollten nicht von Details abhängen
 - Details sollten von Schnittstellen abhängen
 
+# Designprinzipien
+
+## Dependency injection
+- Abhängigkeiten einer Klasse oder eines Modules sollten nicht innerhalb konstruiert werden 
+- Abhängikeiten sollten übergeben werden 
+
+```
+// Abhängigkeit wird in der Klasse erzeugt 
+// dies sollte vermieden werden 
+klasse MeineKlasse {
+  new Abhängigkeit()
+}
+
+// Abhängigkit wird an Klasse übergeben
+klasse MeineKlasse(Abhängigkeit meineAbhängigkeit) {
+  this.abhängigkeit = meineAbhängigkeit
+}
+
+```
 
 # Clean coding
 
