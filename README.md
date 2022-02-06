@@ -1,6 +1,7 @@
 # Software Architektur Guide [DE]
 
 > ⚠️ Der Guide wird laufend ergänzt, erweitert und angepasst. 
+> 
 > Codebeispiele werden in Pseudocode geschrieben
 
 # Abkürzungen
