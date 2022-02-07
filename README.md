@@ -202,7 +202,7 @@ Problem: Diverse zusammenhängende und einzelne Objekte sollen auf die gleiche A
 
 Lösung: Implementierung einer Baumstruktur bestehend aus einer Komponente (Interface oder Abstrakte Klasse), einem Blatt (Einzelobjekt) und einem Kompositum (Zusammenhängendes Objekt).
 
-
+<img src="assets/composite.drawio.png" alt="Composite Pattern" />
 
 ### Fassade
 
