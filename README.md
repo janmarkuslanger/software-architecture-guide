@@ -41,6 +41,7 @@ Diese Abkürzungen werden hier genutzt.
   - [Strukturmuster](#strukturmuster)
     - [Adapter](#adapter)
     - [Bridge](#bridge)
+    - [Kompositum](#kompositum)
     - [Fassade](#fassade)
     - [Proxy](#proxy)
   - [Verhaltensmuster](#verhaltensmuster)
@@ -194,6 +195,14 @@ Lösung:
 - Es können mehrere Implementierung assoziert werden so Könnter der Abstraktion: Form -> Kugel; die Implementierung können zb Farbe -> Rot/Schwarz und/oder Größe -> klein/groß 
 
 <img src="assets/bridge.drawio.png" alt="Bridge Pattern" />
+
+### Kompositum
+
+Problem: Diverse zusammenhängende und einzelne Objekte sollen auf die gleiche Art und Weise behandelt werden 
+
+Lösung: Implementierung einer Baumstruktur bestehend aus einer Komponente (Interface oder Abstrakte Klasse), einem Blatt (Einzelobjekt) und einem Kompositum (Zusammenhängendes Objekt).
+
+
 
 ### Fassade
 
