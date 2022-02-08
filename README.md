@@ -42,6 +42,7 @@ Diese Abkürzungen werden hier genutzt.
     - [Adapter](#adapter)
     - [Bridge](#bridge)
     - [Kompositum](#kompositum)
+    - [Dekorierer](#dekorierer)
     - [Fassade](#fassade)
     - [Proxy](#proxy)
   - [Verhaltensmuster](#verhaltensmuster)
@@ -204,6 +205,15 @@ Lösung: Implementierung einer Baumstruktur bestehend aus einer Komponente (Inte
 
 <img src="assets/composite.drawio.png" alt="Composite Pattern" />
 
+
+### Dekorierer
+
+Problem: Eine Erweiteurng einer (abstrakten) Basisklasse würde zu sehr vielen Klassen führen. 
+
+Lösung: Eine konkrette Komponente wird um Varianten "dekoriert". 
+
+
+ 
 ### Fassade
 
 ## Proxy
