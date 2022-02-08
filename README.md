@@ -212,7 +212,7 @@ Problem: Eine Erweiteurng einer (abstrakten) Basisklasse würde zu sehr vielen K
 
 Lösung: Eine konkrette Komponente wird um Varianten "dekoriert". 
 
-
+<img src="assets/decorator.drawio.png" alt="Decorator Pattern" />
  
 ### Fassade
 
