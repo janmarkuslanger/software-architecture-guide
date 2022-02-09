@@ -216,6 +216,13 @@ Lösung: Eine konkrette Komponente wird um Varianten "dekoriert".
  
 ### Fassade
 
+Problem: Clients müssen auf komplexe und unübersichtliche Systmeme zugreifen
+
+Lösung: Vereinigung/Bündelung mehrere Systeme/Komponente/.. in einer Fassade. Clients greifen nur auf diese Fassade zu und können diese als vereinfachte Schnittstelle nutzen. 
+Die Systeme dahinter sind verborgen. 
+
+
+
 ## Proxy
 
 ## Verhaltensmuster 
