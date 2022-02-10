@@ -299,6 +299,13 @@ klasse MeineKlasse(Abhängigkeit meineAbhängigkeit) {
   this.abhängigkeit = meineAbhängigkeit
 }
 
+## Schnittstelle vs Implementierung
+
+Entwickle gegen eine Schnittstelle, nicht gegen eine Implementierung.
+Denn Implementierungen können sich schnell ändern. Wenn man gegen eine Schnittstelle entwickelt, so kann sich die Implemetierung unabhängig davon ändern. 
+
+> Schnittstelle ist nicht unbedingt ein Interface
+
 ```
 
 # Clean coding
