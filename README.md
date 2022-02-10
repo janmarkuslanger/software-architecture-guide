@@ -230,6 +230,10 @@ Die Systeme dahinter sind verborgen.
 
 ### Beobachter
 
+Problem: Objekte in einem System wollen über bestimmte Events informiert werden. 
+
+Lösung: Implementierung eines Publisher-Subscriber Patterns. Der Subscriber kann sich beim Publisher "anmelden" um auf Events zu "hören". Der Publisher sammelt diese. Sobald ein Event veröffentlicht wird, werden alle Subscriber informiert. 
+
 ### Iterator
 
 # Software Qualität
