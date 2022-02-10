@@ -56,6 +56,7 @@ Diese Abkürzungen werden hier genutzt.
   - [Dependency Inversion Principle](#dependency-inversion-principle)
 - [Designprinzipien](#designprinzipien)
   - [Dependency injection](#dependency-injection)
+  - [Schnittstelle vs Implementierung](#schnittstelle-vs-implementierung)
 - [Software Architektur bewerten](#software-architektur-bewerten)
 - [Clean coding](#clean-coding)
 - [Literatur](#literatur)
@@ -298,6 +299,7 @@ klasse MeineKlasse {
 klasse MeineKlasse(Abhängigkeit meineAbhängigkeit) {
   this.abhängigkeit = meineAbhängigkeit
 }
+```
 
 ## Schnittstelle vs Implementierung
 
@@ -306,7 +308,7 @@ Denn Implementierungen können sich schnell ändern. Wenn man gegen eine Schnitt
 
 > Schnittstelle ist nicht unbedingt ein Interface
 
-```
+
 
 # Clean coding
 
