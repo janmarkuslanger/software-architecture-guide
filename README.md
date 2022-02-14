@@ -167,6 +167,12 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 
 ### Singleton
 
+Problem: Von einer Klasse soll es nur eine Instanz geben
+
+Lösung: Klasse mit privatem Konstruktur, damit keine neuen Instanzen erstellt werden können. Klasse hat eine öffentliche Methode, die immer die selbe Instanz zurückgibt. 
+
+<img src="assets/singleton.drawio.png" alt="Singeton Pattern" />
+
 ### Erbauer
 
 ## Strukturmuster
