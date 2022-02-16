@@ -169,6 +169,8 @@ Problem: Die Bestimmung der Erzeugung einer konkreten Klasse (Produkt) soll zur 
 
 Lösung: Die Erzeugung findet durch eine Methode einer (meist abstrakten) Klasse statt. Die Erzeugung des Produktes wird in einer Oberklasse definiert. Die Erzeugung eines konkreten Produktes wird in einer abgeleiteten Klasse durchgeführt. 
 
+<img src="assets/factory.drawio.png" alt="Factory Pattern" />
+
 ### Singleton
 
 Problem: Von einer Klasse soll es nur eine Instanz geben
