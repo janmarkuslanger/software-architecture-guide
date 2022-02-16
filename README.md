@@ -165,6 +165,10 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 
 ### Fabrik
 
+Problem: Die Bestimmung der Erzeugung einer konkreten Klasse (Produkt) soll zur Laufzeit erfolgen und Implementierung und Erzeugung sollen größtenteils entkoppelt sein. 
+
+Lösung: Die Erzeugung findet durch eine Methode einer (meist abstrakten) Klasse statt. Die Erzeugung des Produktes wird in einer Oberklasse definiert. Die Erzeugung eines konkreten Produktes wird in einer abgeleiteten Klasse durchgeführt. 
+
 ### Singleton
 
 Problem: Von einer Klasse soll es nur eine Instanz geben
