@@ -167,7 +167,7 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 
 Problem: Die Bestimmung der Erzeugung einer konkreten Klasse (Produkt) soll zur Laufzeit erfolgen und Implementierung und Erzeugung sollen größtenteils entkoppelt sein. 
 
-Lösung: Die Erzeugung findet durch eine Methode einer (meist abstrakten) Klasse statt. Die Erzeugung des Produktes wird in einer Oberklasse definiert. Die Erzeugung eines konkreten Produktes wird in einer abgeleiteten Klasse durchgeführt. 
+Lösung: Die Erzeugung findet durch eine bestimmte (Fabrik-)Methode einer Klasse statt. Die Erzeugung des Produktes wird in einer Oberklasse definiert. Die Erzeugung eines konkreten Produktes wird in einer abgeleiteten Klasse durchgeführt. 
 
 <img src="assets/factory.drawio.png" alt="Factory Pattern" />
 
