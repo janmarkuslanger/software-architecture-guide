@@ -319,6 +319,7 @@ Problem: Der Zustand wird direkt in den Klassen und Objekten behandelt. Das sorg
   
 Lösung: Für Zustände werden Klasse implementiert, die diese Zustände halten. 
   
+<img src="assets/state.drawio.png" alt="State Pattern" />
  
 </details>
 
