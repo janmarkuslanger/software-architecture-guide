@@ -181,6 +181,11 @@ Lösung: Klasse mit privatem Konstruktur, damit keine neuen Instanzen erstellt w
 
 ### Erbauer
 
+<details>
+  <summary>Erbauer</summary>
+
+</details>
+
 ## Strukturmuster
 
 ### Adapter
