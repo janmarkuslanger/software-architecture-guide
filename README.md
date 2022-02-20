@@ -165,19 +165,30 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 
 ### Fabrik
 
+<details>
+  <summary>Fabrik</summary>
+  
 Problem: Die Bestimmung der Erzeugung einer konkreten Klasse (Produkt) soll zur Laufzeit erfolgen und Implementierung und Erzeugung sollen größtenteils entkoppelt sein. 
 
 Lösung: Die Erzeugung findet durch eine bestimmte (Fabrik-)Methode einer Klasse statt. Die Erzeugung des Produktes wird in einer Oberklasse definiert. Die Erzeugung eines konkreten Produktes wird in einer abgeleiteten Klasse durchgeführt. 
 
 <img src="assets/factory.drawio.png" alt="Factory Pattern" />
+  
+</details>
+
+
 
 ### Singleton
+
+<details>
+  <summary>Singleton</summary>
 
 Problem: Von einer Klasse soll es nur eine Instanz geben
 
 Lösung: Klasse mit privatem Konstruktur, damit keine neuen Instanzen erstellt werden können. Klasse hat eine öffentliche Methode, die immer die selbe Instanz zurückgibt. 
 
 <img src="assets/singleton.drawio.png" alt="Singeton Pattern" />
+</details>
 
 ### Erbauer
 
@@ -190,6 +201,10 @@ Lösung: Klasse mit privatem Konstruktur, damit keine neuen Instanzen erstellt w
 
 ### Adapter
 
+<details>
+  
+  <summary>Adapter</summary>
+  
 Problem: 
 Ein bestehender Client will über eine bestehende eigene Schnittstelle auf eine Klasse/Objekt zugreifen.
 
@@ -200,10 +215,14 @@ Ein Adapter, der die Target Schnittstelle implementiert und die externe Klasse o
 
 Beispiel:
 Der Client kann über die Schnittstelle "Target" auf den "Adapter" zugreifen. Der Adapter sorgt dann für einen Aufruf der Methode von der Klasse "AdaptierteKlasse".
+</details>
 
 
 ### Bridge 
 
+<details>
+  <summary>Bridge</summary>
+  
 Problem: 
 Durch diverse Vererbungen, welche Abstraktion und Implementierung beinhalten, entsteht eine unübersichtliche und schwer erweiterbare Klassenherachie. 
 
@@ -214,32 +233,53 @@ Lösung:
 - Es können mehrere Implementierung assoziert werden so Könnter der Abstraktion: Form -> Kugel; die Implementierung können zb Farbe -> Rot/Schwarz und/oder Größe -> klein/groß 
 
 <img src="assets/bridge.drawio.png" alt="Bridge Pattern" />
+</details>
+
+
 
 ### Kompositum
 
+<details>
+  <summary>Kompositum</summary>
+  
 Problem: Diverse zusammenhängende und einzelne Objekte sollen auf die gleiche Art und Weise behandelt werden 
 
 Lösung: Implementierung einer Baumstruktur bestehend aus einer Komponente (Interface oder Abstrakte Klasse), einem Blatt (Einzelobjekt) und einem Kompositum (Zusammenhängendes Objekt).
 
 <img src="assets/composite.drawio.png" alt="Composite Pattern" />
+  
+</details>
+
+
 
 
 ### Dekorierer
+
+<details>
+
+  <summary>Dekorierer</summary>
 
 Problem: Eine Erweiteurng einer (abstrakten) Basisklasse würde zu sehr vielen Klassen führen. 
 
 Lösung: Eine konkrette Komponente wird um Varianten "dekoriert". 
 
 <img src="assets/decorator.drawio.png" alt="Decorator Pattern" />
+  
+</details>
+
  
 ### Fassade
 
-Problem: Clients müssen auf komplexe und unübersichtliche Systmeme zugreifen
+<details>
+  <summary>Fassade</summary>
+  
+Problem: Clients müssen auf komplexe und unübersichtliche Systeme zugreifen
 
 Lösung: Vereinigung/Bündelung mehrere Systeme/Komponente/.. in einer Fassade. Clients greifen nur auf diese Fassade zu und können diese als vereinfachte Schnittstelle nutzen. 
 Die Systeme dahinter sind verborgen. 
 
 <img src="assets/facade.drawio.png" alt="Facade Pattern" />
+</details>
 
 
 ## Proxy
@@ -248,11 +288,17 @@ Die Systeme dahinter sind verborgen.
 
 ### Beobachter
 
+<details>
+  
+  <summary>Beobachter</summary>
+  
 Problem: Objekte in einem System wollen über bestimmte Events informiert werden. 
 
 Lösung: Implementierung eines Publisher-Subscriber Patterns. Der Subscriber kann sich beim Publisher "anmelden" um auf Events zu "hören". Der Publisher sammelt diese. Sobald ein Event veröffentlicht wird, werden alle Subscriber informiert. 
 
 <img src="assets/observer.drawio.png" alt="Observer Pattern" />
+  
+</details>
 
 ### Iterator
 
