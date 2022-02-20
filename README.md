@@ -48,6 +48,7 @@ Diese Abkürzungen werden hier genutzt.
   - [Verhaltensmuster](#verhaltensmuster)
     - [Beobachter](#beobachter)
     - [Iterator](#iterator)
+    - [Zustand](#zustand)
 - [SOLID](#solid)
   - [Single-responsiblity Principle](#single-responsiblity-principle)
   - [Open-closed Principle](#open-closed-principle)
@@ -308,6 +309,18 @@ Lösung: Implementierung eines Publisher-Subscriber Patterns. Der Subscriber kan
 </details>
 
 ### Iterator
+
+### Zustand
+
+<details>
+  <summary>Zustand</summary>
+  
+Problem: Der Zustand wird direkt in den Klassen und Objekten behandelt. Das sorgt für viele if-else Konditionen in den Klassen. 
+  
+Lösung: Für Zustände werden Klasse implementiert, die diese Zustände halten. 
+  
+ 
+</details>
 
 # Software Qualität
 
