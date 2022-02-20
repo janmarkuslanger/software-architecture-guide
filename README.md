@@ -195,6 +195,13 @@ Lösung: Klasse mit privatem Konstruktur, damit keine neuen Instanzen erstellt w
 <details>
   <summary>Erbauer</summary>
 
+
+Problem: Komplexe Objekte (mehrere Schritte, Verschachtelte Objekte, Viele Felder) sollen erstellt werden. 
+  
+Lösung: Die Erstellung eines Objektes erfolgt in einer eigenen Klasse.
+  
+<img src="assets/builder.drawio.png" alt="Builder Pattern" />
+  
 </details>
 
 ## Strukturmuster
