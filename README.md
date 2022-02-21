@@ -177,8 +177,6 @@ Lösung: Die Erzeugung findet durch eine bestimmte (Fabrik-)Methode einer Klasse
   
 </details>
 
-
-
 ### Singleton
 
 <details>
@@ -205,7 +203,21 @@ Lösung: Die Erstellung eines Objektes erfolgt in einer eigenen Klasse.
   
 </details>
 
+### Prototyp
+
+<details>
+  <summary>Prototyp</summary>
+  
+Problem: Aus einem bestehenden Objekt sollen ein oder mehrere Klone erstellt werden. Zudem ist das Klonen nicht immer so einfach, wenn das Objekt private Attribute aufweise. 
+  
+Lösung: Es wird eine Prototypschnittstele implementiert mit (meist) einer Methode clone(), die einen Prototyp zurückgibt. Klassen und deren Objekte müssen diese Schnittstelle implementieren und somit auch die Methode clone(). Das bedeutet, dass man der Klasse die Aufgabe des Klonens übergibt. Diese kann dann auf alle privaten Attribute der eigenen Klasse zugreifen. 
+  
+<img src="assets/prototype.drawio.png" alt="Prototype Pattern" />
+  
+</details>
+
 ## Strukturmuster
+
 
 ### Adapter
 
@@ -242,7 +254,6 @@ Lösung:
 
 <img src="assets/bridge.drawio.png" alt="Bridge Pattern" />
 </details>
-
 
 
 ### Kompositum
