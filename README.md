@@ -38,6 +38,7 @@ Diese Abkürzungen werden hier genutzt.
     - [Fabrik](#fabrik)
     - [Singleton](#singleton)
     - [Erbauer](#erbauer)
+    - [Prototyp](#prototyp)
   - [Strukturmuster](#strukturmuster)
     - [Adapter](#adapter)
     - [Bridge](#bridge)
