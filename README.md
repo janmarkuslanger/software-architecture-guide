@@ -308,7 +308,7 @@ Die Systeme dahinter sind verborgen.
 ### Fliegengewicht
 
 <details>
-   
+   <summary>Fliegengewicht (en: Flyweight)</summary>
 Problem: Viele Objekte im System verbrauchen viele Ressourcen. 
 
 Lösung: Herauslösen von wiederverwendbaren Objekten. 
