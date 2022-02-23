@@ -46,6 +46,7 @@ Diese Abkürzungen werden hier genutzt.
     - [Dekorierer](#dekorierer)
     - [Fassade](#fassade)
     - [Proxy](#proxy)
+    - [Fliegengewicht](#fliegengewicht)
   - [Verhaltensmuster](#verhaltensmuster)
     - [Beobachter](#beobachter)
     - [Iterator](#iterator)
@@ -303,6 +304,18 @@ Die Systeme dahinter sind verborgen.
 
 
 ## Proxy
+
+### Fliegengewicht
+
+<details>
+   
+Problem: Viele Objekte im System verbrauchen viele Ressourcen. 
+
+Lösung: Herauslösen von wiederverwendbaren Objekten. 
+  
+<img src="assets/flyweight.drawio.png" alt="Flyweight Pattern" />
+
+</details>
 
 ## Verhaltensmuster 
 
