@@ -428,3 +428,4 @@ Denn Implementierungen können sich schnell ändern. Wenn man gegen eine Schnitt
 - Clean Architecture (Robert C. Martin)
 - The Clean Coder (Robert C. Martin)
 - Einführung in die Softwaretechnik (Manfred Broy & Marco Kuhrmann)
+- https://refactoring.guru/ 
