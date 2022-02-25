@@ -305,6 +305,16 @@ Die Systeme dahinter sind verborgen.
 
 ## Proxy
 
+<details>
+  <summary>Proxy</summary>
+  
+Problem: Auf ein Objekt / Klasse soll nicht direkt zugegriffen werden.
+  
+Lösung: Es wird ein Stellvertreter (Proxy) vor das Zielobjekt gestellt. Beide imlementieren die selbe Schnittstelle. Der Proxy greift dann auf das Zielobjekt zu.  
+  
+<img src="assets/proxy.drawio.png" alt="Proxy Pattern" />
+</details>
+
 ### Fliegengewicht
 
 <details>
