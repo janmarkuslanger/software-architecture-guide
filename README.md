@@ -51,6 +51,7 @@ Diese Abkürzungen werden hier genutzt.
     - [Beobachter](#beobachter)
     - [Iterator](#iterator)
     - [Zustand](#zustand)
+    - [Vermittler](#vermittler)
 - [SOLID](#solid)
   - [Single-responsiblity Principle](#single-responsiblity-principle)
   - [Open-closed Principle](#open-closed-principle)
@@ -356,6 +357,20 @@ Lösung: Für Zustände werden Klasse implementiert, die diese Zustände halten.
   
 <img src="assets/state.drawio.png" alt="State Pattern" />
  
+</details>
+
+### Vermittler
+
+<details>
+  <summary>Vermittler (en: Mediator)</summary>
+  
+Problem: Viele Klassen agieren zusammen (z.B UI Elemente eines Formulars) und sind somit eng gekoppelt, da diese all untereinander abhängen.
+  
+Lösung: Förderung der losen Kopplung, in dem eine Zentrale Klasse als Vermittler dient. Somit liegt die gesamte Komplexität in dieser Vermittlerklasse. 
+  
+<img src="assets/mediator.drawio.png" alt="Mediator Pattern" />
+  
+  
 </details>
 
 # Software Qualität
