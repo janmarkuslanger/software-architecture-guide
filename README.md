@@ -83,9 +83,17 @@ An dieser Stelle sollen mehrere Autoren/Organisationen zitiert werden.
 
 # Begriffe
 
-Baustein - Einheit eines Systems (Funktion, Klasse, Modul, Komponente)
+Baustein - Einheit eines Systems (Funktion, Klasse, Modul, Komponente, Konfiguration, usw.)
 
 System - Zusammenschluss von Bausteinen, die einem bestimmten Zweck dienen
+
+Artefakt - Ein erstelltes "Stück" Produkt (Test, Code, Diagramm, Anforderung, usw.)
+
+Kopplung - Grad der Abhängigkeit zwischen zwei Bausteinen. Arten von Abhängikeiten (Zeitlich / Daten / Struktur / Hardware). 
+Benötigt ein Klasse viele weitere Objekte zur Erstellung und greift auf Datentypen, die auch von anderen Klassen genutzt werden, so weißt dies eine hohe Kopplung auf. 
+
+Kohäsion - Grad des Zusammenhalts einer Einheit im Sinne, dass eine Einheit für einen bestimmen Anwendungsbereich verantwortlich ist und so auch zusammengefasst werden sollte.
+Beispiel: Klasse "Reifen" ist nur für die Erstellung eines Reifens zuständig und nicht für das fahren eines Autos. Dies geschieht in der Klasse Auto. Somit ist eine hohe Kohäsion gegeben.
 
 # Kommunikation
 
