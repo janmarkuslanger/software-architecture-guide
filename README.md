@@ -445,9 +445,9 @@ Lösung: Förderung der losen Kopplung, in dem eine Zentrale Klasse als Vermittl
 Problem: Mehrere Klassen weisen viele gleiche Muster (bzw. Code). 
   
 Lösung: Eine abstrakte Klasse hält eine templateMethod und die Methoden der einzelnen Schritte. In der Methode templateMethod werden die Schritte koordiniert. Die konkreten Klasse, die von der abstrakten Klasse erben, können dann einzelne Schritte überschreiben, wenn diese benötigt werden. 
-</details>
-
+  
 <img src="assets/template-method.drawio.png" alt="Template method Pattern" />
+</details>
 
 
 # SOLID
