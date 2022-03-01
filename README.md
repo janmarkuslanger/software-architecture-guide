@@ -65,6 +65,7 @@ Diese Abkürzungen werden hier genutzt.
   - [Dependency injection](#dependency-injection)
   - [Schnittstelle vs Implementierung](#schnittstelle-vs-implementierung)
 - [Clean coding](#clean-coding)
+- [Ressourcen](#ressourcen)
 - [Literatur](#literatur)
 
 
@@ -496,8 +497,14 @@ Denn Implementierungen können sich schnell ändern. Wenn man gegen eine Schnitt
 > Schnittstelle ist nicht unbedingt ein Interface
 
 
-
 # Clean coding
+
+
+# Ressourcen
+
+- https://refactoring.guru/ 
+- https://www.udacity.com/course/software-architecture-design--ud821
+
 
 # Literatur 
 
@@ -506,4 +513,5 @@ Denn Implementierungen können sich schnell ändern. Wenn man gegen eine Schnitt
 - Clean Architecture (Robert C. Martin)
 - The Clean Coder (Robert C. Martin)
 - Einführung in die Softwaretechnik (Manfred Broy & Marco Kuhrmann)
-- https://refactoring.guru/ 
+
+
