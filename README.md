@@ -33,6 +33,8 @@ Diese Abkürzungen werden hier genutzt.
   - [Microservice-Architektur](#microservice-architektur)
   - [Event-Driven-Architektur](#event-driven-architektur)
   - [Pipeline-Architektur](#pipeline-architektur)
+- [Software Qualität](#software-qualität)
+- [Software Architektur bewerten](#software-architektur-bewerten)
 - [Entwurfsmuster](#entwurfsmuster)
   - [Erzeugungsmuster](#erzeugungsmuster)
     - [Fabrik](#fabrik)
@@ -52,6 +54,7 @@ Diese Abkürzungen werden hier genutzt.
     - [Iterator](#iterator)
     - [Zustand](#zustand)
     - [Vermittler](#vermittler)
+    - [Template method](#template-method)
 - [SOLID](#solid)
   - [Single-responsiblity Principle](#single-responsiblity-principle)
   - [Open-closed Principle](#open-closed-principle)
@@ -61,7 +64,6 @@ Diese Abkürzungen werden hier genutzt.
 - [Designprinzipien](#designprinzipien)
   - [Dependency injection](#dependency-injection)
   - [Schnittstelle vs Implementierung](#schnittstelle-vs-implementierung)
-- [Software Architektur bewerten](#software-architektur-bewerten)
 - [Clean coding](#clean-coding)
 - [Literatur](#literatur)
 
@@ -95,12 +97,15 @@ Benötigt ein Klasse viele weitere Objekte zur Erstellung und greift auf Datenty
 Kohäsion - Grad des Zusammenhalts einer Einheit im Sinne, dass eine Einheit für einen bestimmen Anwendungsbereich verantwortlich ist und so auch zusammengefasst werden sollte.
 Beispiel: Klasse "Reifen" ist nur für die Erstellung eines Reifens zuständig und nicht für das fahren eines Autos. Dies geschieht in der Klasse Auto. Somit ist eine hohe Kohäsion gegeben.
 
+
 # Kommunikation
+
 
 ## Angepasste Sprache
 
 Je nach Art des Stakeholder sollte die Sprache entsprechend ausfallen. 
 z.B. sollte man mit einem Business analysten eher auf der fachlichen Ebene sprechen und technische Details vermeiden. 
+
 
 ## Explizit vs Implizit
 
@@ -118,24 +123,31 @@ Explizit ansprechen und dokumentieren als impliziert annehmen.
 - Aktuelle Trends erfassen 
 - Designentscheidungen kommunizieren & dokumentieren & Feedback einholen 
 
+
 # Stakeholderanalyse
+
 
 # Risikoanalyse
 
+
 # Software Architektur entwerfen
+
 
 ## Ansätze
 
 - SA sollte wenn möglich iterativ entwickelt werden
 - Frühes Feedback einholen
 
+
 ### Top-down Ansatz
 
 Ein System/Komponente/Subsystem wird von "oben" nach "unten" aufgebaut.
 
+
 ### Bottom-up Ansatz
 
 Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufgebaut.
+
 
 ### Ansichtbasierte Architektur
 
@@ -143,6 +155,7 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 - Laufzeit Ansicht
 - Hardware Ansicht
 - Kontext Ansicht
+
 
 ## Black box
 
@@ -153,27 +166,63 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 - angebotene Schnittstellen 
 - benötigte Schnittsellen 
 
+
 ## White box 
 
 - eine "White box" zeigt sein inneres 
 - Inneres: Innere Struktur / Abhängikeiten / Datenstruktur 
 
+
 # Software Architektur Muster
+
 
 ## Schichten 
 
 - Abstraktionschichten: höhere Schichten greifen auf untere Schichten via Schnittstelle zu
 - Schichten um Funktionalität und Verantwortungsbereiche zu trennen
 
+
 ## Microservice-Architektur
+
 
 ## Event-Driven-Architektur
 
+
 ## Pipeline-Architektur
+
+
+# Software Qualität
+
+Nach ISO 25010:
+
+- Angemessenheit (Functional Suitability)
+- Sicherheit (Security)
+- Benutzbarkeit (Usability)
+- Wartbarkeit (Maintainability)
+- Portierbarkeit ()
+- Kompatibilität ()
+- Leistungsfähigkeit ()
+- Wiederverwendbarkeit (Reusability)
+
+> Bei Qualitätseigenschaften können schnell Interessenskonflikte enstehen. So kann die erhöhte Sicherheit für ein schlechtere Performance sorgen. Häufig ist nach Priorität abzuwägen.
+
+# Software Architektur bewerten
+
+Im Rahmen der SA lassen sich zwei Dinge bewerten:
+- Prozesse
+- Artefakte (Code, Anforderungen, Dokumente)
+
+Dazu gibt es auch die 
+
+- qualitativer Bewertung 
+- quantitative Bewertung 
+
 
 # Entwurfsmuster
 
+
 ## Erzeugungsmuster 
+
 
 ### Fabrik
 
@@ -188,6 +237,7 @@ Lösung: Die Erzeugung findet durch eine bestimmte (Fabrik-)Methode einer Klasse
   
 </details>
 
+
 ### Singleton
 
 <details>
@@ -199,6 +249,7 @@ Lösung: Klasse mit privatem Konstruktur, damit keine neuen Instanzen erstellt w
 
 <img src="assets/singleton.drawio.png" alt="Singeton Pattern" />
 </details>
+
 
 ### Erbauer
 
@@ -214,6 +265,7 @@ Lösung: Die Erstellung eines Objektes erfolgt in einer eigenen Klasse.
   
 </details>
 
+
 ### Prototyp
 
 <details>
@@ -226,6 +278,7 @@ Lösung: Es wird eine Prototypschnittstele implementiert mit (meist) einer Metho
 <img src="assets/prototype.drawio.png" alt="Prototype Pattern" />
   
 </details>
+
 
 ## Strukturmuster
 
@@ -281,8 +334,6 @@ Lösung: Implementierung einer Baumstruktur bestehend aus einer Komponente (Inte
 </details>
 
 
-
-
 ### Dekorierer
 
 <details>
@@ -324,6 +375,7 @@ Lösung: Es wird ein Stellvertreter (Proxy) vor das Zielobjekt gestellt. Beide i
 <img src="assets/proxy.drawio.png" alt="Proxy Pattern" />
 </details>
 
+
 ### Fliegengewicht
 
 <details>
@@ -336,7 +388,9 @@ Lösung: Herauslösen von wiederverwendbaren Objekten.
 
 </details>
 
+
 ## Verhaltensmuster 
+
 
 ### Beobachter
 
@@ -352,7 +406,9 @@ Lösung: Implementierung eines Publisher-Subscriber Patterns. Der Subscriber kan
   
 </details>
 
+
 ### Iterator
+
 
 ### Zustand
 
@@ -367,6 +423,7 @@ Lösung: Für Zustände werden Klasse implementiert, die diese Zustände halten.
  
 </details>
 
+
 ### Vermittler
 
 <details>
@@ -378,34 +435,20 @@ Lösung: Förderung der losen Kopplung, in dem eine Zentrale Klasse als Vermittl
   
 <img src="assets/mediator.drawio.png" alt="Mediator Pattern" />
   
-  
 </details>
 
-# Software Qualität
 
-Nach ISO 25010:
+### Template method
+<details>
+  <summary>Template method</summary>
+  
+Problem: Mehrere Klassen weisen viele gleiche Muster (bzw. Code). 
+  
+Lösung: Eine abstrakte Klasse hält eine templateMethod und die Methoden der einzelnen Schritte. In der Methode templateMethod werden die Schritte koordiniert. Die konkreten Klasse, die von der abstrakten Klasse erben, können dann einzelne Schritte überschreiben, wenn diese benötigt werden. 
+</details>
 
-- Angemessenheit (Functional Suitability)
-- Sicherheit (Security)
-- Benutzbarkeit (Usability)
-- Wartbarkeit (Maintainability)
-- Portierbarkeit ()
-- Kompatibilität ()
-- Leistungsfähigkeit ()
-- Wiederverwendbarkeit (Reusability)
+<img src="assets/template-method.drawio.png" alt="Template method Pattern" />
 
-> Bei Qualitätseigenschaften können schnell Interessenskonflikte enstehen. So kann die erhöhte Sicherheit für ein schlechtere Performance sorgen. Häufig ist nach Priorität abzuwägen.
-
-# Software Architektur bewerten
-
-Im Rahmen der SA lassen sich zwei Dinge bewerten:
-- Prozesse
-- Artefakte (Code, Anforderungen, Dokumente)
-
-Dazu gibt es auch die 
-
-- qualitativer Bewertung 
-- quantitative Bewertung 
 
 # SOLID
 
@@ -426,6 +469,7 @@ Dazu gibt es auch die
 
 # Designprinzipien
 
+
 ## Dependency injection
 - Abhängigkeiten einer Klasse oder eines Modules sollten nicht innerhalb konstruiert werden 
 - Abhängikeiten sollten übergeben werden 
@@ -442,6 +486,7 @@ klasse MeineKlasse(Abhängigkeit meineAbhängigkeit) {
   this.abhängigkeit = meineAbhängigkeit
 }
 ```
+
 
 ## Schnittstelle vs Implementierung
 
