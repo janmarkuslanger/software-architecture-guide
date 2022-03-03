@@ -411,6 +411,16 @@ Lösung: Implementierung eines Publisher-Subscriber Patterns. Der Subscriber kan
 
 ### Iterator
 
+<details>
+<summary>Iterator</summary>
+  
+Problem: Es soll möglich sein, über eine komplexe Gruppe von Objekten zu iterieren. Baumstruktur / Liste 
+  
+Lösung: Strukturen soll Durchlaufen werden mit einem Iterator, der immer eine Referenz auf das nächste Elemente besitzt. Dabei gibt es den Iterator, der die Methoden bereithält, um das nächste Elemente zu erhalten. Die IteratorKollektion ist für die Erstellung der Kollektion zuständig. 
+  
+<img src="assets/iterator.drawio.png" alt="Iterator Pattern" />
+  
+</details>
 
 ### Zustand
 
