@@ -461,6 +461,18 @@ Lösung: Eine abstrakte Klasse hält eine templateMethod und die Methoden der ei
 <img src="assets/template-method.drawio.png" alt="Template method Pattern" />
 </details>
 
+### Memento
+
+<details>
+<summary>Memento</summary>
+
+Problem: Zustände eines Objektes sollen gespeichert werden, damit man auf diese zu einem späteren Zeitpunkt zurückgreifen kann bzw diese wiederherstellen kann. 
+
+Lösung: Einem Uhrheber (belieblige Klasse) wird ein Memento zur Verfügung gestellt. Dieser sorgt dafür, dass der Zustand (private inner Attribute) von Uhrheber gespeichert wird. Objekte des Memento werden dann in einem sog. Aufbewahrer gespeichert. 
+
+<img src="assets/memento.drawio.png" alt="Memento Pattern" />
+</details>
+
 
 # SOLID
 
