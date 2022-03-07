@@ -48,7 +48,7 @@ Diese Abkürzungen werden hier genutzt.
     - [Kompositum](#kompositum)
     - [Dekorierer](#dekorierer)
     - [Fassade](#fassade)
-  - [Proxy](#proxy)
+    - [Proxy](#proxy)
     - [Fliegengewicht](#fliegengewicht)
   - [Verhaltensmuster](#verhaltensmuster)
     - [Beobachter](#beobachter)
