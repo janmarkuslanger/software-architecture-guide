@@ -56,6 +56,8 @@ Diese Abkürzungen werden hier genutzt.
     - [Zustand](#zustand)
     - [Vermittler](#vermittler)
     - [Template method](#template-method)
+    - [Memento](#memento)
+    - [Strategie](#strategie)
 - [SOLID](#solid)
   - [Single-responsiblity Principle](#single-responsiblity-principle)
   - [Open-closed Principle](#open-closed-principle)
@@ -461,6 +463,7 @@ Lösung: Eine abstrakte Klasse hält eine templateMethod und die Methoden der ei
 <img src="assets/template-method.drawio.png" alt="Template method Pattern" />
 </details>
 
+
 ### Memento
 
 <details>
@@ -471,6 +474,19 @@ Problem: Zustände eines Objektes sollen gespeichert werden, damit man auf diese
 Lösung: Einem Uhrheber (belieblige Klasse) wird ein Memento zur Verfügung gestellt. Dieser sorgt dafür, dass der Zustand (private inner Attribute) von Uhrheber gespeichert wird. Objekte des Memento werden dann in einem sog. Aufbewahrer gespeichert. 
 
 <img src="assets/memento.drawio.png" alt="Memento Pattern" />
+</details>
+
+
+### Strategie
+
+<details>
+<summary>Strategie (en: Strategy)</summary>
+
+Problem: Für einen Kontext (z.B Klasse) soll es mehrere Implementierung/Algorithmen geben 
+
+Lösung: Ein Kontext besitzt ein Attribute welche auf eine Strategie zeigt. In dieser Strategie sind die unterschiedlichen Implementierungen enthalten (Eine Strategy - eine Implementierung). Die Art der Implementierung wird somit nicht von dem Context selber gesteuert, sondern hängt davon ab, welche Strategie der Client zuweist. 
+  
+<img src="assets/strategy.drawio.png" alt="Strategy Pattern" />
 </details>
 
 
