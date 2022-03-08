@@ -130,9 +130,31 @@ Explizit ansprechen und dokumentieren als impliziert annehmen.
 
 # Stakeholderanalyse
 
+Bei der Stakeholderanalyse geht es darum die Personen zu identifizieren die relevant für das Projekt sind. Welche das sind kann zwischen Organisationsform und den Projekten stark variieren; sei es Leiter\*in der Entwicklung, Budget-Verantwortliche, eine andere Abteilung oder im Falle eines Dienstleistungsunternehmens die Kundin. Jede dieser Stakeholder tragen zu dem gelingen des Projekts bei. Wurden die Stakeholder identifiziert, werden sie priorisiert, heißt, müssen diese nur informiert werden oder sind diese aktive Teilnehmer\*innen im Projekt.
 
 # Risikoanalyse
 
+Die Risikoanalyse beinhaltet folgende schritte:
+
+- Identifizieren des Risikos
+- Reduzieren der Folgen eines Risikos
+- Reduzieren der Wahrscheinlichkeit des Eintretens eines Risikos
+- Risiko Überwachung
+
+Dabei gilt es die verschiedenen Typen von Risiken zu beachten:
+
+- Bekannte Risiken: Risiken die bereits bekannt sind und auftretten können/werden
+- Bekannte Risiken aus anderen Projekten: Damit ist gemeint, Risiken die aus Erfahrung bekannt sind, aber es ist noch unbekannt ob sie für das Projekt eine Relevanz haben
+- Unbekannte Risiken
+
+Im Rahmen der Softwarearchitektur können wir folgende Prozesse berücksichtigen:
+
+- Risiko Identifikation
+- Risiko Analyse
+  - Qualitative Risiko Analyse
+  - Quantitative Risiko Analyse
+- Risiko Planung
+- Risiko überwachung
 
 # Software Architektur entwerfen
 
@@ -184,6 +206,7 @@ Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufg
 
 - Abstraktionschichten: höhere Schichten greifen auf untere Schichten via Schnittstelle zu
 - Schichten um Funktionalität und Verantwortungsbereiche zu trennen
+- Aufrufe finden nur Top-Down statt, heißt nur die oberen Schichten greifen auf untere Schichten zu, nicht umgekehrt
 
 
 ## Microservice-Architektur
