@@ -58,6 +58,7 @@ Diese Abkürzungen werden hier genutzt.
     - [Template method](#template-method)
     - [Memento](#memento)
     - [Strategie](#strategie)
+    - [Besucher](#besucher)
 - [SOLID](#solid)
   - [Single-responsiblity Principle](#single-responsiblity-principle)
   - [Open-closed Principle](#open-closed-principle)
@@ -510,6 +511,17 @@ Problem: Für einen Kontext (z.B Klasse) soll es mehrere Implementierung/Algorit
 Lösung: Ein Kontext besitzt ein Attribute welche auf eine Strategie zeigt. In dieser Strategie sind die unterschiedlichen Implementierungen enthalten (Eine Strategy - eine Implementierung). Die Art der Implementierung wird somit nicht von dem Context selber gesteuert, sondern hängt davon ab, welche Strategie der Client zuweist. 
   
 <img src="assets/strategy.drawio.png" alt="Strategy Pattern" />
+</details>
+
+### Besucher
+<details>
+  
+  <summary>Besucher (en: Visitor)</summar>
+  
+  Problem: Eine Klasse (Element) soll unterschiedliche Methoden (PDF Generierung / XML Generierung) (mit unterschiedlichen Kontexten anwenden). Dies würde zum Verstoß des Single-Responsibility-Prinzip führen. 
+  
+  Lösung: Trennung der Operation und Klassenherachie. Es wird ein Objekt (Besucher) erstellt, welches für die Operationen verantwortlich ist.  Das Element bekommt enthält eine Methode, welches den Besucher übergeben bekommt und dann die entsprechende Operation durchführt. 
+  
 </details>
 
 
