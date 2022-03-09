@@ -513,15 +513,17 @@ Lösung: Ein Kontext besitzt ein Attribute welche auf eine Strategie zeigt. In d
 <img src="assets/strategy.drawio.png" alt="Strategy Pattern" />
 </details>
 
+
 ### Besucher
 <details>
   
-  <summary>Besucher (en: Visitor)</summar>
+  <summary>Besucher (en: Visitor)</summary>
   
   Problem: Eine Klasse (Element) soll unterschiedliche Methoden (PDF Generierung / XML Generierung) (mit unterschiedlichen Kontexten anwenden). Dies würde zum Verstoß des Single-Responsibility-Prinzip führen. 
   
   Lösung: Trennung der Operation und Klassenherachie. Es wird ein Objekt (Besucher) erstellt, welches für die Operationen verantwortlich ist.  Das Element bekommt enthält eine Methode, welches den Besucher übergeben bekommt und dann die entsprechende Operation durchführt. 
   
+  <img src="assets/visitor.drawio.png" alt="Visitor Pattern" />
 </details>
 
 
