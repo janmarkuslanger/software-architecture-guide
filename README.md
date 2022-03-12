@@ -3,6 +3,7 @@
 - ⚠️ Der Guide wird laufend ergänzt, erweitert und angepasst. 
 - Codebeispiele werden in Pseudocode geschrieben
 
+
 # Abkürzungen
 
 Diese Abkürzungen werden hier genutzt. 
