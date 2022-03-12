@@ -1,4 +1,4 @@
-# Software Architektur Guide [DE]
+# Software Architecture Guide
 
 - ⚠️ Der Guide wird laufend ergänzt, erweitert und angepasst. 
 - Codebeispiele werden in Pseudocode geschrieben
@@ -60,6 +60,7 @@ Diese Abkürzungen werden hier genutzt.
     - [Memento](#memento)
     - [Strategie](#strategie)
     - [Besucher](#besucher)
+    - [Chain of Responsibility](#chain-of-responsibility)
 - [SOLID](#solid)
   - [Single-responsiblity Principle](#single-responsiblity-principle)
   - [Open-closed Principle](#open-closed-principle)
@@ -525,6 +526,24 @@ Lösung: Ein Kontext besitzt ein Attribute welche auf eine Strategie zeigt. In d
   Lösung: Trennung der Operation und Klassenherachie. Es wird ein Objekt (Besucher) erstellt, welches für die Operationen verantwortlich ist.  Das Element bekommt enthält eine Methode, welches den Besucher übergeben bekommt und dann die entsprechende Operation durchführt. 
   
   <img src="assets/visitor.drawio.png" alt="Visitor Pattern" />
+</details>
+
+### Chain of Responsibility
+
+<details>
+  
+*Problem / Requirement*: An (e.g.) object must go through multiple tasks. These tasks must perform sequentially. 
+
+*Solution*: The object gets sent to a "Chain of Responsibility". This chain is a collection of handlers. The object goes through this chain until a handler answers the request.  
+```mermaid
+classDiagram
+Handler <|-- ConreteHandler
+<<Interface>> Handler
+Handler: handle(request)
+Handler: setHandler(Handler)
+ConreteHandler: handle(request)
+```
+  
 </details>
 
 
