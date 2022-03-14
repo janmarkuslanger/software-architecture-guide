@@ -550,6 +550,9 @@ ConreteHandler: handle(request)
 # SOLID
 
 ## Single-responsiblity Principle
+  
+There should be only one reason (actor) to change a class. 
+  Single responsibility does not mean that a block should only do one thing. 
 
 ## Open-closed Principle
 
