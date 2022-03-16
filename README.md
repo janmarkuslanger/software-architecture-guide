@@ -555,6 +555,10 @@ There should be only one reason (actor) to change a class.
   Single responsibility does not mean that a block should only do one thing. 
 
 ## Open-closed Principle
+  
+“Modules should be both open (for extension) and closed (for modification).” - Bertrand Meyer
+
+The open-closed principle means that changes to a module, which can be a module, classes, and so on, should extend the behavior but not modify it. 
 
 ## Liskov Substitution Principle
 
