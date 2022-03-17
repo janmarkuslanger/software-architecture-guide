@@ -4,18 +4,16 @@
 - Codebeispiele werden in Pseudocode geschrieben
 
 
-# Abkürzungen
-
-Diese Abkürzungen werden hier genutzt. 
+# Acronyms
 
 - Software Architektur -> SA
 - Software engineering -> SE
 - Test driven development -> TDD
 - Domain driven design -> DDD
 
-# Inhalte 
+# Content
 
-- [Definition](#definition)
+- [Definitions](#definitions)
 - [Begriffe](#begriffe)
 - [Kommunikation](#kommunikation)
   - [Angepasste Sprache](#angepasste-sprache)
@@ -78,10 +76,10 @@ Diese Abkürzungen werden hier genutzt.
 ---
 
 
-# Definition
+# Definitions
 
-Für SA gibt es keine einheitliche Definition. 
-An dieser Stelle sollen mehrere Autoren/Organisationen zitiert werden. 
+There is not one final definition for software archtecture. 
+Several authors/organizations will be cited at this point. 
 
 "Architecture is about the important stuff. Whatever that is." - Ralph Johnson
 
