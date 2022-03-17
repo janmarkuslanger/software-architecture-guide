@@ -1,9 +1,5 @@
 # Software Architecture Guide
 
-- ⚠️ Der Guide wird laufend ergänzt, erweitert und angepasst. 
-- Codebeispiele werden in Pseudocode geschrieben
-
-
 # Acronyms
 
 - Software Architektur -> SA
