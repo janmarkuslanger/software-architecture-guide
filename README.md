@@ -31,6 +31,7 @@
   - [Pipeline-Architektur](#pipeline-architektur)
 - [Software Qualität](#software-qualität)
 - [Software Architektur bewerten](#software-architektur-bewerten)
+- [Relations](#relations)
 - [Entwurfsmuster](#entwurfsmuster)
   - [Erzeugungsmuster](#erzeugungsmuster)
     - [Fabrik](#fabrik)
@@ -240,6 +241,21 @@ Dazu gibt es auch die
 
 - qualitativer Bewertung 
 - quantitative Bewertung 
+
+
+# Relations
+
+Inheritance: This relation exists when a class inherits from another. 
+E.g., When Class `Employee` (Subclass) inherits from `Human` (Superclass) . 
+
+Association: Use Association when there is no dependency between two classes, but those classes can communicate.
+E.g., Modeling a company with `Employee` you could add `Car` as an association because the Employee can use it. 
+
+Aggregation: Use Aggregation if one class consists of several other classes. But these classes can also exist on their own. 
+E.g., the class `BusDriver` consists of Class `Bus` and `Driver`. `Bus` and `Driver` can exist on their own. 
+
+Composition: You can use Composition if one class consists of several other classes. But these classes cannot exist on their own. 
+E.g., the class `Human` consists of Class `Hand` and `Leg`. Both classes cannot exist on their own.
 
 
 # Entwurfsmuster
