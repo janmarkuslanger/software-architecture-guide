@@ -1,5 +1,7 @@
 # Software Architecture Guide
 
+> The code examples are written in pseudocode.
+
 # Abbreviations
 
 - Software Architektur -> SA
@@ -281,15 +283,35 @@ Lösung: Die Erzeugung findet durch eine bestimmte (Fabrik-)Methode einer Klasse
 
 ### Singleton
 
-<details>
-  <summary>Singleton</summary>
+Problem / Requirement: There should be only one instance from a specific class. 
 
-Problem: Von einer Klasse soll es nur eine Instanz geben
+Solution: The constructor of the Singleton-Class should be private, and the instance stored in a private attribute. Additionally, one method (getInstance()) returns that instance. The method returns the instance if an instance is already there and creates one before if there is no instance.
 
-Lösung: Klasse mit privatem Konstruktur, damit keine neuen Instanzen erstellt werden können. Klasse hat eine öffentliche Methode, die immer die selbe Instanz zurückgibt. 
 
-<img src="assets/singleton.drawio.png" alt="Singeton Pattern" />
-</details>
+``` mermaid
+classDiagram
+    class Singleton {
+        - instance : Singleton
+        - Singeton()
+        + getInstance() : [asdasd]
+    }
+```
+
+```
+class Singleton {
+  private static instance: Singleton;
+  
+  private constructor Singleton();
+  
+  public getInstance(): Singleton {
+     if (this.instance == null) {
+       this.instance = new Singleton();
+     }
+     
+     return this.instance;
+  }
+}
+```
 
 
 ### Erbauer
