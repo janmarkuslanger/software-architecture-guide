@@ -33,12 +33,12 @@
 - [Software Architektur bewerten](#software-architektur-bewerten)
 - [Relations](#relations)
 - [Design patterns](#design-patterns)
-  - [Erzeugungsmuster](#erzeugungsmuster)
+  - [Creational patterns](#creational-patterns)
     - [Fabrik](#fabrik)
     - [Singleton](#singleton)
     - [Erbauer](#erbauer)
     - [Prototyp](#prototyp)
-  - [Strukturmuster](#strukturmuster)
+  - [Structural patterns](#structural-patterns)
     - [Adapter](#adapter)
     - [Bridge](#bridge)
     - [Kompositum](#kompositum)
@@ -46,7 +46,7 @@
     - [Fassade](#fassade)
     - [Proxy](#proxy)
     - [Fliegengewicht](#fliegengewicht)
-  - [Verhaltensmuster](#verhaltensmuster)
+  - [Behavioral patterns](#behavioral-patterns)
     - [Beobachter](#beobachter)
     - [Iterator](#iterator)
     - [Zustand](#zustand)
@@ -262,7 +262,7 @@ E.g., the class `Human` consists of Class `Hand` and `Leg`. Both classes cannot 
 Design patterns are helpful solutions for problems in software development. Nevertheless, design patterns can increase complexity without an advantage. It is possible to adjust those patterns if that will fit better to a problem. 
 
 
-## Erzeugungsmuster 
+## Creational patterns 
 
 
 ### Fabrik
@@ -321,7 +321,7 @@ Lösung: Es wird eine Prototypschnittstele implementiert mit (meist) einer Metho
 </details>
 
 
-## Strukturmuster
+## Structural patterns
 
 
 ### Adapter
@@ -430,7 +430,7 @@ Lösung: Herauslösen von wiederverwendbaren Objekten.
 </details>
 
 
-## Verhaltensmuster 
+## Behavioral patterns
 
 
 ### Beobachter
