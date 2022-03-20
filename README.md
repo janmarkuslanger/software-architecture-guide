@@ -32,7 +32,7 @@
 - [Software Qualität](#software-qualität)
 - [Software Architektur bewerten](#software-architektur-bewerten)
 - [Relations](#relations)
-- [Entwurfsmuster](#entwurfsmuster)
+- [Design patterns](#design-patterns)
   - [Erzeugungsmuster](#erzeugungsmuster)
     - [Fabrik](#fabrik)
     - [Singleton](#singleton)
@@ -257,7 +257,9 @@ E.g., the class `BusDriver` consists of Class `Bus` and `Driver`. `Bus` and `Dri
 E.g., the class `Human` consists of Class `Hand` and `Leg`. Both classes cannot exist on their own.
 
 
-# Entwurfsmuster
+# Design patterns
+
+Design patterns are helpful solutions for problems in software development. Nevertheless, design patterns can increase complexity without an advantage. It is possible to adjust those patterns if that will fit better to a problem. 
 
 
 ## Erzeugungsmuster 
