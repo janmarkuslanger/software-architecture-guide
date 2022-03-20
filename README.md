@@ -619,12 +619,15 @@ Denn Implementierungen können sich schnell ändern. Wenn man gegen eine Schnitt
 - https://www.udacity.com/course/software-architecture-design--ud821
 
 
-# Literatur 
+# Literature 
 
+EN:
 - Fundamentals of Software Architecture (Mark Richards & Neal Ford)
-- Entwurfsmuster (Matthias Geirhos)
 - Clean Architecture (Robert C. Martin)
 - The Clean Coder (Robert C. Martin)
+
+DE:
+- Entwurfsmuster (Matthias Geirhos)
 - Einführung in die Softwaretechnik (Manfred Broy & Marco Kuhrmann)
 
 
