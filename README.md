@@ -1,6 +1,6 @@
 # Software Architecture Guide
 
-# Acronyms
+# Abbreviations
 
 - Software Architektur -> SA
 - Software engineering -> SE
@@ -67,7 +67,7 @@
   - [Schnittstelle vs Implementierung](#schnittstelle-vs-implementierung)
 - [Clean coding](#clean-coding)
 - [Ressourcen](#ressourcen)
-- [Literatur](#literatur)
+- [Literature](#literature)
 
 
 ---
