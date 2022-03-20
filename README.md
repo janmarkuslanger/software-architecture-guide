@@ -10,7 +10,7 @@
 # Content
 
 - [Definitions](#definitions)
-- [Begriffe](#begriffe)
+- [Terms](#terms)
 - [Kommunikation](#kommunikation)
   - [Angepasste Sprache](#angepasste-sprache)
   - [Explizit vs Implizit](#explizit-vs-implizit)
@@ -85,19 +85,19 @@ Several authors/organizations will be cited at this point.
 "Fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution." - ISO/IEC/IEEE 42010 
 
 
-# Begriffe
+# Terms
 
-Baustein - Einheit eines Systems (Funktion, Klasse, Modul, Komponente, Konfiguration, usw.)
+**Building block**: A building block is a unit of a system. A building block could be a component, module, class, configuration, system, or subsystem.
 
-System - Zusammenschluss von Bausteinen, die einem bestimmten Zweck dienen
+**System**: A system is an association of building blocks. A system has a specific goal. 
 
-Artefakt - Ein erstelltes "Stück" Produkt (Test, Code, Diagramm, Anforderung, usw.)
+**Artifact**: An artifact is a "piece" of a product. It can be tests, code, documentation, or anything similar. 
 
-Kopplung - Grad der Abhängigkeit zwischen zwei Bausteinen. Arten von Abhängikeiten (Zeitlich / Daten / Struktur / Hardware). 
-Benötigt ein Klasse viele weitere Objekte zur Erstellung und greift auf Datentypen, die auch von anderen Klassen genutzt werden, so weißt dies eine hohe Kopplung auf. 
+**Coupling**: Degree of dependency between two building blocks. Types of dependencies are temporal, data, structure, or hardware.
+Example: Imagine A class car that uses many different classes in its methods like an Engine class or Tires class has a high coupling. 
 
-Kohäsion - Grad des Zusammenhalts einer Einheit im Sinne, dass eine Einheit für einen bestimmen Anwendungsbereich verantwortlich ist und so auch zusammengefasst werden sollte.
-Beispiel: Klasse "Reifen" ist nur für die Erstellung eines Reifens zuständig und nicht für das fahren eines Autos. Dies geschieht in der Klasse Auto. Somit ist eine hohe Kohäsion gegeben.
+**Cohesion**: Degree of cohesion of a unit in a system. Functionality, values, and properties with the same scope should belong together. 
+Example: Imagine two methods for a Car.
 
 
 # Kommunikation
