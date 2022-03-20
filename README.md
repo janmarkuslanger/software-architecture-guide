@@ -12,8 +12,8 @@
 - [Definitions](#definitions)
 - [Terms](#terms)
 - [Kommunikation](#kommunikation)
-  - [Angepasste Sprache](#angepasste-sprache)
-  - [Explizit vs Implizit](#explizit-vs-implizit)
+  - [Adjusted Language](#adjusted-language)
+  - [Explicit vs Implicit](#explicit-vs-implicit)
 - [Aufgaben eines Software Architekten](#aufgaben-eines-software-architekten)
 - [Stakeholderanalyse](#stakeholderanalyse)
 - [Risikoanalyse](#risikoanalyse)
@@ -103,17 +103,16 @@ Example: Imagine two methods for a Car.
 # Kommunikation
 
 
-## Angepasste Sprache
+## Adjusted Language
 
-Je nach Art des Stakeholder sollte die Sprache entsprechend ausfallen. 
-z.B. sollte man mit einem Business analysten eher auf der fachlichen Ebene sprechen und technische Details vermeiden. 
+The way an architect talks to stakeholders should be different.
+It should depend on the stakeholders and their technical knowledge. 
 
 
-## Explizit vs Implizit
+## Explicit vs Implicit
 
-Es sollte vermieden werden implizite Annahmen zu machen. 
-Das kann schnell zu unterschiedlichen Interpretationen führen. 
-Explizit ansprechen und dokumentieren als impliziert annehmen. 
+Assumptions and decisions should always be explicitly communicated and documented.
+Implicit assumptions such as "It was clear to me" lead to misunderstandings and problems. 
 
 
 # Aufgaben eines Software Architekten
@@ -248,13 +247,13 @@ Dazu gibt es auch die
 **Inheritance**: This relation exists when a class inherits from another. 
 E.g., When Class `Employee` (Subclass) inherits from `Human` (Superclass) . 
 
-**Association**: Use Association when there is no dependency between two classes, but those classes can communicate.
+**Association**: An arcitect should use Association when there is no dependency between two classes, but those classes can communicate.
 E.g., Modeling a company with `Employee` you could add `Car` as an association because the Employee can use it. 
 
-**Aggregation**: Use Aggregation if one class consists of several other classes. But these classes can also exist on their own. 
+**Aggregation**: An arcitect should use Aggregation if one class consists of several other classes. But these classes can also exist on their own. 
 E.g., the class `BusDriver` consists of Class `Bus` and `Driver`. `Bus` and `Driver` can exist on their own. 
 
-**Composition**: You can use Composition if one class consists of several other classes. But these classes cannot exist on their own. 
+**Composition**: An arcitect should use Composition if one class consists of several other classes. But these classes cannot exist on their own. 
 E.g., the class `Human` consists of Class `Hand` and `Leg`. Both classes cannot exist on their own.
 
 
