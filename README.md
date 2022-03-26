@@ -293,7 +293,7 @@ classDiagram
     class Singleton {
         - instance : Singleton
         - Singeton()
-        + getInstance() : [asdasd]
+        + getInstance()
     }
 ```
 
