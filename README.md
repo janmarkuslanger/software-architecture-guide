@@ -13,10 +13,10 @@
 
 - [Definitions](#definitions)
 - [Terms](#terms)
-- [Kommunikation](#kommunikation)
+- [Communication](#communication)
   - [Adjusted Language](#adjusted-language)
   - [Explicit vs Implicit](#explicit-vs-implicit)
-- [Aufgaben eines Software Architekten](#aufgaben-eines-software-architekten)
+- [Tasks of a Software Architect](#tasks-of-a-software-architect)
 - [Stakeholderanalyse](#stakeholderanalyse)
 - [Risikoanalyse](#risikoanalyse)
 - [Software Architektur entwerfen](#software-architektur-entwerfen)
@@ -102,8 +102,7 @@ Example: Imagine A class car that uses many different classes in its methods lik
 Example: Imagine two methods for a Car.
 
 
-# Kommunikation
-
+# Communication
 
 ## Adjusted Language
 
@@ -117,7 +116,7 @@ Assumptions and decisions should always be explicitly communicated and documente
 Implicit assumptions such as "It was clear to me" lead to misunderstandings and problems. 
 
 
-# Aufgaben eines Software Architekten
+# Tasks of a Software Architect
 
 - Anforderungen analysieren, klären und gegebenfalls verfeinern 
 - Architekturentscheidungen treffen
