@@ -18,7 +18,7 @@
   - [Explicit vs Implicit](#explicit-vs-implicit)
 - [Tasks of a Software Architect](#tasks-of-a-software-architect)
 - [Stakeholderanalyse](#stakeholderanalyse)
-- [Risikoanalyse](#risikoanalyse)
+- [Risk analysis](#risk-analysis)
 - [Software Architektur entwerfen](#software-architektur-entwerfen)
   - [Ansätze](#ansätze)
     - [Top-down Ansatz](#top-down-ansatz)
@@ -118,19 +118,19 @@ Implicit assumptions such as "It was clear to me" lead to misunderstandings and 
 
 # Tasks of a Software Architect
 
-- Anforderungen analysieren, klären und gegebenfalls verfeinern 
-- Architekturentscheidungen treffen
-- Kontinuierliche Analyse der Architekur
-- Wissen im Geschäftsfeld aufbauen
-- Aktuelle Trends erfassen 
-- Designentscheidungen kommunizieren & dokumentieren & Feedback einholen 
+- Analyze, clarify and, if necessary, refine requirements 
+- Make architectural decisions
+- Continuously analyze architecture
+- Build knowledge in the business area
+- Capture current trends 
+- Communicate & document design decisions & gather feedback 
 
 
 # Stakeholderanalyse
 
 Bei der Stakeholderanalyse geht es darum die Personen zu identifizieren die relevant für das Projekt sind. Welche das sind kann zwischen Organisationsform und den Projekten stark variieren; sei es Leiter\*in der Entwicklung, Budget-Verantwortliche, eine andere Abteilung oder im Falle eines Dienstleistungsunternehmens die Kundin. Jede dieser Stakeholder tragen zu dem gelingen des Projekts bei. Wurden die Stakeholder identifiziert, werden sie priorisiert, heißt, müssen diese nur informiert werden oder sind diese aktive Teilnehmer\*innen im Projekt.
 
-# Risikoanalyse
+# Risk analysis
 
 Die Risikoanalyse beinhaltet folgende schritte:
 
