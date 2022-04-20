@@ -17,9 +17,9 @@
   - [Adjusted Language](#adjusted-language)
   - [Explicit vs Implicit](#explicit-vs-implicit)
 - [Tasks of a Software Architect](#tasks-of-a-software-architect)
-- [Stakeholderanalyse](#stakeholderanalyse)
+- [Stakeholder analysis](#stakeholder-analysis)
 - [Risk analysis](#risk-analysis)
-- [Software Architektur entwerfen](#software-architektur-entwerfen)
+- [Design software architecture](#design-software-architecture)
   - [Ansätze](#ansätze)
     - [Top-down Ansatz](#top-down-ansatz)
     - [Bottom-up Ansatz](#bottom-up-ansatz)
@@ -126,36 +126,36 @@ Implicit assumptions such as "It was clear to me" lead to misunderstandings and 
 - Communicate & document design decisions & gather feedback 
 
 
-# Stakeholderanalyse
+# Stakeholder analysis
 
-Bei der Stakeholderanalyse geht es darum die Personen zu identifizieren die relevant für das Projekt sind. Welche das sind kann zwischen Organisationsform und den Projekten stark variieren; sei es Leiter\*in der Entwicklung, Budget-Verantwortliche, eine andere Abteilung oder im Falle eines Dienstleistungsunternehmens die Kundin. Jede dieser Stakeholder tragen zu dem gelingen des Projekts bei. Wurden die Stakeholder identifiziert, werden sie priorisiert, heißt, müssen diese nur informiert werden oder sind diese aktive Teilnehmer\*innen im Projekt.
+The stakeholder analysis is about identifying the people relevant to the project. These stakeholders can vary significantly from one organization to another and from one project to another, be it the development manager, the budget manager, another department, or, in the case of a service company, the customer. Each of these stakeholders contributes to the success of the project. Once the stakeholders have been identified, they are prioritized, i.e., do they only need to be informed, or are they active participants in the project.
 
 # Risk analysis
 
-Die Risikoanalyse beinhaltet folgende schritte:
+The risk analysis includes the following steps:
 
-- Identifizieren des Risikos
-- Reduzieren der Folgen eines Risikos
-- Reduzieren der Wahrscheinlichkeit des Eintretens eines Risikos
-- Risiko Überwachung
+- Identify the risk
+- Reducing the consequences of a risk
+- Reducing the probability of a risk occurring
+- Risk monitoring
 
-Dabei gilt es die verschiedenen Typen von Risiken zu beachten:
+It is essential to consider the different types of risks:
 
-- Bekannte Risiken: Risiken die bereits bekannt sind und auftretten können/werden
-- Bekannte Risiken aus anderen Projekten: Damit ist gemeint, Risiken die aus Erfahrung bekannt sind, aber es ist noch unbekannt ob sie für das Projekt eine Relevanz haben
-- Unbekannte Risiken
+- Known risks: risks that are already known and can/will occur.
+- Known risks from other projects: This means chances known from experience, but it is still unknown whether they have any relevance for the project.
+- Unknown risks
 
-Im Rahmen der Softwarearchitektur können wir folgende Prozesse berücksichtigen:
+Within the software architecture, we can consider the following processes:
 
-- Risiko Identifikation
-- Risiko Analyse
-  - Qualitative Risiko Analyse
-  - Quantitative Risiko Analyse
-- Risiko Planung
-- Risiko überwachung
+- Risk Identification
+- Risk Analysis
+  - Qualitative risk analysis
+  - Quantitative Risk Analysis
+- Risk planning
+- Risk monitoring
 
-# Software Architektur entwerfen
 
+# Design software architecture
 
 ## Ansätze
 
