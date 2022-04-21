@@ -11,6 +11,7 @@
 
 # Content
 
+
 - [Definitions](#definitions)
 - [Terms](#terms)
 - [Communication](#communication)
@@ -20,9 +21,9 @@
 - [Stakeholder analysis](#stakeholder-analysis)
 - [Risk analysis](#risk-analysis)
 - [Design software architecture](#design-software-architecture)
-  - [Ansätze](#ansätze)
-    - [Top-down Ansatz](#top-down-ansatz)
-    - [Bottom-up Ansatz](#bottom-up-ansatz)
+  - [Approaches](#approaches)
+    - [Top-down approach](#top-down-approach)
+    - [Bottom-up approach](#bottom-up-approach)
     - [Ansichtbasierte Architektur](#ansichtbasierte-architektur)
   - [Black box](#black-box)
   - [White box](#white-box)
