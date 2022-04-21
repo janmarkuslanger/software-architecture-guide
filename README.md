@@ -157,44 +157,43 @@ Within the software architecture, we can consider the following processes:
 
 # Design software architecture
 
-## Ansätze
+## Approaches
 
-- SA sollte wenn möglich iterativ entwickelt werden
-- Frühes Feedback einholen
+- Software architecture should be developed iteratively if possible
+- Obtain early feedback
 
+### Top-down approach
 
-### Top-down Ansatz
-
-Ein System/Komponente/Subsystem wird von "oben" nach "unten" aufgebaut.
-
-
-### Bottom-up Ansatz
-
-Ein System/Komponente/Subsystem wird von "unten" (detail level) nach "oben" aufgebaut.
+A system/component/subsystem is designed from "top" to "bottom".
 
 
-### Ansichtbasierte Architektur
+### Bottom-up approach
 
-- Komponenten Ansicht
-- Laufzeit Ansicht
-- Hardware Ansicht
-- Kontext Ansicht
+A system/component/subsystem is designed from the "bottom" (detail level) to the "top".
+
+
+### View-based architecture
+
+- Components View
+- Runtime View
+- Hardware View
+- Context View
 
 
 ## Black box
 
-- eine "Black box" versteckt sein inneres. 
-- Inneres: Abhängigkeiten / Prozesse / Datenstruktur / Daten
-- Fokus auf das Verhalten nach Außen 
-- Aufgaben des Bausteins nach Außen
-- angebotene Schnittstellen 
-- benötigte Schnittsellen 
+- A "black box" hides its interior. 
+- Inside: dependencies / processes / data structure / data
+- Focus on the external behavior 
+- Tasks of the building block to the outside
+- Offered interfaces 
+- Required interfaces 
 
 
 ## White box 
 
-- eine "White box" zeigt sein inneres 
-- Inneres: Innere Struktur / Abhängikeiten / Datenstruktur 
+- a "white box" shows its inner behaviour and attributes 
+- Inner: Inner structure / dependencies / data structure 
 
 
 # Software Architektur Muster
