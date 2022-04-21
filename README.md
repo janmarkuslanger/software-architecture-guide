@@ -26,8 +26,8 @@
     - [Ansichtbasierte Architektur](#ansichtbasierte-architektur)
   - [Black box](#black-box)
   - [White box](#white-box)
-- [Software Architektur Muster](#software-architektur-muster)
-  - [Schichten](#schichten)
+- [Software Architecture Pattern](#software-architecture-pattern)
+  - [Layers](#layers)
   - [Microservice-Architektur](#microservice-architektur)
   - [Event-Driven-Architektur](#event-driven-architektur)
   - [Pipeline-Architektur](#pipeline-architektur)
@@ -199,7 +199,7 @@ A system/component/subsystem is designed from the "bottom" (detail level) to the
 - Inner: Inner structure / dependencies / data structure 
 
 
-# Software Architektur Muster
+# Software Architecture Pattern
 
 
 ## Layers
