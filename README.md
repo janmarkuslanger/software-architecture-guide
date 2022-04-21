@@ -130,6 +130,7 @@ Implicit assumptions such as "It was clear to me" lead to misunderstandings and 
 
 The stakeholder analysis is about identifying the people relevant to the project. These stakeholders can vary significantly from one organization to another and from one project to another, be it the development manager, the budget manager, another department, or, in the case of a service company, the customer. Each of these stakeholders contributes to the success of the project. Once the stakeholders have been identified, they are prioritized, i.e., do they only need to be informed, or are they active participants in the project.
 
+
 # Risk analysis
 
 The risk analysis includes the following steps:
@@ -157,10 +158,12 @@ Within the software architecture, we can consider the following processes:
 
 # Design software architecture
 
+
 ## Approaches
 
 - Software architecture should be developed iteratively if possible
 - Obtain early feedback
+
 
 ### Top-down approach
 
@@ -199,11 +202,11 @@ A system/component/subsystem is designed from the "bottom" (detail level) to the
 # Software Architektur Muster
 
 
-## Schichten 
+## Layers
 
-- Abstraktionschichten: höhere Schichten greifen auf untere Schichten via Schnittstelle zu
-- Schichten um Funktionalität und Verantwortungsbereiche zu trennen
-- Aufrufe finden nur Top-Down statt, heißt nur die oberen Schichten greifen auf untere Schichten zu, nicht umgekehrt
+- Abstraction layers: higher layers access lower layers via interface
+- Layers to separate functionality and areas of responsibility
+- Calls only take place top-down, i.e., only the upper layers access lower layers, not vice versa
 
 
 ## Microservice-Architektur
@@ -217,29 +220,29 @@ A system/component/subsystem is designed from the "bottom" (detail level) to the
 
 # Software Qualität
 
-Nach ISO 25010:
+According to ISO 25010:
 
-- Angemessenheit (Functional Suitability)
-- Sicherheit (Security)
-- Benutzbarkeit (Usability)
-- Wartbarkeit (Maintainability)
-- Portierbarkeit ()
-- Kompatibilität ()
-- Leistungsfähigkeit ()
-- Wiederverwendbarkeit (Reusability)
+- Functional Suitability
+- Security
+- Usability
+- Maintainability
+- Portability
+- Compatibility
+- Performance
+- Reusability
 
-> Bei Qualitätseigenschaften können schnell Interessenskonflikte enstehen. So kann die erhöhte Sicherheit für ein schlechtere Performance sorgen. Häufig ist nach Priorität abzuwägen.
+> Conflicts of interest can quickly arise in the case of quality properties. For example, increased security can lead to poorer performance. It is often necessary to weigh up priorities.
 
-# Software Architektur bewerten
+# Evaluate software architecture
 
-Im Rahmen der SA lassen sich zwei Dinge bewerten:
-- Prozesse
-- Artefakte (Code, Anforderungen, Dokumente)
+Two things can be evaluated in the context of software architecture:
+- Processes
+- Artifacts (code, requirements, documents)
 
-Dazu gibt es auch die 
+For this purpose there is also the 
 
-- qualitativer Bewertung 
-- quantitative Bewertung 
+- qualitative assessment 
+- quantitative evaluation 
 
 
 # Relations
