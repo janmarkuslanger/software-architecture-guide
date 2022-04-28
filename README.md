@@ -316,15 +316,11 @@ class Singleton {
 ```
 
 
-### Erbauer
+### Builder
 
-<details>
-  <summary>Erbauer</summary>
-
-
-Problem: Komplexe Objekte (mehrere Schritte, Verschachtelte Objekte, Viele Felder) sollen erstellt werden. 
+Problem: Complex objects (multiple steps, nested objects, many fields) should be created. 
   
-Lösung: Die Erstellung eines Objektes erfolgt in einer eigenen Klasse.
+Solution: The creation of an object is done by multiple methods in its separated classes.
   
 <img src="assets/builder.drawio.png" alt="Builder Pattern" />
   
