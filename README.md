@@ -322,7 +322,35 @@ Problem: Complex objects (multiple steps, nested objects, many fields) should be
   
 Solution: The creation of an object is done by multiple methods in its separated classes.
   
-<img src="assets/builder.drawio.png" alt="Builder Pattern" />
+``` mermaid
+classDiagram
+    class Director {
+        +Director(builder: Builder)
+    }
+
+    class Builder {
+        +buildA()
+        +buildB() 
+    }
+
+    class ConcreteBuilderA {
+        +buildA()
+        +buildB() 
+        +build()
+    }
+
+    class ConcreteBuilderB {
+        +buildA()
+        +buildB() 
+        +build()
+    }
+
+    Builder --|> ConcreteBuilderB
+    Builder --|> ConcreteBuilderA
+    Director --> Builder
+     
+            
+```
   
 </details>
 
