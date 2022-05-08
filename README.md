@@ -32,8 +32,8 @@
   - [Microservice-Architektur](#microservice-architektur)
   - [Event-Driven-Architektur](#event-driven-architektur)
   - [Pipeline-Architektur](#pipeline-architektur)
-- [Software Qualität](#software-qualität)
-- [Software Architektur bewerten](#software-architektur-bewerten)
+- [Software quality](#software-quality)
+- [Evaluate software architecture](#evaluate-software-architecture)
 - [Relations](#relations)
 - [Design patterns](#design-patterns)
   - [Creational patterns](#creational-patterns)
@@ -50,7 +50,7 @@
     - [Proxy](#proxy)
     - [Flyweight](#flyweight)
   - [Behavioral patterns](#behavioral-patterns)
-    - [Beobachter](#beobachter)
+    - [Observer](#observer)
     - [Iterator](#iterator)
     - [State](#state)
     - [Mediator](#mediator)
@@ -65,11 +65,11 @@
   - [Liskov Substitution Principle](#liskov-substitution-principle)
   - [Interface Segregation Principle](#interface-segregation-principle)
   - [Dependency Inversion Principle](#dependency-inversion-principle)
-- [Designprinzipien](#designprinzipien)
+- [Design principles](#design-principles)
   - [Dependency injection](#dependency-injection)
-  - [Schnittstelle vs Implementierung](#schnittstelle-vs-implementierung)
+  - [Interface vs Implementation](#interface-vs-implementation)
 - [Clean coding](#clean-coding)
-- [Ressourcen](#ressourcen)
+- [Resources](#resources)
 - [Literature](#literature)
 
 
@@ -219,7 +219,7 @@ A system/component/subsystem is designed from the "bottom" (detail level) to the
 ## Pipeline-Architektur
 
 
-# Software Qualität
+# Software quality
 
 According to ISO 25010:
 
@@ -261,18 +261,18 @@ E.g., the class `BusDriver` consists of Class `Bus` and `Driver`. `Bus` and `Dri
 E.g., the class `Human` consists of Class `Hand` and `Leg`. Both classes cannot exist on their own.
 
 
-# Design patterns
+# Design principles
 
-Design patterns are helpful solutions for problems in software development. Nevertheless, design patterns can increase complexity without an advantage. It is possible to adjust those patterns if that will fit better to a problem. 
+Design principles are helpful solutions for problems in software development. Nevertheless, design patterns can increase complexity without an advantage. It is possible to adjust those patterns if that will fit better to a problem. 
 
 
 ## Creational patterns 
 
 
-### Fabrik
+### Factory method
 
 <details>
-  <summary>Fabrik</summary>
+  <summary>Factory method</summary>
   
 Problem: Die Bestimmung der Erzeugung einer konkreten Klasse (Produkt) soll zur Laufzeit erfolgen und Implementierung und Erzeugung sollen größtenteils entkoppelt sein. 
 
@@ -355,10 +355,10 @@ classDiagram
 </details>
 
 
-### Prototyp
+### Prototype
 
 <details>
-  <summary>Prototyp</summary>
+  <summary>Prototype</summary>
   
 Problem: Aus einem bestehenden Objekt sollen ein oder mehrere Klone erstellt werden. Zudem ist das Klonen nicht immer so einfach, wenn das Objekt private Attribute aufweise. 
   
@@ -409,10 +409,10 @@ Lösung:
 </details>
 
 
-### Kompositum
+### Composition
 
 <details>
-  <summary>Kompositum</summary>
+  <summary>Composition</summary>
   
 Problem: Diverse zusammenhängende und einzelne Objekte sollen auf die gleiche Art und Weise behandelt werden 
 
@@ -423,11 +423,11 @@ Lösung: Implementierung einer Baumstruktur bestehend aus einer Komponente (Inte
 </details>
 
 
-### Dekorierer
+### Decorator
 
 <details>
 
-  <summary>Dekorierer</summary>
+  <summary>Decorator</summary>
 
 Problem: Eine Erweiteurng einer (abstrakten) Basisklasse würde zu sehr vielen Klassen führen. 
 
@@ -438,10 +438,10 @@ Lösung: Eine konkrette Komponente wird um Varianten "dekoriert".
 </details>
 
  
-### Fassade
+### Facade
 
 <details>
-  <summary>Fassade</summary>
+  <summary>Facade</summary>
   
 Problem: Clients müssen auf komplexe und unübersichtliche Systeme zugreifen
 
@@ -465,10 +465,10 @@ Lösung: Es wird ein Stellvertreter (Proxy) vor das Zielobjekt gestellt. Beide i
 </details>
 
 
-### Fliegengewicht
+### Flyweight
 
 <details>
-   <summary>Fliegengewicht (en: Flyweight)</summary>
+   <summary>Flyweight</summary>
 Problem: Viele Objekte im System verbrauchen viele Ressourcen. 
 
 Lösung: Herauslösen von wiederverwendbaren Objekten. 
@@ -481,11 +481,11 @@ Lösung: Herauslösen von wiederverwendbaren Objekten.
 ## Behavioral patterns
 
 
-### Beobachter
+### Observer
 
 <details>
   
-  <summary>Beobachter</summary>
+  <summary>Observer</summary>
   
 Problem: Objekte in einem System wollen über bestimmte Events informiert werden. 
 
@@ -509,10 +509,10 @@ Lösung: Strukturen soll Durchlaufen werden mit einem Iterator, der immer eine R
   
 </details>
 
-### Zustand
+### State
 
 <details>
-  <summary>Zustand</summary>
+  <summary>State</summary>
   
 Problem: Der Zustand wird direkt in den Klassen und Objekten behandelt. Das sorgt für viele if-else Konditionen in den Klassen. 
   
@@ -523,10 +523,10 @@ Lösung: Für Zustände werden Klasse implementiert, die diese Zustände halten.
 </details>
 
 
-### Vermittler
+### Mediator
 
 <details>
-  <summary>Vermittler (en: Mediator)</summary>
+  <summary>Mediator</summary>
   
 Problem: Viele Klassen agieren zusammen (z.B UI Elemente eines Formulars) und sind somit eng gekoppelt, da diese all untereinander abhängen.
   
@@ -562,10 +562,10 @@ Lösung: Einem Uhrheber (belieblige Klasse) wird ein Memento zur Verfügung gest
 </details>
 
 
-### Strategie
+### Strategy
 
 <details>
-<summary>Strategie (en: Strategy)</summary>
+<summary>Strategy</summary>
 
 Problem: Für einen Kontext (z.B Klasse) soll es mehrere Implementierung/Algorithmen geben 
 
@@ -575,10 +575,10 @@ Lösung: Ein Kontext besitzt ein Attribute welche auf eine Strategie zeigt. In d
 </details>
 
 
-### Besucher
+### Visitor
 <details>
   
-  <summary>Besucher (en: Visitor)</summary>
+  <summary>Visitor</summary>
   
   Problem: Eine Klasse (Element) soll unterschiedliche Methoden (PDF Generierung / XML Generierung) (mit unterschiedlichen Kontexten anwenden). Dies würde zum Verstoß des Single-Responsibility-Prinzip führen. 
   
@@ -630,7 +630,7 @@ The open-closed principle means that changes to a module, which can be a module,
 - Schnittstellen sollten nicht von Details abhängen
 - Details sollten von Schnittstellen abhängen
 
-# Designprinzipien
+# Design principle
 
 
 ## Dependency injection
@@ -651,7 +651,7 @@ klasse MeineKlasse(Abhängigkeit meineAbhängigkeit) {
 ```
 
 
-## Schnittstelle vs Implementierung
+## Interface vs implementation
 
 Entwickle gegen eine Schnittstelle, nicht gegen eine Implementierung.
 Denn Implementierungen können sich schnell ändern. Wenn man gegen eine Schnittstelle entwickelt, so kann sich die Implemetierung unabhängig davon ändern. 
@@ -662,7 +662,7 @@ Denn Implementierungen können sich schnell ändern. Wenn man gegen eine Schnitt
 # Clean coding
 
 
-# Ressourcen
+# Resources
 
 - https://refactoring.guru/ 
 - https://www.udacity.com/course/software-architecture-design--ud821
