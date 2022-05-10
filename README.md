@@ -269,7 +269,7 @@ Design principles are helpful solutions for problems in software development. Ne
 ## Creational patterns 
 
 
-### Factory method
+## Factory method
 
 <details>
   <summary>Factory method</summary>
@@ -283,7 +283,7 @@ Lösung: Die Erzeugung findet durch eine bestimmte (Fabrik-)Methode einer Klasse
 </details>
 
 
-### Singleton
+## Singleton
 
 Problem / Requirement: There should be only one instance from a specific class. 
 
@@ -316,7 +316,7 @@ class Singleton {
 ```
 
 
-### Builder
+## Builder
 
 Problem: Complex objects (multiple steps, nested objects, many fields) should be created. 
   
@@ -355,7 +355,7 @@ classDiagram
 </details>
 
 
-### Prototype
+## Prototype
 
 <details>
   <summary>Prototype</summary>
@@ -372,7 +372,7 @@ Lösung: Es wird eine Prototypschnittstele implementiert mit (meist) einer Metho
 ## Structural patterns
 
 
-### Adapter
+## Adapter
 
 <details>
   
@@ -391,7 +391,7 @@ Der Client kann über die Schnittstelle "Target" auf den "Adapter" zugreifen. De
 </details>
 
 
-### Bridge 
+## Bridge 
 
 <details>
   <summary>Bridge</summary>
@@ -409,7 +409,7 @@ Lösung:
 </details>
 
 
-### Composition
+## Composition
 
 <details>
   <summary>Composition</summary>
@@ -423,7 +423,7 @@ Lösung: Implementierung einer Baumstruktur bestehend aus einer Komponente (Inte
 </details>
 
 
-### Decorator
+## Decorator
 
 <details>
 
@@ -438,7 +438,7 @@ Lösung: Eine konkrette Komponente wird um Varianten "dekoriert".
 </details>
 
  
-### Facade
+## Facade
 
 <details>
   <summary>Facade</summary>
@@ -465,7 +465,7 @@ Lösung: Es wird ein Stellvertreter (Proxy) vor das Zielobjekt gestellt. Beide i
 </details>
 
 
-### Flyweight
+## Flyweight
 
 <details>
    <summary>Flyweight</summary>
@@ -481,7 +481,7 @@ Lösung: Herauslösen von wiederverwendbaren Objekten.
 ## Behavioral patterns
 
 
-### Observer
+## Observer
 
 <details>
   
@@ -496,7 +496,7 @@ Lösung: Implementierung eines Publisher-Subscriber Patterns. Der Subscriber kan
 </details>
 
 
-### Iterator
+## Iterator
 
 <details>
 <summary>Iterator</summary>
@@ -509,7 +509,7 @@ Lösung: Strukturen soll Durchlaufen werden mit einem Iterator, der immer eine R
   
 </details>
 
-### State
+## State
 
 <details>
   <summary>State</summary>
@@ -523,7 +523,7 @@ Lösung: Für Zustände werden Klasse implementiert, die diese Zustände halten.
 </details>
 
 
-### Mediator
+## Mediator
 
 <details>
   <summary>Mediator</summary>
@@ -537,7 +537,7 @@ Lösung: Förderung der losen Kopplung, in dem eine Zentrale Klasse als Vermittl
 </details>
 
 
-### Template method
+## Template method
 <details>
   <summary>Template method</summary>
   
@@ -549,7 +549,7 @@ Lösung: Eine abstrakte Klasse hält eine templateMethod und die Methoden der ei
 </details>
 
 
-### Memento
+## Memento
 
 <details>
 <summary>Memento</summary>
@@ -562,7 +562,7 @@ Lösung: Einem Uhrheber (belieblige Klasse) wird ein Memento zur Verfügung gest
 </details>
 
 
-### Strategy
+## Strategy
 
 <details>
 <summary>Strategy</summary>
@@ -575,7 +575,7 @@ Lösung: Ein Kontext besitzt ein Attribute welche auf eine Strategie zeigt. In d
 </details>
 
 
-### Visitor
+## Visitor
 <details>
   
   <summary>Visitor</summary>
@@ -587,7 +587,7 @@ Lösung: Ein Kontext besitzt ein Attribute welche auf eine Strategie zeigt. In d
   <img src="assets/visitor.drawio.png" alt="Visitor Pattern" />
 </details>
 
-### Chain of Responsibility
+## Chain of Responsibility
 
 <details>
   
