@@ -271,16 +271,11 @@ Design principles are helpful solutions for problems in software development. Ne
 
 ## Factory method
 
-<details>
-  <summary>Factory method</summary>
-  
 Problem: Die Bestimmung der Erzeugung einer konkreten Klasse (Produkt) soll zur Laufzeit erfolgen und Implementierung und Erzeugung sollen größtenteils entkoppelt sein. 
 
 Lösung: Die Erzeugung findet durch eine bestimmte (Fabrik-)Methode einer Klasse statt. Die Erzeugung des Produktes wird in einer Oberklasse definiert. Die Erzeugung eines konkreten Produktes wird in einer abgeleiteten Klasse durchgeführt. 
 
 <img src="assets/factory.drawio.png" alt="Factory Pattern" />
-  
-</details>
 
 
 ## Singleton
@@ -356,17 +351,12 @@ classDiagram
 
 
 ## Prototype
-
-<details>
-  <summary>Prototype</summary>
   
 Problem: Aus einem bestehenden Objekt sollen ein oder mehrere Klone erstellt werden. Zudem ist das Klonen nicht immer so einfach, wenn das Objekt private Attribute aufweise. 
   
 Lösung: Es wird eine Prototypschnittstele implementiert mit (meist) einer Methode clone(), die einen Prototyp zurückgibt. Klassen und deren Objekte müssen diese Schnittstelle implementieren und somit auch die Methode clone(). Das bedeutet, dass man der Klasse die Aufgabe des Klonens übergibt. Diese kann dann auf alle privaten Attribute der eigenen Klasse zugreifen. 
   
 <img src="assets/prototype.drawio.png" alt="Prototype Pattern" />
-  
-</details>
 
 
 ## Structural patterns
@@ -374,9 +364,6 @@ Lösung: Es wird eine Prototypschnittstele implementiert mit (meist) einer Metho
 
 ## Adapter
 
-<details>
-  
-  <summary>Adapter</summary>
   
 Problem: 
 Ein bestehender Client will über eine bestehende eigene Schnittstelle auf eine Klasse/Objekt zugreifen.
@@ -388,14 +375,10 @@ Ein Adapter, der die Target Schnittstelle implementiert und die externe Klasse o
 
 Beispiel:
 Der Client kann über die Schnittstelle "Target" auf den "Adapter" zugreifen. Der Adapter sorgt dann für einen Aufruf der Methode von der Klasse "AdaptierteKlasse".
-</details>
 
 
 ## Bridge 
 
-<details>
-  <summary>Bridge</summary>
-  
 Problem: 
 Durch diverse Vererbungen, welche Abstraktion und Implementierung beinhalten, entsteht eine unübersichtliche und schwer erweiterbare Klassenherachie. 
 
@@ -406,42 +389,27 @@ Lösung:
 - Es können mehrere Implementierung assoziert werden so Könnter der Abstraktion: Form -> Kugel; die Implementierung können zb Farbe -> Rot/Schwarz und/oder Größe -> klein/groß 
 
 <img src="assets/bridge.drawio.png" alt="Bridge Pattern" />
-</details>
 
 
 ## Composition
-
-<details>
-  <summary>Composition</summary>
   
 Problem: Diverse zusammenhängende und einzelne Objekte sollen auf die gleiche Art und Weise behandelt werden 
 
 Lösung: Implementierung einer Baumstruktur bestehend aus einer Komponente (Interface oder Abstrakte Klasse), einem Blatt (Einzelobjekt) und einem Kompositum (Zusammenhängendes Objekt).
 
 <img src="assets/composite.drawio.png" alt="Composite Pattern" />
-  
-</details>
 
 
 ## Decorator
-
-<details>
-
-  <summary>Decorator</summary>
 
 Problem: Eine Erweiteurng einer (abstrakten) Basisklasse würde zu sehr vielen Klassen führen. 
 
 Lösung: Eine konkrette Komponente wird um Varianten "dekoriert". 
 
 <img src="assets/decorator.drawio.png" alt="Decorator Pattern" />
-  
-</details>
 
  
 ## Facade
-
-<details>
-  <summary>Facade</summary>
   
 Problem: Clients müssen auf komplexe und unübersichtliche Systeme zugreifen
 
@@ -449,33 +417,24 @@ Lösung: Vereinigung/Bündelung mehrere Systeme/Komponente/.. in einer Fassade. 
 Die Systeme dahinter sind verborgen. 
 
 <img src="assets/facade.drawio.png" alt="Facade Pattern" />
-</details>
 
 
 ## Proxy
 
-<details>
-  <summary>Proxy</summary>
-  
 Problem: Auf ein Objekt / Klasse soll nicht direkt zugegriffen werden.
   
 Lösung: Es wird ein Stellvertreter (Proxy) vor das Zielobjekt gestellt. Beide imlementieren die selbe Schnittstelle. Der Proxy greift dann auf das Zielobjekt zu.  
   
 <img src="assets/proxy.drawio.png" alt="Proxy Pattern" />
-</details>
 
 
 ## Flyweight
 
-<details>
-   <summary>Flyweight</summary>
 Problem: Viele Objekte im System verbrauchen viele Ressourcen. 
 
 Lösung: Herauslösen von wiederverwendbaren Objekten. 
   
 <img src="assets/flyweight.drawio.png" alt="Flyweight Pattern" />
-
-</details>
 
 
 ## Behavioral patterns
@@ -483,113 +442,77 @@ Lösung: Herauslösen von wiederverwendbaren Objekten.
 
 ## Observer
 
-<details>
-  
-  <summary>Observer</summary>
-  
 Problem: Objekte in einem System wollen über bestimmte Events informiert werden. 
 
 Lösung: Implementierung eines Publisher-Subscriber Patterns. Der Subscriber kann sich beim Publisher "anmelden" um auf Events zu "hören". Der Publisher sammelt diese. Sobald ein Event veröffentlicht wird, werden alle Subscriber informiert. 
 
 <img src="assets/observer.drawio.png" alt="Observer Pattern" />
-  
-</details>
 
 
 ## Iterator
 
-<details>
-<summary>Iterator</summary>
-  
 Problem: Es soll möglich sein, über eine komplexe Gruppe von Objekten zu iterieren. Baumstruktur / Liste 
   
 Lösung: Strukturen soll Durchlaufen werden mit einem Iterator, der immer eine Referenz auf das nächste Elemente besitzt. Dabei gibt es den Iterator, der die Methoden bereithält, um das nächste Elemente zu erhalten. Die IteratorKollektion ist für die Erstellung der Kollektion zuständig. 
   
 <img src="assets/iterator.drawio.png" alt="Iterator Pattern" />
-  
-</details>
+
 
 ## State
 
-<details>
-  <summary>State</summary>
-  
 Problem: Der Zustand wird direkt in den Klassen und Objekten behandelt. Das sorgt für viele if-else Konditionen in den Klassen. 
   
 Lösung: Für Zustände werden Klasse implementiert, die diese Zustände halten. 
   
 <img src="assets/state.drawio.png" alt="State Pattern" />
  
-</details>
-
-
+ 
 ## Mediator
 
-<details>
-  <summary>Mediator</summary>
-  
 Problem: Viele Klassen agieren zusammen (z.B UI Elemente eines Formulars) und sind somit eng gekoppelt, da diese all untereinander abhängen.
   
 Lösung: Förderung der losen Kopplung, in dem eine Zentrale Klasse als Vermittler dient. Somit liegt die gesamte Komplexität in dieser Vermittlerklasse. 
   
 <img src="assets/mediator.drawio.png" alt="Mediator Pattern" />
   
-</details>
-
 
 ## Template method
-<details>
-  <summary>Template method</summary>
-  
+
 Problem: Mehrere Klassen weisen viele gleiche Muster (bzw. Code). 
   
 Lösung: Eine abstrakte Klasse hält eine templateMethod und die Methoden der einzelnen Schritte. In der Methode templateMethod werden die Schritte koordiniert. Die konkreten Klasse, die von der abstrakten Klasse erben, können dann einzelne Schritte überschreiben, wenn diese benötigt werden. 
   
 <img src="assets/template-method.drawio.png" alt="Template method Pattern" />
-</details>
 
 
 ## Memento
-
-<details>
-<summary>Memento</summary>
 
 Problem: Zustände eines Objektes sollen gespeichert werden, damit man auf diese zu einem späteren Zeitpunkt zurückgreifen kann bzw diese wiederherstellen kann. 
 
 Lösung: Einem Uhrheber (belieblige Klasse) wird ein Memento zur Verfügung gestellt. Dieser sorgt dafür, dass der Zustand (private inner Attribute) von Uhrheber gespeichert wird. Objekte des Memento werden dann in einem sog. Aufbewahrer gespeichert. 
 
 <img src="assets/memento.drawio.png" alt="Memento Pattern" />
-</details>
 
 
 ## Strategy
-
-<details>
-<summary>Strategy</summary>
 
 Problem: Für einen Kontext (z.B Klasse) soll es mehrere Implementierung/Algorithmen geben 
 
 Lösung: Ein Kontext besitzt ein Attribute welche auf eine Strategie zeigt. In dieser Strategie sind die unterschiedlichen Implementierungen enthalten (Eine Strategy - eine Implementierung). Die Art der Implementierung wird somit nicht von dem Context selber gesteuert, sondern hängt davon ab, welche Strategie der Client zuweist. 
   
 <img src="assets/strategy.drawio.png" alt="Strategy Pattern" />
-</details>
 
 
 ## Visitor
-<details>
+
+Problem: Eine Klasse (Element) soll unterschiedliche Methoden (PDF Generierung / XML Generierung) (mit unterschiedlichen Kontexten anwenden). Dies würde zum Verstoß des Single-Responsibility-Prinzip führen. 
   
-  <summary>Visitor</summary>
+Lösung: Trennung der Operation und Klassenherachie. Es wird ein Objekt (Besucher) erstellt, welches für die Operationen verantwortlich ist.  Das Element bekommt enthält eine Methode, welches den Besucher übergeben bekommt und dann die entsprechende Operation durchführt. 
   
-  Problem: Eine Klasse (Element) soll unterschiedliche Methoden (PDF Generierung / XML Generierung) (mit unterschiedlichen Kontexten anwenden). Dies würde zum Verstoß des Single-Responsibility-Prinzip führen. 
-  
-  Lösung: Trennung der Operation und Klassenherachie. Es wird ein Objekt (Besucher) erstellt, welches für die Operationen verantwortlich ist.  Das Element bekommt enthält eine Methode, welches den Besucher übergeben bekommt und dann die entsprechende Operation durchführt. 
-  
-  <img src="assets/visitor.drawio.png" alt="Visitor Pattern" />
-</details>
+<img src="assets/visitor.drawio.png" alt="Visitor Pattern" />
+
 
 ## Chain of Responsibility
-
-<details>
   
 *Problem / Requirement*: An (e.g.) object must go through multiple tasks. These tasks must perform sequentially. 
 
@@ -602,8 +525,6 @@ Handler: handle(request)
 Handler: setHandler(Handler)
 ConreteHandler: handle(request)
 ```
-  
-</details>
 
 
 # SOLID
