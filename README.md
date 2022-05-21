@@ -1,6 +1,5 @@
 # Software Architecture Guide
 
-> The code examples are written in pseudocode.
 
 # Abbreviations
 
