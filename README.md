@@ -28,9 +28,10 @@
   - [White box](#white-box)
 - [Software Architecture Pattern](#software-architecture-pattern)
   - [Layers](#layers)
-  - [Microservice-Architektur](#microservice-architektur)
-  - [Event-Driven-Architektur](#event-driven-architektur)
-  - [Pipeline-Architektur](#pipeline-architektur)
+  - [Microservice architecture](#microservice-architecture)
+  - [Event-Driven architecture](#event-driven-architecture)
+  - [Pipeline architecture](#pipeline-architecture)
+  - [Service-oriented architecture](#service-oriented-architecture)
 - [Software quality](#software-quality)
 - [Evaluate software architecture](#evaluate-software-architecture)
 - [Relations](#relations)
@@ -208,14 +209,19 @@ A system/component/subsystem is designed from the "bottom" (detail level) to the
 - Layers to separate functionality and areas of responsibility
 - Calls only take place top-down, i.e., only the upper layers access lower layers, not vice versa
 
+## Microservice architecture
 
-## Microservice-Architektur
+## Event-driven architecture
 
+## Pipeline architecture
 
-## Event-Driven-Architektur
+## Service-oriented architecture
 
-
-## Pipeline-Architektur
+- The system consists of one or several services
+- Services can depend on other services
+- Service communicate mostly over HTTP like REST 
+- Most systems have a single database instance 
+- Every service has its function 
 
 
 # Software quality
