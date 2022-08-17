@@ -226,18 +226,8 @@ A system/component/subsystem is designed from the "bottom" (detail level) to the
 
 # Software quality
 
-According to ISO 25010:
+There is no universal definition of software quality. The ISO organization is constantly releasing new standards to describe software quality. These standards consist of many properties and sub-properties, such as maintainability. Conflicts of interest can quickly arise in the case of quality properties. For example, increased security can lead to poorer performance. It is often necessary to weigh up priorities.
 
-- Functional Suitability
-- Security
-- Usability
-- Maintainability
-- Portability
-- Compatibility
-- Performance
-- Reusability
-
-> Conflicts of interest can quickly arise in the case of quality properties. For example, increased security can lead to poorer performance. It is often necessary to weigh up priorities.
 
 # Evaluate software architecture
 
