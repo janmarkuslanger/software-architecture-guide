@@ -554,30 +554,26 @@ The open-closed principle means that changes to a module, which can be a module,
 
 
 ## Dependency injection
-- Abhängigkeiten einer Klasse oder eines Modules sollten nicht innerhalb konstruiert werden 
-- Abhängikeiten sollten übergeben werden 
+- Dependencies of a class or module should not be constructed inside.
+- Dependencies should be passed from outside (e.g Arg in a constructor)
 
 ```
-// Abhängigkeit wird in der Klasse erzeugt 
-// dies sollte vermieden werden 
-klasse MeineKlasse {
-  new Abhängigkeit()
+// bad
+class MyClass {
+  new Dependency()
 }
 
-// Abhängigkit wird an Klasse übergeben
-klasse MeineKlasse(Abhängigkeit meineAbhängigkeit) {
-  this.abhängigkeit = meineAbhängigkeit
+// good
+class MyClass(Dependency myDependency) {
+  this.dependency = myDependency
 }
 ```
 
 
 ## Interface vs implementation
 
-Entwickle gegen eine Schnittstelle, nicht gegen eine Implementierung.
-Denn Implementierungen können sich schnell ändern. Wenn man gegen eine Schnittstelle entwickelt, so kann sich die Implemetierung unabhängig davon ändern. 
-
-> Schnittstelle ist nicht unbedingt ein Interface
-
+Develop against an interface, not against an implementation.
+Because implementations can change quickly, the implementation can vary independently if you develop against an interface.
 
 # Clean coding
 
