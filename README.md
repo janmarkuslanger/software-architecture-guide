@@ -23,7 +23,7 @@
   - [Approaches](#approaches)
     - [Top-down approach](#top-down-approach)
     - [Bottom-up approach](#bottom-up-approach)
-    - [Ansichtbasierte Architektur](#ansichtbasierte-architektur)
+    - [View-based architecture](#view-based-architecture)
   - [Black box](#black-box)
   - [White box](#white-box)
 - [Software Architecture Pattern](#software-architecture-pattern)
