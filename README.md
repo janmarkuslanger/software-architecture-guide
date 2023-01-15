@@ -282,14 +282,14 @@ Solution: The constructor of the Singleton-Class should be private, and the inst
 
 Problem / Requirement: Complex objects (multiple steps, nested objects, many fields) should be created. 
   
-Solution: The creation of an object is done by multiple methods in its separated classes.
+Solution: The creation of an object is done by multiple methods in a seperated class.
 
 
 ## Prototype
   
-Problem: Aus einem bestehenden Objekt sollen ein oder mehrere Klone erstellt werden. Zudem ist das Klonen nicht immer so einfach, wenn das Objekt private Attribute aufweise. 
+Problem / Requirement: As a developer I want to create a clone of a specifiy object. The class of the object might have private attributes, so it is not possible to access it from outside. 
   
-Lösung: Es wird eine Prototypschnittstele implementiert mit (meist) einer Methode clone(), die einen Prototyp zurückgibt. Klassen und deren Objekte müssen diese Schnittstelle implementieren und somit auch die Methode clone(). Das bedeutet, dass man der Klasse die Aufgabe des Klonens übergibt. Diese kann dann auf alle privaten Attribute der eigenen Klasse zugreifen. 
+Solution: The class should implement a method called `clone`. This method create and returns a new object with the same config. 
 
 
 ## Structural patterns
