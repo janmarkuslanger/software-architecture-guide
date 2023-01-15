@@ -266,9 +266,9 @@ Design principles are helpful solutions for problems in software development. Ne
 
 ## Factory method
 
-Problem: Die Bestimmung der Erzeugung einer konkreten Klasse (Produkt) soll zur Laufzeit erfolgen und Implementierung und Erzeugung sollen größtenteils entkoppelt sein. 
+Problem / Requirement: As a developer I want to create classes dynamicly during the runtime escpecially when I do not know which class I will need. 
 
-Lösung: Die Erzeugung findet durch eine bestimmte (Fabrik-)Methode einer Klasse statt. Die Erzeugung des Produktes wird in einer Oberklasse definiert. Die Erzeugung eines konkreten Produktes wird in einer abgeleiteten Klasse durchgeführt. 
+Solution: Create a function (method) that has the responsiblity to create the objects of the classes. 
 
 
 ## Singleton
