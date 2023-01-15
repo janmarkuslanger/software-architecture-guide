@@ -280,7 +280,7 @@ Solution: The constructor of the Singleton-Class should be private, and the inst
 
 ## Builder
 
-Problem: Complex objects (multiple steps, nested objects, many fields) should be created. 
+Problem / Requirement: Complex objects (multiple steps, nested objects, many fields) should be created. 
   
 Solution: The creation of an object is done by multiple methods in its separated classes.
 
