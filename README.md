@@ -297,9 +297,9 @@ Solution: The class should implement a method called `clone`. This method create
 
 ## Adapter
 
-  
-Problem: 
-Ein bestehender Client will über eine bestehende eigene Schnittstelle auf eine Klasse/Objekt zugreifen.
+Problem / Requirement: As a developer I want to archieve compatibility of two classes. 
+
+Solution: One class will be used as an adapter class. In this class we use the methods from the other class and makes them compatible. So the developer just need to use the adapter class. 
 
 Lösung:
 Ein Adapter, der die Target Schnittstelle implementiert und die externe Klasse oder Objekt integriert. Auf diesen Adapter kann der Client nun zugreifen.
