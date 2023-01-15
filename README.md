@@ -417,14 +417,6 @@ Lösung: Trennung der Operation und Klassenherachie. Es wird ein Objekt (Besuche
 *Problem / Requirement*: An (e.g.) object must go through multiple tasks. These tasks must perform sequentially. 
 
 *Solution*: The object gets sent to a "Chain of Responsibility". This chain is a collection of handlers. The object goes through this chain until a handler answers the request.  
-```mermaid
-classDiagram
-Handler <|-- ConreteHandler
-<<Interface>> Handler
-Handler: handle(request)
-Handler: setHandler(Handler)
-ConreteHandler: handle(request)
-```
 
 
 # SOLID
