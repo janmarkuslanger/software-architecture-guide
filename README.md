@@ -1,6 +1,6 @@
 <h1 align="center">Software Architecture Guide</h1>
 
-<p align="center"><img src="logo.svg" alt="Logo"</p>
+<p align="center"><img src="logo.svg" alt="Logo" width="200" /></p>
 
 ---
 
