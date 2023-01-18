@@ -1,4 +1,8 @@
-# Software Architecture Guide
+<h1 align="center">Software Architecture Guide</h1>
+
+<p align="center"><img width="200" src="logo.svg" alt="Logo /></p>
+
+---
 
 
 # Abbreviations
