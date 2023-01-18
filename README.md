@@ -314,14 +314,12 @@ Ein Adapter, der die Target Schnittstelle implementiert und die externe Klasse o
 Problem / Requirements: 
 There are lots of different inheritances, including abstraction and implementation. This creates a confusing and difficult to extend class hierarchy.
 
-Solution:
 
+Solution:
 Abstraction and implementation are separated and outsourced in separate classes. The abstraction then contains a field as a reference. 
 
 For the abstraction, one could imagine a form. Concrete abstractions would be, for example, a sphere or a square. 
-
 For the implementation, one could imagine material. Concrete implementations would be iron and plastic.
-
 Thus, one could create an instance of a sphere and the instance of iron. The sphere, i.e. the abstraction, is then given the iron, the implementation.
 
 
