@@ -301,7 +301,7 @@ Solution: The class should implement a method called `clone`. This method create
 
 ## Adapter
 
-Problem / Requirement: As a developer I want to archieve compatibility of two classes. 
+Problem / Requirements: As a developer I want to archieve compatibility of two classes. 
 
 Solution: One class will be used as an adapter class. In this class we use the methods from the other class and makes them compatible. So the developer just need to use the adapter class. 
 
@@ -311,14 +311,18 @@ Ein Adapter, der die Target Schnittstelle implementiert und die externe Klasse o
 
 ## Bridge 
 
-Problem: 
-Durch diverse Vererbungen, welche Abstraktion und Implementierung beinhalten, entsteht eine unübersichtliche und schwer erweiterbare Klassenherachie. 
+Problem / Requirements: 
+There are lots of different inheritances, including abstraction and implementation. This creates a confusing and difficult to extend class hierarchy.
 
-Lösung: 
-- Trennung von Abstraktion und Implementierung. 
-- Es gibt eine Abstraktionsklasse, von der spezifische Abstraktionen entstehen können. z.B. Dokument -> Rechnung / Angebot
-- Es eine Implementierungklasse/Schnittstelle, von der spezifische Implementierungen entstehen können. -> Drucker -> HTMLDrucker / TextDrucker 
-- Es können mehrere Implementierung assoziert werden so Könnter der Abstraktion: Form -> Kugel; die Implementierung können zb Farbe -> Rot/Schwarz und/oder Größe -> klein/groß 
+Solution:
+
+Abstraction and implementation are separated and outsourced in separate classes. The abstraction then contains a field as a reference. 
+
+For the abstraction, one could imagine a form. Concrete abstractions would be, for example, a sphere or a square. 
+
+For the implementation, one could imagine material. Concrete implementations would be iron and plastic.
+
+Thus, one could create an instance of a sphere and the instance of iron. The sphere, i.e. the abstraction, is then given the iron, the implementation.
 
 
 ## Composition
