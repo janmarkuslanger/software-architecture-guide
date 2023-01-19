@@ -270,30 +270,41 @@ Design principles are helpful solutions for problems in software development. Ne
 
 ## Factory method
 
-Problem / Requirement: As a developer I want to create classes dynamicly during the runtime escpecially when I do not know which class I will need. 
+**Problem / Requirements:**<br />
+As a developer I want to create classes dynamicly during the runtime escpecially when I do not know which class I will need. 
 
-Solution: Create a function (method) that has the responsiblity to create the objects of the classes. 
+**Solution:**<br />
+Create a function (method) that has the responsiblity to create the objects of the classes. 
 
 
 ## Singleton
 
-Problem / Requirement: There should be only one instance from a specific class. 
+**Problem / Requirements:**<br />
+There should be only one instance from a specific class. 
 
-Solution: The constructor of the Singleton-Class should be private, and the instance stored in a private attribute. Additionally, one method (getInstance()) returns that instance. The method returns the instance if an instance is already there and creates one before if there is no instance.
+**Solution:**<br />
+The constructor of the Singleton-Class should be private, and the instance stored in a private attribute. 
+Additionally, one method (getInstance()) returns that instance. 
+The method returns the instance if an instance is already there and creates one before if there is no instance.
 
 
 ## Builder
 
-Problem / Requirement: Complex objects (multiple steps, nested objects, many fields) should be created. 
+**Problem / Requirements:**<br />
+Complex objects (multiple steps, nested objects, many fields) should be created. 
   
-Solution: The creation of an object is done by multiple methods in a seperated class.
+**Solution:**<br />
+The creation of an object is done by multiple methods in a seperated class.
 
 
 ## Prototype
   
-Problem / Requirement: As a developer I want to create a clone of a specifiy object. The class of the object might have private attributes, so it is not possible to access it from outside. 
+**Problem / Requirements:**<br />
+As a developer I want to create a clone of a specifiy object. 
+The class of the object might have private attributes, so it is not possible to access it from outside. 
   
-Solution: The class should implement a method called `clone`. This method create and returns a new object with the same config. 
+**Solution:**<br />
+The class should implement a method called `clone`. This method create and returns a new object with the same config. 
 
 
 ## Structural patterns
@@ -301,23 +312,22 @@ Solution: The class should implement a method called `clone`. This method create
 
 ## Adapter
 
-Problem / Requirements: As a developer I want to archieve compatibility of two classes. 
+**Problem / Requirements:**<br />
+As a developer I want to archieve compatibility of two classes. 
 
-Solution: One class will be used as an adapter class. In this class we use the methods from the other class and makes them compatible. So the developer just need to use the adapter class. 
-
-Lösung:
-Ein Adapter, der die Target Schnittstelle implementiert und die externe Klasse oder Objekt integriert. Auf diesen Adapter kann der Client nun zugreifen.
+**Solution:**<br />
+One class will be used as an adapter class. In this class we use the methods from the other class and makes them compatible. So the developer just need to use the adapter class. 
 
 
 ## Bridge 
 
-Problem / Requirements: 
+**Problem / Requirements:**<br />
 There are lots of different inheritances, including abstraction and implementation. This creates a confusing and difficult to extend class hierarchy.
 
-
-Solution:
+**Solution:**<br />
 Abstraction and implementation are separated and outsourced in separate classes. The abstraction then contains a field as a reference. 
 
+**Example:**<br />
 For the abstraction, one could imagine a form. Concrete abstractions would be, for example, a sphere or a square. 
 For the implementation, one could imagine material. Concrete implementations would be iron and plastic.
 Thus, one could create an instance of a sphere and the instance of iron. The sphere, i.e. the abstraction, is then given the iron, the implementation.
@@ -325,38 +335,51 @@ Thus, one could create an instance of a sphere and the instance of iron. The sph
 
 ## Composition
   
-Problem: Diverse zusammenhängende und einzelne Objekte sollen auf die gleiche Art und Weise behandelt werden 
+**Problem / Requirements:**<br />
+Various connected and individual objects are to be treated in the same way.
 
-Lösung: Implementierung einer Baumstruktur bestehend aus einer Komponente (Interface oder Abstrakte Klasse), einem Blatt (Einzelobjekt) und einem Kompositum (Zusammenhängendes Objekt).
+**Solution:**<br />
+Implementation of a tree structure consisting of a component (interface or abstract class), a leaf (single object) and a composite (related object).
 
 
 ## Decorator
 
-Problem: Eine Erweiteurng einer (abstrakten) Basisklasse würde zu sehr vielen Klassen führen. 
+**Problem / Requirements:**<br />
+An extension of an (abstract) base class would lead to many classes.
 
-Lösung: Eine konkrette Komponente wird um Varianten "dekoriert". 
+**Solution:**<br />
+A concrete component is "decorated" with variants.
+Thus a decorating class is created which has a reference to a base class.
+The decoration class then "decorates" the base class. 
 
  
 ## Facade
   
-Problem: Clients müssen auf komplexe und unübersichtliche Systeme zugreifen
+**Problem / Requirements:**<br />
+Clients need to access complex and confusing systems.
 
-Lösung: Vereinigung/Bündelung mehrere Systeme/Komponente/.. in einer Fassade. Clients greifen nur auf diese Fassade zu und können diese als vereinfachte Schnittstelle nutzen. 
-Die Systeme dahinter sind verborgen. 
+**Solution:**<br />
+Unification/bundling of several systems/components/... in one façade.
+Clients only access this façade and can use it as a simplified interface. 
+The systems behind it are hidden. 
 
 
 ## Proxy
 
-Problem: Auf ein Objekt / Klasse soll nicht direkt zugegriffen werden.
+**Problem / Requirements:**<br />
+An object / class is not to be accessed directly.
   
-Lösung: Es wird ein Stellvertreter (Proxy) vor das Zielobjekt gestellt. Beide imlementieren die selbe Schnittstelle. Der Proxy greift dann auf das Zielobjekt zu.  
+**Solution:**<br />
+A proxy is placed in front of the target object. Both implement the same interface. The proxy then accesses the target object. 
 
 
 ## Flyweight
 
-Problem: Viele Objekte im System verbrauchen viele Ressourcen. 
+**Problem / Requirements:**<br />
+Many objects in the system consume many resources.
 
-Lösung: Herauslösen von wiederverwendbaren Objekten. 
+**Solution:**<br />
+Detach reusable objects. 
 
 
 ## Behavioral patterns
@@ -364,65 +387,94 @@ Lösung: Herauslösen von wiederverwendbaren Objekten.
 
 ## Observer
 
-Problem: Objekte in einem System wollen über bestimmte Events informiert werden. 
+**Problem / Requirements:**<br />
+Objects in a system want to be informed about certain events.
 
-Lösung: Implementierung eines Publisher-Subscriber Patterns. Der Subscriber kann sich beim Publisher "anmelden" um auf Events zu "hören". Der Publisher sammelt diese. Sobald ein Event veröffentlicht wird, werden alle Subscriber informiert. 
+**Solution:**<br />
+Implementation of a publisher-subscriber pattern.
+The subscriber can "register" with the publisher to "listen" for events.
+The publisher collects these. As soon as an event is published, all subscribers are informed. 
 
 
 ## Iterator
 
-Problem: Es soll möglich sein, über eine komplexe Gruppe von Objekten zu iterieren. Baumstruktur / Liste 
+**Problem / Requirements:**<br />
+It should be possible to iterate over a complex group of objects. Tree structure / list.
   
-Lösung: Strukturen soll Durchlaufen werden mit einem Iterator, der immer eine Referenz auf das nächste Elemente besitzt. Dabei gibt es den Iterator, der die Methoden bereithält, um das nächste Elemente zu erhalten. Die IteratorKollektion ist für die Erstellung der Kollektion zuständig. 
+**Solution:**<br />
+Structures are to be traversed with an iterator that always has a reference to the next element.
+There is the iterator that holds the methods ready to get the next element. 
+The iterator collection is responsible for creating the collection. 
 
 
 ## State
 
-Problem: Der Zustand wird direkt in den Klassen und Objekten behandelt. Das sorgt für viele if-else Konditionen in den Klassen. 
+**Problem / Requirements:**<br />
+The condition is handled directly in the classes and objects. This makes for many if-else conditions in the classes. 
   
-Lösung: Für Zustände werden Klasse implementiert, die diese Zustände halten. 
+**Solution:**<br />
+For states, classes are implemented that store these states. 
  
  
 ## Mediator
 
-Problem: Viele Klassen agieren zusammen (z.B UI Elemente eines Formulars) und sind somit eng gekoppelt, da diese all untereinander abhängen.
+**Problem / Requirements:**<br />
+Many classes act together (e.g. UI elements of a form) and are thus closely coupled, as they all depend on each other.
   
-Lösung: Förderung der losen Kopplung, in dem eine Zentrale Klasse als Vermittler dient. Somit liegt die gesamte Komplexität in dieser Vermittlerklasse. 
+**Solution:**<br />
+Promotion of loose coupling, in which a central class serves as an intermediary.
+Thus, all the complexity lies in this mediator class.
   
 
 ## Template method
 
-Problem: Mehrere Klassen weisen viele gleiche Muster (bzw. Code). 
+**Problem / Requirements:**<br />
+Several classes have many of the same patterns (or code). 
   
-Lösung: Eine abstrakte Klasse hält eine templateMethod und die Methoden der einzelnen Schritte. In der Methode templateMethod werden die Schritte koordiniert. Die konkreten Klasse, die von der abstrakten Klasse erben, können dann einzelne Schritte überschreiben, wenn diese benötigt werden. 
+**Solution:**<br />
+An abstract class holds a templateMethod and the methods of the individual steps. The steps are coordinated in the templateMethod method. The concrete class, which inherits from the abstract class, can then overwrite individual steps if they are needed.
   
 
 ## Memento
 
-Problem: Zustände eines Objektes sollen gespeichert werden, damit man auf diese zu einem späteren Zeitpunkt zurückgreifen kann bzw diese wiederherstellen kann. 
+**Problem / Requirements:**<br />
+The states of an object are to be saved so that they can be accessed or restored at a later time. 
 
-Lösung: Einem Uhrheber (belieblige Klasse) wird ein Memento zur Verfügung gestellt. Dieser sorgt dafür, dass der Zustand (private inner Attribute) von Uhrheber gespeichert wird. Objekte des Memento werden dann in einem sog. Aufbewahrer gespeichert. 
+**Solution:**<br />
+A memento is made available to a clock lifter (any class).
+This ensures that the state (private inner attributes) of the clock lifter is saved.
+Objects of the memento are then stored in a so-called keeper. 
 
 
 ## Strategy
 
-Problem: Für einen Kontext (z.B Klasse) soll es mehrere Implementierung/Algorithmen geben 
+**Problem / Requirements:**<br />
+For one context (e.g. class) there should be several implementations/algorithms 
 
-Lösung: Ein Kontext besitzt ein Attribute welche auf eine Strategie zeigt. In dieser Strategie sind die unterschiedlichen Implementierungen enthalten (Eine Strategy - eine Implementierung). Die Art der Implementierung wird somit nicht von dem Context selber gesteuert, sondern hängt davon ab, welche Strategie der Client zuweist. 
+**Solution:**<br />
+A context has an attribute that points to a strategy.
+This strategy contains the different implementations (one strategy - one implementation).
+The type of implementation is therefore not controlled by the context itself, but depends on which strategy the client assigns.
 
 
 ## Visitor
 
-Problem: Eine Klasse (Element) soll unterschiedliche Methoden (PDF Generierung / XML Generierung) (mit unterschiedlichen Kontexten anwenden). Dies würde zum Verstoß des Single-Responsibility-Prinzip führen. 
+**Problem / Requirements:**<br />
+A class (element) should use different methods (PDF generation / XML generation) (with different contexts).
+This would lead to a violation of the single-responsibility principle. 
   
-Lösung: Trennung der Operation und Klassenherachie. Es wird ein Objekt (Besucher) erstellt, welches für die Operationen verantwortlich ist.  Das Element bekommt enthält eine Methode, welches den Besucher übergeben bekommt und dann die entsprechende Operation durchführt. 
+**Solution:**<br />
+Separation of the operation and class hierarchy. An object (visitor) is created which is responsible for the operations.
+The element gets contains a method, which gets the visitor passed and then performs the corresponding operation. 
 
 
 ## Chain of Responsibility
   
-*Problem / Requirement*: An (e.g.) object must go through multiple tasks. These tasks must perform sequentially. 
+**Problem / Requirements:**<br />
+An (e.g.) object must go through multiple tasks. These tasks must perform sequentially. 
 
-*Solution*: The object gets sent to a "Chain of Responsibility". This chain is a collection of handlers. The object goes through this chain until a handler answers the request.  
+**Solution:**<br />
+The object gets sent to a "Chain of Responsibility". This chain is a collection of handlers. The object goes through this chain until a handler answers the request.  
 
 
 # SOLID
