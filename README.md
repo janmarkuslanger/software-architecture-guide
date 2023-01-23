@@ -484,27 +484,39 @@ The object gets sent to a "Chain of Responsibility". This chain is a collection 
 There should be only one reason (actor) to change a class. 
 Single responsibility does not mean that a block should only do one thing. 
 
+
 ## Open-closed Principle
   
 “Modules should be both open (for extension) and closed (for modification).” - Bertrand Meyer
 
 The open-closed principle means that if you need to change a module it should be possible without modifying the module itself. 
 
+
 ## Liskov Substitution Principle
 
 The Liskov Substitution Principle states that objects of a superclass should be able to be replaced with objects of a subclass without affecting the correctness of the program.
 
+
 ## Interface Segregation Principle
+
+The Interface Segregation Principle means that no code should depend on methods it doesn´t use.
+
+For example if there is an interface called `Car` with the methods `refuel`. 
+Then you want to create a class `ElectricCar` that implements the `Car` interface. 
+Then it must implement the `refuel` method, which doesn´t make sense.
+
 
 ## Dependency Inversion Principle
 
-- Höhere Module / Klassen sollten nicht von Niedrigeren Modulen / Klassen abhängen
-- Klassen/Modulen sollten über Schnittstellen abstrahiert werden
-- Schnittstellen sollten nicht von Details abhängen
-- Details sollten von Schnittstellen abhängen
+The Dependency Inversion Principle consists of the following things: 
+
+- Higher modules/classes should not depend on lower modules/classes
+- Classes/modules should be abstracted by interfaces
+- Interfaces should not depend on details
+- Details should depend on interfaces
+
 
 # Design principle
-
 
 ## Dependency injection
 - Dependencies of a class or module should not be constructed inside.
