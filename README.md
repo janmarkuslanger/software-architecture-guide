@@ -215,6 +215,9 @@ A system/component/subsystem is designed from the "bottom" (detail level) to the
 
 ## Microservice architecture
 
+Microservice architecture descripes a system that consists of multiple services. 
+Each service must be loosley couped, maintainable and testable and independently deployable.
+
 ## Event-driven architecture
 
 ## Pipeline architecture
