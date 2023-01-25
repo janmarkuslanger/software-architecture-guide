@@ -220,6 +220,9 @@ Each service must be loosley couped, maintainable and testable and independently
 
 ## Event-driven architecture
 
+Event-driven architecture is a design pattern in which an event or a change in state within a system triggers a specific action or response.
+In this architecture, events are the primary means of communication between different components of the system, allowing for loose coupling and flexibility.
+
 ## Pipeline architecture
 
 ## Service-oriented architecture
