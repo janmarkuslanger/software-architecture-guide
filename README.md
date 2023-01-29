@@ -225,6 +225,9 @@ In this architecture, events are the primary means of communication between diff
 
 ## Pipeline architecture
 
+The pipeline architecure is a design pattern for complex tasks that needs to be executed in sequence. 
+Every pipeline has it own task and modifies data. When it is done it will process data to the next pipeline. 
+
 ## Service-oriented architecture
 
 - The system consists of one or several services
