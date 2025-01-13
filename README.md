@@ -4,569 +4,383 @@
 
 ---
 
-
 # Abbreviations
 
-- Software Architektur -> SA
-- Software engineering -> SE
-- Test driven development -> TDD
-- Domain driven design -> DDD
+- **Software Architecture** → SA  
+- **Software Engineering** → SE  
+- **Test-Driven Development** → TDD  
+- **Domain-Driven Design** → DDD  
 
 # Content
 
-
-- [Definitions](#definitions)
-- [Terms](#terms)
-- [Communication](#communication)
-  - [Adjusted Language](#adjusted-language)
-  - [Explicit vs Implicit](#explicit-vs-implicit)
-- [Tasks of a Software Architect](#tasks-of-a-software-architect)
-- [Stakeholder analysis](#stakeholder-analysis)
-- [Risk analysis](#risk-analysis)
-- [Design software architecture](#design-software-architecture)
-  - [Approaches](#approaches)
-    - [Top-down approach](#top-down-approach)
-    - [Bottom-up approach](#bottom-up-approach)
-    - [View-based architecture](#view-based-architecture)
-  - [Black box](#black-box)
-  - [White box](#white-box)
-- [Software Architecture Pattern](#software-architecture-pattern)
-  - [Layers](#layers)
-  - [Microservice architecture](#microservice-architecture)
-  - [Event-Driven architecture](#event-driven-architecture)
-  - [Pipeline architecture](#pipeline-architecture)
-  - [Service-oriented architecture](#service-oriented-architecture)
-- [Software quality](#software-quality)
-- [Evaluate software architecture](#evaluate-software-architecture)
-- [Relations](#relations)
-- [Design patterns](#design-patterns)
-  - [Creational patterns](#creational-patterns)
-    - [Factory method](#factory-method)
-    - [Singleton](#singleton)
-    - [Builder](#builder)
-    - [Prototype](#prototype)
-  - [Structural patterns](#structural-patterns)
-    - [Adapter](#adapter)
-    - [Bridge](#bridge)
-    - [Composite](#composite)
-    - [Decorator](#decorator)
-    - [Fassade](#fassade)
-    - [Proxy](#proxy)
-    - [Flyweight](#flyweight)
-  - [Behavioral patterns](#behavioral-patterns)
-    - [Observer](#observer)
-    - [Iterator](#iterator)
-    - [State](#state)
-    - [Mediator](#mediator)
-    - [Template method](#template-method)
-    - [Memento](#memento)
-    - [Strategy](#strategy)
-    - [Visitor](#visitor)
-    - [Chain of Responsibility](#chain-of-responsibility)
-- [SOLID](#solid)
-  - [Single-responsiblity Principle](#single-responsiblity-principle)
-  - [Open-closed Principle](#open-closed-principle)
-  - [Liskov Substitution Principle](#liskov-substitution-principle)
-  - [Interface Segregation Principle](#interface-segregation-principle)
-  - [Dependency Inversion Principle](#dependency-inversion-principle)
-- [Design principles](#design-principles)
-  - [Dependency injection](#dependency-injection)
-  - [Interface vs Implementation](#interface-vs-implementation)
-- [Clean coding](#clean-coding)
-- [Resources](#resources)
-- [Literature](#literature)
-
+- [Definitions](#definitions)  
+- [Terms](#terms)  
+- [Communication](#communication)  
+  - [Adjusted Language](#adjusted-language)  
+  - [Explicit vs. Implicit](#explicit-vs-implicit)  
+- [Tasks of a Software Architect](#tasks-of-a-software-architect)  
+- [Stakeholder Analysis](#stakeholder-analysis)  
+- [Risk Analysis](#risk-analysis)  
+- [Design Software Architecture](#design-software-architecture)  
+  - [Approaches](#approaches)  
+    - [Top-Down Approach](#top-down-approach)  
+    - [Bottom-Up Approach](#bottom-up-approach)  
+    - [View-Based Architecture](#view-based-architecture)  
+  - [Black Box](#black-box)  
+  - [White Box](#white-box)  
+- [Software Architecture Patterns](#software-architecture-patterns)  
+  - [Layers](#layers)  
+  - [Microservice Architecture](#microservice-architecture)  
+  - [Event-Driven Architecture](#event-driven-architecture)  
+  - [Pipeline Architecture](#pipeline-architecture)  
+  - [Service-Oriented Architecture](#service-oriented-architecture)  
+- [Software Quality](#software-quality)  
+- [Evaluate Software Architecture](#evaluate-software-architecture)  
+- [Relations](#relations)  
+- [Design Patterns](#design-patterns)  
+  - [Creational Patterns](#creational-patterns)  
+    - [Factory Method](#factory-method)  
+    - [Singleton](#singleton)  
+    - [Builder](#builder)  
+    - [Prototype](#prototype)  
+  - [Structural Patterns](#structural-patterns)  
+    - [Adapter](#adapter)  
+    - [Bridge](#bridge)  
+    - [Composite](#composite)  
+    - [Decorator](#decorator)  
+    - [Facade](#facade)  
+    - [Proxy](#proxy)  
+    - [Flyweight](#flyweight)  
+  - [Behavioral Patterns](#behavioral-patterns)  
+    - [Observer](#observer)  
+    - [Iterator](#iterator)  
+    - [State](#state)  
+    - [Mediator](#mediator)  
+    - [Template Method](#template-method)  
+    - [Memento](#memento)  
+    - [Strategy](#strategy)  
+    - [Visitor](#visitor)  
+    - [Chain of Responsibility](#chain-of-responsibility)  
+- [SOLID](#solid)  
+  - [Single-Responsibility Principle](#single-responsibility-principle)  
+  - [Open-Closed Principle](#open-closed-principle)  
+  - [Liskov Substitution Principle](#liskov-substitution-principle)  
+  - [Interface Segregation Principle](#interface-segregation-principle)  
+  - [Dependency Inversion Principle](#dependency-inversion-principle)  
+- [Design Principles](#design-principles)  
+  - [Dependency Injection](#dependency-injection)  
+  - [Interface vs. Implementation](#interface-vs-implementation)  
+- [Clean Coding](#clean-coding)  
+- [Resources](#resources)  
+- [Literature](#literature)  
 
 ---
 
-
 # Definitions
 
-There is not one final definition for software archtecture. 
-Several authors/organizations will be cited at this point. 
+There is no single, definitive definition for software architecture. Different authors and organizations provide their interpretations:
 
-"Architecture is about the important stuff. Whatever that is." - Ralph Johnson
-
-"The goal of software architecture is to minimize the human resources required to build and maintain the required system" - Robert C. Martin
-
-"Fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution." - ISO/IEC/IEEE 42010 
-
+- "Architecture is about the important stuff. Whatever that is." – Ralph Johnson  
+- "The goal of software architecture is to minimize the human resources required to build and maintain the required system." – Robert C. Martin  
+- "Fundamental concepts or properties of a system in its environment embodied in its elements, relationships, and in the principles of its design and evolution." – ISO/IEC/IEEE 42010  
 
 # Terms
 
-**Building block**: A building block is a unit of a system. A building block could be a component, module, class, configuration, system, or subsystem.
-
-**System**: A system is an association of building blocks. A system has a specific goal. 
-
-**Artifact**: An artifact is a "piece" of a product. It can be tests, code, documentation, or anything similar. 
-
-**Coupling**: Degree of dependency between two building blocks. Types of dependencies are temporal, data, structure, or hardware.
-Example: Imagine A class car that uses many different classes in its methods like an Engine class or Tires class has a high coupling. 
-
-**Cohesion**: Degree of cohesion of a unit in a system. Functionality, values, and properties with the same scope should belong together. 
-Example: Imagine two methods for a Car.
-
+- **Building Block**: A unit of a system, such as a component, module, class, or subsystem.  
+- **System**: A collection of building blocks working together to achieve a specific goal.  
+- **Artifact**: A "piece" of a product, such as code, documentation, or tests.  
+- **Coupling**: The degree of dependency between two building blocks. Types include temporal, data, structural, and hardware coupling.  
+  _Example_: A `Car` class heavily using `Engine` and `Tires` classes has high coupling.  
+- **Cohesion**: The degree to which elements of a unit belong together.  
+  _Example_: Methods related to a `Car` should all be part of the `Car` class.  
 
 # Communication
 
 ## Adjusted Language
 
-The way an architect talks to stakeholders should be different.
-It should depend on the stakeholders and their technical knowledge. 
+The language used by a software architect should adapt to the audience's technical knowledge, ensuring effective communication with stakeholders.
 
+## Explicit vs. Implicit
 
-## Explicit vs Implicit
-
-Assumptions and decisions should always be explicitly communicated and documented.
-Implicit assumptions such as "It was clear to me" lead to misunderstandings and problems. 
-
+All assumptions and decisions must be explicitly communicated and documented. Avoid implicit assumptions like, "It was clear to me," which lead to misunderstandings.
 
 # Tasks of a Software Architect
 
-- Analyze, clarify and, if necessary, refine requirements 
-- Make architectural decisions
-- Continuously analyze architecture
-- Build knowledge in the business area
-- Capture current trends 
-- Communicate & document design decisions & gather feedback 
+- Analyze, clarify, and refine requirements  
+- Make architectural decisions  
+- Continuously evaluate architecture  
+- Build knowledge in the domain area  
+- Stay updated on current trends  
+- Communicate and document design decisions, gathering feedback  
 
+# Stakeholder Analysis
 
-# Stakeholder analysis
+Stakeholder analysis involves identifying the people relevant to the project. Stakeholders vary by organization and project, including development managers, budget managers, other departments, or customers. After identifying stakeholders, they are prioritized by their level of involvement and information needs.
 
-The stakeholder analysis is about identifying the people relevant to the project. These stakeholders can vary significantly from one organization to another and from one project to another, be it the development manager, the budget manager, another department, or, in the case of a service company, the customer. Each of these stakeholders contributes to the success of the project. Once the stakeholders have been identified, they are prioritized, i.e., do they only need to be informed, or are they active participants in the project.
+# Risk Analysis
 
+Risk analysis includes:
 
-# Risk analysis
+- Identifying risks  
+- Reducing the consequences of risks  
+- Reducing the probability of risks occurring  
+- Monitoring risks  
 
-The risk analysis includes the following steps:
+### Types of Risks
 
-- Identify the risk
-- Reducing the consequences of a risk
-- Reducing the probability of a risk occurring
-- Risk monitoring
+- **Known Risks**: Risks already identified and likely to occur.  
+- **Known Risks from Other Projects**: Risks known from experience but not yet relevant to the project.  
+- **Unknown Risks**: Risks not yet identified.
 
-It is essential to consider the different types of risks:
+### Steps in Risk Management
 
-- Known risks: risks that are already known and can/will occur.
-- Known risks from other projects: This means chances known from experience, but it is still unknown whether they have any relevance for the project.
-- Unknown risks
+1. Risk Identification  
+2. Risk Analysis  
+   - Qualitative Risk Analysis  
+   - Quantitative Risk Analysis  
+3. Risk Planning  
+4. Risk Monitoring  
 
-Within the software architecture, we can consider the following processes:
-
-- Risk Identification
-- Risk Analysis
-  - Qualitative risk analysis
-  - Quantitative Risk Analysis
-- Risk planning
-- Risk monitoring
-
-
-# Design software architecture
-
+# Design Software Architecture
 
 ## Approaches
 
-- Software architecture should be developed iteratively if possible
-- Obtain early feedback
+- Iterative development is recommended.  
+- Gather early feedback.  
 
+### Top-Down Approach
 
-### Top-down approach
+Design begins with high-level components and progresses to detailed levels.
 
-A system/component/subsystem is designed from "top" to "bottom".
+### Bottom-Up Approach
 
+Design begins with detailed components and integrates them into higher levels.
 
-### Bottom-up approach
+### View-Based Architecture
 
-A system/component/subsystem is designed from the "bottom" (detail level) to the "top".
+Focuses on:
 
+- **Component View**
+- **Runtime View**
+- **Hardware View**
+- **Context View**
 
-### View-based architecture
+## Black Box
 
-- Components View
-- Runtime View
-- Hardware View
-- Context View
+A "black box" hides its internal structure and focuses on:
 
+- External behavior  
+- Provided and required interfaces  
 
-## Black box
+## White Box
 
-- A "black box" hides its interior. 
-- Inside: dependencies / processes / data structure / data
-- Focus on the external behavior 
-- Tasks of the building block to the outside
-- Offered interfaces 
-- Required interfaces 
+A "white box" reveals its internal structure, including:
 
+- Inner components  
+- Dependencies  
 
-## White box 
-
-- a "white box" shows its inner behaviour and attributes 
-- Inner: Inner structure / dependencies / data structure 
-
-
-# Software Architecture Pattern
-
+# Software Architecture Patterns
 
 ## Layers
 
-- Abstraction layers: higher layers access lower layers via interface
-- Layers to separate functionality and areas of responsibility
-- Calls only take place top-down, i.e., only the upper layers access lower layers, not vice versa
+- Higher layers access lower layers through interfaces.  
+- Layers separate functionality and responsibilities.  
+- Only downward calls are allowed (top-down).
 
-## Microservice architecture
+## Microservice Architecture
 
-Microservice architecture descripes a system that consists of multiple services. 
-Each service must be loosley couped, maintainable and testable and independently deployable.
+Microservice architecture describes systems composed of small, independent, and loosely coupled services. Each service is maintainable, testable, and deployable independently.
 
-## Event-driven architecture
+## Event-Driven Architecture
 
-Event-driven architecture is a design pattern in which an event or a change in state within a system triggers a specific action or response.
-In this architecture, events are the primary means of communication between different components of the system, allowing for loose coupling and flexibility.
+Event-driven architecture centers on events triggering specific actions. This enables loose coupling and flexibility between components.
 
-## Pipeline architecture
+## Pipeline Architecture
 
-The pipeline architecure is a design pattern for complex tasks that needs to be executed in sequence. 
-Every pipeline has it own task and modifies data. When it is done it will process data to the next pipeline. 
+Pipeline architecture is suited for sequential tasks. Each stage in the pipeline performs a task and passes data to the next stage.
 
-## Service-oriented architecture
+## Service-Oriented Architecture
 
-- The system consists of one or several services
-- Services can depend on other services
-- Service communicate mostly over HTTP like REST 
-- Most systems have a single database instance 
-- Every service has its function 
+- The system consists of one or more services.  
+- Services often communicate over HTTP (e.g., REST).  
+- Typically, there is a shared database instance.  
+- Each service has a dedicated function.  
 
+# Software Quality
 
-# Software quality
+Software quality lacks a universal definition. ISO standards define quality attributes, such as maintainability. Prioritizing quality attributes often involves trade-offs—e.g., security may reduce performance.
 
-There is no universal definition of software quality. The ISO organization is constantly releasing new standards to describe software quality. These standards consist of many properties and sub-properties, such as maintainability. Conflicts of interest can quickly arise in the case of quality properties. For example, increased security can lead to poorer performance. It is often necessary to weigh up priorities.
+# Evaluate Software Architecture
 
+Evaluation focuses on:
 
-# Evaluate software architecture
+- **Processes**  
+- **Artifacts** (e.g., code, requirements, documentation)  
 
-Two things can be evaluated in the context of software architecture:
-- Processes
-- Artifacts (code, requirements, documents)
+Evaluation methods include:
 
-For this purpose there is also the 
-
-- qualitative assessment 
-- quantitative evaluation 
-
+- **Qualitative Assessment**  
+- **Quantitative Evaluation**  
 
 # Relations
 
-**Inheritance**: This relation exists when a class inherits from another. 
-E.g., When Class `Employee` (Subclass) inherits from `Human` (Superclass) . 
+**Inheritance**: A subclass inherits from a superclass (e.g., `Employee` inherits from `Human`).
 
-**Association**: An arcitect should use Association when there is no dependency between two classes, but those classes can communicate.
-E.g., Modeling a company with `Employee` you could add `Car` as an association because the Employee can use it. 
+**Association**: Two classes interact without strong dependencies (e.g., `Employee` uses `Car`).
 
-**Aggregation**: An arcitect should use Aggregation if one class consists of several other classes. But these classes can also exist on their own. 
-E.g., the class `BusDriver` consists of Class `Bus` and `Driver`. `Bus` and `Driver` can exist on their own. 
+**Aggregation**: A class is composed of other classes, which can exist independently (e.g., `BusDriver` includes `Bus` and `Driver`).
 
-**Composition**: An arcitect should use Composition if one class consists of several other classes. But these classes cannot exist on their own. 
-E.g., the class `Human` consists of Class `Hand` and `Leg`. Both classes cannot exist on their own.
+**Composition**: A class is composed of parts that cannot exist independently (e.g., `Human` with `Hand` and `Leg`).
 
+# Design Patterns
 
-# Design principles
+Design principles are helpful solutions for common software development problems. They can, however, increase complexity if applied unnecessarily. Patterns should be adapted to specific contexts where needed.
 
-Design principles are helpful solutions for problems in software development. Nevertheless, design patterns can increase complexity without an advantage. It is possible to adjust those patterns if that will fit better to a problem. 
+## Creational Patterns
 
+### Factory Method
 
-## Creational patterns 
+**Problem**: You need to create classes dynamically at runtime, especially when the required class is not known in advance.  
+**Solution**: Implement a method that creates instances of classes dynamically.
 
+### Singleton
 
-## Factory method
+**Problem**: Only one instance of a specific class should exist.  
+**Solution**: Make the constructor private and provide a static method (`getInstance()`) to return the single instance. This ensures only one instance exists.
 
-**Problem / Requirements:**<br />
-As a developer I want to create classes dynamicly during the runtime escpecially when I do not know which class I will need. 
+### Builder
 
-**Solution:**<br />
-Create a function (method) that has the responsiblity to create the objects of the classes. 
+**Problem**: Complex objects requiring multiple steps or nested configurations need to be created.  
+**Solution**: Use a builder class to construct the object step-by-step.
 
+### Prototype
 
-## Singleton
+**Problem**: You need to create clones of specific objects.  
+**Solution**: Implement a `clone` method in the class to create and return a copy of the object.
 
-**Problem / Requirements:**<br />
-There should be only one instance from a specific class. 
+## Structural Patterns
 
-**Solution:**<br />
-The constructor of the Singleton-Class should be private, and the instance stored in a private attribute. 
-Additionally, one method (getInstance()) returns that instance. 
-The method returns the instance if an instance is already there and creates one before if there is no instance.
+### Adapter
 
+**Problem**: Two classes need to work together but have incompatible interfaces.  
+**Solution**: Use an adapter class to bridge the compatibility gap.
 
-## Builder
+### Bridge
 
-**Problem / Requirements:**<br />
-Complex objects (multiple steps, nested objects, many fields) should be created. 
-  
-**Solution:**<br />
-The creation of an object is done by multiple methods in a seperated class.
+**Problem**: A complex inheritance structure makes the system difficult to extend.  
+**Solution**: Separate abstraction and implementation into independent hierarchies.
 
+### Composite
 
-## Prototype
-  
-**Problem / Requirements:**<br />
-As a developer I want to create a clone of a specifiy object. 
-The class of the object might have private attributes, so it is not possible to access it from outside. 
-  
-**Solution:**<br />
-The class should implement a method called `clone`. This method create and returns a new object with the same config. 
+**Problem**: Treat individual objects and compositions of objects uniformly.  
+**Solution**: Use a tree structure with components, leaves (individual objects), and composites (collections).
 
+### Decorator
 
-## Structural patterns
+**Problem**: Extending functionality through inheritance creates excessive subclasses.  
+**Solution**: Use decorator classes to dynamically add behavior to components.
 
+### Facade
 
-## Adapter
+**Problem**: Clients interact with a complex subsystem.  
+**Solution**: Provide a simplified interface (facade) to the subsystem.
 
-**Problem / Requirements:**<br />
-As a developer I want to archieve compatibility of two classes. 
+### Proxy
 
-**Solution:**<br />
-One class will be used as an adapter class. In this class we use the methods from the other class and makes them compatible. So the developer just need to use the adapter class. 
+**Problem**: Access to an object needs to be controlled.  
+**Solution**: Use a proxy class to manage access to the real object.
 
+### Flyweight
 
-## Bridge 
+**Problem**: Many similar objects consume excessive resources.  
+**Solution**: Share common objects to reduce memory usage.
 
-**Problem / Requirements:**<br />
-There are lots of different inheritances, including abstraction and implementation. This creates a confusing and difficult to extend class hierarchy.
+## Behavioral Patterns
 
-**Solution:**<br />
-Abstraction and implementation are separated and outsourced in separate classes. The abstraction then contains a field as a reference. 
+### Observer
 
-**Example:**<br />
-For the abstraction, one could imagine a form. Concrete abstractions would be, for example, a sphere or a square. 
-For the implementation, one could imagine material. Concrete implementations would be iron and plastic.
-Thus, one could create an instance of a sphere and the instance of iron. The sphere, i.e. the abstraction, is then given the iron, the implementation.
+**Problem**: Objects need to be notified about changes in another object.  
+**Solution**: Use a publisher-subscriber pattern to notify observers about changes.
 
+### Iterator
 
-## Composition
-  
-**Problem / Requirements:**<br />
-Various connected and individual objects are to be treated in the same way.
+**Problem**: You need to traverse a complex object structure.  
+**Solution**: Implement an iterator to sequentially access elements of the structure.
 
-**Solution:**<br />
-Implementation of a tree structure consisting of a component (interface or abstract class), a leaf (single object) and a composite (related object).
+### State
 
+**Problem**: State management within objects results in numerous conditional statements.  
+**Solution**: Implement state classes to encapsulate specific states.
 
-## Decorator
+### Mediator
 
-**Problem / Requirements:**<br />
-An extension of an (abstract) base class would lead to many classes.
+**Problem**: Multiple objects are tightly coupled and depend on each other.  
+**Solution**: Use a mediator class to manage communication between objects.
 
-**Solution:**<br />
-A concrete component is "decorated" with variants.
-Thus a decorating class is created which has a reference to a base class.
-The decoration class then "decorates" the base class. 
+### Template Method
 
- 
-## Facade
-  
-**Problem / Requirements:**<br />
-Clients need to access complex and confusing systems.
+**Problem**: Common behavior is duplicated across subclasses.  
+**Solution**: Define the behavior in a base class and allow subclasses to override specific steps.
 
-**Solution:**<br />
-Unification/bundling of several systems/components/... in one façade.
-Clients only access this façade and can use it as a simplified interface. 
-The systems behind it are hidden. 
+### Memento
 
+**Problem**: You need to save and restore an object's state.  
+**Solution**: Use a memento class to capture and restore the object's state.
 
-## Proxy
+### Strategy
 
-**Problem / Requirements:**<br />
-An object / class is not to be accessed directly.
-  
-**Solution:**<br />
-A proxy is placed in front of the target object. Both implement the same interface. The proxy then accesses the target object. 
+**Problem**: A class needs to support multiple algorithms or behaviors.  
+**Solution**: Define strategies as separate classes and let the class use them interchangeably.
 
+### Visitor
 
-## Flyweight
+**Problem**: Adding new operations to a class hierarchy violates the Single Responsibility Principle.  
+**Solution**: Implement operations as separate visitor classes that operate on the class hierarchy.
 
-**Problem / Requirements:**<br />
-Many objects in the system consume many resources.
+### Chain of Responsibility
 
-**Solution:**<br />
-Detach reusable objects. 
-
-
-## Behavioral patterns
-
-
-## Observer
-
-**Problem / Requirements:**<br />
-Objects in a system want to be informed about certain events.
-
-**Solution:**<br />
-Implementation of a publisher-subscriber pattern.
-The subscriber can "register" with the publisher to "listen" for events.
-The publisher collects these. As soon as an event is published, all subscribers are informed. 
-
-
-## Iterator
-
-**Problem / Requirements:**<br />
-It should be possible to iterate over a complex group of objects. Tree structure / list.
-  
-**Solution:**<br />
-Structures are to be traversed with an iterator that always has a reference to the next element.
-There is the iterator that holds the methods ready to get the next element. 
-The iterator collection is responsible for creating the collection. 
-
-
-## State
-
-**Problem / Requirements:**<br />
-The condition is handled directly in the classes and objects. This makes for many if-else conditions in the classes. 
-  
-**Solution:**<br />
-For states, classes are implemented that store these states. 
- 
- 
-## Mediator
-
-**Problem / Requirements:**<br />
-Many classes act together (e.g. UI elements of a form) and are thus closely coupled, as they all depend on each other.
-  
-**Solution:**<br />
-Promotion of loose coupling, in which a central class serves as an intermediary.
-Thus, all the complexity lies in this mediator class.
-  
-
-## Template method
-
-**Problem / Requirements:**<br />
-Several classes have many of the same patterns (or code). 
-  
-**Solution:**<br />
-An abstract class holds a templateMethod and the methods of the individual steps. The steps are coordinated in the templateMethod method. The concrete class, which inherits from the abstract class, can then overwrite individual steps if they are needed.
-  
-
-## Memento
-
-**Problem / Requirements:**<br />
-The states of an object are to be saved so that they can be accessed or restored at a later time. 
-
-**Solution:**<br />
-A memento is made available to a clock lifter (any class).
-This ensures that the state (private inner attributes) of the clock lifter is saved.
-Objects of the memento are then stored in a so-called keeper. 
-
-
-## Strategy
-
-**Problem / Requirements:**<br />
-For one context (e.g. class) there should be several implementations/algorithms 
-
-**Solution:**<br />
-A context has an attribute that points to a strategy.
-This strategy contains the different implementations (one strategy - one implementation).
-The type of implementation is therefore not controlled by the context itself, but depends on which strategy the client assigns.
-
-
-## Visitor
-
-**Problem / Requirements:**<br />
-A class (element) should use different methods (PDF generation / XML generation) (with different contexts).
-This would lead to a violation of the single-responsibility principle. 
-  
-**Solution:**<br />
-Separation of the operation and class hierarchy. An object (visitor) is created which is responsible for the operations.
-The element gets contains a method, which gets the visitor passed and then performs the corresponding operation. 
-
-
-## Chain of Responsibility
-  
-**Problem / Requirements:**<br />
-An (e.g.) object must go through multiple tasks. These tasks must perform sequentially. 
-
-**Solution:**<br />
-The object gets sent to a "Chain of Responsibility". This chain is a collection of handlers. The object goes through this chain until a handler answers the request.  
-
+**Problem**: An object needs to pass through a sequence of handlers.  
+**Solution**: Implement a chain of handlers where each one processes the object or passes it to the next.
 
 # SOLID
 
-## Single-responsiblity Principle
-  
-There should be only one reason (actor) to change a class. 
-Single responsibility does not mean that a block should only do one thing. 
+## Single-Responsibility Principle
 
+A class should have only one reason to change, meaning it should encapsulate only one responsibility.
 
-## Open-closed Principle
-  
-“Modules should be both open (for extension) and closed (for modification).” - Bertrand Meyer
+## Open-Closed Principle
 
-The open-closed principle means that if you need to change a module it should be possible without modifying the module itself. 
-
+"Modules should be both open for extension and closed for modification." – Bertrand Meyer
 
 ## Liskov Substitution Principle
 
-The Liskov Substitution Principle states that objects of a superclass should be able to be replaced with objects of a subclass without affecting the correctness of the program.
-
+Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
 
 ## Interface Segregation Principle
 
-The Interface Segregation Principle means that no code should depend on methods it doesn´t use.
-
-For example if there is an interface called `Car` with the methods `refuel`. 
-Then you want to create a class `ElectricCar` that implements the `Car` interface. 
-Then it must implement the `refuel` method, which doesn´t make sense.
-
+No client should be forced to depend on methods it does not use.
 
 ## Dependency Inversion Principle
 
-The Dependency Inversion Principle consists of the following things: 
+High-level modules should not depend on low-level modules; both should depend on abstractions.
 
-- Higher modules/classes should not depend on lower modules/classes
-- Classes/modules should be abstracted by interfaces
-- Interfaces should not depend on details
-- Details should depend on interfaces
+# Clean Coding
 
-
-# Design principle
-
-## Dependency injection
-- Dependencies of a class or module should not be constructed inside.
-- Dependencies should be passed from outside (e.g Arg in a constructor)
-
-```
-// bad
-class MyClass {
-  new Dependency()
-}
-
-// good
-class MyClass(Dependency myDependency) {
-  this.dependency = myDependency
-}
-```
-
-
-## Interface vs implementation
-
-Develop against an interface, not against an implementation.
-Because implementations can change quickly, the implementation can vary independently if you develop against an interface.
-
-# Clean coding
-
+Clean code is easy to read, understand, and maintain. Follow best practices to ensure code quality and minimize technical debt.
 
 # Resources
 
-- https://refactoring.guru/ 
-- https://www.udacity.com/course/software-architecture-design--ud821
+- [Refactoring Guru](https://refactoring.guru/)  
+- [Udacity: Software Architecture & Design](https://www.udacity.com/course/software-architecture-design--ud821)
 
+# Literature
 
-# Literature 
+**English:**
+- *Fundamentals of Software Architecture* by Mark Richards & Neal Ford  
+- *Clean Architecture* by Robert C. Martin  
+- *The Clean Coder* by Robert C. Martin  
 
-EN:
-- Fundamentals of Software Architecture (Mark Richards & Neal Ford)
-- Clean Architecture (Robert C. Martin)
-- The Clean Coder (Robert C. Martin)
-
-DE:
-- Entwurfsmuster (Matthias Geirhos)
-- Einführung in die Softwaretechnik (Manfred Broy & Marco Kuhrmann)
-
+**German:**
+- *Entwurfsmuster* by Matthias Geirhos  
+- *Einführung in die Softwaretechnik* by Manfred Broy & Marco Kuhrmann
 
