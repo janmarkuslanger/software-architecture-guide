@@ -70,3 +70,10 @@ A microservice is an architectural style where a system is composed of multiple 
 ## Structural Patterns
 ## Behavioral Patterns
 ## Creational Patterns
+
+---
+
+# Contribution 
+
+If you'd like to contribute, feel free to create a pull request. 
+If you think a topic is missing, please open an issue.
