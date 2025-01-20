@@ -1,5 +1,7 @@
 # software-architecture-guide
 
+<img src="head.webp" alt="Dog assembling building blocks" width="300">
+
 A software architecture guide.
 
 ---
