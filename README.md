@@ -1,8 +1,6 @@
-# software-architecture-guide
+<h1 align="center">A software architecture guide</h1>
 
-<img src="head.webp" alt="Dog assembling building blocks" width="300">
-
-A software architecture guide.
+<p align="center"><img src="head.webp" alt="Dog assembling building blocks" width="300" /></p>
 
 ---
 
