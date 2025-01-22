@@ -109,9 +109,21 @@ Cloud architecture refers to the design and deployment of applications and servi
 
 # Design Patterns
 
+Design Patterns are reusable solutions to common problems in software development. 
+They serve as blueprints that help developers create software that is more efficient, flexible, and maintainable.
+
+
 ## Structural Patterns
+
+**Structural Patterns are solutions to organize classes and their objects**
+
 ## Behavioral Patterns
+
+**Behavioral Patterns are solutions to define interaction between objects**
+
 ## Creational Patterns
+
+**Behavioral Patterns are solutions to create objects**
 
 ---
 
