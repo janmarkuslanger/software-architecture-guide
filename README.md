@@ -6,7 +6,7 @@
 
 # Introduction
 
-This guide aims to provide a concise overview of various aspects of software architecture. It covers key concepts, architectural styles, and essential principles to help developers, architects, and tech enthusiasts understand the foundational elements of building robust software systems.
+This guide aims to provide a concise overview of various aspects of software architecture. It covers key concepts, architectural styles, and essential principles to help people understand the foundational elements of building software systems.
 
 ## What is Software Architecture?
 
