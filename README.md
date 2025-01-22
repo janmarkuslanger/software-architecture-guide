@@ -25,15 +25,39 @@ A component can represent various entities, such as a module, a service, or a da
 
 Dependencies can manifest in many forms and affect the flexibility and maintainability of the system.
 
-**Types of coupling**: 
-- Temporal Coupling
-- Data Coupling
-- Content Coupling
-- Control Coupling
-- Contextual Coupling
-- Common Coupling
-- Sequential Coupling
-- External Coupling
+### Types of coupling 
+
+#### Temporal Coupling
+
+Building blocks are dependent on the timing of their execution. 
+
+#### Data Coupling
+
+Building blocks are connected by exchanging data.
+
+#### Content Coupling
+
+A building block directly accesses or manipulates internal data of another building block. 
+
+#### Control Coupling
+
+A building block controls the behavior of another by passing control data. 
+
+#### Contextual Coupling
+
+Building blocks depend on a shared context (for example configuration).
+
+#### Common Coupling
+
+Building blocks share the same global resources.
+
+#### Sequential Coupling
+
+The output of one building block serves as the input for another building block.
+
+#### External Coupling
+
+A building block depends on external systems, services, or interfaces.
 
 Examples of Coupling:
 
