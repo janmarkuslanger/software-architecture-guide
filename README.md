@@ -117,6 +117,11 @@ They serve as blueprints that help developers create software that is more effic
 
 **Structural Patterns are solutions to organize classes and their objects**
 
+### Adapter 
+
+The adapter patterns enables two incompatible interfaces to work together.
+In the Adapter Pattern, an incompatible interface is wrapped by an adapter, and the corresponding methods and more are adapted to the target interface.
+
 ## Behavioral Patterns
 
 **Behavioral Patterns are solutions to define interaction between objects**
