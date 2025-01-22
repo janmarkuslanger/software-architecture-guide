@@ -75,17 +75,35 @@ High cohesion ensures that components are focused on a single responsibility, ma
 
 ## Monolithic Architecture
 
-Monolithic Architecture is an architectural style where the entire system is built as a single, unified block. All components, such as the user interface, business logic, and data access layer, are tightly integrated and operate as a single application.
+Monolithic Architecture is an architectural style where the entire system is built as a single, unified block. 
+All components, such as the user interface, business logic, and data access layer, are tightly integrated and operate as a single application.
 
 ## Microservices
 
-A microservice is an architectural style where a system is composed of multiple independent services. Each service is designed to perform a specific function and operates autonomously, communicating with other services through well-defined APIs.
+A microservice is an architectural style where a system is composed of multiple independent services.
+Each service is designed to perform a specific function and operates autonomously, communicating with other services through well-defined APIs.
 
 ## Event-Driven Architecture
 
+Event-Driven Architecture is a software architectural pattern where the system state is determined by events. 
+An event represents a change in the system. Building blocks can listen to those events.
+
 ## Service-Oriented Architecture (SOA)
 
-## Serverless and Cloud Architecture
+Service-Oriented Architecture (SOA) is a software architectural style where applications are built by services.
+Each service represents a discrete functionality and communicates with other services through well-defined interfaces.
+
+SOA and Microservices share many similarities. 
+However, in Microservices, the services are significantly smaller, whereas in SOA, the services are much larger and provide multiple functionalities within a specific domain.
+
+## Serverless Architecture
+
+Serverless architecture is a cloud computing model where the cloud provider dynamically manages the allocation of resources.
+Developers focus on writing and deploying code without worrying about managing or provisioning servers.
+
+## Cloud Architecture
+
+Cloud architecture refers to the design and deployment of applications and services that run on cloud infrastructure provided by cloud providers.
 
 ---
 
