@@ -132,38 +132,37 @@ This way, the client can seamlessly use the adapter without any need to modify o
 
 <details>
   <summary>Code Example</summary>
-  ``` python
 
+  ```python
   class Workout:
     def add_exercise(self, name, weight_kg):
-        print(f"Added exercise: {name}, Weight: {weight_kg} kg")
-        
-class PoundWorkout:
+      print(f"Added exercise: {name}, Weight: {weight_kg} kg")
+
+  class PoundWorkout:
     def add_exercise(self, name, weight_lb):
-        print(f"Added exercise: {name}, Weight: {weight_lb} lbs")
+      print(f"Added exercise: {name}, Weight: {weight_lb} lbs")
 
-class Adapter:
+  class Adapter:
     def __init__(self, pound_workout):
-        self.pound_workout = pound_workout
-
+      self.pound_workout = pound_workout
+  
     def add_exercise(self, name, weight_kg):
-        weight_lb = weight_kg * 2.20462
-        self.pound_workout.add_exercise(name, weight_lb)
-
-def build_workout(workout):
+      weight_lb = weight_kg * 2.20462
+      self.pound_workout.add_exercise(name, weight_lb)
+  
+  def build_workout(workout):
     workout.add_exercise("Bench Press", 100) 
     workout.add_exercise("Deadlift", 130) 
-
-# code with kg 
-workout = Workout()
-calculate_volume(workout)
-
-# code using lb 
-pound_workout = PoundWorkout()
-adapter = Adapter(pound_workout)
-calculate_volume(adapter)
-
-  ```
+  
+  print("using regular kg")
+  workout = Workout()
+  calculate_volume(workout)
+  
+  print("using pounds")
+  pound_workout = PoundWorkout()
+  adapter = Adapter(pound_workout)
+  calculate_volume(adapter)
+```
 </details>
 
 
