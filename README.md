@@ -4,7 +4,7 @@
 
 ---
 
-# Introduction
+# Introduction 👋
 
 This guide aims to provide a concise overview of various aspects of software architecture. It covers key concepts, architectural styles, and essential principles to help people understand the foundational elements of building software systems.
 
@@ -15,7 +15,7 @@ Regardless of whether these decisions are deliberate or accidental, every softwa
 
 ---
 
-# Key concepts
+# Key concepts 🔑
 
 ## Coupling
 
@@ -71,7 +71,7 @@ High cohesion ensures that components are focused on a single responsibility, ma
 
 ---
 
-# Architecture Styles
+# Architecture Styles 🏭
 
 ## Monolithic Architecture
 
@@ -107,7 +107,7 @@ Cloud architecture refers to the design and deployment of applications and servi
 
 ---
 
-# Design Patterns
+# Design Patterns 🏁
 
 Design Patterns are reusable solutions to common problems in software development. 
 They serve as blueprints that help developers create software that is more efficient, flexible, and maintainable.
@@ -164,8 +164,6 @@ This way, the client can seamlessly use the adapter without any need to modify o
   calculate_volume(adapter)
 ```
 </details>
-
-
 
 
 ## Behavioral Patterns
