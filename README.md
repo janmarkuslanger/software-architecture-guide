@@ -122,6 +122,13 @@ They serve as blueprints that help developers create software that is more effic
 The adapter patterns enables two incompatible interfaces to work together.
 In the Adapter Pattern, an incompatible interface is wrapped by an adapter, and the corresponding methods and more are adapted to the target interface.
 
+Example: 
+Imagine you have a workout application that operates using kilograms as the unit of measurement. In this application, there's a class called Workout with a method named addExercise, which takes the weight in kilograms as input.
+Now, you want to extend the app to also support weights in pounds. However, the existing client method, calculateVolume, is designed to work exclusively with kilograms. To address this, you introduce a new class called PoundWorkout, which also has a method named addExercise but expects the weight in pounds.
+To bridge the gap between the PoundWorkout class and the existing client logic, you create an adapter class called Adapter. This adapter takes an instance of the incompatible PoundWorkout class as an argument. It provides its own implementation of the addExercise method, which internally calls the addExercise method of the PoundWorkout class after converting the weight from kilograms to pounds.
+This way, the client can seamlessly use the adapter without any need to modify or restructure the existing codebase. The adapter handles the conversion and ensures compatibility between the two systems.
+
+
 ## Behavioral Patterns
 
 **Behavioral Patterns are solutions to define interaction between objects**
