@@ -165,6 +165,69 @@ This way, the client can seamlessly use the adapter without any need to modify o
 ```
 </details>
 
+### Bridge 
+
+The Bridge Pattern provides a solution to decouple abstraction from implementation by using object composition, allowing both to evolve independently for related classes.
+
+<details>
+
+  <summary>Example</summary>
+
+Imagine you have a car that you want to build. For the car there might be different engines available. 
+You could create multiple subclasses like `ElectricCar` or `PetrolCar`. But now we want to add gear-shift to the cars. 
+This would lead into more subclasses like `ElectricManuelGearCar`, `ElectricAutomaticGearCar`, `PetrolManuelGearCar` and `PetrolAutomaticGearCar`.
+We can fix this by switching from inheritance to composition. Our class `Car(engine: Engine, gearshift: Gearshift)` expects the abstractions `Engine` and `Gearshift`. 
+Then we create our implementations `AutomaticGear`, `ManuelGear`, `PetrolEngine` and `ElectricEngine`. 
+Now we can create our cars like Car(new AutomaticGear(), new Petrol()).
+
+</details>
+
+<details>
+  <summary>Code Example</summary>
+
+  ```python
+
+  class Gearshift:
+    def start(self):
+        raise NotImplementedError
+
+  class ManuelGear(Gearshift)
+    def start(self):
+      print("Start manuel")
+
+  class AutomaticGear(Gearshift)
+    def start(self):
+      print("Start automatic")
+
+  class Engine:
+    def start():
+      raise NotImplementedError
+
+  class PetrolEngine(Engine):
+    def start(self):
+      print("Start petrol engine"
+
+  class ElectricEngine():
+    def start(self):
+      print("Start electric engine"
+
+  class Car():
+    def __init__(self, engine, gearshift):
+      self.engine = engine
+      self.gearshift
+
+    def drive(self):
+      self.engine.start()
+      self.gearshift.start()
+
+
+    petrol = PetrolEngine()
+    manuel = ManuelGear()
+    car = Car(petrol, manuel)
+    car.start()
+
+  ```
+</details>
 
 ## Behavioral Patterns
 
