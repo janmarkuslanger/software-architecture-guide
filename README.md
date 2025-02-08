@@ -117,6 +117,8 @@ They serve as blueprints that help developers create software that is more effic
 
 **Structural Patterns are solutions to organize classes and their objects**
 
+---
+
 ### Adapter 
 
 The adapter patterns enables two incompatible interfaces to work together.
@@ -243,6 +245,10 @@ Now we can create our cars like Car(new AutomaticGear(), new Petrol()).
 **Behavioral Patterns are solutions to create objects**
 
 ---
+
+### Factory method
+
+The Factory Method encapsulates object creation in a method that subclasses override to decide which concrete object to instantiate.
 
 # Contribution 
 
