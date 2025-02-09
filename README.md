@@ -251,6 +251,12 @@ Now we can create our cars like Car(new AutomaticGear(), new Petrol()).
 The Factory Method encapsulates object creation in a method that subclasses override to decide which concrete object to instantiate.
 
 <details>
+  <summary>Example</summary>
+
+Imagine you have a tool that creates invoices. There are two ways to generate an invoice: PDF and text. Every time the implementation for either PDF or text changes, the client needs to be adjusted. To solve this   problem, an InvoiceFactory is created. From this InvoiceFactory superclass, two concrete factories are derived: PdfFactory and TextFactory. These classes are responsible for creating the objects, so the client doesn't need to know about the specific implementations. The client interacts just with the factories. 
+</details>
+
+<details>
   <summary>Code Example</summary>
 
   ```python
