@@ -117,6 +117,8 @@ They serve as blueprints that help developers create software that is more effic
 
 **Structural Patterns are solutions to organize classes and their objects**
 
+---
+
 ### Adapter 
 
 The adapter patterns enables two incompatible interfaces to work together.
@@ -243,6 +245,64 @@ Now we can create our cars like Car(new AutomaticGear(), new Petrol()).
 **Behavioral Patterns are solutions to create objects**
 
 ---
+
+### Factory method
+
+The Factory Method encapsulates object creation in a method that subclasses override to decide which concrete object to instantiate.
+
+<details>
+  <summary>Example</summary>
+
+Imagine you have a tool that creates invoices. There are two ways to generate an invoice: PDF and text. Every time the implementation for either PDF or text changes, the client needs to be adjusted. To solve this   problem, an InvoiceFactory is created. From this InvoiceFactory superclass, two concrete factories are derived: PdfFactory and TextFactory. These classes are responsible for creating the objects, so the client doesn't need to know about the specific implementations. The client interacts just with the factories. 
+</details>
+
+<details>
+  <summary>Code Example</summary>
+
+  ```python
+
+  from abc import ABC, abstractmethod
+
+  class Invoice(ABC):
+      @abstractmethod
+      def print_invoice(self):
+          pass
+  
+  class PDFInvoice(Invoice):
+      def print_invoice(self):
+          print("PDF invoice is created and saved.")
+  
+  class TextInvoice(Invoice):
+      def print_invoice(self):
+          print("Text invoice is created and printed.")
+  
+  class InvoiceTool(ABC):
+      @abstractmethod
+      def create_invoice(self):
+          pass
+  
+      def generate_invoice(self):
+          invoice = self.create_invoice()
+          invoice.print_invoice()
+  
+  class PDFInvoiceTool(InvoiceTool):
+      def create_invoice(self):
+          return PDFInvoice()
+  
+  class TextInvoiceTool(InvoiceTool):
+      def create_invoice(self):
+          return TextInvoice()
+  
+  def main():
+      tool = PDFInvoiceTool()
+      tool.generate_invoice()
+      tool = TextInvoiceTool()
+      tool.generate_invoice()
+
+
+  ```
+</details>
+
 
 # Contribution 
 
