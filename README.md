@@ -250,6 +250,54 @@ Now we can create our cars like Car(new AutomaticGear(), new Petrol()).
 
 The Factory Method encapsulates object creation in a method that subclasses override to decide which concrete object to instantiate.
 
+<details>
+  <summary>Code Example</summary>
+
+  ```python
+
+  from abc import ABC, abstractmethod
+
+  class Invoice(ABC):
+      @abstractmethod
+      def print_invoice(self):
+          pass
+  
+  class PDFInvoice(Invoice):
+      def print_invoice(self):
+          print("PDF invoice is created and saved.")
+  
+  class TextInvoice(Invoice):
+      def print_invoice(self):
+          print("Text invoice is created and printed.")
+  
+  class InvoiceTool(ABC):
+      @abstractmethod
+      def create_invoice(self):
+          pass
+  
+      def generate_invoice(self):
+          invoice = self.create_invoice()
+          invoice.print_invoice()
+  
+  class PDFInvoiceTool(InvoiceTool):
+      def create_invoice(self):
+          return PDFInvoice()
+  
+  class TextInvoiceTool(InvoiceTool):
+      def create_invoice(self):
+          return TextInvoice()
+  
+  def main():
+      tool = PDFInvoiceTool()
+      tool.generate_invoice()
+      tool = TextInvoiceTool()
+      tool.generate_invoice()
+
+
+  ```
+</details>
+
+
 # Contribution 
 
 If you'd like to contribute, feel free to create a pull request. 
