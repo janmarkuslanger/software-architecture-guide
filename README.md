@@ -1,4 +1,4 @@
-<h2 align="center">A software architecture guide</h2>
+<h1 align="center">A software architecture guide</h1>
 
 <p align="center"><img src="head.webp" alt="Dog assembling building blocks" width="300" /></p>
 
@@ -17,7 +17,7 @@ Regardless of whether these decisions are deliberate or accidental, every softwa
 
 ## Key Concepts 🔑
 
-**Coupling**
+### Coupling
 
 Coupling describes the degree of dependency between two components in a system.
 In general, we aim for a system with as **loose coupling** between components as possible. 
@@ -41,7 +41,7 @@ Examples of Coupling:
 - Component A imports another component B: This creates a direct dependency where A relies on the functionality or structure of B. If B changes, A might also need to be updated.
 - A component depends on receiving data from a REST API: The component must wait for the API's response before it can process or proceed. This introduces a dependency on external communication and response times.
 
-**Cohesion**
+### Cohesion
 
 Cohesion describes how strongly components within a module or system are related. In general, we aim to achieve high cohesion.
 High cohesion ensures that components are focused on a single responsibility, making the system easier to understand, maintain, and extend.
@@ -229,16 +229,18 @@ Design patterns are common solutions to recurring design problems. They give tea
 These patterns create objects in a flexible way.
 
 #### Abstract Factory
-**Intent:** Creates families of related objects without naming the concrete classes.
-**Pros**
+**Overview:**
+Creates families of related objects without naming the concrete classes.
+**Benefits:**
 - Keeps products consistent
 - Easy to switch a whole family
-**Cons**
+**Trade-offs:**
 - Harder to add new product types
 - More classes to manage
-**Fits when**
+**When to use:**
 - You need matching UI or service families
-**Example:** Create Windows or macOS UI widgets
+**Example:**
+Create Windows or macOS UI widgets
 
 ```python
 class WinFactory:
@@ -254,16 +256,18 @@ def render_ui(factory):
 ```
 
 #### Builder
-**Intent:** Builds complex objects step by step with the same construction process.
-**Pros**
+**Overview:**
+Builds complex objects step by step with the same construction process.
+**Benefits:**
 - Clear step-by-step build
 - Optional parts are easy
-**Cons**
+**Trade-offs:**
 - More code
 - Extra classes
-**Fits when**
+**When to use:**
 - An object has many optional parts
-**Example:** Build a complex HTTP request
+**Example:**
+Build a complex HTTP request
 
 ```python
 class RequestBuilder:
@@ -276,15 +280,17 @@ req = RequestBuilder().header("Auth", "token").param("q", "books").build()
 ```
 
 #### Factory Method
-**Intent:** Creates objects through a method, so subclasses decide the concrete type.
-**Pros**
+**Overview:**
+Creates objects through a method, so subclasses decide the concrete type.
+**Benefits:**
 - Decouples creation from use
 - Easy to extend with new types
-**Cons**
+**Trade-offs:**
 - Many small subclasses
-**Fits when**
+**When to use:**
 - Subclasses should choose which object to create
-**Example:** A document app creates PDF or Word documents
+**Example:**
+A document app creates PDF or Word documents
 
 ```python
 class DocCreator:
@@ -299,15 +305,17 @@ class WordCreator(DocCreator):
 ```
 
 #### Prototype
-**Intent:** Creates new objects by cloning existing ones.
-**Pros**
+**Overview:**
+Creates new objects by cloning existing ones.
+**Benefits:**
 - Fast creation
 - Easy to customize
-**Cons**
+**Trade-offs:**
 - Deep copies can be tricky
-**Fits when**
+**When to use:**
 - You need copies of preconfigured objects
-**Example:** Duplicate a preconfigured form
+**Example:**
+Duplicate a preconfigured form
 
 ```python
 import copy
@@ -322,16 +330,18 @@ custom.fields.append("company")
 ```
 
 #### Singleton
-**Intent:** Ensures one instance and provides a global access point.
-**Pros**
+**Overview:**
+Ensures one instance and provides a global access point.
+**Benefits:**
 - One shared instance
 - Easy access
-**Cons**
+**Trade-offs:**
 - Global state is hard to test
 - Hidden dependencies
-**Fits when**
+**When to use:**
 - You truly need one instance
-**Example:** A single configuration object
+**Example:**
+A single configuration object
 
 ```python
 class Config:
@@ -350,16 +360,18 @@ assert c1 is c2
 These patterns organize classes and objects.
 
 #### Adapter
-**Intent:** Converts one interface into another expected by the client.
-**Pros**
+**Overview:**
+Converts one interface into another expected by the client.
+**Benefits:**
 - Lets incompatible components work together
 - Keeps old code stable
-**Cons**
+**Trade-offs:**
 - Adds extra layers
 - Can hide integration issues
-**Fits when**
+**When to use:**
 - You need to integrate a new interface
-**Example:** Use a new payment provider with an old interface
+**Example:**
+Use a new payment provider with an old interface
 
 ```python
 class LegacyPay:
@@ -371,16 +383,18 @@ class PayAdapter:
 ```
 
 #### Bridge
-**Intent:** Separates abstraction from implementation so both can change independently.
-**Pros**
+**Overview:**
+Separates abstraction from implementation so both can change independently.
+**Benefits:**
 - Avoids subclass explosion
 - Two dimensions can evolve independently
-**Cons**
+**Trade-offs:**
 - More setup
 - More indirection
-**Fits when**
+**When to use:**
 - You have two dimensions of change
-**Example:** Remote controls that work with many devices
+**Example:**
+Remote controls that work with many devices
 
 ```python
 class Device:
@@ -395,16 +409,18 @@ class Remote:
 ```
 
 #### Composite
-**Intent:** Builds tree structures so single items and groups look the same.
-**Pros**
+**Overview:**
+Builds tree structures so single items and groups look the same.
+**Benefits:**
 - Simple handling of trees
 - Same API for leaf and group
-**Cons**
+**Trade-offs:**
 - Harder to restrict component types
 - Some operations get complex
-**Fits when**
+**When to use:**
 - You model part-whole hierarchies
-**Example:** A file system with folders and files
+**Example:**
+A file system with folders and files
 
 ```python
 class File:
@@ -421,16 +437,18 @@ class Folder:
 ```
 
 #### Decorator
-**Intent:** Adds behavior to objects without changing their class.
-**Pros**
+**Overview:**
+Adds behavior to objects without changing their class.
+**Benefits:**
 - Flexible and composable features
 - Add behavior at runtime
-**Cons**
+**Trade-offs:**
 - Many wrapper classes
 - Debugging is harder
-**Fits when**
+**When to use:**
 - You need optional features
-**Example:** Add compression and encryption to a stream
+**Example:**
+Add compression and encryption to a stream
 
 ```python
 class Stream:
@@ -442,16 +460,18 @@ class Encrypted(Stream):
 ```
 
 #### Facade
-**Intent:** Provides a simple interface to a complex subsystem.
-**Pros**
+**Overview:**
+Provides a simple interface to a complex subsystem.
+**Benefits:**
 - Easier to use
 - Fewer dependencies
-**Cons**
+**Trade-offs:**
 - Can hide useful features
 - Can grow into a god interface
-**Fits when**
+**When to use:**
 - You want a simple entry point to a complex system
-**Example:** A single API for a complex payment system
+**Example:**
+A single API for a complex payment system
 
 ```python
 class Auth:
@@ -468,16 +488,18 @@ class PaymentFacade:
 ```
 
 #### Flyweight
-**Intent:** Shares common data to save memory when many objects are similar.
-**Pros**
+**Overview:**
+Shares common data to save memory when many objects are similar.
+**Benefits:**
 - Lower memory usage
 - Faster creation for repeated objects
-**Cons**
+**Trade-offs:**
 - Shared state is harder to manage
 - Code is more complex
-**Fits when**
+**When to use:**
 - Many small objects share the same data
-**Example:** Characters in a text editor
+**Example:**
+Characters in a text editor
 
 ```python
 class Glyph:
@@ -492,16 +514,18 @@ class GlyphFactory:
 ```
 
 #### Proxy
-**Intent:** Controls access to another object.
-**Pros**
+**Overview:**
+Controls access to another object.
+**Benefits:**
 - Lazy loading, caching, or security
 - Extra control without changing the real object
-**Cons**
+**Trade-offs:**
 - Extra latency
 - More complexity
-**Fits when**
+**When to use:**
 - You need access control or lazy loading
-**Example:** Lazy-loading large images
+**Example:**
+Lazy-loading large images
 
 ```python
 class RealImage:
@@ -519,16 +543,18 @@ class ImageProxy:
 These patterns define how objects communicate.
 
 #### Chain of Responsibility
-**Intent:** Passes a request through a chain until one handler processes it.
-**Pros**
+**Overview:**
+Passes a request through a chain until one handler processes it.
+**Benefits:**
 - Loose coupling between sender and handler
 - Easy to reorder handlers
-**Cons**
+**Trade-offs:**
 - Not clear who handles the request
 - Requests can go unhandled
-**Fits when**
+**When to use:**
 - Multiple handlers could process the same request
-**Example:** Support tickets routed by category
+**Example:**
+Support tickets routed by category
 
 ```python
 class Handler:
@@ -540,16 +566,18 @@ class Auth(Handler):
 ```
 
 #### Command
-**Intent:** Wraps a request as an object.
-**Pros**
+**Overview:**
+Wraps a request as an object.
+**Benefits:**
 - Supports undo, logging, and queues
 - Decouples sender and receiver
-**Cons**
+**Trade-offs:**
 - Many small command classes
 - Extra boilerplate
-**Fits when**
+**When to use:**
 - You need undo or queued actions
-**Example:** UI actions with undo
+**Example:**
+UI actions with undo
 
 ```python
 class Command:
@@ -564,16 +592,18 @@ class Remote:
 ```
 
 #### Interpreter
-**Intent:** Defines a grammar and interprets expressions.
-**Pros**
+**Overview:**
+Defines a grammar and interprets expressions.
+**Benefits:**
 - Simple to add small rules
 - Easy to extend the grammar
-**Cons**
+**Trade-offs:**
 - Slow for large grammars
 - Hard to maintain at scale
-**Fits when**
+**When to use:**
 - You have a small, simple language
-**Example:** A simple rule engine
+**Example:**
+A simple rule engine
 
 ```python
 class Number:
@@ -586,16 +616,18 @@ class Add:
 ```
 
 #### Iterator
-**Intent:** Accesses elements of a collection without exposing its structure.
-**Pros**
+**Overview:**
+Accesses elements of a collection without exposing its structure.
+**Benefits:**
 - Consistent traversal API
 - Hides internal structure
-**Cons**
+**Trade-offs:**
 - Can hide performance costs
 - Adds extra objects
-**Fits when**
+**When to use:**
 - You need to traverse different collections the same way
-**Example:** Iterating over a tree
+**Example:**
+Iterating over a tree
 
 ```python
 class Bag:
@@ -605,16 +637,18 @@ class Bag:
 ```
 
 #### Mediator
-**Intent:** Centralizes communication between objects.
-**Pros**
+**Overview:**
+Centralizes communication between objects.
+**Benefits:**
 - Reduces direct dependencies
 - Keeps objects simpler
-**Cons**
+**Trade-offs:**
 - Mediator can become complex
 - Hard to test if it grows too large
-**Fits when**
+**When to use:**
 - Many objects talk to each other
-**Example:** A chat room managing messages
+**Example:**
+A chat room managing messages
 
 ```python
 class ChatRoom:
@@ -624,16 +658,18 @@ class ChatRoom:
 ```
 
 #### Memento
-**Intent:** Captures and restores an object's state.
-**Pros**
+**Overview:**
+Captures and restores an object's state.
+**Benefits:**
 - Enables undo
 - Keeps encapsulation
-**Cons**
+**Trade-offs:**
 - Can use lots of memory
 - State management can get complex
-**Fits when**
+**When to use:**
 - You need restore points
-**Example:** Undo in a text editor
+**Example:**
+Undo in a text editor
 
 ```python
 class Editor:
@@ -643,16 +679,18 @@ class Editor:
 ```
 
 #### Observer
-**Intent:** Notifies many dependents when a subject changes.
-**Pros**
+**Overview:**
+Notifies many dependents when a subject changes.
+**Benefits:**
 - Loose coupling
 - Easy to add new observers
-**Cons**
+**Trade-offs:**
 - Update cascades can be hard to debug
 - Update order is not obvious
-**Fits when**
+**When to use:**
 - Many parts depend on the same change
-**Example:** UI updates when data changes
+**Example:**
+UI updates when data changes
 
 ```python
 class Subject:
@@ -663,16 +701,18 @@ class Subject:
 ```
 
 #### State
-**Intent:** Changes behavior when internal state changes.
-**Pros**
+**Overview:**
+Changes behavior when internal state changes.
+**Benefits:**
 - Removes large conditional logic
 - Clear state transitions
-**Cons**
+**Trade-offs:**
 - More classes
 - More moving parts
-**Fits when**
+**When to use:**
 - Behavior depends on state
-**Example:** Order states like New, Paid, Shipped
+**Example:**
+Order states like New, Paid, Shipped
 
 ```python
 class New:
@@ -685,16 +725,18 @@ class Order:
 ```
 
 #### Strategy
-**Intent:** Encapsulates algorithms and makes them interchangeable.
-**Pros**
+**Overview:**
+Encapsulates algorithms and makes them interchangeable.
+**Benefits:**
 - Swap behavior at runtime
 - Keeps algorithms isolated
-**Cons**
+**Trade-offs:**
 - Many small classes
 - Extra wiring
-**Fits when**
+**When to use:**
 - You have multiple algorithms for one task
-**Example:** Different pricing rules
+**Example:**
+Different pricing rules
 
 ```python
 class Fixed:
@@ -707,16 +749,18 @@ class Checkout:
 ```
 
 #### Template Method
-**Intent:** Defines a skeleton algorithm with steps overridden in subclasses.
-**Pros**
+**Overview:**
+Defines a skeleton algorithm with steps overridden in subclasses.
+**Benefits:**
 - Consistent flow
 - Custom steps where needed
-**Cons**
+**Trade-offs:**
 - Inheritance can be rigid
 - Hard to change the base flow
-**Fits when**
+**When to use:**
 - Steps are the same but details differ
-**Example:** Report generation with shared steps
+**Example:**
+Report generation with shared steps
 
 ```python
 class Exporter:
@@ -727,16 +771,18 @@ class Exporter:
 ```
 
 #### Visitor
-**Intent:** Adds new operations to object structures without changing the objects.
-**Pros**
+**Overview:**
+Adds new operations to object structures without changing the objects.
+**Benefits:**
 - Easy to add new operations
 - Keeps element classes stable
-**Cons**
+**Trade-offs:**
 - Hard to add new element types
 - Can be verbose
-**Fits when**
+**When to use:**
 - The object structure is stable
-**Example:** Running analytics on an AST
+**Example:**
+Running analytics on an AST
 
 ```python
 class Node:
