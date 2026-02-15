@@ -1,4 +1,4 @@
-<h1 align="center">A software architecture guide</h1>
+<h2 align="center">A software architecture guide</h2>
 
 <p align="center"><img src="head.webp" alt="Dog assembling building blocks" width="300" /></p>
 
@@ -15,9 +15,9 @@ Regardless of whether these decisions are deliberate or accidental, every softwa
 
 ---
 
-# Key concepts 🔑
+## Key Concepts 🔑
 
-## Coupling
+**Coupling**
 
 Coupling describes the degree of dependency between two components in a system.
 In general, we aim for a system with as **loose coupling** between components as possible. 
@@ -25,286 +25,738 @@ A component can represent various entities, such as a module, a service, or a da
 
 Dependencies can manifest in many forms and affect the flexibility and maintainability of the system.
 
-### Types of coupling 
+Types of coupling:
 
-#### Temporal Coupling
-
-Building blocks are dependent on the timing of their execution. 
-
-#### Data Coupling
-
-Building blocks are connected by exchanging data.
-
-#### Content Coupling
-
-A building block directly accesses or manipulates internal data of another building block. 
-
-#### Control Coupling
-
-A building block controls the behavior of another by passing control data. 
-
-#### Contextual Coupling
-
-Building blocks depend on a shared context (for example configuration).
-
-#### Common Coupling
-
-Building blocks share the same global resources.
-
-#### Sequential Coupling
-
-The output of one building block serves as the input for another building block.
-
-#### External Coupling
-
-A building block depends on external systems, services, or interfaces.
+- Temporal coupling: Building blocks are dependent on the timing of their execution.
+- Data coupling: Building blocks are connected by exchanging data.
+- Content coupling: A building block directly accesses or manipulates internal data of another building block.
+- Control coupling: A building block controls the behavior of another by passing control data.
+- Contextual coupling: Building blocks depend on a shared context (for example configuration).
+- Common coupling: Building blocks share the same global resources.
+- Sequential coupling: The output of one building block serves as the input for another building block.
+- External coupling: A building block depends on external systems, services, or interfaces.
 
 Examples of Coupling:
 
 - Component A imports another component B: This creates a direct dependency where A relies on the functionality or structure of B. If B changes, A might also need to be updated.
 - A component depends on receiving data from a REST API: The component must wait for the API's response before it can process or proceed. This introduces a dependency on external communication and response times.
 
-## Cohesion
+**Cohesion**
 
 Cohesion describes how strongly components within a module or system are related. In general, we aim to achieve high cohesion.
 High cohesion ensures that components are focused on a single responsibility, making the system easier to understand, maintain, and extend.
 
+## Quality Attributes ✅
+
+Quality attributes describe what “good” looks like for a system. They help to set priorities.
+Not all are equally important. Pick the top 2–3 for your system.
+
+- Maintainability: How easy is it to change the system?
+- Scalability: Can the system handle more users or data?
+- Reliability: Does it behave correctly and predictably?
+- Availability: Is it up and running when people need it?
+- Performance: Is it fast enough?
+- Security: Are data and access protected?
+- Operations: Is it easy to run and monitor?
+- Cost: Is it affordable to build and run?
+
+## Trade-offs ⚖️
+
+Architecture is about choices. Most choices have upsides and downsides.
+You can’t optimize everything at the same time.
+
+- Speed vs. consistency: Faster delivery can reduce consistency.
+- Flexibility vs. simplicity: More options can add complexity.
+- Cost vs. availability: High availability usually costs more.
+- Isolation vs. reuse: Shared code is easy to reuse but harder to change safely.
+
+## Decisions and Records 📝
+
+Important decisions should be written down. This helps new people and avoids repeated debates.
+One simple way is an ADR (Architecture Decision Record).
+
+An ADR is a short note that includes:
+
+- The decision
+- The reason
+- Alternatives that were considered
+- The date
+
+## Diagrams 🗺️
+
+Diagrams help people understand a system quickly. Common types are:
+
+- Context diagram: Shows the system and the outside world. Use it to explain scope.
+- Container diagram: Shows the main parts and how they connect. Use it for the big picture.
+- Component diagram: Shows parts inside a container. Use it for deeper detail.
+- Sequence diagram: Shows steps over time. Use it for a single flow.
+- Deployment diagram: Shows where software runs. Use it to explain infrastructure.
+- Data flow diagram: Shows how data moves. Use it for data pipelines.
+- ER diagram: Shows data models and relations. Use it for database design.
+
 ---
 
-# Architecture Styles 🏭
+## Architecture Styles 🏭
 
-## Monolithic Architecture
+### Monolithic Architecture
 
-Monolithic Architecture is an architectural style where the entire system is built as a single, unified block. 
-All components, such as the user interface, business logic, and data access layer, are tightly integrated and operate as a single application.
+A single app where everything runs together. UI, business logic, and data access are deployed as one unit.
 
-## Microservices
+Pros:
+- Easy to start and test
+- Fewer interfaces
+- Simple deployment
 
-A microservice is an architectural style where a system is composed of multiple independent services.
-Each service is designed to perform a specific function and operates autonomously, communicating with other services through well-defined APIs.
+Cons:
+- Changes can affect the whole system
+- Scaling is all or nothing
+- Teams can block each other
 
-## Event-Driven Architecture
+Fits when:
+- The system is small or still early
 
-Event-Driven Architecture is a software architectural pattern where the system state is determined by events. 
-An event represents a change in the system. Building blocks can listen to those events.
+Example:
+- A small internal admin service
 
-## Service-Oriented Architecture (SOA)
+### Microservices
 
-Service-Oriented Architecture (SOA) is a software architectural style where applications are built by services.
-Each service represents a discrete functionality and communicates with other services through well-defined interfaces.
+Many small services, each with a clear responsibility. Services talk through APIs and are deployed separately.
 
-SOA and Microservices share many similarities. 
-However, in Microservices, the services are significantly smaller, whereas in SOA, the services are much larger and provide multiple functionalities within a specific domain.
+Pros:
+- Parts can be changed independently
+- Teams can work in parallel
+- Scaling per service
 
-## Serverless Architecture
+Cons:
+- More ops and tooling needed
+- More interfaces to manage
+- Data management is more complex
 
-Serverless architecture is a cloud computing model where the cloud provider dynamically manages the allocation of resources.
-Developers focus on writing and deploying code without worrying about managing or provisioning servers.
+Fits when:
+- The system is large and teams need autonomy
 
-## Cloud Architecture
+Example:
+- An online shop with separate services for orders, payment, shipping
 
-Cloud architecture refers to the design and deployment of applications and services that run on cloud infrastructure provided by cloud providers.
+### Event-Driven Architecture
+
+Parts publish events. Other parts react. This keeps things loosely coupled.
+
+Pros:
+- Good decoupling
+- Fast reactions
+- Easy to extend
+
+Cons:
+- Flow is harder to follow
+- Debugging is harder
+- Event order can be tricky
+
+Fits when:
+- Many parts need to react to changes
+
+Example:
+- Payment happens -> event triggers shipping and invoice
+
+### Service-Oriented Architecture (SOA)
+
+Large services with clear interfaces, often aligned to business areas. Services are broader than microservices.
+
+Pros:
+- Good reuse
+- Clear contracts between services
+- Works well for large organizations
+
+Cons:
+- Services can become large and heavy
+- Changes can take longer
+- More governance needed
+
+Fits when:
+- Many products share the same business capabilities
+
+Example:
+- A central customer service used by many products
+
+### Serverless Architecture
+
+Code runs as functions. The cloud provider runs the servers and scales automatically.
+
+Pros:
+- No server management
+- Auto-scaling
+- Pay per use
+
+Cons:
+- Vendor lock-in
+- Cold starts are possible
+- Limits on runtime and resources
+
+Fits when:
+- Workloads are event-based or bursty
+
+Example:
+- Image processing after an upload to cloud storage
+
+### Cloud Architecture
+
+Systems are built on cloud services like managed databases, storage, and queues.
+
+Pros:
+- Fast provisioning
+- Many managed services
+- Good scaling
+
+Cons:
+- Cost control is important
+- Vendor lock-in
+- Security and compliance topics
+
+Fits when:
+- You want fast delivery with managed services
+
+Example:
+- A web app with a managed DB, storage, and CDN
 
 ---
 
-# Design Patterns 🏁
+## Design Patterns 🏁
 
-Design Patterns are reusable solutions to common problems in software development. 
-They serve as blueprints that help developers create software that is more efficient, flexible, and maintainable.
+Design patterns are common solutions to recurring design problems. They give teams a shared language and speed up decisions.
 
+### Creational Patterns
 
-## Structural Patterns
+These patterns create objects in a flexible way.
 
-**Structural Patterns are solutions to organize classes and their objects**
+#### Abstract Factory
+**Intent:** Creates families of related objects without naming the concrete classes.
+**Pros**
+- Keeps products consistent
+- Easy to switch a whole family
+**Cons**
+- Harder to add new product types
+- More classes to manage
+**Fits when**
+- You need matching UI or service families
+**Example:** Create Windows or macOS UI widgets
 
----
+```python
+class WinFactory:
+    def button(self): return "WinButton"
+    def checkbox(self): return "WinCheckbox"
 
-### Adapter 
+class MacFactory:
+    def button(self): return "MacButton"
+    def checkbox(self): return "MacCheckbox"
 
-The adapter patterns enables two incompatible interfaces to work together.
-In the Adapter Pattern, an incompatible interface is wrapped by an adapter, and the corresponding methods and more are adapted to the target interface.
-
-<details>
-  <summary>Example</summary>
-  
-Imagine you have a workout application that operates using kilograms as the unit of measurement. In this application, there's a class called `Workout` with a method named `addExercise`, which takes the weight in kilograms as input.
-Now, you want to extend the app to also support weights in pounds. However, the existing client method, `buildWorkout`, is designed to work exclusively with kilograms. To address this, you introduce a new class called `PoundWorkout`, which also has a method named `addExercise` but expects the weight in pounds.
-To bridge the gap between the `PoundWorkout` class and the existing client logic, you create an adapter class called `Adapter`. This adapter takes an instance of the incompatible `PoundWorkout` class as an argument. It provides its own implementation of the `addExercise` method, which internally calls the `addExercise` method of the `PoundWorkout` class after converting the weight from kilograms to pounds.
-This way, the client can seamlessly use the adapter without any need to modify or restructure the existing codebase. The adapter handles the conversion and ensures compatibility between the two systems.
-</details>
-
-<details>
-  <summary>Code Example</summary>
-
-  ```python
-  class Workout:
-    def add_exercise(self, name, weight_kg):
-      print(f"Added exercise: {name}, Weight: {weight_kg} kg")
-
-  class PoundWorkout:
-    def add_exercise(self, name, weight_lb):
-      print(f"Added exercise: {name}, Weight: {weight_lb} lbs")
-
-  class Adapter:
-    def __init__(self, pound_workout):
-      self.pound_workout = pound_workout
-  
-    def add_exercise(self, name, weight_kg):
-      weight_lb = weight_kg * 2.20462
-      self.pound_workout.add_exercise(name, weight_lb)
-  
-  def build_workout(workout):
-    workout.add_exercise("Bench Press", 100) 
-    workout.add_exercise("Deadlift", 130) 
-  
-  print("using regular kg")
-  workout = Workout()
-  calculate_volume(workout)
-  
-  print("using pounds")
-  pound_workout = PoundWorkout()
-  adapter = Adapter(pound_workout)
-  calculate_volume(adapter)
+def render_ui(factory):
+    return factory.button(), factory.checkbox()
 ```
-</details>
+
+#### Builder
+**Intent:** Builds complex objects step by step with the same construction process.
+**Pros**
+- Clear step-by-step build
+- Optional parts are easy
+**Cons**
+- More code
+- Extra classes
+**Fits when**
+- An object has many optional parts
+**Example:** Build a complex HTTP request
+
+```python
+class RequestBuilder:
+    def __init__(self): self.req = {"headers": {}, "params": {}}
+    def header(self, k, v): self.req["headers"][k] = v; return self
+    def param(self, k, v): self.req["params"][k] = v; return self
+    def build(self): return self.req
+
+req = RequestBuilder().header("Auth", "token").param("q", "books").build()
+```
+
+#### Factory Method
+**Intent:** Creates objects through a method, so subclasses decide the concrete type.
+**Pros**
+- Decouples creation from use
+- Easy to extend with new types
+**Cons**
+- Many small subclasses
+**Fits when**
+- Subclasses should choose which object to create
+**Example:** A document app creates PDF or Word documents
+
+```python
+class DocCreator:
+    def create(self): raise NotImplementedError
+    def open(self): return f"Open {self.create()}"
+
+class PdfCreator(DocCreator):
+    def create(self): return "PDF"
+
+class WordCreator(DocCreator):
+    def create(self): return "Word"
+```
+
+#### Prototype
+**Intent:** Creates new objects by cloning existing ones.
+**Pros**
+- Fast creation
+- Easy to customize
+**Cons**
+- Deep copies can be tricky
+**Fits when**
+- You need copies of preconfigured objects
+**Example:** Duplicate a preconfigured form
+
+```python
+import copy
+
+class Form:
+    def __init__(self, fields): self.fields = fields
+    def clone(self): return copy.deepcopy(self)
+
+base = Form(["name", "email"])
+custom = base.clone()
+custom.fields.append("company")
+```
+
+#### Singleton
+**Intent:** Ensures one instance and provides a global access point.
+**Pros**
+- One shared instance
+- Easy access
+**Cons**
+- Global state is hard to test
+- Hidden dependencies
+**Fits when**
+- You truly need one instance
+**Example:** A single configuration object
+
+```python
+class Config:
+    _instance = None
+    def __new__(cls):
+        if not cls._instance:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+c1, c2 = Config(), Config()
+assert c1 is c2
+```
+
+### Structural Patterns
+
+These patterns organize classes and objects.
+
+#### Adapter
+**Intent:** Converts one interface into another expected by the client.
+**Pros**
+- Lets incompatible components work together
+- Keeps old code stable
+**Cons**
+- Adds extra layers
+- Can hide integration issues
+**Fits when**
+- You need to integrate a new interface
+**Example:** Use a new payment provider with an old interface
+
+```python
+class LegacyPay:
+    def pay_legacy(self, cents): return f"paid {cents}"
+
+class PayAdapter:
+    def __init__(self, legacy): self.legacy = legacy
+    def pay(self, dollars): return self.legacy.pay_legacy(dollars * 100)
+```
+
+#### Bridge
+**Intent:** Separates abstraction from implementation so both can change independently.
+**Pros**
+- Avoids subclass explosion
+- Two dimensions can evolve independently
+**Cons**
+- More setup
+- More indirection
+**Fits when**
+- You have two dimensions of change
+**Example:** Remote controls that work with many devices
+
+```python
+class Device:
+    def on(self): pass
+
+class TV(Device):
+    def on(self): return "TV on"
+
+class Remote:
+    def __init__(self, device): self.device = device
+    def power(self): return self.device.on()
+```
+
+#### Composite
+**Intent:** Builds tree structures so single items and groups look the same.
+**Pros**
+- Simple handling of trees
+- Same API for leaf and group
+**Cons**
+- Harder to restrict component types
+- Some operations get complex
+**Fits when**
+- You model part-whole hierarchies
+**Example:** A file system with folders and files
+
+```python
+class File:
+    def __init__(self, name): self.name = name
+    def show(self): return [self.name]
+
+class Folder:
+    def __init__(self, name): self.name, self.items = name, []
+    def add(self, item): self.items.append(item)
+    def show(self):
+        out = [self.name]
+        for i in self.items: out += i.show()
+        return out
+```
+
+#### Decorator
+**Intent:** Adds behavior to objects without changing their class.
+**Pros**
+- Flexible and composable features
+- Add behavior at runtime
+**Cons**
+- Many wrapper classes
+- Debugging is harder
+**Fits when**
+- You need optional features
+**Example:** Add compression and encryption to a stream
+
+```python
+class Stream:
+    def read(self): return "data"
+
+class Encrypted(Stream):
+    def __init__(self, stream): self.stream = stream
+    def read(self): return f"enc({self.stream.read()})"
+```
+
+#### Facade
+**Intent:** Provides a simple interface to a complex subsystem.
+**Pros**
+- Easier to use
+- Fewer dependencies
+**Cons**
+- Can hide useful features
+- Can grow into a god interface
+**Fits when**
+- You want a simple entry point to a complex system
+**Example:** A single API for a complex payment system
+
+```python
+class Auth:
+    def ok(self): return True
+class Charge:
+    def run(self): return "charged"
+class Receipt:
+    def send(self): return "sent"
+
+class PaymentFacade:
+    def pay(self):
+        if Auth().ok():
+            Charge().run(); return Receipt().send()
+```
+
+#### Flyweight
+**Intent:** Shares common data to save memory when many objects are similar.
+**Pros**
+- Lower memory usage
+- Faster creation for repeated objects
+**Cons**
+- Shared state is harder to manage
+- Code is more complex
+**Fits when**
+- Many small objects share the same data
+**Example:** Characters in a text editor
+
+```python
+class Glyph:
+    def __init__(self, char): self.char = char
+
+class GlyphFactory:
+    _cache = {}
+    def get(self, char):
+        if char not in self._cache:
+            self._cache[char] = Glyph(char)
+        return self._cache[char]
+```
+
+#### Proxy
+**Intent:** Controls access to another object.
+**Pros**
+- Lazy loading, caching, or security
+- Extra control without changing the real object
+**Cons**
+- Extra latency
+- More complexity
+**Fits when**
+- You need access control or lazy loading
+**Example:** Lazy-loading large images
+
+```python
+class RealImage:
+    def load(self): return "image loaded"
+
+class ImageProxy:
+    def __init__(self): self.real = None
+    def load(self):
+        if not self.real: self.real = RealImage()
+        return self.real.load()
+```
+
+### Behavioral Patterns
+
+These patterns define how objects communicate.
+
+#### Chain of Responsibility
+**Intent:** Passes a request through a chain until one handler processes it.
+**Pros**
+- Loose coupling between sender and handler
+- Easy to reorder handlers
+**Cons**
+- Not clear who handles the request
+- Requests can go unhandled
+**Fits when**
+- Multiple handlers could process the same request
+**Example:** Support tickets routed by category
+
+```python
+class Handler:
+    def __init__(self, nxt=None): self.nxt = nxt
+    def handle(self, req): return self.nxt.handle(req) if self.nxt else "none"
+
+class Auth(Handler):
+    def handle(self, req): return "auth" if req == "auth" else super().handle(req)
+```
+
+#### Command
+**Intent:** Wraps a request as an object.
+**Pros**
+- Supports undo, logging, and queues
+- Decouples sender and receiver
+**Cons**
+- Many small command classes
+- Extra boilerplate
+**Fits when**
+- You need undo or queued actions
+**Example:** UI actions with undo
+
+```python
+class Command:
+    def execute(self): pass
+
+class LightOn(Command):
+    def execute(self): return "on"
+
+class Remote:
+    def __init__(self, cmd): self.cmd = cmd
+    def press(self): return self.cmd.execute()
+```
+
+#### Interpreter
+**Intent:** Defines a grammar and interprets expressions.
+**Pros**
+- Simple to add small rules
+- Easy to extend the grammar
+**Cons**
+- Slow for large grammars
+- Hard to maintain at scale
+**Fits when**
+- You have a small, simple language
+**Example:** A simple rule engine
+
+```python
+class Number:
+    def __init__(self, v): self.v = v
+    def eval(self): return self.v
+
+class Add:
+    def __init__(self, a, b): self.a, self.b = a, b
+    def eval(self): return self.a.eval() + self.b.eval()
+```
+
+#### Iterator
+**Intent:** Accesses elements of a collection without exposing its structure.
+**Pros**
+- Consistent traversal API
+- Hides internal structure
+**Cons**
+- Can hide performance costs
+- Adds extra objects
+**Fits when**
+- You need to traverse different collections the same way
+**Example:** Iterating over a tree
+
+```python
+class Bag:
+    def __init__(self, items): self.items = items
+    def __iter__(self):
+        for i in self.items: yield i
+```
+
+#### Mediator
+**Intent:** Centralizes communication between objects.
+**Pros**
+- Reduces direct dependencies
+- Keeps objects simpler
+**Cons**
+- Mediator can become complex
+- Hard to test if it grows too large
+**Fits when**
+- Many objects talk to each other
+**Example:** A chat room managing messages
+
+```python
+class ChatRoom:
+    def __init__(self): self.users = []
+    def join(self, u): self.users.append(u)
+    def send(self, msg): return [u.recv(msg) for u in self.users]
+```
+
+#### Memento
+**Intent:** Captures and restores an object's state.
+**Pros**
+- Enables undo
+- Keeps encapsulation
+**Cons**
+- Can use lots of memory
+- State management can get complex
+**Fits when**
+- You need restore points
+**Example:** Undo in a text editor
+
+```python
+class Editor:
+    def __init__(self): self.text = ""
+    def save(self): return self.text
+    def restore(self, m): self.text = m
+```
+
+#### Observer
+**Intent:** Notifies many dependents when a subject changes.
+**Pros**
+- Loose coupling
+- Easy to add new observers
+**Cons**
+- Update cascades can be hard to debug
+- Update order is not obvious
+**Fits when**
+- Many parts depend on the same change
+**Example:** UI updates when data changes
+
+```python
+class Subject:
+    def __init__(self): self.obs = []
+    def attach(self, o): self.obs.append(o)
+    def notify(self, msg):
+        for o in self.obs: o.update(msg)
+```
+
+#### State
+**Intent:** Changes behavior when internal state changes.
+**Pros**
+- Removes large conditional logic
+- Clear state transitions
+**Cons**
+- More classes
+- More moving parts
+**Fits when**
+- Behavior depends on state
+**Example:** Order states like New, Paid, Shipped
+
+```python
+class New:
+    def next(self): return Paid()
+class Paid:
+    def next(self): return Shipped()
+class Order:
+    def __init__(self): self.state = New()
+    def advance(self): self.state = self.state.next()
+```
+
+#### Strategy
+**Intent:** Encapsulates algorithms and makes them interchangeable.
+**Pros**
+- Swap behavior at runtime
+- Keeps algorithms isolated
+**Cons**
+- Many small classes
+- Extra wiring
+**Fits when**
+- You have multiple algorithms for one task
+**Example:** Different pricing rules
+
+```python
+class Fixed:
+    def price(self, base): return base
+class Discount:
+    def price(self, base): return base * 0.9
+class Checkout:
+    def __init__(self, strategy): self.strategy = strategy
+    def total(self, base): return self.strategy.price(base)
+```
+
+#### Template Method
+**Intent:** Defines a skeleton algorithm with steps overridden in subclasses.
+**Pros**
+- Consistent flow
+- Custom steps where needed
+**Cons**
+- Inheritance can be rigid
+- Hard to change the base flow
+**Fits when**
+- Steps are the same but details differ
+**Example:** Report generation with shared steps
+
+```python
+class Exporter:
+    def export(self):
+        data = self.load(); return self.format(data)
+    def load(self): raise NotImplementedError
+    def format(self, data): raise NotImplementedError
+```
+
+#### Visitor
+**Intent:** Adds new operations to object structures without changing the objects.
+**Pros**
+- Easy to add new operations
+- Keeps element classes stable
+**Cons**
+- Hard to add new element types
+- Can be verbose
+**Fits when**
+- The object structure is stable
+**Example:** Running analytics on an AST
+
+```python
+class Node:
+    def accept(self, v): return v.visit(self)
+
+class Visitor:
+    def visit(self, node): return "visited"
+```
+
+---
+---
+
+## Glossary 📘
+
+- Building block: A part of a system (for example a module, service, or database).
+- Dependency: When one part needs another part to work or to deliver a result.
 
 ---
 
-### Bridge 
-
-The Bridge Pattern provides a solution to decouple abstraction from implementation by using object composition, allowing both to evolve independently for related classes.
-
-<details>
-
-  <summary>Example</summary>
-
-Imagine you have a car that you want to build. For the car there might be different engines available. 
-You could create multiple subclasses like `ElectricCar` or `PetrolCar`. But now we want to add gear-shift to the cars. 
-This would lead into more subclasses like `ElectricManuelGearCar`, `ElectricAutomaticGearCar`, `PetrolManuelGearCar` and `PetrolAutomaticGearCar`.
-We can fix this by switching from inheritance to composition. Our class `Car(engine: Engine, gearshift: Gearshift)` expects the abstractions `Engine` and `Gearshift`. 
-Then we create our implementations `AutomaticGear`, `ManuelGear`, `PetrolEngine` and `ElectricEngine`. 
-Now we can create our cars like Car(new AutomaticGear(), new Petrol()).
-
-</details>
-
-<details>
-  <summary>Code Example</summary>
-
-  ```python
-
-  class Gearshift:
-    def start(self):
-        raise NotImplementedError
-
-  class ManuelGear(Gearshift)
-    def start(self):
-      print("Start manuel")
-
-  class AutomaticGear(Gearshift)
-    def start(self):
-      print("Start automatic")
-
-  class Engine:
-    def start():
-      raise NotImplementedError
-
-  class PetrolEngine(Engine):
-    def start(self):
-      print("Start petrol engine"
-
-  class ElectricEngine():
-    def start(self):
-      print("Start electric engine"
-
-  class Car():
-    def __init__(self, engine, gearshift):
-      self.engine = engine
-      self.gearshift
-
-    def drive(self):
-      self.engine.start()
-      self.gearshift.start()
-
-
-    petrol = PetrolEngine()
-    manuel = ManuelGear()
-    car = Car(petrol, manuel)
-    car.start()
-
-  ```
-</details>
-
----
-
-## Behavioral Patterns
-
-**Behavioral Patterns are solutions to define interaction between objects**
-
-## Creational Patterns
-
-**Behavioral Patterns are solutions to create objects**
-
----
-
-### Factory method
-
-The Factory Method encapsulates object creation in a method that subclasses override to decide which concrete object to instantiate.
-
-<details>
-  <summary>Example</summary>
-
-Imagine you have a tool that creates invoices. There are two ways to generate an invoice: PDF and text. Every time the implementation for either PDF or text changes, the client needs to be adjusted. To solve this   problem, an InvoiceFactory is created. From this InvoiceFactory superclass, two concrete factories are derived: PdfFactory and TextFactory. These classes are responsible for creating the objects, so the client doesn't need to know about the specific implementations. The client interacts just with the factories. 
-</details>
-
-<details>
-  <summary>Code Example</summary>
-
-  ```python
-
-  from abc import ABC, abstractmethod
-
-  class Invoice(ABC):
-      @abstractmethod
-      def print_invoice(self):
-          pass
-  
-  class PDFInvoice(Invoice):
-      def print_invoice(self):
-          print("PDF invoice is created and saved.")
-  
-  class TextInvoice(Invoice):
-      def print_invoice(self):
-          print("Text invoice is created and printed.")
-  
-  class InvoiceTool(ABC):
-      @abstractmethod
-      def create_invoice(self):
-          pass
-  
-      def generate_invoice(self):
-          invoice = self.create_invoice()
-          invoice.print_invoice()
-  
-  class PDFInvoiceTool(InvoiceTool):
-      def create_invoice(self):
-          return PDFInvoice()
-  
-  class TextInvoiceTool(InvoiceTool):
-      def create_invoice(self):
-          return TextInvoice()
-  
-  def main():
-      tool = PDFInvoiceTool()
-      tool.generate_invoice()
-      tool = TextInvoiceTool()
-      tool.generate_invoice()
-
-
-  ```
-</details>
-
-
-# Contribution 
+## Contribution 
 
 If you'd like to contribute, feel free to create a pull request. 
 If you think a topic is missing, please open an issue.
