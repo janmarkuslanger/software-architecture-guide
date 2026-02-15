@@ -4,7 +4,7 @@
 
 ---
 
-# Introduction 👋
+# Introduction
 
 This guide aims to provide a concise overview of various aspects of software architecture. It covers key concepts, architectural styles, and essential principles to help people understand the foundational elements of building software systems.
 
@@ -15,13 +15,13 @@ Regardless of whether these decisions are deliberate or accidental, every softwa
 
 ---
 
-## Key Concepts 🔑
+## Key Concepts
 
 ### Coupling
 
 Coupling describes the degree of dependency between two components in a system.
-In general, we aim for a system with as **loose coupling** between components as possible. 
-A component can represent various entities, such as a module, a service, or a database. 
+In general, we aim for a system with as **loose coupling** between components as possible.
+A component can represent various entities, such as a module, a service, or a database.
 
 Dependencies can manifest in many forms and affect the flexibility and maintainability of the system.
 
@@ -46,7 +46,7 @@ Examples of Coupling:
 Cohesion describes how strongly components within a module or system are related. In general, we aim to achieve high cohesion.
 High cohesion ensures that components are focused on a single responsibility, making the system easier to understand, maintain, and extend.
 
-## Quality Attributes ✅
+## Quality Attributes
 
 Quality attributes describe what “good” looks like for a system. They help to set priorities.
 Not all are equally important. Pick the top 2–3 for your system.
@@ -60,7 +60,7 @@ Not all are equally important. Pick the top 2–3 for your system.
 - Operations: Is it easy to run and monitor?
 - Cost: Is it affordable to build and run?
 
-## Trade-offs ⚖️
+## Trade-offs
 
 Architecture is about choices. Most choices have upsides and downsides.
 You can’t optimize everything at the same time.
@@ -70,7 +70,7 @@ You can’t optimize everything at the same time.
 - Cost vs. availability: High availability usually costs more.
 - Isolation vs. reuse: Shared code is easy to reuse but harder to change safely.
 
-## Decisions and Records 📝
+## Decisions and Records
 
 Important decisions should be written down. This helps new people and avoids repeated debates.
 One simple way is an ADR (Architecture Decision Record).
@@ -82,7 +82,7 @@ An ADR is a short note that includes:
 - Alternatives that were considered
 - The date
 
-## Diagrams 🗺️
+## Diagrams
 
 Diagrams help people understand a system quickly. Common types are:
 
@@ -96,7 +96,7 @@ Diagrams help people understand a system quickly. Common types are:
 
 ---
 
-## Architecture Styles 🏭
+## Architecture Styles
 
 ### Monolithic Architecture
 
@@ -220,7 +220,7 @@ Example:
 
 ---
 
-## Design Patterns 🏁
+## Design Patterns
 
 Design patterns are common solutions to recurring design problems. They give teams a shared language and speed up decisions.
 
@@ -795,14 +795,14 @@ class Visitor:
 ---
 ---
 
-## Glossary 📘
+## Glossary
 
 - Building block: A part of a system (for example a module, service, or database).
 - Dependency: When one part needs another part to work or to deliver a result.
 
 ---
 
-## Contribution 
+## Contribution
 
-If you'd like to contribute, feel free to create a pull request. 
+If you'd like to contribute, feel free to create a pull request.
 If you think a topic is missing, please open an issue.
