@@ -651,6 +651,10 @@ Centralizes communication between objects.
 A chat room managing messages
 
 ```python
+class User:
+    def __init__(self, name): self.name = name
+    def recv(self, msg): return f"{self.name} got {msg}"
+
 class ChatRoom:
     def __init__(self): self.users = []
     def join(self, u): self.users.append(u)
@@ -693,6 +697,9 @@ Notifies many dependents when a subject changes.
 UI updates when data changes
 
 ```python
+class Observer:
+    def update(self, msg): return msg
+
 class Subject:
     def __init__(self): self.obs = []
     def attach(self, o): self.obs.append(o)
@@ -719,6 +726,8 @@ class New:
     def next(self): return Paid()
 class Paid:
     def next(self): return Shipped()
+class Shipped:
+    def next(self): return self
 class Order:
     def __init__(self): self.state = New()
     def advance(self): self.state = self.state.next()
