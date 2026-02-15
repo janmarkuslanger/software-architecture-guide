@@ -255,6 +255,8 @@ def render_ui(factory):
     return factory.button(), factory.checkbox()
 ```
 
+---
+
 #### Builder
 **Overview:**
 Builds complex objects step by step with the same construction process.
@@ -278,6 +280,8 @@ class RequestBuilder:
 
 req = RequestBuilder().header("Auth", "token").param("q", "books").build()
 ```
+
+---
 
 #### Factory Method
 **Overview:**
@@ -304,6 +308,8 @@ class WordCreator(DocCreator):
     def create(self): return "Word"
 ```
 
+---
+
 #### Prototype
 **Overview:**
 Creates new objects by cloning existing ones.
@@ -328,6 +334,8 @@ base = Form(["name", "email"])
 custom = base.clone()
 custom.fields.append("company")
 ```
+
+---
 
 #### Singleton
 **Overview:**
@@ -382,6 +390,8 @@ class PayAdapter:
     def pay(self, dollars): return self.legacy.pay_legacy(dollars * 100)
 ```
 
+---
+
 #### Bridge
 **Overview:**
 Separates abstraction from implementation so both can change independently.
@@ -407,6 +417,8 @@ class Remote:
     def __init__(self, device): self.device = device
     def power(self): return self.device.on()
 ```
+
+---
 
 #### Composite
 **Overview:**
@@ -436,6 +448,8 @@ class Folder:
         return out
 ```
 
+---
+
 #### Decorator
 **Overview:**
 Adds behavior to objects without changing their class.
@@ -458,6 +472,8 @@ class Encrypted(Stream):
     def __init__(self, stream): self.stream = stream
     def read(self): return f"enc({self.stream.read()})"
 ```
+
+---
 
 #### Facade
 **Overview:**
@@ -487,6 +503,8 @@ class PaymentFacade:
             Charge().run(); return Receipt().send()
 ```
 
+---
+
 #### Flyweight
 **Overview:**
 Shares common data to save memory when many objects are similar.
@@ -512,6 +530,8 @@ class GlyphFactory:
             self._cache[char] = Glyph(char)
         return self._cache[char]
 ```
+
+---
 
 #### Proxy
 **Overview:**
@@ -565,6 +585,8 @@ class Auth(Handler):
     def handle(self, req): return "auth" if req == "auth" else super().handle(req)
 ```
 
+---
+
 #### Command
 **Overview:**
 Wraps a request as an object.
@@ -591,6 +613,8 @@ class Remote:
     def press(self): return self.cmd.execute()
 ```
 
+---
+
 #### Interpreter
 **Overview:**
 Defines a grammar and interprets expressions.
@@ -615,6 +639,8 @@ class Add:
     def eval(self): return self.a.eval() + self.b.eval()
 ```
 
+---
+
 #### Iterator
 **Overview:**
 Accesses elements of a collection without exposing its structure.
@@ -635,6 +661,8 @@ class Bag:
     def __iter__(self):
         for i in self.items: yield i
 ```
+
+---
 
 #### Mediator
 **Overview:**
@@ -661,6 +689,8 @@ class ChatRoom:
     def send(self, msg): return [u.recv(msg) for u in self.users]
 ```
 
+---
+
 #### Memento
 **Overview:**
 Captures and restores an object's state.
@@ -681,6 +711,8 @@ class Editor:
     def save(self): return self.text
     def restore(self, m): self.text = m
 ```
+
+---
 
 #### Observer
 **Overview:**
@@ -706,6 +738,8 @@ class Subject:
     def notify(self, msg):
         for o in self.obs: o.update(msg)
 ```
+
+---
 
 #### State
 **Overview:**
@@ -733,6 +767,8 @@ class Order:
     def advance(self): self.state = self.state.next()
 ```
 
+---
+
 #### Strategy
 **Overview:**
 Encapsulates algorithms and makes them interchangeable.
@@ -757,6 +793,8 @@ class Checkout:
     def total(self, base): return self.strategy.price(base)
 ```
 
+---
+
 #### Template Method
 **Overview:**
 Defines a skeleton algorithm with steps overridden in subclasses.
@@ -778,6 +816,8 @@ class Exporter:
     def load(self): raise NotImplementedError
     def format(self, data): raise NotImplementedError
 ```
+
+---
 
 #### Visitor
 **Overview:**
@@ -801,7 +841,6 @@ class Visitor:
     def visit(self, node): return "visited"
 ```
 
----
 ---
 
 ## Glossary
