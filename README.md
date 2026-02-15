@@ -118,6 +118,8 @@ Fits when:
 Example:
 - A small internal admin service
 
+---
+
 ### Microservices
 
 Many small services, each with a clear responsibility. Services talk through APIs and are deployed separately.
@@ -137,6 +139,8 @@ Fits when:
 
 Example:
 - An online shop with separate services for orders, payment, shipping
+
+---
 
 ### Event-Driven Architecture
 
@@ -158,6 +162,8 @@ Fits when:
 Example:
 - Payment happens -> event triggers shipping and invoice
 
+---
+
 ### Service-Oriented Architecture (SOA)
 
 Large services with clear interfaces, often aligned to business areas. Services are broader than microservices.
@@ -178,6 +184,8 @@ Fits when:
 Example:
 - A central customer service used by many products
 
+---
+
 ### Serverless Architecture
 
 Code runs as functions. The cloud provider runs the servers and scales automatically.
@@ -197,6 +205,8 @@ Fits when:
 
 Example:
 - Image processing after an upload to cloud storage
+
+---
 
 ### Cloud Architecture
 
