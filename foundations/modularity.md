@@ -122,7 +122,7 @@ flowchart TB
   Connascence -->|"guides refactoring toward"| Cohesion
 ```
 
-- High cohesion naturally reduces coupling,  a focused module has fewer reasons to touch other modules.
+- High cohesion naturally reduces coupling, a focused module has fewer reasons to touch other modules.
 - Low coupling reduces connascence — fewer dependencies mean fewer things that must change together.
 - Connascence gives you a vocabulary to *identify* and *prioritize* what to refactor.
 
