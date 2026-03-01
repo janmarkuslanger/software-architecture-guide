@@ -12,7 +12,7 @@ Each module or service owns a clear capability and its data. Users, external sys
 Interfaces define stable inputs, outputs, and error behavior. Less coupling (temporal, spatial, or data) means less coordination between teams and services. Functional cohesion is strongest; avoid grouping by technical layer alone.
 
 **Quality & Constraints**
-Quality attributes: scalability, reliability, availability, security, maintainability and performance describe what the system must do well. Constraints like budget, team size, compliance andtechnology limit what is actually feasible. You cannot maximize all attributes at once; document the chosen balance.
+Quality attributes: scalability, reliability, availability, security, maintainability and performance describe what the system must do well. Constraints like budget, team size, compliance and technology limit what is actually feasible. You cannot maximize all attributes at once; document the chosen balance.
 
 **Evolution**
 Architecture is not a one-time decision. It evolves iteratively as requirements, team, and context change. Avoid locking in irreversible decisions early, measure actual behavior, and refactor safely. The goal is to keep technical debt low, but no decision is ever perfect. You work with incomplete information and real constraints, so the right call is to make a reasonable choice, document the trade-offs, and revisit when you know more.
