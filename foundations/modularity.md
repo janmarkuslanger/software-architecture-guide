@@ -19,7 +19,7 @@ Cohesion measures how strongly the elements inside a module belong together. Hig
 | Temporal | Elements execute at the same time | Startup initialization routines in one module |
 | Procedural | Elements follow a fixed sequence | Steps of a file-processing script |
 | Communicational | Elements operate on the same data | Validate, transform, and save the same record |
-| Sequential | Output of one element feeds into the next | Parse -> validate -> enrich → persist |
+| Sequential | Output of one element feeds into the next | Parse -> validate -> enrich -> persist |
 | Functional | All elements contribute to one single, well-defined task | A `PasswordHasher` that only hashes passwords |
 
 **Aim for functional or sequential cohesion.** Avoid coincidental and logical cohesion, because they are signs that a module is doing too many unrelated things.
