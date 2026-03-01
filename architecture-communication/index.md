@@ -7,7 +7,7 @@ Architecture only works if it is understood. Clear communication aligns teams, r
 - Stakeholders and viewpoints: engineers, product, operations, security, and compliance have different views.
 - Diagram hygiene: consistent notation, clear legends, and minimal clutter.
 - Narrative context: explain the why behind diagrams like goals, constraints and trade-offs.
-- Explicit communication: state assumptions, goals, non-goalds and risks.
+- Explicit communication: state assumptions, goals, non-goals and risks.
 - Living documentation: keep diagrams close to code and update with changes.
 - Adapt to context: the level of documentation should match the complexity and needs of the project.
 
