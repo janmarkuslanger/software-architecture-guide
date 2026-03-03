@@ -30,6 +30,7 @@ flowchart TB
 
 
 ## Decision considerations / trade-offs
+
 | | Pro | Con |
 |---|---|---|
 | Dependency direction | Easy to reason about; testable domain | Infrastructure concerns can leak upward |
