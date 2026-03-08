@@ -7,6 +7,10 @@ This decouples timing, deployment, and team ownership.
 
 ## Topology
 
+### Broker Topology
+
+Producers emit events to a central broker (e.g., Kafka, RabbitMQ). Consumers subscribe independently. No central coordination. The broker only routes and delivers.
+
 ```mermaid
 flowchart LR
   subgraph Producers
@@ -28,6 +32,31 @@ flowchart LR
   Broker -->|"delivers Event"| C2
   Broker -->|"delivers Event"| C3
 ```
+
+### Mediator Topology
+
+Events are routed through a central mediator (e.g., an orchestrator or workflow engine). The mediator knows the process steps and coordinates which consumers are called and in what order.
+
+```mermaid
+flowchart LR
+  P["Producer"]
+  M[["Mediator\n(Orchestrator)"]]
+  C1["Consumer 1"]
+  C2["Consumer 2"]
+  C3["Consumer 3"]
+
+  P -->|"emits Event"| M
+  M -->|"step 1"| C1
+  M -->|"step 2"| C2
+  M -->|"step 3"| C3
+```
+
+| | Broker | Mediator |
+|---|---|---|
+| Coordination | Decentralized — consumers decide what to do | Centralized — mediator controls the flow |
+| Coupling | Low — producer and consumer don't know each other | Medium — mediator knows all steps |
+| Visibility | Harder to see end-to-end flow | Flow is explicit and auditable in one place |
+| Use when | Fan-out, independent reactions, scalability | Multi-step workflows, ordered processing, error handling across steps |
 
 ## Core concepts
 - **Event**: an immutable record of something that happened. Named in past tense (e.g., `OrderPlaced`, `UserRegistered`). Contains all information a consumer needs to react.
