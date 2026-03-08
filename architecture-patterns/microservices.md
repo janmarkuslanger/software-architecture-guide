@@ -5,7 +5,7 @@ Microservices is an architectural style where a system is composed of small, ind
 
 The goal is independent deployability, scalability, and team autonomy — not small code size.
 
-## Structure
+## Topology
 
 ```mermaid
 flowchart TB
