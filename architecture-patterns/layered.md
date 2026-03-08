@@ -5,7 +5,7 @@ Layered architecture organizes a system into horizontal layers, each with a spec
 
 The most common form has four layers: presentation, application, domain, and infrastructure.
 
-## Structure
+## Topology
 
 Each layer has a single, well-defined responsibility. Dependencies flow strictly downward — upper layers may call lower layers, but never the reverse.
 

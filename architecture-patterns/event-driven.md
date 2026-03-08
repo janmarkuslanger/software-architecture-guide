@@ -5,7 +5,7 @@ Event-driven architecture (EDA) is a style where components communicate by produ
 
 This decouples timing, deployment, and team ownership.
 
-## Structure
+## Topology
 
 ```mermaid
 flowchart LR

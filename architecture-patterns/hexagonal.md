@@ -5,7 +5,7 @@ Hexagonal architecture isolates core business logic from all external systems â€
 
 The result: the core can be tested and evolved without touching infrastructure, and infrastructure can be swapped without touching the core.
 
-## Structure
+## Topology
 
 ```mermaid
 flowchart LR

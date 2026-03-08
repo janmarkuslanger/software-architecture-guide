@@ -5,7 +5,7 @@ A modular monolith is a single deployable unit structured with explicit, enforce
 
 It combines the operational simplicity of a monolith with the boundary discipline of a service-oriented architecture.
 
-## Structure
+## Topology
 
 ```mermaid
 flowchart TB
