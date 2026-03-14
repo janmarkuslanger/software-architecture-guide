@@ -33,6 +33,7 @@ The core calls out to plug-ins at defined extension points. Plug-ins implement t
 - **Registry**: the mechanism that maps extension points to concrete plug-in implementations at runtime (configuration file, DI container, service locator).
 
 ## Decision considerations / trade-offs
+
 | | Pro | Con |
 |---|---|---|
 | Extensibility | New features added without touching core logic | Extension point changes require updates across all plug-ins |
