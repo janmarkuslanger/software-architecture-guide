@@ -14,6 +14,7 @@ Choosing the right style early reduces long-term coordination cost. The wrong st
 | [Modular Monolith](modular-monolith.md) | Growing teams, pre-microservices | Clean boundaries without deployment complexity |
 | [Microservices](microservices.md) | Multiple teams, independent scaling | High autonomy, high operational cost |
 | [Event-Driven](event-driven.md) | Fan-out, audit trails, async workflows | Great decoupling, harder to trace and debug |
+| [Microkernel / Plugin](microkernel.md) | Extensible platforms, plugin ecosystems | Stable core, plugin contract must be carefully versioned |
 
 
 ## General trade-offs
