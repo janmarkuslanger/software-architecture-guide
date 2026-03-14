@@ -20,7 +20,7 @@ class BookingForm:
     def __init__(self) -> None:
         self.collect_at_store = Checkbox(self)
         self.address = TextInput(self)
-        self.submit = Button()
+        self.submit = Button(self)
 
     def notify(self, sender: object) -> None:
         if sender is self.collect_at_store:
@@ -51,7 +51,9 @@ class TextInput:
 
 
 class Button:
-    enabled = False
+    def __init__(self, form: "BookingForm") -> None:
+        self._form = form
+        self.enabled = False
 
 
 form = BookingForm()
@@ -60,7 +62,7 @@ form.address.type("Baker Street 1")
 assert form.submit.enabled        # address filled → submit active
 
 form.collect_at_store.toggle()
-assert not form.address.enabled   # home delivery unchecked → address hidden
+assert not form.address.enabled   # pickup selected → address hidden
 assert form.submit.enabled        # store pickup needs no address
 
 form.collect_at_store.toggle()

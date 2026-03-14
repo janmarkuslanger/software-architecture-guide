@@ -58,7 +58,7 @@ class EmailBuilder:
             to=self._to,
             subject=self._subject,
             body=self._body,
-            cc=self._cc,
+            cc=list(self._cc),
             reply_to=self._reply_to,
         )
 

@@ -4,7 +4,7 @@ The Singleton pattern ensures that a class has exactly one instance and provides
 
 ## How it works
 
-The constructor is made private (or protected) so nothing outside the class can create a new instance directly. Note: Not every language like Javascript supports private methods. The class itself holds the single instance as a class-level variable and exposes it through a static method or property. On the first call the instance is created; on every subsequent call the existing one is returned.
+The constructor is made private (or protected) so nothing outside the class can create a new instance directly. Note: Not every language like JavaScript supports private methods. The class itself holds the single instance as a class-level variable and exposes it through a static method or property. On the first call the instance is created; on every subsequent call the existing one is returned.
 
 ## Example
 
@@ -32,6 +32,8 @@ config_b = AppConfig()
 print(config_b.get("theme"))  # dark
 print(config_a is config_b)   # True
 ```
+
+> **Thread-safety warning:** The `if cls._instance is None` check in `__new__` is not thread-safe. Two threads can both pass the check before either assigns `cls._instance`, resulting in two instances being created. For multithreaded environments, protect the check with a `threading.Lock`, or avoid the problem entirely by using a module-level singleton (assign the instance once at import time), which Python's import system initialises atomically.
 
 ## When to use
 

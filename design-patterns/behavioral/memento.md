@@ -42,6 +42,9 @@ class DrawingCanvas:
             zoom_level=self._zoom,
         )
 
+    def get_shapes(self) -> list[str]:
+        return list(self._shapes)
+
     def restore(self, state: DrawingState) -> None:
         self._shapes = list(state.shapes)
         self._tool = state.selected_tool
@@ -73,7 +76,7 @@ history.push(canvas.save())
 canvas.add_shape("Rectangle")
 canvas.select_tool("eraser")
 
-print(canvas._shapes)  # ['Circle', 'Rectangle']
+print(canvas.get_shapes())  # ['Circle', 'Rectangle']
 
 snapshot = history.pop()
 if snapshot:

@@ -82,4 +82,3 @@ ticker.set_price(110.0)
 ## When not to use
 
 - The update chain becomes long and recursive: an observer changes the subject, which notifies more observers, causing cascading updates that are hard to trace.
-- The notification order matters for correctness. Observer lists do not guarantee a stable order, and relying on it creates fragile behavior.

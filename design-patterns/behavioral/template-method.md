@@ -63,7 +63,7 @@ class UserPipeline(DataPipeline):
         return [{"id": 10, "name": "Alice"}, {"name": "Bob"}]
 
     def transform(self, records: list[dict]) -> list[dict]:
-        return [r for r in records if "id" in r]
+        return list(records)
 
     def load(self, records: list[dict]) -> None:
         print(f"Saving {len(records)} users.")

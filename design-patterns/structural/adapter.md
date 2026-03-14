@@ -9,6 +9,9 @@ The adapter wraps the incompatible object and implements the interface the clien
 ## Example
 
 ```python
+from decimal import Decimal, ROUND_HALF_UP
+
+
 class LegacyPaymentGateway:
     def make_payment(self, amount_cents: int, currency_code: str) -> dict:
         return {
@@ -28,7 +31,9 @@ class LegacyGatewayAdapter(PaymentProcessor):
         self._gateway = gateway
 
     def charge(self, amount: float, currency: str) -> bool:
-        amount_cents = int(amount * 100)
+        amount_cents = int(
+            (Decimal(str(amount)) * Decimal("100")).quantize(Decimal("1"), rounding=ROUND_HALF_UP)
+        )
         result = self._gateway.make_payment(amount_cents, currency)
         return result["status"] == "OK"
 
