@@ -23,6 +23,11 @@ This guide is a compact reference about software architecture. It combines theor
 - [Cloud & Deployment Architecture](cloud-architecture/index.md)
 - [Architecture Communication](architecture-communication/index.md)
 - [Architecture Decision Making](decision-making/index.md)
+- [Architect Role & Responsibilities](architect-role/index.md)
+  - [Stakeholder Management](architect-role/stakeholder-management.md)
+  - [Team Alignment](architect-role/team-alignment.md)
+  - [Risk Analysis](architect-role/risk-analysis.md)
+  - [Architecture Decision Records (ADRs)](architect-role/adr.md)
 
 ---
 
