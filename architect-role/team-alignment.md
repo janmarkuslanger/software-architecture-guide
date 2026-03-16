@@ -1,12 +1,13 @@
 # Team Alignment
 
 ## Overview
-Architecture only works if the teams building the system understand and follow it. Alignment means creating shared mental models — not enforcing compliance top-down.
+Architecture only works if the teams building the system understand and follow it. Alignment means creating shared mental models, not enforcing compliance top-down.
 
 ## Core concepts
 
 ### Share the "why"
-Teams that understand the reasoning behind decisions are more likely to apply them correctly in novel situations. Document not just what was decided, but why.
+Teams that understand the reasoning behind decisions are more likely to apply them correctly in novel situations.
+Document not just what was decided, but why.
 
 ### Architecture as a conversation
 - Involve team members early in architectural discussions.

@@ -33,7 +33,7 @@ State what was decided, clearly and directly.
 List the options that were evaluated and briefly explain why they were not chosen.
 
 ### Consequences
-Describe the expected outcomes — both positive and negative. Include risks, trade-offs, and follow-up actions if applicable.
+Describe the expected positive and negative outcomes. Include risks, trade-offs, and follow-up actions if applicable.
 
 ## Example
 

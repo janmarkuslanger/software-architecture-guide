@@ -32,4 +32,4 @@ Stakeholder management is continuous, not a one-time activity. Regular check-ins
 ## Decision considerations / trade-offs
 - Over-involving stakeholders slows decisions; under-involving them causes rework.
 - Transparency about trade-offs builds trust but may increase scrutiny.
-- Prioritizing one stakeholder group risks alienating others — balance is required.
+- Prioritizing one stakeholder group risks alienating others.

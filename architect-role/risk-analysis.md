@@ -21,7 +21,7 @@ For each risk, assess:
 Risk storming is a collaborative workshop technique to identify risks across a system design:
 
 1. **Prepare**: share the architecture diagram with participants before the session.
-2. **Individual identification**: each participant independently marks areas of concern on the diagram using sticky notes or color codes — without discussion.
+2. **Individual identification**: each participant independently marks areas of concern on the diagram using sticky notes or color codes without discussion.
 3. **Group review**: present findings one by one. Identify areas where multiple participants flagged the same concern. These are high-priority risks.
 4. **Prioritize**: rate each risk by likelihood and impact to focus mitigation efforts.
 5. **Mitigate**: assign owners and define concrete mitigation steps or acceptance criteria.
