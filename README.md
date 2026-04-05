@@ -11,6 +11,7 @@ This guide is a compact reference about software architecture. It combines theor
 ## Table of contents
 - [Foundations](foundations/index.md)
   - [Modularity](foundations/modularity.md)
+  - [Component Principles](foundations/component-principles.md)
   - [Glossary](foundations/glossary.md)
 - [Architecture Styles & Patterns](architecture-patterns/index.md)
   - [Layered Architecture](architecture-patterns/layered.md)
