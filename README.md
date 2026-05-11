@@ -5,7 +5,7 @@
 ---
 
 ## Purpose and scope
-This guide is a compact reference about software architecture. It combines theory with practice, covering core concepts, trade-offs, and system structure.
+A compact reference on software architecture — concepts, trade-offs, and structural decisions.
 
 
 ## Table of contents
@@ -13,6 +13,46 @@ This guide is a compact reference about software architecture. It combines theor
   - [Modularity](foundations/modularity.md)
   - [Component Principles](foundations/component-principles.md)
   - [Glossary](foundations/glossary.md)
+- [Quality Attributes](quality-attributes/index.md) *(ISO 25010)*
+  - [Functional Suitability](quality-attributes/functional-suitability/index.md)
+    - [Functional Completeness](quality-attributes/functional-suitability/functional-completeness.md)
+    - [Functional Correctness](quality-attributes/functional-suitability/functional-correctness.md)
+    - [Functional Appropriateness](quality-attributes/functional-suitability/functional-appropriateness.md)
+  - [Performance Efficiency](quality-attributes/performance-efficiency/index.md)
+    - [Time Behaviour](quality-attributes/performance-efficiency/time-behaviour.md)
+    - [Resource Utilisation](quality-attributes/performance-efficiency/resource-utilisation.md)
+    - [Capacity](quality-attributes/performance-efficiency/capacity.md)
+  - [Compatibility](quality-attributes/compatibility/index.md)
+    - [Co-existence](quality-attributes/compatibility/co-existence.md)
+    - [Interoperability](quality-attributes/compatibility/interoperability.md)
+  - [Usability](quality-attributes/usability/index.md)
+    - [Appropriateness Recognisability](quality-attributes/usability/appropriateness-recognisability.md)
+    - [Learnability](quality-attributes/usability/learnability.md)
+    - [Operability](quality-attributes/usability/operability.md)
+    - [User Error Protection](quality-attributes/usability/user-error-protection.md)
+    - [User Interface Aesthetics](quality-attributes/usability/user-interface-aesthetics.md)
+    - [Accessibility](quality-attributes/usability/accessibility.md)
+  - [Reliability](quality-attributes/reliability/index.md)
+    - [Maturity](quality-attributes/reliability/maturity.md)
+    - [Availability](quality-attributes/reliability/availability.md)
+    - [Fault Tolerance](quality-attributes/reliability/fault-tolerance.md)
+    - [Recoverability](quality-attributes/reliability/recoverability.md)
+  - [Security](quality-attributes/security/index.md)
+    - [Confidentiality](quality-attributes/security/confidentiality.md)
+    - [Integrity](quality-attributes/security/integrity.md)
+    - [Non-repudiation](quality-attributes/security/non-repudiation.md)
+    - [Accountability](quality-attributes/security/accountability.md)
+    - [Authenticity](quality-attributes/security/authenticity.md)
+  - [Maintainability](quality-attributes/maintainability/index.md)
+    - [Modularity](quality-attributes/maintainability/modularity.md)
+    - [Reusability](quality-attributes/maintainability/reusability.md)
+    - [Analysability](quality-attributes/maintainability/analysability.md)
+    - [Modifiability](quality-attributes/maintainability/modifiability.md)
+    - [Testability](quality-attributes/maintainability/testability.md)
+  - [Portability](quality-attributes/portability/index.md)
+    - [Adaptability](quality-attributes/portability/adaptability.md)
+    - [Installability](quality-attributes/portability/installability.md)
+    - [Replaceability](quality-attributes/portability/replaceability.md)
 - [Architecture Styles & Patterns](architecture-patterns/index.md)
   - [Layered Architecture](architecture-patterns/layered.md)
   - [Hexagonal / Ports & Adapters](architecture-patterns/hexagonal.md)
