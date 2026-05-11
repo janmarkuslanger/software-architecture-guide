@@ -13,7 +13,7 @@ A compact reference on software architecture — concepts, trade-offs, and struc
   - [Modularity](foundations/modularity.md)
   - [Component Principles](foundations/component-principles.md)
   - [Glossary](foundations/glossary.md)
-- [Quality Attributes](quality-attributes/index.md) *(ISO 25010)*
+- [Quality Attributes](quality-attributes/index.md)
   - [Functional Suitability](quality-attributes/functional-suitability/index.md)
     - [Functional Completeness](quality-attributes/functional-suitability/functional-completeness.md)
     - [Functional Correctness](quality-attributes/functional-suitability/functional-correctness.md)
