@@ -41,3 +41,31 @@ Examples:
 - A fitness function for availability: "The service must have an uptime of ≥ 99.9% per month."
 
 Fitness functions can be automated (e.g. run in CI) or manual (e.g. periodic architecture reviews). The term comes from evolutionary architecture, where fitness functions guide incremental architectural change.
+
+---
+
+**Contention**
+Contention occurs when multiple threads, processes, or services compete for the same shared resource at the same time — such as a CPU, a lock, or a database connection. The resource can only serve one at a time, so others have to wait. This waiting is a common cause of latency and poor performance under load.
+
+A typical example is lock contention: two threads both want to write to the same data structure. One acquires the lock and proceeds, the other blocks until the lock is released.
+```python
+# Both threads call this function concurrently.
+# Only one can hold the lock at a time — the other waits.
+def transfer(amount):
+    with account_lock:
+        account.balance -= amount
+```
+
+---
+
+**Composition Root**
+The single place in an application where all dependencies are wired together. Instead of creating objects throughout the codebase, everything is assembled once at startup. This keeps dependency creation out of business logic and makes the structure of the application easy to see and change in one place.
+
+```python
+# Composition Root — runs once at startup
+def main():
+    db = PostgresDatabase(url=config.DB_URL)
+    repo = UserRepository(db)
+    service = UserService(repo)
+    app.register(service)
+```
