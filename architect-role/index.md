@@ -8,7 +8,6 @@ An architect is not only responsible for technical decisions but also for commun
 - [Team Alignment](team-alignment.md): create shared understanding of architecture goals, decisions, and constraints across teams.
 - [Risk Analysis](risk-analysis.md): identify, assess, and mitigate architectural risks proactively.
 - [Architecture Decision Records (ADRs)](adr.md): document significant decisions with context, rationale, and consequences.
-- [Fitness Functions](fitness-functions.md): automated checks that continuously enforce architectural constraints in CI/CD pipelines.
 
 ## Key tensions
 - Technical depth vs. organizational breadth: architects must bridge code-level thinking with business context.
