@@ -31,35 +31,37 @@ In software architecture, fitness functions act as a continuous guard: they run 
 
 ---
 
-## Example 1 — Module boundary enforcement (Node.js / Jest)
+## Example 1 — Module boundary enforcement (Python / pytest)
 
 This fitness function prevents modules from crossing architectural boundaries. The rule: nothing inside `src/orders/` may import directly from `src/payments/`. The two domains must communicate only through a defined interface.
 
-```js
-// fitness/module-boundaries.test.js
-import { execSync } from 'node:child_process';
-import path from 'node:path';
+```python
+# fitness/test_module_boundaries.py
+import ast
+from pathlib import Path
 
-test('orders module does not import directly from payments', () => {
-  const srcDir = path.resolve('src/orders');
+ORDERS_DIR = Path("src/orders")
+FORBIDDEN_IMPORT = "payments"
 
-  // grep -r returns exit code 1 when nothing matches (desired outcome)
-  let output = '';
-  try {
-    output = execSync(
-      `grep -r "from '.*payments" ${srcDir} --include="*.ts"`,
-      { encoding: 'utf8' }
-    );
-  } catch {
-    // non-zero exit means no matches found — constraint satisfied
-    return;
-  }
 
-  // if grep succeeded, forbidden imports were found
-  throw new Error(
-    `Forbidden cross-module imports detected:\n${output}`
-  );
-});
+def collect_violations():
+    violations = []
+    for py_file in ORDERS_DIR.rglob("*.py"):
+        tree = ast.parse(py_file.read_text())
+        for node in ast.walk(tree):
+            if isinstance(node, (ast.Import, ast.ImportFrom)):
+                module = getattr(node, "module", "") or ""
+                names = [a.name for a in getattr(node, "names", [])]
+                if FORBIDDEN_IMPORT in module or any(FORBIDDEN_IMPORT in n for n in names):
+                    violations.append(f"{py_file}:{node.lineno}")
+    return violations
+
+
+def test_orders_does_not_import_payments():
+    violations = collect_violations()
+    assert not violations, (
+        "Forbidden cross-module imports detected:\n" + "\n".join(violations)
+    )
 ```
 
 Run it in CI alongside unit tests:
@@ -67,10 +69,10 @@ Run it in CI alongside unit tests:
 ```yaml
 # .github/workflows/ci.yml
 - name: Fitness functions
-  run: npx jest fitness/
+  run: pytest fitness/
 ```
 
-If a developer adds `import { calculateRefund } from '../../payments/refunds'` inside the orders module, this test fails immediately with a clear message listing the offending lines.
+If a developer adds `from payments.refunds import calculate_refund` inside the orders module, this test fails immediately with a clear message listing the offending files and line numbers.
 
 ---
 
