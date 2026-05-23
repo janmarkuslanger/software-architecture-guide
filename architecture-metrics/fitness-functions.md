@@ -49,11 +49,13 @@ def collect_violations():
     for py_file in ORDERS_DIR.rglob("*.py"):
         tree = ast.parse(py_file.read_text())
         for node in ast.walk(tree):
-            if isinstance(node, (ast.Import, ast.ImportFrom)):
-                module = getattr(node, "module", "") or ""
-                names = [a.name for a in getattr(node, "names", [])]
-                if FORBIDDEN_IMPORT in module or any(FORBIDDEN_IMPORT in n for n in names):
+            if isinstance(node, ast.ImportFrom):
+                if FORBIDDEN_IMPORT in (node.module or ""):
                     violations.append(f"{py_file}:{node.lineno}")
+            elif isinstance(node, ast.Import):
+                for alias in node.names:
+                    if FORBIDDEN_IMPORT in alias.name:
+                        violations.append(f"{py_file}:{node.lineno}")
     return violations
 
 
@@ -62,14 +64,6 @@ def test_orders_does_not_import_payments():
     assert not violations, (
         "Forbidden cross-module imports detected:\n" + "\n".join(violations)
     )
-```
-
-Run it in CI alongside unit tests:
-
-```yaml
-# .github/workflows/ci.yml
-- name: Fitness functions
-  run: pytest fitness/
 ```
 
 If a developer adds `from payments.refunds import calculate_refund` inside the orders module, this test fails immediately with a clear message listing the offending files and line numbers.
@@ -102,23 +96,14 @@ def latencies():
             elapsed_ms = (time.perf_counter() - start) * 1000
             assert response.status_code == 200
             results.append(elapsed_ms)
-    return sorted(results)
+    return results
 
 
 def test_p95_latency_below_threshold(latencies):
-    index = int(len(latencies) * 0.95)
-    p95 = latencies[index]
+    p95 = statistics.quantiles(latencies, n=100)[94]
     assert p95 < P95_LIMIT_MS, (
         f"P95 latency {p95:.1f} ms exceeds threshold of {P95_LIMIT_MS} ms"
     )
-```
-
-Run it as a post-deployment step:
-
-```yaml
-# .github/workflows/deploy.yml
-- name: Run performance fitness functions
-  run: pytest fitness/test_response_time.py -v
 ```
 
 This makes a regression visible the moment it is deployed to staging, long before it reaches production.
