@@ -69,6 +69,7 @@ A compact reference on software architecture — concepts, trade-offs, and struc
   - [Team Alignment](architect-role/team-alignment.md)
   - [Risk Analysis](architect-role/risk-analysis.md)
   - [Architecture Decision Records (ADRs)](architect-role/adr.md)
+  - [Fitness Functions](architect-role/fitness-functions.md)
 
 ---
 
