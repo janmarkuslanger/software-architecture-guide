@@ -64,6 +64,8 @@ A compact reference on software architecture — concepts, trade-offs, and struc
 - [Cloud & Deployment Architecture](cloud-architecture/index.md)
 - [Architecture Communication](architecture-communication/index.md)
 - [Architecture Decision Making](decision-making/index.md)
+- [Architecture Metrics & Measurement](architecture-metrics/index.md)
+  - [Fitness Functions](architecture-metrics/fitness-functions.md)
 - [Architect Role & Responsibilities](architect-role/index.md)
   - [Stakeholder Management](architect-role/stakeholder-management.md)
   - [Team Alignment](architect-role/team-alignment.md)
