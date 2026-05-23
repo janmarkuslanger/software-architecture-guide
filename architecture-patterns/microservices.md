@@ -72,6 +72,33 @@ Running microservices requires:
 - API versioning strategy
 - Secrets management
 
+## Service size
+
+One of the hardest questions in microservices: how big should a service be?
+
+**Too small**: services need to call each other constantly just to do one thing. Every small change touches multiple services. Deployments become a coordination problem.
+
+**Too large**: the service is doing too many unrelated things. Different teams step on each other. You cannot scale or deploy parts of it independently.
+
+### Reasons to split a service
+
+| Reason | Example |
+|---|---|
+| Different scaling needs | Checkout needs 20 instances at peak, notifications only 2 |
+| Security isolation | Payment data must run in a separate, restricted environment |
+| Different change frequency | Pricing rules change weekly, the order model rarely changes |
+| Fault isolation | A failing recommendation service must not take down checkout |
+
+### Reasons to keep things together
+
+| Reason | Example |
+|---|---|
+| Data belongs together | Orders and order items are always read and written as a unit |
+| Steps must all succeed or all fail | Creating an order and reserving stock must not be split |
+| Very high call rate between two parts | Two services calling each other on every request belong together |
+
+**A simple rule**: if two parts always change together, deploy together, and cannot work without each other — they probably belong in the same service. If they scale differently, fail independently, or are owned by different teams — splitting them makes sense.
+
 ## Common pitfalls
 - **Distributed monolith**: services are deployed separately but still tightly coupled via a shared database or long chains of synchronous calls.
 - **Too fine-grained services**: services split below the business domain boundary lead to chatty communication and coordination overhead.

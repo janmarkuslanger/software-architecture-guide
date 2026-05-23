@@ -42,6 +42,16 @@ Coupling measures how much one module depends on another. Low coupling means mod
 | Data coupling | Modules communicate via simple, minimal data (parameters) | Low — only the interface matters |
 | Message coupling | Modules communicate only via messages or events | Lowest — no shared knowledge |
 
+#### Stamp coupling across service boundaries
+
+Stamp coupling becomes especially risky when services share a data structure across a network — for example, a shared `Order` object passed between services via an API or event.
+
+If the `Order` structure changes (a field is removed, renamed, or retyped), every service that uses it must be updated at the same time. This breaks the ability to deploy services independently.
+
+How to reduce it:
+- Only pass the fields a service actually needs, not the full object
+- Define separate, minimal data contracts per service
+- Do not share internal data models across service boundaries
 
 ### Coupling dimensions
 

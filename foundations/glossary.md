@@ -58,6 +58,33 @@ def transfer(amount):
 
 ---
 
+**Saga**
+A way to manage a multi-step operation that spans several services. Instead of one big transaction, a saga breaks the operation into smaller steps. Each step is handled by a different service. If a step fails, the saga runs compensating actions to undo the steps that already completed.
+
+There are two ways to coordinate a saga: choreography (each service reacts to events independently) and orchestration (a central coordinator directs each step). See [Event-Driven Architecture](../architecture-patterns/event-driven.md#saga-managing-multi-step-workflows).
+
+---
+
+**Compensating action**
+An action that undoes a previous step when something goes wrong in a multi-step workflow. For example: if "charge the customer" succeeded but "schedule delivery" failed, the compensating action is "refund the customer". Compensating actions are the main way to handle failure in a saga.
+
+---
+
+**Strangler Fig**
+A pattern for replacing parts of an existing system gradually, without a full rewrite. Named after the strangler fig tree, which grows around another tree and eventually replaces it. A routing layer is placed in front of the old system; new parts are built alongside the old ones; traffic is moved piece by piece until the old system is no longer needed. See [Breaking a System Apart](../architecture-patterns/decomposition.md#strangler-fig).
+
+---
+
+**Choreography**
+A way of coordinating work across services where each service reacts to events on its own. No central coordinator tells services what to do — they listen for events and decide independently. Works well for simple flows; harder to follow when flows become complex.
+
+---
+
+**Orchestration**
+A way of coordinating work across services where a central coordinator sends instructions and tracks progress. The coordinator knows all the steps and handles failures. Easier to follow than choreography; the coordinator becomes a central point of coupling.
+
+---
+
 **Composition Root**
 The single place in an application where all dependencies are wired together. Instead of creating objects throughout the codebase, everything is assembled once at startup. This keeps dependency creation out of business logic and makes the structure of the application easy to see and change in one place.
 

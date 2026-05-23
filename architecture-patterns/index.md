@@ -15,6 +15,7 @@ Choosing the right style early reduces long-term coordination cost. The wrong st
 | [Microservices](microservices.md) | Multiple teams, independent scaling | High autonomy, high operational cost |
 | [Event-Driven](event-driven.md) | Fan-out, audit trails, async workflows | Great decoupling, harder to trace and debug |
 | [Microkernel / Plugin](microkernel.md) | Extensible platforms, plugin ecosystems | Stable core, plugin contract must be carefully versioned |
+| [Breaking a System Apart](decomposition.md) | Migrating from a monolith to independent parts | Lower risk than a full rewrite, but requires patience and discipline |
 
 
 ## General trade-offs

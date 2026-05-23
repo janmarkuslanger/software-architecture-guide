@@ -114,8 +114,52 @@ flowchart TB
 
 - **Outbox pattern**: write events to a local outbox table atomically with the domain change, then publish asynchronously. Prevents lost events.
 - **Dead letter queue**: events that fail processing are moved to a DLQ for inspection and replay.
-- **Saga**: manage multi-step workflows across services using events and compensating actions.
+- **[Saga](#saga-managing-multi-step-workflows)**: manage multi-step workflows across services using events and compensating actions.
 - **Event sourcing**: store state as a sequence of events rather than current state.
+
+## Saga: managing multi-step workflows
+
+A [saga](../foundations/glossary.md#saga) breaks a long-running operation into smaller steps. Each step is handled by a different service. If a step fails, the saga runs [compensating actions](../foundations/glossary.md#compensating-action) to undo the steps that already completed.
+
+**Example — placing an order:**
+1. Reserve stock
+2. Charge the customer
+3. Schedule delivery
+
+If step 3 fails, the saga runs in reverse: refund the charge, release the reserved stock. The system ends up in a clean state even though not all steps succeeded.
+
+### Two ways to coordinate a saga
+
+**Choreography** — each service reacts to events and decides what to do next on its own. There is no central coordinator.
+
+```mermaid
+flowchart LR
+  Orders -->|"OrderPlaced"| Billing
+  Billing -->|"PaymentProcessed"| Shipping
+  Shipping -->|"DeliveryScheduled"| Orders
+```
+
+**Orchestration** — a central coordinator sends instructions to each service and tracks the overall progress.
+
+```mermaid
+flowchart LR
+  Coordinator -->|"1. charge"| Billing
+  Coordinator -->|"2. schedule"| Shipping
+  Coordinator -->|"on failure: refund"| Billing
+```
+
+| | Choreography | Orchestration |
+|---|---|---|
+| Who controls the flow | No one — each service reacts independently | A central coordinator |
+| Visibility | Hard to see the full picture in one place | The full flow is visible in the coordinator |
+| Coupling | Low — services do not know each other | Medium — the coordinator knows all services |
+| Best for | Simple flows with few failure cases | Complex flows with many steps or conditions |
+
+### When to use sagas
+
+- Use when a workflow spans multiple services and all steps must succeed together, or all must be undone.
+- Choreography works well for simple fan-out flows where failure handling is straightforward.
+- Orchestration is easier to manage when the flow has many steps, conditional logic, or complex error handling.
 
 ## Common pitfalls
 - **Event schema drift**: producers change event structure without versioning, breaking consumers.

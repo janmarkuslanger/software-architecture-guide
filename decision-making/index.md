@@ -9,6 +9,7 @@ Architecture decisions shape the system for years. Making them explicit reduces 
 - Architecture review checklist: a lightweight way to detect gaps and risk.
 - New service design: define problem, constraints, options, and a clear decision.
 - Build vs buy: compare strategic fit, total cost, and operational impact.
+- [Fitness Functions](fitness-functions.md): automated and manual checks that verify architectural goals are still being met.
 
 ## Decision considerations / trade-offs
 - More governance reduces risk but can slow delivery.
