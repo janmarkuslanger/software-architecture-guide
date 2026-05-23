@@ -1,9 +1,7 @@
 # Fitness Functions
 
 ## Overview
-A fitness function is an automated check that verifies whether the system still meets a defined architectural property. The term comes from evolutionary computation, where a fitness function scores how close a candidate solution is to a goal.
-
-In software architecture, fitness functions act as a continuous guard: they run in CI/CD pipelines and fail the build when an architectural rule is violated. Where ADRs *document* a decision, fitness functions *enforce* it.
+A fitness function is an automated check that verifies whether the system still meets a defined architectural property. Fitness functions act as a continuous guard: they run in CI/CD pipelines and fail the build when an architectural rule is violated. Where ADRs *document* a decision, fitness functions *enforce* it.
 
 ## Characteristics
 
