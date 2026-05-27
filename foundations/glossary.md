@@ -58,6 +58,29 @@ def transfer(amount):
 
 ---
 
+**Seam**
+A seam is a place in the code where behaviour can be changed without modifying the code at that point. The term comes from Michael Feathers' *Working Effectively with Legacy Code*. Seams are the basis for making existing code testable: instead of calling a concrete dependency directly, the code is structured so a different implementation can be substituted at the seam — typically through dependency injection, an interface, or a configuration point.
+
+```python
+# No seam — the dependency is created internally; cannot be replaced in tests.
+class OrderService:
+    def place_order(self, order):
+        mailer = SmtpMailer()  # hard-coded; no way to substitute
+        mailer.send(order.confirmation_email())
+
+# Object seam — the dependency is injected; a test double can be passed in.
+class OrderService:
+    def __init__(self, mailer: Mailer):
+        self.mailer = mailer
+
+    def place_order(self, order):
+        self.mailer.send(order.confirmation_email())
+```
+
+A seam always has an *enabling point*: the place where you choose which behaviour to use. In the example above, the enabling point is the constructor parameter.
+
+---
+
 **Composition Root**
 The single place in an application where all dependencies are wired together. Instead of creating objects throughout the codebase, everything is assembled once at startup. This keeps dependency creation out of business logic and makes the structure of the application easy to see and change in one place.
 
