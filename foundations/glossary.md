@@ -79,8 +79,6 @@ class OrderService:
 
 A seam always has an *enabling point*: the place where you choose which behaviour to use. In the example above, the enabling point is the constructor parameter.
 
----
-
 **Composition Root**
 The single place in an application where all dependencies are wired together. Instead of creating objects throughout the codebase, everything is assembled once at startup. This keeps dependency creation out of business logic and makes the structure of the application easy to see and change in one place.
 
