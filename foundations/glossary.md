@@ -59,7 +59,7 @@ def transfer(amount):
 ---
 
 **Seam**
-A seam is a place in the code where behaviour can be changed without modifying the code at that point. The term comes from Michael Feathers' *Working Effectively with Legacy Code*. Seams are the basis for making existing code testable: instead of calling a concrete dependency directly, the code is structured so a different implementation can be substituted at the seam — typically through dependency injection, an interface, or a configuration point.
+A seam is a place in the code where behaviour can be changed without modifying the code at that point. Seams are the basis for making existing code testable: instead of calling a concrete dependency directly, the code is structured so a different implementation can be substituted at the seam — typically through dependency injection, an interface, or a configuration point.
 
 ```python
 # No seam — the dependency is created internally; cannot be replaced in tests.
