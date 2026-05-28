@@ -1,0 +1,79 @@
+<h1 align="center">A software architecture guide</h1>
+
+<p align="center"><img src="head.webp" alt="Dog assembling building blocks" width="300" /></p>
+
+---
+
+## Purpose and scope
+A compact reference on software architecture — concepts, trade-offs, and structural decisions.
+
+
+## Table of contents
+- [Foundations](foundations/index.md)
+  - [Modularity](foundations/modularity.md)
+  - [Component Principles](foundations/component-principles.md)
+  - [Glossary](foundations/glossary.md)
+- [Quality Attributes](quality-attributes/index.md)
+  - [Functional Suitability](quality-attributes/functional-suitability/index.md)
+    - [Functional Completeness](quality-attributes/functional-suitability/functional-completeness.md)
+    - [Functional Correctness](quality-attributes/functional-suitability/functional-correctness.md)
+    - [Functional Appropriateness](quality-attributes/functional-suitability/functional-appropriateness.md)
+  - [Performance Efficiency](quality-attributes/performance-efficiency/index.md)
+    - [Time Behaviour](quality-attributes/performance-efficiency/time-behaviour.md)
+    - [Resource Utilisation](quality-attributes/performance-efficiency/resource-utilisation.md)
+    - [Capacity](quality-attributes/performance-efficiency/capacity.md)
+  - [Compatibility](quality-attributes/compatibility/index.md)
+    - [Co-existence](quality-attributes/compatibility/co-existence.md)
+    - [Interoperability](quality-attributes/compatibility/interoperability.md)
+  - [Usability](quality-attributes/usability/index.md)
+    - [Appropriateness Recognisability](quality-attributes/usability/appropriateness-recognisability.md)
+    - [Learnability](quality-attributes/usability/learnability.md)
+    - [Operability](quality-attributes/usability/operability.md)
+    - [User Error Protection](quality-attributes/usability/user-error-protection.md)
+    - [User Interface Aesthetics](quality-attributes/usability/user-interface-aesthetics.md)
+    - [Accessibility](quality-attributes/usability/accessibility.md)
+  - [Reliability](quality-attributes/reliability/index.md)
+    - [Maturity](quality-attributes/reliability/maturity.md)
+    - [Availability](quality-attributes/reliability/availability.md)
+    - [Fault Tolerance](quality-attributes/reliability/fault-tolerance.md)
+    - [Recoverability](quality-attributes/reliability/recoverability.md)
+  - [Security](quality-attributes/security/index.md)
+    - [Confidentiality](quality-attributes/security/confidentiality.md)
+    - [Integrity](quality-attributes/security/integrity.md)
+    - [Non-repudiation](quality-attributes/security/non-repudiation.md)
+    - [Accountability](quality-attributes/security/accountability.md)
+    - [Authenticity](quality-attributes/security/authenticity.md)
+  - [Maintainability](quality-attributes/maintainability/index.md)
+    - [Modularity](quality-attributes/maintainability/modularity.md)
+    - [Reusability](quality-attributes/maintainability/reusability.md)
+    - [Analysability](quality-attributes/maintainability/analysability.md)
+    - [Modifiability](quality-attributes/maintainability/modifiability.md)
+    - [Testability](quality-attributes/maintainability/testability.md)
+  - [Portability](quality-attributes/portability/index.md)
+    - [Adaptability](quality-attributes/portability/adaptability.md)
+    - [Installability](quality-attributes/portability/installability.md)
+    - [Replaceability](quality-attributes/portability/replaceability.md)
+- [Architecture Styles & Patterns](architecture-patterns/index.md)
+  - [Layered Architecture](architecture-patterns/layered.md)
+  - [Hexagonal / Ports & Adapters](architecture-patterns/hexagonal.md)
+  - [Modular Monolith](architecture-patterns/modular-monolith.md)
+  - [Microservices](architecture-patterns/microservices.md)
+  - [Event-Driven Architecture](architecture-patterns/event-driven.md)
+- [Design Patterns](design-patterns/index.md)
+- [System Design Core Topics](system-design/index.md)
+- [Cloud & Deployment Architecture](cloud-architecture/index.md)
+- [Architecture Communication](architecture-communication/index.md)
+- [Architecture Decision Making](decision-making/index.md)
+- [Architecture Metrics & Measurement](architecture-metrics/index.md)
+  - [Fitness Functions](architecture-metrics/fitness-functions.md)
+- [Architect Role & Responsibilities](architect-role/index.md)
+  - [Stakeholder Management](architect-role/stakeholder-management.md)
+  - [Team Alignment](architect-role/team-alignment.md)
+  - [Risk Analysis](architect-role/risk-analysis.md)
+  - [Architecture Decision Records (ADRs)](architect-role/adr.md)
+
+---
+
+## Contributing
+
+Pull requests are always welcome.
