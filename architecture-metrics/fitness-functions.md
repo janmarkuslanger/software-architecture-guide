@@ -116,5 +116,5 @@ This makes a regression visible the moment it is deployed to staging, long befor
 
 ## Decision considerations / trade-offs
 - Fitness functions add maintenance cost: they must be updated when thresholds or rules change intentionally.
-- A failing fitness function should block the build, not just warn — a warning that no one acts on provides no value.
+- A failing fitness function that blocks the build is generally more effective than one that only warns — a warning that no one acts on provides little value.
 - Start with the most critical constraints (security, core module boundaries) and add more as violations occur.

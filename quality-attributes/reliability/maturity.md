@@ -24,7 +24,7 @@ Long-running systems can degrade in maturity over time if they are not actively 
 
 ### Relationship to fault tolerance
 
-Maturity reduces the frequency of faults. Fault tolerance contains faults when they occur. Both are required: maturity alone cannot prevent all failures in production; fault tolerance alone does not reduce the underlying defect rate.
+Maturity reduces the frequency of faults. Fault tolerance contains faults when they occur. Both play a role: maturity alone cannot prevent all failures in production; fault tolerance alone does not reduce the underlying defect rate.
 
 ---
 

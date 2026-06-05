@@ -79,4 +79,4 @@ print(f"Subscriber (5 units): {pricer.total(10.0, 5):.2f} EUR")
 
 - There is only one algorithm and no realistic prospect of adding others. Introducing a strategy interface for a single implementation adds abstraction without benefit.
 - The algorithms are trivial one-liners. Wrapping them in classes adds ceremony that outweighs the value of the pattern.
-- Clients must be aware of all available strategies to choose the right one. If the selection logic is complex, it belongs in a factory or configuration layer, not scattered at each call site.
+- Clients must be aware of all available strategies to choose the right one. If the selection logic is complex, it belongs in a factory or configuration layer, not duplicated at each call site.

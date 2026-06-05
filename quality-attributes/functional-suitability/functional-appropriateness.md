@@ -16,7 +16,7 @@ These are complementary but distinct. Completeness asks whether all required fun
 
 ### Over-engineering as an appropriateness failure
 
-Functions that are more general, more configurable, or more powerful than the task requires introduce cognitive overhead and error surface. Appropriateness favours the simplest function that suffices for the specified task — not the most flexible one.
+Functions that are more general, more configurable, or more capable than the task requires can introduce cognitive overhead and error surface. Appropriateness tends to favour the simplest function that suffices for the specified task over the most flexible one.
 
 ### User task alignment
 

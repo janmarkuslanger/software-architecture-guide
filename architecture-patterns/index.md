@@ -3,17 +3,17 @@
 ## Overview
 Architecture styles define system structure, boundaries, and communication. They are not just deployment choices; they shape ownership, data flow, and change cost.
 
-Choosing the right style early reduces long-term coordination cost. The wrong style is expensive to fix — it touches team topology, deployment pipelines, and data ownership.
+The choice of style has long-term effects on coordination cost. Changing it later can be expensive, because it touches team topology, deployment pipelines, and data ownership.
 
 ## Styles covered
 
-| Style | Best for | Key trade-off |
+| Style | Common fit | Key trade-off |
 |---|---|---|
 | [Layered](layered.md) | Stable domains, small teams | Simple to start, harder to scale across teams |
 | [Hexagonal / Ports & Adapters](hexagonal.md) | Systems with many external dependencies | Better isolation, more interfaces to maintain |
 | [Modular Monolith](modular-monolith.md) | Growing teams, pre-microservices | Clean boundaries without deployment complexity |
 | [Microservices](microservices.md) | Multiple teams, independent scaling | High autonomy, high operational cost |
-| [Event-Driven](event-driven.md) | Fan-out, audit trails, async workflows | Great decoupling, harder to trace and debug |
+| [Event-Driven](event-driven.md) | Fan-out, audit trails, async workflows | Strong decoupling, harder to trace and debug |
 | [Microkernel / Plugin](microkernel.md) | Extensible platforms, plugin ecosystems | Stable core, plugin contract must be carefully versioned |
 
 

@@ -75,5 +75,5 @@ Running microservices requires:
 ## Common pitfalls
 - **Distributed monolith**: services are deployed separately but still tightly coupled via a shared database or long chains of synchronous calls.
 - **Too fine-grained services**: services split below the business domain boundary lead to chatty communication and coordination overhead.
-- **No observability**: without tracing, debugging failures across services is extremely difficult.
-- **Shared database**: the most common mistake. Kills independent deployability immediately.
+- **No observability**: without tracing, debugging failures across services becomes significantly more difficult.
+- **Shared database**: a common pitfall. A shared database couples services and undermines independent deployability.

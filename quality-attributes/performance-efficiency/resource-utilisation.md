@@ -4,7 +4,7 @@
 
 Resource utilisation is the degree to which the amounts and types of resources used by a system meet requirements. Resources include CPU, memory, disk I/O, network bandwidth, threads, and external service quotas. A system has poor resource utilisation when it uses more resources than necessary to accomplish its function, or when it exhausts resources under load in ways that degrade behaviour.
 
-Resource utilisation matters architecturally because resource costs translate directly to infrastructure costs, and resource exhaustion produces availability and performance failures.
+Resource utilisation is an architectural concern because resource costs translate directly to infrastructure costs, and resource exhaustion produces availability and performance failures.
 
 ---
 
@@ -23,7 +23,7 @@ Resource utilisation matters architecturally because resource costs translate di
 
 ### Utilisation targets
 
-Sustained utilisation above ~70–80% for CPU and memory leaves no headroom for traffic spikes. Systems designed to run at 95% utilisation have no buffer for load variations and are one spike away from failure.
+Sustained utilisation above ~70–80% for CPU and memory leaves no headroom for traffic spikes. Systems designed to run at 95% utilisation have no buffer for load variations and can fail under a modest traffic spike.
 
 ### Efficiency vs. performance
 
@@ -58,6 +58,6 @@ Resource utilisation and time behaviour are related but distinct. A system can b
 ## Common pitfalls
 
 - **No resource limits on containers or processes**: an unconstrained process can exhaust host resources and take down co-located services.
-- **Designing for average load with no headroom**: systems must handle burst traffic. Sustained utilisation targets should leave buffer.
+- **Designing for average load with no headroom**: systems benefit from headroom for burst traffic. Sustained utilisation targets should leave buffer.
 - **Memory leaks treated as performance issues**: a process that grows in memory over time and requires periodic restarts has a resource utilisation defect, not a performance configuration issue.
 - **Ignoring external service quotas**: rate limits on downstream APIs are resource constraints. Systems that do not account for them fail under load in ways that are difficult to diagnose.

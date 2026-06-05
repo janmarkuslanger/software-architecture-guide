@@ -1,6 +1,6 @@
 # State
 
-The State pattern allows an object to change its behavior when its internal state changes. Rather than scattering `if/elif` checks for each possible state throughout the code, the behavior for each state is encapsulated in a separate class. The object delegates work to its current state object and swaps it when transitioning.
+The State pattern allows an object to change its behavior when its internal state changes. Rather than distributing `if/elif` checks for each possible state throughout the code, the behavior for each state is encapsulated in a separate class. The object delegates work to its current state object and swaps it when transitioning.
 
 ## How it works
 

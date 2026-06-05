@@ -22,7 +22,7 @@ Cohesion measures how strongly the elements inside a module belong together. Hig
 | Sequential | Output of one element feeds into the next | Parse -> validate -> enrich -> persist |
 | Functional | All elements contribute to one single, well-defined task | A `PasswordHasher` that only hashes passwords |
 
-**Aim for functional or sequential cohesion.** Avoid coincidental and logical cohesion, because they are signs that a module is doing too many unrelated things.
+Functional and sequential cohesion are generally preferred. Coincidental and logical cohesion often indicate that a module combines unrelated responsibilities.
 
 ---
 
@@ -51,7 +51,7 @@ Beyond type, coupling has three dimensions:
 - **Efferent coupling (Ce)**: how many modules a given module depends *on*. High Ce = sensitive to external changes.
 - **Instability** = Ce / (Ca + Ce). A value near 1 means unstable (many outgoing dependencies). A value near 0 means stable (many others depend on it).
 
-Stable modules (low instability) should be abstract and rarely change. Unstable modules (high instability) can change freely because little depends on them.
+Stable modules (low instability) tend to benefit from being abstract and changing rarely. Unstable modules (high instability) can change more freely because little depends on them.
 
 ---
 
@@ -98,13 +98,13 @@ flowchart LR
   style CoI fill:#f8d7da
 ```
 
-**Weak (green)** -> acceptable. **Strong (red)** -> refactor if possible.
+**Weak (green)** is generally easier to manage. **Strong (red)** is a candidate for refactoring where practical.
 
 ### How to use connascence in practice
 
-1. **Prefer static over dynamic.** Static connascence is visible at compile time and easier to manage.
-2. **Prefer weak over strong.** CoN (name) is easy to manage; CoI (shared identity) is a hidden dependency.
-3. **Minimize connascence across module boundaries.** Within a module, stronger connascence is acceptable. Across boundaries, aim for CoN or CoT only.
+1. **Prefer static over dynamic.** Static connascence is visible at compile time and tends to be easier to manage.
+2. **Prefer weak over strong.** CoN (name) is straightforward to manage; CoI (shared identity) introduces a hidden dependency.
+3. **Minimize connascence across module boundaries.** Within a module, stronger connascence is acceptable. Across boundaries, CoN or CoT is generally sufficient.
 4. **Use named types instead of primitives.** Replace `createUser(string, string, int)` (CoP) with a typed request object (CoT).
 
 ---

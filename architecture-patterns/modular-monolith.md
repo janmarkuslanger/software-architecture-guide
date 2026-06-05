@@ -3,7 +3,7 @@
 ## Overview
 A modular monolith is a single deployable unit structured with explicit, enforced module boundaries. Each module owns its functionality and data. Communication between modules happens through defined interfaces, not direct database sharing or internal imports.
 
-It combines the operational simplicity of a monolith with the boundary discipline of a service-oriented architecture.
+It aims to combine the operational simplicity of a monolith with explicit module boundaries similar to a service-oriented architecture.
 
 ## Topology
 

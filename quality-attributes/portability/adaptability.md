@@ -48,5 +48,5 @@ The cost of the abstraction must be weighed against the probability and cost of 
 ## Common pitfalls
 
 - **Provider-specific SDK calls throughout the application**: calls to AWS, Azure, or GCP SDKs scattered across business logic cannot be adapted without touching every call site. Centralise infrastructure access.
-- **Environment-specific logic in application code**: `if (env == "production") { ... }` blocks are the opposite of adaptability. Environment differences should be expressed in configuration, not code.
+- **Environment-specific logic in application code**: `if (env == "production") { ... }` blocks work against adaptability. Environment differences are generally better expressed in configuration than in code.
 - **No environment parity**: significant differences between development and production environments mean the system is adapted for production but tested in a different context. Reduce environment differences as much as practical.

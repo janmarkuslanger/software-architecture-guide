@@ -1,6 +1,6 @@
 # Singleton
 
-The Singleton pattern ensures that a class has exactly one instance and provides a global point of access to it. No matter how often you ask for the instance, you always get the same object back.
+The Singleton pattern ensures that a class has exactly one instance and provides a global point of access to it. Each call for the instance returns the same object.
 
 ## How it works
 
@@ -45,4 +45,4 @@ print(config_a is config_b)   # True
 
 - The class holds mutable state that different parts of the application need to see independently. This shared mutable state leads to hard-to-trace bugs.
 - You are writing code that needs to be tested in isolation. Singletons survive between test runs and cause test pollution.
-- You are reaching for Singleton only because you want a convenient global variable. That is a code smell, not a design decision.
+- Using Singleton only to obtain a convenient global variable is often considered a code smell rather than a deliberate design choice.

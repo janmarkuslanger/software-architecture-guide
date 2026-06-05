@@ -3,7 +3,7 @@
 ## Overview
 Hexagonal architecture isolates core business logic from all external systems — databases, UIs, message brokers, third-party APIs. The core defines *ports* (interfaces), and *adapters* implement those interfaces for specific technologies.
 
-The result: the core can be tested and evolved without touching infrastructure, and infrastructure can be swapped without touching the core.
+This allows the core to be tested and evolved without touching infrastructure, and infrastructure to be swapped without touching the core.
 
 ## Topology
 

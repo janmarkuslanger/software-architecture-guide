@@ -1,6 +1,6 @@
 # Functional Suitability
 
-Functional suitability describes the degree to which a system provides functions that meet stated and implied needs under specified conditions. It is the only quality characteristic that concerns *what* a system does rather than *how well* it does it — correctness at the functional level is the baseline all other characteristics build on.
+Functional suitability describes the degree to which a system provides functions that meet stated and implied needs under specified conditions. It is the only quality characteristic that concerns *what* a system does rather than *how well* it does it — correctness at the functional level is a baseline the other characteristics build on.
 
 ## Sub-characteristics
 

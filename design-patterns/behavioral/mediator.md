@@ -73,7 +73,7 @@ assert form.submit.enabled        # value still set → submit stays active
 
 ## When to use
 
-- A set of objects communicate in complex ways that produce hard-to-maintain dependencies between them. Centralizing the communication in a mediator makes the relationships explicit.
+- A set of objects communicate in complex ways that produce tightly coupled dependencies between them. Centralizing the communication in a mediator makes the relationships explicit.
 - You want to reuse components in different contexts without carrying all their peer dependencies along.
 
 ## When not to use

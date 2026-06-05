@@ -29,7 +29,7 @@ Before making a change, a developer must be able to assess what the change will 
 - Dependency graphs that can be navigated without deep code reading
 - Test coverage that provides confidence about what breaks when a change is made
 
-Systems with hidden dependencies, implicit coupling, or tangled module graphs make impact analysis difficult and expensive — leading to regressions and conservative "safe" changes that never clean up technical debt.
+Systems with hidden dependencies, implicit coupling, or tangled module graphs make impact analysis difficult and expensive — which can lead to regressions and conservative changes that defer technical debt cleanup.
 
 ### Static analysis
 
@@ -50,7 +50,7 @@ Static analysis tools (linters, dependency analysers, complexity metrics) provid
 
 ## Common pitfalls
 
-- **Logs without context**: log entries that say "error occurred" without the request ID, user, or relevant state are useless for incident analysis. Every log entry must carry enough context to be actionable in isolation.
+- **Logs without context**: log entries that say "error occurred" without the request ID, user, or relevant state are difficult to act on during incident analysis. Log entries benefit from carrying enough context to be actionable in isolation.
 - **No correlation IDs**: a request that crosses three services with no shared identifier cannot be traced end-to-end without correlating by timestamp, which is unreliable at scale.
 - **High cyclomatic complexity**: functions with many branches are hard to analyse for impact. Complexity metrics should be tracked and thresholds enforced.
 - **Implicit coupling**: if a change to module A unexpectedly breaks module B, and the dependency between them was not visible, analysability has failed. Dependencies must be explicit.

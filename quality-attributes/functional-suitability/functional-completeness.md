@@ -49,6 +49,6 @@ Each functional requirement should have testable acceptance criteria. Without th
 
 ## Common pitfalls
 
-- **Implicit scope assumptions**: stakeholders assume features that were never documented. Validate scope explicitly with stakeholders before development, not after.
+- **Implicit scope assumptions**: stakeholders assume features that were never documented. Validating scope explicitly with stakeholders before development reduces the risk of gaps surfacing late.
 - **Happy-path-only implementation**: the main flow is complete but error paths, edge cases, and administrative functions (e.g., cancellation, correction) are missing.
 - **Acceptance criteria written after implementation**: criteria written to match what was built rather than what was needed cannot catch completeness gaps.

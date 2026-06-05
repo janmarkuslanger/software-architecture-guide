@@ -1,6 +1,6 @@
 # Quality Attributes
 
-Quality attributes — also called non-functional requirements — describe how a system behaves, not what it does. They are the primary drivers of architectural decisions: the same feature set can be implemented with fundamentally different architectures depending on the quality targets.
+Quality attributes — also called non-functional requirements — describe how a system behaves, not what it does. They are often primary drivers of architectural decisions: the same feature set can be implemented with fundamentally different architectures depending on the quality targets.
 
 ---
 
@@ -8,7 +8,7 @@ Quality attributes — also called non-functional requirements — describe how 
 
 A quality attribute is a measurable property of a system's runtime behavior, structure, or development process. Unlike functional requirements, they apply across the entire system and cannot be addressed by a single component in isolation.
 
-**Measurability is mandatory.** A quality attribute target must be concrete and verifiable:
+**Measurability matters.** A quality attribute target is most useful when it is concrete and verifiable:
 
 - "The system must be fast" is not a requirement.
 - "p99 latency < 300ms under 500 concurrent users" is a requirement.
@@ -48,18 +48,18 @@ Statelessness is a prerequisite for horizontal scaling and simultaneously simpli
 These are orthogonal. A system can have high availability (always reachable) but low reliability (returns wrong results). Redundancy increases availability by reducing downtime; it does not prevent a faulty component from being replicated. Reliability requires correctness guarantees — not just uptime.
 
 **Security vs. Usability**
-Security controls add friction. Authentication steps, session timeouts, and access restrictions reduce convenience. The right balance is context-dependent — a banking application and a public content site have different thresholds.
+Security controls add friction. Authentication steps, session timeouts, and access restrictions reduce convenience. The appropriate balance is context-dependent — a banking application and a public content site have different thresholds.
 
 **Maintainability vs. Performance**
 Abstractions, layering, and modularity that improve maintainability can introduce overhead. Highly optimized code is often tightly coupled to its execution context and difficult to change. Performance optimizations should be introduced after measurable need is established, not speculatively.
 
 **Portability vs. Functional Suitability**
-Abstracting over provider-specific features to preserve portability sometimes means forgoing capabilities that would directly improve functional suitability (managed search, geospatial queries, stream processing). The trade-off must be made explicitly.
+Abstracting over provider-specific features to preserve portability sometimes means forgoing capabilities that would directly improve functional suitability (managed search, geospatial queries, stream processing). This trade-off is worth making explicitly.
 
 ---
 
 ## Quality attributes are requirements, not optimization targets
 
-A common mistake is treating quality attributes as things to maximize after the system is built. They are constraints that must be known before architectural decisions are made.
+Quality attributes are sometimes treated as things to maximize after the system is built; they are better understood as constraints to be established before architectural decisions are made.
 
-If the target is unknown, any architecture is defensible — and none can be evaluated. Define targets early, make them measurable, and use them to drive trade-off decisions explicitly.
+If the target is unknown, any architecture is defensible — and none can be evaluated. Defining targets early, making them measurable, and using them to drive trade-off decisions explicitly supports more grounded architectural choices.

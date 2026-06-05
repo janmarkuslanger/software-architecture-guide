@@ -4,7 +4,7 @@
 
 Functional correctness is the degree to which a system produces the right results with the required degree of precision. A system is functionally correct when it faithfully implements the intended domain logic — not just when it avoids crashes or returns a response.
 
-Correctness failures are often silent: the system runs, but the output is wrong. They are typically more costly than availability failures because incorrect data propagates and may require manual correction.
+Correctness failures are often silent: the system runs, but the output is wrong. They can be more costly than availability failures because incorrect data propagates and may require manual correction.
 
 ---
 
@@ -16,7 +16,7 @@ These are distinct properties. Functional correctness asks: does the system impl
 
 ### Domain logic as the source of truth
 
-Correctness is determined by the domain model. Business rules — calculation formulas, state transition constraints, validation conditions — must be represented explicitly in code and must match the agreed specification. Ambiguous specifications produce incorrect implementations regardless of code quality.
+Correctness is determined by the domain model. Business rules — calculation formulas, state transition constraints, validation conditions — should be represented explicitly in code and should match the agreed specification. Ambiguous specifications tend to produce incorrect implementations regardless of code quality.
 
 ### Precision
 
@@ -49,6 +49,6 @@ Correctness includes precision: a tax calculation rounded to the wrong number of
 
 ## Common pitfalls
 
-- **Business logic distributed across layers**: rules split between the domain layer, the API handler, and the database trigger are inconsistent and untestable as a unit. Centralise domain logic.
-- **Specification ambiguity accepted as normal**: "we'll figure it out in code" produces implementations that are internally consistent but externally wrong. Resolve ambiguity before implementation.
-- **Testing only the happy path**: correctness tests must cover boundary conditions, negative cases, and precision edge cases — not just the common scenario.
+- **Business logic distributed across layers**: rules split between the domain layer, the API handler, and the database trigger tend to be inconsistent and untestable as a unit. Centralising domain logic reduces this risk.
+- **Specification ambiguity accepted as normal**: deferring ambiguity to implementation tends to produce systems that are internally consistent but externally incorrect. Resolving ambiguity before implementation reduces this risk.
+- **Testing only the happy path**: correctness tests should cover boundary conditions, negative cases, and precision edge cases — not just the common scenario.

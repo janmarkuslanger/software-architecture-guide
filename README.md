@@ -76,4 +76,4 @@ A compact reference on software architecture — concepts, trade-offs, and struc
 
 ## Contributing
 
-Pull requests are always welcome.
+Pull requests are welcome.

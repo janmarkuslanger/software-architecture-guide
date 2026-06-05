@@ -4,7 +4,7 @@
 
 Testability is the degree to which test criteria can be established for a system or component, and tests can be performed to determine whether those criteria have been met. A testable system makes it possible to verify its behaviour in isolation, under controlled conditions, with fast and reliable feedback.
 
-Testability is a property of the design, not of the test suite. A component that is difficult to test in isolation has a design problem — hidden dependencies, unclear responsibilities, or tightly coupled infrastructure.
+Testability is a property of the design, not of the test suite. A component that is difficult to test in isolation often reflects a design concern — hidden dependencies, unclear responsibilities, or tightly coupled infrastructure.
 
 ---
 
@@ -12,7 +12,7 @@ Testability is a property of the design, not of the test suite. A component that
 
 ### Testability as a design signal
 
-If a component is hard to test, the design needs to change. Common testability problems and their design causes:
+If a component is hard to test, the design is worth reconsidering. Common testability problems and their design causes:
 
 | Test difficulty | Design cause |
 |---|---|
@@ -55,4 +55,4 @@ A testable architecture supports all three levels. Over-reliance on end-to-end t
 - **Static method calls and global state**: static dependencies and singletons cannot be replaced in tests. They make every test that exercises the affected code path depend on the real implementation.
 - **Business logic in controllers or handlers**: logic that lives in HTTP handlers, message consumers, or database triggers can only be tested through the full integration path. Extract logic into plain objects.
 - **Tests that start the whole application**: if every test requires a full application context, the test suite is slow and fragile. Components must be testable in isolation.
-- **No tests for the hard cases**: the most important tests cover error conditions, boundary values, and concurrent scenarios. If these are not testable, the design is deficient.
+- **No tests for the hard cases**: tests covering error conditions, boundary values, and concurrent scenarios are particularly valuable. If these cases are not testable in isolation, the design may benefit from revision.
