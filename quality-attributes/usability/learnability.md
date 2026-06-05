@@ -12,7 +12,7 @@ Learnability is distinct from usability in general: an expert may find a system 
 
 ### Learning curve
 
-The learning curve describes the effort required to reach a defined level of proficiency. A steep learning curve (high initial investment, slow ramp-up) is acceptable for systems used intensively by professionals. It is not acceptable for systems with casual or infrequent users.
+The learning curve describes the effort required to reach a defined level of proficiency. A steep learning curve (high initial investment, slow ramp-up) may be acceptable for systems used intensively by professionals. It is generally less suitable for systems with casual or infrequent users.
 
 Architectural decisions that affect the learning curve:
 - Consistency of interaction patterns across the system

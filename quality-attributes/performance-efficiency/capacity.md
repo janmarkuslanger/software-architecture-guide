@@ -19,7 +19,7 @@ A scalable system can handle more work by adding resources — without requiring
 | Complexity | Simple — no application changes needed | Requires stateless design and load distribution |
 | Cost | Expensive at the high end | More predictable unit economics |
 
-Vertical scaling is a valid short-term lever, but it has a hard ceiling. Horizontal scaling is the sustainable path for systems with growing load — and it requires the application to be designed for it from the start.
+Vertical scaling is a valid short-term lever, but it has a ceiling. Horizontal scaling is a common approach for systems with growing load — and it requires the application to be designed for it from the start.
 
 ### Statelessness
 
@@ -40,7 +40,7 @@ When a system fails to scale, the bottleneck is typically one of the following, 
 1. **Compute** — CPU or memory saturation on a single instance. Solved by horizontal scaling.
 2. **Shared mutable state** — a distributed lock, a shared counter, or a serialized queue. Solved by partitioning or redesigning the data model.
 3. **Synchronous call chains** — a request must wait for N sequential downstream calls. Solved by async patterns or parallelism.
-4. **Database** — connection limits, single-writer bottleneck, or query performance at scale. The most common and most costly bottleneck to address late.
+4. **Database** — connection limits, single-writer bottleneck, or query performance at scale. A bottleneck that is often encountered late and can be operationally costly to address.
 
 Identifying the bottleneck before choosing a scaling strategy prevents applying the wrong lever.
 
@@ -66,7 +66,7 @@ Identifying the bottleneck before choosing a scaling strategy prevents applying 
 
 ## When not to prioritize
 
-- Load is low and stable. Scalability work on a system with 10 users is premature optimization.
+- Load is low and stable. Scalability work on a system with very few users is generally premature.
 - The team does not yet understand the actual load profile. Design for the current reality; add scalability when the bottleneck is known.
 
 ---
@@ -74,6 +74,6 @@ Identifying the bottleneck before choosing a scaling strategy prevents applying 
 ## Common pitfalls
 
 - **Local state in horizontally scaled instances**: session data stored in memory on a single instance breaks when the load balancer routes the next request elsewhere. Externalize all shared state.
-- **Early sharding**: sharding before a database becomes the actual bottleneck introduces significant operational complexity with no benefit. Use it as a last resort for write scalability.
-- **Ignoring the database as a bottleneck**: compute scales easily; databases often do not. A system designed with no database scaling strategy will hit a wall that is expensive to fix retroactively.
+- **Early sharding**: sharding before a database becomes the actual bottleneck introduces significant operational complexity with no benefit. It is generally considered appropriate only when write scalability cannot be addressed by other means.
+- **Ignoring the database as a bottleneck**: compute scales more readily than databases in many architectures. A system designed with no database scaling strategy may reach a ceiling that is costly to address retroactively.
 - **Elasticity without a stateless design**: autoscaling adds instances, but if instances hold local state, new instances cannot serve requests that were in progress elsewhere.

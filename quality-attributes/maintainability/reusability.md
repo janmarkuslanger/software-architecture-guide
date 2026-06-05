@@ -12,16 +12,16 @@ Reusability reduces duplication and the associated cost of maintaining the same 
 
 ### Reuse vs. duplication
 
-Not all duplication is a problem. The cost of duplication (maintaining the same logic twice) must exceed the cost of the abstraction that would eliminate it. Three instances of similar logic are a signal to consider abstraction. One instance is almost never a reason to abstract.
+Not all duplication is a problem. The cost of duplication (maintaining the same logic twice) should be weighed against the cost of the abstraction that would eliminate it. Three instances of similar logic are a signal to consider abstraction. A single instance is generally not sufficient justification to abstract.
 
-The wrong abstraction — a reusable component that does not quite fit any of its use cases — is more costly than the duplication it eliminated.
+A poorly fitting abstraction — a reusable component that does not quite fit any of its use cases — can be more costly than the duplication it was meant to remove.
 
 ### What makes a component reusable
 
 A reusable component:
 - Has a well-defined, stable interface
 - Depends only on what it needs — no unnecessary dependencies that callers must also acquire
-- Does one thing well — a component that solves a general problem is more reusable than one that solves a specific problem
+- Has a focused responsibility — a component that solves a general problem is often more reusable than one that solves a specific problem
 - Is documented — callers can understand its contract without reading its implementation
 
 ### Library design vs. application design
@@ -43,6 +43,6 @@ Reusable components (libraries, shared modules) have different design constraint
 
 ## Common pitfalls
 
-- **Reusability pursued before the abstraction is understood**: generalising from one use case produces the wrong abstraction. Wait for at least two or three concrete use cases before abstracting.
+- **Reusability pursued before the abstraction is understood**: generalising from one use case can produce a poorly fitting abstraction. Consider waiting for at least two or three concrete use cases before abstracting.
 - **Shared components with too many dependencies**: a "reusable" utility that requires 10 transitive dependencies is rarely reused because the cost of adoption is too high.
 - **No ownership of shared components**: components shared across teams without a clear owner degrade over time as each team makes local patches rather than contributing to the shared version.

@@ -103,7 +103,7 @@ print(f"Total words: {counter.count}")
 ## When to use
 
 - You need to perform multiple distinct operations on a set of objects with different types, and you want to keep each operation in one place rather than scattered across the object classes.
-- The object hierarchy is stable but you frequently add new operations. Adding a visitor is cheaper than adding a method to every class in the hierarchy.
+- The object hierarchy is stable but you frequently add new operations. Adding a visitor requires fewer changes than adding a method to every class in the hierarchy.
 - You are processing an abstract syntax tree, document model, or any composite structure where you need several passes for different purposes (rendering, validation, analytics).
 
 ## When not to use

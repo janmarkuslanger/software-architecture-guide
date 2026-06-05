@@ -13,7 +13,7 @@ The core questions cloud architecture answers:
 
 ## The five pillars
 
-Every cloud architecture must address five fundamental concerns. Neglecting any one of them will eventually surface as an incident or cost problem.
+Cloud architectures generally need to address five fundamental concerns; neglecting any one of them can later surface as an incident or cost problem.
 
 ```mermaid
 flowchart TD
@@ -39,9 +39,9 @@ Security cuts across all five pillars — it is not a separate concern added at 
 
 ## Compute models
 
-The most consequential early decision in cloud architecture is the compute model. It determines how much you control versus how much the platform manages.
+One of the most consequential early decisions in cloud architecture is the compute model. It determines how much you control versus how much the platform manages.
 
-| Model | You manage | Platform manages | Best for |
+| Model | You manage | Platform manages | Common fit |
 |---|---|---|---|
 | **Virtual machines** | OS, runtime, scaling | Hardware, hypervisor | Full control, legacy workloads |
 | **Containers** | Application, configuration | OS (partial), scheduling | Consistent environments, microservices |
@@ -104,8 +104,8 @@ Identify what a 10-minute outage costs versus a 24-hour outage. Let that drive r
 **Match operational complexity to team capability.**
 A Kubernetes cluster gives full control but requires significant expertise to operate safely. A fully managed platform reduces control but reduces operational risk.
 
-**Prefer managed over self-hosted by default.**
-Let the cloud provider manage databases, queues, and caches unless there is a concrete reason not to. The marginal cost of control is usually not worth it early on.
+**Consider managed over self-hosted as a starting point.**
+Managed services for databases, queues, and caches are often a reasonable default. The added control of self-hosting may not justify its operational cost early in a project.
 
 ---
 

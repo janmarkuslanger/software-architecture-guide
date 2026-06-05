@@ -21,7 +21,7 @@ Not all data requires the same level of confidentiality protection. A classifica
 
 ### Encryption
 
-Encryption is the primary technical control for confidentiality:
+Encryption is a primary technical control for confidentiality:
 - **In transit**: TLS for all network communication, including internal service-to-service traffic
 - **At rest**: encrypted storage for sensitive data; field-level encryption for the most sensitive fields
 - **Key management**: encryption is only as strong as key management — keys must be rotated, protected, and revocable

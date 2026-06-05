@@ -23,13 +23,13 @@ Most integration problems occur at the semantic and behavioural levels, not the 
 
 ### Interface contracts
 
-Interoperability depends on explicit contracts that define the format, semantics, and versioning of exchanged data. Implicit contracts — undocumented but relied-upon behaviours — are the most common source of integration failures during evolution.
+Interoperability depends on explicit contracts that define the format, semantics, and versioning of exchanged data. Implicit contracts — undocumented but relied-upon behaviours — are a frequent source of integration failures during evolution.
 
 Contract formats: OpenAPI for REST, Protobuf/gRPC for binary RPC, Avro/JSON Schema for event streams, AsyncAPI for message-based systems.
 
 ### Versioning and evolution
 
-Interoperability must be maintained as systems evolve independently. Breaking changes — removed fields, changed types, reordered enum values, altered error codes — break consumers without notice unless versioning is explicit and backward compatibility is a design constraint.
+Interoperability needs to be maintained as systems evolve independently. Breaking changes — removed fields, changed types, reordered enum values, altered error codes — break consumers without notice unless versioning is explicit and backward compatibility is a design constraint.
 
 ---
 
@@ -59,6 +59,6 @@ Interoperability must be maintained as systems evolve independently. Breaking ch
 
 ## Common pitfalls
 
-- **Undocumented implicit contracts**: consumers build on observed behaviour that was never specified. The producer changes it; consumers break. Every interface with an external consumer needs an explicit contract.
+- **Undocumented implicit contracts**: consumers build on observed behaviour that was never specified. The producer changes it; consumers break. Interfaces with external consumers generally benefit from an explicit contract.
 - **Semantic mismatch**: field names match but meanings diverge — a `status` field that means different things to producer and consumer. Shared vocabulary and canonical data models prevent this.
 - **No backward compatibility policy**: teams evolve their APIs without defining what constitutes a breaking change. Consumers discover breakage at runtime.

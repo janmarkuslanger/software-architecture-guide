@@ -72,7 +72,7 @@ These three principles answer the question: *how should components depend on eac
 
 > Allow no cycles in the component dependency graph.
 
-A cycle means two or more components depend on each other, directly or indirectly. This destroys independent deployability: you cannot release component A without first releasing component B, which depends on A.
+A cycle means two or more components depend on each other, directly or indirectly. This undermines independent deployability: releasing component A may require first releasing component B, which depends on A.
 
 **Example of a cycle:**
 
@@ -121,7 +121,7 @@ graph LR
   classDef volatile fill:#f8d7da
 ```
 
-Stable depends on Volatile. This is a design problem. Introduce an abstraction to invert the dependency.
+Stable depends on Volatile. This violates SDP. Introducing an abstraction to invert the dependency is a common remedy.
 
 **Corrected with interface:**
 
@@ -175,7 +175,7 @@ Zone of Pain (I≈0, A≈0): stable but concrete, hard to change, hard to extend
 Zone of Uselessness (I≈1, A≈1): abstract but unstable, no one depends on it
 ```
 
-Components close to the **Main Sequence** (`A + I ≈ 1`) are well-designed: stable things are abstract, unstable things are concrete.
+Components close to the **Main Sequence** (`A + I ≈ 1`) are generally considered well-balanced: stable things tend to be abstract, unstable things tend to be concrete.
 
 **Distance from the Main Sequence:**
 

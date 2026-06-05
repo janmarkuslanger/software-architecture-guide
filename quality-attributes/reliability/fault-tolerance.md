@@ -27,9 +27,9 @@ Understanding this chain matters for strategy: fault avoidance tries to prevent 
 | Fault avoidance | Testing, code review, type systems, input validation | Cannot prevent all faults; especially insufficient for distributed failure modes |
 | Fault tolerance | Idempotency, checksums, transactions, redundancy with consistency guarantees | Adds complexity; requires explicit design |
 
-In distributed systems, fault tolerance is the primary strategy. Networks partition, processes crash, messages arrive out of order or are delivered more than once. These are operational realities that cannot be tested away.
+In distributed systems, fault tolerance is often a primary strategy. Networks partition, processes crash, messages arrive out of order or are delivered more than once. These are operational realities that testing alone cannot eliminate.
 
-Fault avoidance remains important for correctness at the business logic level, but it is not sufficient on its own.
+Fault avoidance remains important for correctness at the business logic level, but is generally not sufficient on its own.
 
 ### Idempotency
 
@@ -62,7 +62,7 @@ This distinction is frequently misunderstood and worth stating explicitly:
 
 A load-balanced cluster with two nodes — one returning correct results, one returning corrupted data — can have 100% availability with 50% reliability. Redundancy does not fix correctness issues; it may replicate them.
 
-Both properties must be addressed independently and with separate architectural decisions.
+Both properties are typically addressed independently and with separate architectural decisions.
 
 ---
 
@@ -81,7 +81,7 @@ Both properties must be addressed independently and with separate architectural 
 
 ## Common pitfalls
 
-- **No idempotency for message consumers**: any consumer that processes messages from a queue without handling duplicates will cause incorrect behavior when messages are redelivered — which they will be, under normal operating conditions.
+- **No idempotency for message consumers**: any consumer that processes messages from a queue without handling duplicates may cause incorrect behavior when messages are redelivered — which is expected under normal operating conditions in at-least-once delivery systems.
 - **No stable deduplication key**: idempotency requires a key that survives retries. Using a timestamp or generated UUID per attempt defeats the purpose.
-- **Fault avoidance as the only strategy in distributed systems**: comprehensive test coverage does not protect against network partitions, message redelivery, or partial failures across service boundaries.
+- **Fault avoidance as the only strategy in distributed systems**: comprehensive test coverage does not address network partitions, message redelivery, or partial failures across service boundaries.
 - **Conflating reliability with availability**: adding more replicas increases availability; it does not increase reliability if the fault being replicated is a logic error or data corruption.

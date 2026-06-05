@@ -18,7 +18,7 @@ Without authenticity, a system cannot make access decisions or trust the data it
 | Something you have | TOTP token, hardware key, SMS code | Medium-High — requires physical access or SIM swap |
 | Something you are | Biometric | High — difficult to replicate; privacy implications |
 
-Multi-factor authentication (MFA) combines factors. Any system handling sensitive data or privileged access should require at minimum two factors.
+Multi-factor authentication (MFA) combines factors. Systems handling sensitive data or privileged access commonly require at minimum two factors.
 
 ### Service authenticity
 
@@ -48,5 +48,5 @@ Data authenticity verifies that a message or document originates from the claime
 
 - **Long-lived credentials without rotation**: API keys, service passwords, and certificates with multi-year lifespans create a large window of exposure if compromised. Define and enforce rotation schedules.
 - **Authentication at the gateway only**: downstream services that trust any request from inside the network implicitly trust every compromised or misconfigured upstream service.
-- **No MFA on privileged accounts**: administrative accounts with single-factor authentication are the most common entry point for account compromise. MFA is non-negotiable for privileged access.
+- **No MFA on privileged accounts**: administrative accounts with single-factor authentication represent a frequently exploited entry point for account compromise. MFA is strongly recommended for privileged access.
 - **Self-signed certificates in production**: self-signed certificates prevent verification of authenticity. Use certificates from a trusted certificate authority.

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Modularity is the degree to which a system is composed of discrete components such that a change in one component has minimal impact on other components. A modular system can be understood, changed, tested, and deployed in parts — reducing the cost and risk of every change.
+Modularity is the degree to which a system is composed of discrete components such that a change in one component has minimal impact on other components. A modular system can be understood, changed, tested, and deployed in parts — which tends to reduce the cost and risk of individual changes.
 
 Modularity in the ISO 25010 maintainability sense is directly addressed by the foundational concepts in this guide: see [Modularity](../../foundations/modularity.md) for cohesion, coupling, and connascence.
 
@@ -14,12 +14,12 @@ Modularity in the ISO 25010 maintainability sense is directly addressed by the f
 
 A module boundary is the contract between two components. The boundary defines what is visible (the interface) and what is hidden (the implementation). Strong module boundaries allow either side to change independently, as long as the contract is preserved.
 
-The cost of a change is determined by how many module boundaries it crosses. A change contained within a single module is cheap. A change that requires modifications to interfaces between modules is expensive and risky.
+The cost of a change is influenced by how many module boundaries it crosses. A change contained within a single module tends to have lower cost and risk. A change that requires modifications to interfaces between modules typically has higher cost and risk of regression.
 
 ### Cohesion and coupling
 
 The two primary levers for modularity:
-- **High cohesion**: each module has one clear responsibility — it does one thing well. A module that does many unrelated things must change for many unrelated reasons.
+- **High cohesion**: each module has one clear responsibility. A module that does many unrelated things tends to change for many unrelated reasons.
 - **Low coupling**: modules depend on each other minimally and only through explicit interfaces. A highly coupled module cannot change without changing its dependencies.
 
 See [Modularity](../../foundations/modularity.md) for the full taxonomy of cohesion types, coupling types, and connascence.

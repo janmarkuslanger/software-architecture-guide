@@ -46,7 +46,7 @@ Most availability strategies target one of two levers:
 - Runbooks and incident response procedures
 - Feature flags for rapid rollback
 
-**MTTR is often the more effective lever.** Failures cannot be eliminated in complex distributed systems — hardware fails, networks partition, deployments go wrong. Recovery, however, can be automated and made predictable. A system that recovers in 30 seconds consistently is more available than one that fails rarely but takes 2 hours to restore.
+**MTTR can be an effective lever.** Failures cannot be eliminated in complex distributed systems — hardware fails, networks partition, deployments go wrong. Recovery, however, can be automated and made predictable. A system that recovers in 30 seconds consistently is more available than one that fails rarely but takes 2 hours to restore.
 
 ---
 
@@ -84,6 +84,6 @@ Availability targets above 99.99% typically require eliminating all single point
 ## Common pitfalls
 
 - **Redundancy placed at the wrong layer**: adding a second application server provides no benefit if both share a single database with no failover capability. Identify and eliminate actual single points of failure.
-- **No automated failover**: manual failover under pressure is slow and error-prone. Automation reduces MTTR from minutes or hours to seconds.
+- **No automated failover**: manual failover under pressure tends to be slow and error-prone. Automation can reduce MTTR from minutes or hours to seconds.
 - **No runbooks**: even with alerts, teams without documented recovery procedures take longer to restore service. Runbooks reduce MTTR and lower the skill threshold required during incidents.
-- **Defining SLA after the architecture is built**: availability targets determine which redundancy patterns are necessary. A 99.9% target and a 99.999% target require fundamentally different designs. Define the target first.
+- **Defining SLA after the architecture is built**: availability targets determine which redundancy patterns are necessary. A 99.9% target and a 99.999% target require fundamentally different designs. Defining the target before the architecture is established avoids costly rework.

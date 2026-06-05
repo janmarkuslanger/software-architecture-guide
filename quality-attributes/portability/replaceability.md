@@ -27,7 +27,7 @@ Systems with opaque or proprietary data formats are difficult to replace regardl
 
 ### The Strangler Fig pattern
 
-When replacing a large system, complete replacement in a single step is high-risk. The Strangler Fig pattern incrementally replaces functionality: a façade routes requests to the new system for replaced functionality and to the old system for functionality not yet replaced. This limits blast radius and allows incremental validation.
+When replacing a large system, complete replacement in a single step carries significant risk. The Strangler Fig pattern incrementally replaces functionality: a façade routes requests to the new system for replaced functionality and to the old system for functionality not yet replaced. This limits the scope of each change and allows incremental validation.
 
 ---
 

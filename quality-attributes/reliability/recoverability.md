@@ -21,7 +21,7 @@ A system can recover to an available state (reachable, responding) without being
 | **RPO** | Maximum acceptable data loss (how far back can we go?) | Determines backup frequency and replication lag tolerance |
 | **RTO** | Maximum acceptable time to restore service | Determines failover automation and standby infrastructure requirements |
 
-RPO and RTO must be defined explicitly before choosing a recovery strategy. A 0 RPO (no data loss) requires synchronous replication. A 24h RPO tolerates daily backups.
+RPO and RTO are generally defined before choosing a recovery strategy. A 0 RPO (no data loss) requires synchronous replication. A 24h RPO tolerates daily backups.
 
 ### Recovery mechanisms
 
@@ -60,7 +60,7 @@ RPO and RTO must be defined explicitly before choosing a recovery strategy. A 0 
 
 ## Common pitfalls
 
-- **Untested recovery procedures**: backup and restore processes that are never exercised fail at the worst moment. Recovery must be tested regularly.
-- **RPO/RTO undefined until after an incident**: without defined targets, recovery architecture is arbitrary. Define targets before designing the system.
+- **Untested recovery procedures**: backup and restore processes that are never exercised tend to fail at the worst moment. Regular testing of recovery procedures reduces this risk.
+- **RPO/RTO undefined until after an incident**: without defined targets, recovery architecture lacks a concrete basis. Defining targets before designing the system allows recovery mechanisms to be matched to actual requirements.
 - **Conflating availability with recoverability**: a system that comes back online after a failure but with 2 hours of lost transactions has poor recoverability — regardless of how fast it recovered availability.
 - **No data integrity checks post-recovery**: returning to service without verifying state consistency can propagate corruption silently.

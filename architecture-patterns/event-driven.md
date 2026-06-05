@@ -122,4 +122,4 @@ flowchart TB
 - **Missing dead letter queues**: failed events silently disappear without a DLQ.
 - **Large event payloads**: events carry full entity state instead of just what changed. Use event + fetch pattern for large data.
 - **God topic**: all events on a single topic, making it impossible to scale or manage independently.
-- **No tracing**: without correlation IDs and distributed tracing, debugging cross-service flows is very hard.
+- **No tracing**: without correlation IDs and distributed tracing, debugging cross-service flows becomes considerably more difficult.

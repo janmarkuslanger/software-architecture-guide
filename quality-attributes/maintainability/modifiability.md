@@ -4,7 +4,7 @@
 
 Modifiability is the degree to which a system can be effectively and efficiently modified without introducing defects or degrading existing product quality. A highly modifiable system allows developers to make changes confidently, with predictable effort and low risk of regression.
 
-Modifiability is the outcome of good structural decisions: low coupling, high cohesion, clear dependencies, and comprehensive automated tests. It degrades when shortcuts accumulate.
+Modifiability tends to follow from structural decisions such as low coupling, high cohesion, clear dependencies, and comprehensive automated tests. It can degrade when shortcuts accumulate over time.
 
 ---
 
@@ -42,7 +42,7 @@ Dependencies that point in the wrong direction make the system hard to modify. I
 
 ## Common pitfalls
 
-- **Magic constants and hardcoded values**: values embedded in code rather than configuration require code changes for what should be operational adjustments. Every hardcoded value is a potential modifiability defect.
+- **Magic constants and hardcoded values**: values embedded in code rather than configuration require code changes for what should be operational adjustments. Hardcoded values can become a modifiability concern when they need to change.
 - **Tests that test implementation rather than behaviour**: tests tied to internal structure break when the structure changes, precisely when tests should be providing safety. Test behaviour and outcomes, not implementation details.
 - **No automated tests for changed code**: modifying code without a test suite makes every change a risk. Test coverage is the prerequisite for safe modifiability.
 - **Accumulating workarounds instead of fixes**: each workaround increases the complexity of the affected area and makes future modifications harder. Technical debt compounds.

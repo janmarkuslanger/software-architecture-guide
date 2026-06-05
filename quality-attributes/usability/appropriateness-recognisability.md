@@ -2,7 +2,7 @@
 
 ## Overview
 
-Appropriateness recognisability is the degree to which users can recognise whether a system or component is appropriate for their needs. Users must be able to determine — before investing significant time — whether the system will help them accomplish their goal.
+Appropriateness recognisability is the degree to which users can recognise whether a system or component is appropriate for their needs. Users should be able to determine — before investing significant time — whether the system will help them accomplish their goal.
 
 Recognisability failures cause high abandonment rates, misuse, and support load from users who engaged with the wrong tool for their task.
 
@@ -36,6 +36,6 @@ For APIs and SDKs, recognisability means developers can determine from documenta
 
 ## Common pitfalls
 
-- **Generic naming**: a system called "DataProcessor" or "ServiceManager" communicates nothing about its purpose. Names and entry-point descriptions must be specific.
+- **Generic naming**: a system called "DataProcessor" or "ServiceManager" communicates little about its purpose. Names and entry-point descriptions tend to be more effective when they are specific.
 - **No visible scope boundaries**: users only discover the system cannot meet their need after investing significant time. Communicate limitations early.
 - **Internal terminology at entry points**: using system-internal concepts in the first description forces users to learn the system's model before they can evaluate fit.

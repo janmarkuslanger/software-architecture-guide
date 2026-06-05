@@ -10,7 +10,7 @@ Operability is the degree to which a system has attributes that make it easy to 
 
 ### User-facing operability
 
-At the user interface level, operability concerns: clear feedback about system state, predictable and reversible actions, consistent controls, and the ability to interrupt or undo operations in progress. Users must be able to understand what the system is doing and intervene when needed.
+At the user interface level, operability concerns: clear feedback about system state, predictable and reversible actions, consistent controls, and the ability to interrupt or undo operations in progress. Users should be able to understand what the system is doing and intervene when needed.
 
 ### Operational operability (infrastructure perspective)
 
@@ -39,6 +39,6 @@ Operability treats system operators (SREs, DevOps engineers) as users with speci
 
 ## Common pitfalls
 
-- **No operational visibility**: a system that runs but cannot be observed is impossible to operate safely. Logs, metrics, and health endpoints are not optional.
+- **No operational visibility**: a system that runs but cannot be observed is difficult to operate safely. Logs, metrics, and health endpoints are generally considered essential.
 - **Configuration baked into the binary**: parameters that require redeployment to change (timeouts, feature flags, rate limits) slow operational response to problems.
-- **No graceful shutdown**: a service that terminates abruptly drops in-flight requests and may leave data in an inconsistent state. Graceful shutdown is a basic operational requirement.
+- **No graceful shutdown**: a service that terminates abruptly drops in-flight requests and may leave data in an inconsistent state. Graceful shutdown is widely regarded as a basic operational requirement.

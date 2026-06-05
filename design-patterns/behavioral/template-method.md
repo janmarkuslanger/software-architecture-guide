@@ -1,6 +1,6 @@
 # Template Method
 
-The Template Method pattern defines the skeleton of an algorithm in a base class and lets subclasses fill in specific steps without changing the overall structure. The base class calls the steps in the right order; subclasses override only the parts that need to vary.
+The Template Method pattern defines the skeleton of an algorithm in a base class and lets subclasses fill in specific steps without changing the overall structure. The base class calls the steps in a fixed order; subclasses override only the parts that need to vary.
 
 ## How it works
 
