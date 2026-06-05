@@ -8,7 +8,7 @@ Quality attributes — also called non-functional requirements — describe how 
 
 A quality attribute is a measurable property of a system's runtime behavior, structure, or development process. Unlike functional requirements, they apply across the entire system and cannot be addressed by a single component in isolation.
 
-**Measurability is mandatory.** A quality attribute target must be concrete and verifiable:
+**A useful target is measurable.** A quality attribute target should be concrete and verifiable:
 
 - "The system must be fast" is not a requirement.
 - "p99 latency < 300ms under 500 concurrent users" is a requirement.
@@ -60,6 +60,6 @@ Abstracting over provider-specific features to preserve portability sometimes me
 
 ## Quality attributes are requirements, not optimization targets
 
-A common mistake is treating quality attributes as things to maximize after the system is built. They are constraints that must be known before architectural decisions are made.
+Quality attributes are sometimes treated as things to maximize after the system is built. They are better understood as constraints that need to be known before architectural decisions are made.
 
 If the target is unknown, any architecture is defensible — and none can be evaluated. Define targets early, make them measurable, and use them to drive trade-off decisions explicitly.

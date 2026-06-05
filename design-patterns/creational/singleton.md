@@ -45,4 +45,4 @@ print(config_a is config_b)   # True
 
 - The class holds mutable state that different parts of the application need to see independently. This shared mutable state leads to hard-to-trace bugs.
 - You are writing code that needs to be tested in isolation. Singletons survive between test runs and cause test pollution.
-- You are reaching for Singleton only because you want a convenient global variable. That is a code smell, not a design decision.
+- You are reaching for Singleton only to get a convenient global variable. Introducing global mutable state this way makes dependencies implicit and harder to test — passing the dependency explicitly is often a better fit.

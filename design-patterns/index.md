@@ -77,10 +77,10 @@ Define how objects interact and distribute responsibility. Focus on algorithms a
 
 Use patterns when the same structural or behavioral problem appears in multiple places, when the team needs a shared vocabulary, or when extensibility of a specific component is a real requirement.
 
-Avoid patterns when a direct and simple solution is clearer. Patterns are tools, not goals. A misapplied pattern causes more harm than no pattern at all.
+Avoid patterns when a direct and simple solution is clearer. Patterns are tools, not goals — a pattern applied without a matching problem adds indirection without a corresponding benefit.
 
 ---
 
 ## Common pitfalls
 
-Patterns are most harmful when applied for the wrong reasons. The most common mistakes are using a pattern to signal expertise rather than to solve a real problem, applying a pattern before the problem it solves actually exists, and choosing a pattern based on its name rather than its intent. Each individual pattern page covers the pitfalls specific to that pattern.
+Patterns add the least value when applied without a matching problem — for example, applying a pattern before the problem it solves actually exists, or choosing a pattern based on its name rather than its intent. Each individual pattern page covers the pitfalls specific to that pattern.

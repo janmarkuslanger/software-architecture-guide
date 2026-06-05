@@ -22,7 +22,7 @@ Cohesion measures how strongly the elements inside a module belong together. Hig
 | Sequential | Output of one element feeds into the next | Parse -> validate -> enrich -> persist |
 | Functional | All elements contribute to one single, well-defined task | A `PasswordHasher` that only hashes passwords |
 
-**Aim for functional or sequential cohesion.** Avoid coincidental and logical cohesion, because they are signs that a module is doing too many unrelated things.
+Functional and sequential cohesion generally make a module easier to understand and change. Coincidental and logical cohesion often signal that a module is doing several unrelated things, which tends to make it harder to maintain.
 
 ---
 
@@ -98,12 +98,12 @@ flowchart LR
   style CoI fill:#f8d7da
 ```
 
-**Weak (green)** -> acceptable. **Strong (red)** -> refactor if possible.
+**Weak (green)** -> generally easy to manage. **Strong (red)** -> a candidate for refactoring, especially across module boundaries.
 
 ### How to use connascence in practice
 
-1. **Prefer static over dynamic.** Static connascence is visible at compile time and easier to manage.
-2. **Prefer weak over strong.** CoN (name) is easy to manage; CoI (shared identity) is a hidden dependency.
+1. **Static connascence is easier to manage than dynamic.** It is visible at compile time, so it is generally easier to detect and reason about.
+2. **Weaker forms are easier to manage than stronger ones.** CoN (name) is straightforward to manage; CoI (shared identity) is a hidden dependency.
 3. **Minimize connascence across module boundaries.** Within a module, stronger connascence is acceptable. Across boundaries, aim for CoN or CoT only.
 4. **Use named types instead of primitives.** Replace `createUser(string, string, int)` (CoP) with a typed request object (CoT).
 
