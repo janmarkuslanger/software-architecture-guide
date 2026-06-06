@@ -37,57 +37,18 @@ Security cuts across all five pillars — it is not a separate concern added at 
 
 ---
 
-## Compute models
+## Topics
 
-One of the most consequential early decisions in cloud architecture is the compute model. It determines how much you control versus how much the platform manages.
+| Topic | Concern |
+|---|---|
+| [Compute](compute.md) | The model that runs a workload — virtual machines, containers, serverless, managed services |
+| [Networking](networking.md) | The path traffic takes to a service — DNS, CDN, load balancers, API gateways, network boundaries |
+| [Data](data.md) | Where state lives and who can reach it — managed stores, object storage, caches, residency |
+| [Reliability](reliability.md) | Designing for failure — availability zones, regions, redundancy, recovery targets |
+| [Infrastructure as Code](infrastructure-as-code.md) | Provisioning infrastructure as versioned, repeatable definitions |
+| [Cost](cost.md) | How architectural choices translate into a recurring bill |
 
-| Model | You manage | Platform manages | Common fit |
-|---|---|---|---|
-| **Virtual machines** | OS, runtime, scaling | Hardware, hypervisor | Full control, legacy workloads |
-| **Containers** | Application, configuration | OS (partial), scheduling | Consistent environments, microservices |
-| **Serverless** | Business logic only | Everything else | Event-driven, unpredictable traffic |
-| **Managed services** | Configuration only | Compute, scaling, patching | Databases, queues, caches |
-
-No single model is correct. Most systems use a mix: containers for long-running services, serverless for event processing, managed services for data.
-
----
-
-## Availability and failure
-
-Cloud infrastructure fails. Hardware breaks, network links drop, entire data centers become unavailable. Cloud architecture assumes failure is normal and designs for it explicitly.
-
-```mermaid
-flowchart LR
-  subgraph Region A
-    AZ1["Zone 1\n(active)"]
-    AZ2["Zone 2\n(active)"]
-  end
-  subgraph Region B
-    AZ3["Zone 3\n(standby / active)"]
-  end
-  LB["Load\nBalancer"] --> AZ1
-  LB --> AZ2
-  DNS["Global DNS"] --> LB
-  DNS --> AZ3
-```
-
-**Availability zones** are isolated data centers within a region. Distributing across zones protects against single-facility failures.
-
-**Regions** are geographic locations. Multi-region deployment protects against large-scale outages and reduces latency for global users.
-
-The right level of redundancy depends on your **availability target** and **data sensitivity** — not on what is technically possible.
-
----
-
-## Key trade-offs
-
-| Decision | Benefit | Cost |
-|---|---|---|
-| Multi-region deployment | Higher availability, lower latency globally | Data complexity, synchronization overhead, cost |
-| Serverless compute | No infrastructure management, scales to zero | Cold starts, vendor lock-in, harder local development |
-| Managed services | Reduced operational burden | Less control, potential for vendor dependency |
-| Strong observability | Faster diagnosis, shorter outages | Additional infrastructure and ingestion cost |
-| Infrastructure as code | Repeatable, auditable deployments | Upfront investment in tooling and discipline |
+Observability is a cloud pillar but a cross-cutting concern in its own right; it is treated in a dedicated section of the guide.
 
 ---
 
@@ -109,12 +70,22 @@ Managed services for databases, queues, and caches are often a reasonable defaul
 
 ---
 
+## How these topics connect
+
+- **The compute model sets the cost shape.** Scale-to-zero and always-on workloads bill differently, so a [compute](compute.md) choice is also a [cost](cost.md) choice.
+- **Data location constrains reliability and latency.** Where [data](data.md) lives determines which [reliability](reliability.md) strategies and which regions are even available.
+- **Networking is the seam to every pillar.** Traffic crosses [networking](networking.md) before any compute runs, and cross-region paths reappear as [cost](cost.md) and [reliability](reliability.md) concerns.
+- **Infrastructure as Code makes the rest repeatable.** [Compute](compute.md), [networking](networking.md), and [data](data.md) decisions only stay consistent across environments when they are defined as [code](infrastructure-as-code.md).
+
+---
+
 ## Common pitfalls
 
 - **Lift-and-shift without rethinking**: moving servers to the cloud without adapting the architecture gains little and inherits all existing operational debt.
 - **Overbuilding for scale**: designing for millions of users before you have thousands adds cost and complexity without benefit.
-- **Ignoring failure modes**: assuming cloud infrastructure is reliable leads to systems with no retry logic, no circuit breakers, and no graceful degradation.
 - **Treating security as an afterthought**: IAM policies, secrets management, and network boundaries need to be designed in, not added on.
 - **No observability plan**: deploying without structured logging, metrics, and alerting means the first real incident takes hours to diagnose.
+
+Pillar-specific pitfalls are covered on each topic page.
 
 ---
