@@ -2,7 +2,7 @@
 
 ## Overview
 
-User interface aesthetics is the degree to which a user interface enables pleasing and satisfying interaction. Aesthetics in this context is not superficial decoration — it directly affects usability: visual hierarchy guides attention, spacing reduces cognitive load, and consistent visual language reduces learning effort.
+User interface aesthetics is the degree to which a user interface enables pleasing and satisfying interaction. Aesthetics in this context is not superficial decoration. It directly affects usability: visual hierarchy guides attention, spacing reduces cognitive load, and consistent visual language reduces learning effort.
 
 From an architectural perspective, aesthetics is a concern because design systems, component libraries, and layout frameworks are architectural decisions with long-term consequences for consistency and maintainability.
 
@@ -26,7 +26,7 @@ A design system is the architectural mechanism for achieving aesthetic consisten
 
 ### Aesthetic consistency vs. brand differentiation
 
-Aesthetic consistency means applying the same visual language throughout the system. Brand differentiation means the system has a distinctive visual identity. These are compatible — but brand differentiation at the cost of internal consistency can undermine the aesthetic quality of the system.
+Aesthetic consistency means applying the same visual language throughout the system. Brand differentiation means the system has a distinctive visual identity. These are compatible, but brand differentiation at the cost of internal consistency can undermine the aesthetic quality of the system.
 
 ---
 

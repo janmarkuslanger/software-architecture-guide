@@ -2,7 +2,7 @@
 
 ## Overview
 
-Appropriateness recognisability is the degree to which users can recognise whether a system or component is appropriate for their needs. Users should be able to determine — before investing significant time — whether the system will help them accomplish their goal.
+Appropriateness recognisability is the degree to which users can recognise whether a system or component is appropriate for their needs. Users should be able to determine, before investing significant time, whether the system will help them accomplish their goal.
 
 Recognisability failures cause high abandonment rates, misuse, and support load from users who engaged with the wrong tool for their task.
 
@@ -20,7 +20,7 @@ Users assess appropriateness through: explicit purpose statements, visible examp
 
 ### Developer-facing recognisability
 
-For APIs and SDKs, recognisability means developers can determine from documentation, naming, and examples whether the interface solves their problem — before writing any code. An API that requires deep exploration to understand its scope has poor recognisability.
+For APIs and SDKs, recognisability means developers can determine from documentation, naming, and examples whether the interface solves their problem, before writing any code. An API that requires deep exploration to understand its scope has poor recognisability.
 
 ---
 

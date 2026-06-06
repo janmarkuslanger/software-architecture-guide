@@ -2,7 +2,7 @@
 
 ## Overview
 
-An API is a contract between a system and its consumers. Once an API is published, consumers couple to its exact shape — every field name, status code, and error format becomes part of the interface they depend on. Changing a published contract is therefore costly in a way that changing internal code is not: internal code can be refactored freely, while a contract change can break consumers the system does not control.
+An API is a contract between a system and its consumers. Once an API is published, consumers couple to its exact shape: every field name, status code, and error format becomes part of the interface they depend on. Changing a published contract is therefore costly in a way that changing internal code is not: internal code can be refactored freely, while a contract change can break consumers the system does not control.
 
 API design is an architectural concern rather than an implementation detail, because the exposed boundary determines how independently a system and its consumers can evolve. An API that hides internal change behind a stable surface allows both sides to change separately; one that exposes implementation details ties the internals to every consumer.
 
@@ -12,7 +12,7 @@ Contracts, versioning, error models, pagination, and idempotency are the design 
 
 ## Contracts first
 
-Contract-first design defines the contract — resource shapes, field names, status codes — before the implementation. When the contract is derived from the database schema, every consumer becomes coupled to the storage model, and each schema migration turns into a breaking change. A contract derived from consumer needs keeps storage changes internal.
+Contract-first design defines the contract (resource shapes, field names, status codes) before the implementation. When the contract is derived from the database schema, every consumer becomes coupled to the storage model, and each schema migration turns into a breaking change. A contract derived from consumer needs keeps storage changes internal.
 
 Two practices support contract stability:
 
@@ -105,7 +105,7 @@ Idempotency at the API boundary is the same problem as at-least-once delivery in
 
 ---
 
-## Key trade-offs
+## Trade-offs
 
 | Decision | Benefit | Cost |
 |---|---|---|
@@ -121,7 +121,7 @@ Idempotency at the API boundary is the same problem as at-least-once delivery in
 
 - **Exposing the database schema as the API.** Couples every consumer to the storage model, so any migration becomes a breaking change.
 - **`200 OK` with an error in the body.** Defeats standard HTTP error handling and forces defensive body parsing on every client.
-- **No pagination on a growing collection.** Works in development, then returns a multi-megabyte payload — or times out — once the table is large in production.
+- **No pagination on a growing collection.** Works in development, then returns a multi-megabyte payload, or times out, once the table is large in production.
 - **Breaking changes without a version bump.** Renaming or removing a field without a new version breaks every client that depended on it, often silently.
 - **Unprotected non-idempotent retries.** No idempotency key on creation endpoints means a single network timeout can double-charge, double-book, or double-send.
 - **Leaking internals in error responses.** Stack traces and SQL in error bodies are an information-disclosure vulnerability, not only an aesthetic problem.

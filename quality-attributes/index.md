@@ -1,6 +1,6 @@
 # Quality Attributes
 
-Quality attributes — also called non-functional requirements — describe how a system behaves, not what it does. They are often primary drivers of architectural decisions: the same feature set can be implemented with fundamentally different architectures depending on the quality targets.
+Quality attributes, also called non-functional requirements, describe how a system behaves, not what it does. They are often primary drivers of architectural decisions: the same feature set can be implemented with fundamentally different architectures depending on the quality targets.
 
 ---
 
@@ -19,7 +19,7 @@ Without a measurable target, there is no basis for architectural decisions and n
 
 ## Quality attributes covered in this guide
 
-The attributes below are treated as independent architectural concerns. They align with ISO 25010 but are not structured to mirror its hierarchy — some ISO sub-characteristics (availability, scalability) are elevated to standalone entries because they drive distinct architectural decisions.
+The attributes below are treated as independent architectural concerns. They align with ISO 25010 but are not structured to mirror its hierarchy. Some ISO sub-characteristics (availability, scalability) are elevated to standalone entries because they drive distinct architectural decisions.
 
 | ISO 25010 Characteristic | Sub-characteristics |
 |---|---|
@@ -39,16 +39,16 @@ The attributes below are treated as independent architectural concerns. They ali
 Quality attributes are not independent. Architectural decisions that improve one often affect others.
 
 **Performance vs. Scalability**
-A system optimized for single-instance performance (e.g., heavy in-process caching, local state) may not scale horizontally. Scaling adds synchronization points — distributed locks, cache invalidation, coordination overhead — which increase latency and reduce throughput under certain patterns.
+A system optimized for single-instance performance (e.g., heavy in-process caching, local state) may not scale horizontally. Scaling adds synchronization points (distributed locks, cache invalidation, coordination overhead) which increase latency and reduce throughput under certain patterns.
 
 **Scalability vs. Availability**
 Statelessness is a prerequisite for horizontal scaling and simultaneously simplifies availability: stateless instances can be replaced or multiplied without session continuity concerns. Both attributes benefit from the same architectural decision.
 
 **Availability vs. Reliability**
-These are orthogonal. A system can have high availability (always reachable) but low reliability (returns wrong results). Redundancy increases availability by reducing downtime; it does not prevent a faulty component from being replicated. Reliability requires correctness guarantees — not just uptime.
+These are orthogonal. A system can have high availability (always reachable) but low reliability (returns wrong results). Redundancy increases availability by reducing downtime; it does not prevent a faulty component from being replicated. Reliability requires correctness guarantees, not just uptime.
 
 **Security vs. Usability**
-Security controls add friction. Authentication steps, session timeouts, and access restrictions reduce convenience. The appropriate balance is context-dependent — a banking application and a public content site have different thresholds.
+Security controls add friction. Authentication steps, session timeouts, and access restrictions reduce convenience. The appropriate balance is context-dependent: a banking application and a public content site have different thresholds.
 
 **Maintainability vs. Performance**
 Abstractions, layering, and modularity that improve maintainability can introduce overhead. Highly optimized code is often tightly coupled to its execution context and difficult to change. Performance optimizations should be introduced after measurable need is established, not speculatively.
@@ -62,4 +62,4 @@ Abstracting over provider-specific features to preserve portability sometimes me
 
 Quality attributes are sometimes treated as things to maximize after the system is built; they are better understood as constraints to be established before architectural decisions are made.
 
-If the target is unknown, any architecture is defensible — and none can be evaluated. Defining targets early, making them measurable, and using them to drive trade-off decisions explicitly supports more grounded architectural choices.
+If the target is unknown, any architecture is defensible, and none can be evaluated. Defining targets early, making them measurable, and using them to drive trade-off decisions explicitly supports more grounded architectural choices.

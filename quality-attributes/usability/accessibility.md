@@ -2,7 +2,7 @@
 
 ## Overview
 
-Accessibility is the degree to which a system can be used by people with the widest range of characteristics and capabilities. This includes users with visual, auditory, motor, or cognitive impairments — as well as users on assistive technologies such as screen readers, switch access devices, or voice control.
+Accessibility is the degree to which a system can be used by people with the widest range of characteristics and capabilities. This includes users with visual, auditory, motor, or cognitive impairments, as well as users on assistive technologies such as screen readers, switch access devices, or voice control.
 
 Accessibility is an important design consideration and, in many contexts, a legal requirement (WCAG 2.1, EN 301 549, ADA, EAA). Architecturally, treating it as a first-class design constraint rather than a post-launch checklist reduces remediation cost.
 
@@ -53,7 +53,7 @@ Accessibility extends to developer-facing interfaces: CLIs must work with screen
 
 - Public-facing systems subject to accessibility legislation.
 - Systems used in contexts with diverse user populations.
-- Government, education, healthcare, and financial services — where accessibility requirements are typically mandated.
+- Government, education, healthcare, and financial services, where accessibility requirements are typically mandated.
 
 ## Common pitfalls
 

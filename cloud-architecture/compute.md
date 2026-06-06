@@ -23,10 +23,10 @@ Full control over the operating system and runtime; the platform manages only th
 Package an application with its dependencies into a portable, reproducible unit. An orchestrator (e.g. Kubernetes) schedules containers across hosts, restarts failed ones, and scales replicas. Containers give consistent environments from local development to production, at the cost of operating the orchestration layer.
 
 ### Serverless
-The platform runs business logic in response to events and manages everything else — provisioning, scaling, and capacity. Billing follows actual use and can scale to zero. The trade-offs are cold starts on infrequently used functions, execution limits, and tighter coupling to platform-specific triggers.
+The platform runs business logic in response to events and manages everything else: provisioning, scaling, and capacity. Billing follows actual use and can scale to zero. The trade-offs are cold starts on infrequently used functions, execution limits, and tighter coupling to platform-specific triggers.
 
 ### Managed services
-The platform operates a capability — a database, queue, or cache — and the team only configures it. This removes most operational work in exchange for less control and a dependency on the provider's implementation.
+The platform operates a capability (a database, queue, or cache) and the team only configures it. This removes most operational work in exchange for less control and a dependency on the provider's implementation.
 
 ---
 

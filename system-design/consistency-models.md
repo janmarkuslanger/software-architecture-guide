@@ -10,7 +10,7 @@ A consistency model defines what a system guarantees about the values a read can
 
 | Model | Guarantee | Consequence |
 |---|---|---|
-| Strong (linearizable) | Every read returns the most recent committed write | Requires coordination across replicas — higher latency, reduced availability under partition |
+| Strong (linearizable) | Every read returns the most recent committed write | Requires coordination across replicas: higher latency and reduced availability under partition |
 | Causal | Reads respect cause-and-effect order; related writes are seen in order | Concurrent, unrelated writes may be seen in different orders |
 | Eventual | Replicas converge to the same value once writes stop | A read may return stale data until convergence |
 
@@ -33,7 +33,7 @@ When there is no partition, the trade-off does not apply. PACELC extends CAP to 
 
 Beyond global models, systems offer guarantees scoped to a single client's view. These are weaker than strong consistency but cover the cases users notice:
 
-- **Read-your-writes:** a client always sees its own prior writes — a user sees the comment they just posted.
+- **Read-your-writes:** a client always sees its own prior writes, so a user sees the comment they just posted.
 - **Monotonic reads:** a client never sees data move backwards in time across successive reads.
 - **Consistent prefix:** a client sees writes in an order that could have occurred, never a later write without an earlier one it depends on.
 
@@ -45,13 +45,13 @@ A common implementation routes a client's reads to the replica that served its w
 
 Eventual consistency is not an abstract concept; it shows up wherever a system holds more than one copy of data:
 
-- Read replicas lag the leader, so reads from a replica are eventually consistent — see [Data Architecture](data-architecture.md#replication).
-- A saga leaves the system in intermediate states until all steps complete, producing eventual consistency across services — see [Distributed Transactions](distributed-transactions.md#saga).
-- A cache holds a copy that can be staler than its source — see [Caching](caching.md).
+- Read replicas lag the leader, so reads from a replica are eventually consistent; see [Data Architecture](data-architecture.md#replication).
+- A saga leaves the system in intermediate states until all steps complete, producing eventual consistency across services; see [Distributed Transactions](distributed-transactions.md#saga).
+- A cache holds a copy that can be staler than its source; see [Caching](caching.md).
 
 ---
 
-## Key trade-offs
+## Trade-offs
 
 | Decision | Benefit | Cost |
 |---|---|---|
@@ -67,4 +67,4 @@ Eventual consistency is not an abstract concept; it shows up wherever a system h
 - **Assuming strong consistency by default.** Many distributed stores are eventually consistent unless configured otherwise; the guarantee has to be checked, not assumed.
 - **Ignoring replication lag in the UI.** A user who does not immediately see their own action assumes it failed and retries.
 - **Treating "eventual" as "soon".** Convergence time is unbounded under load or partition; code cannot rely on a tight window.
-- **Concurrent conflicting writes with no resolution policy.** Multi-leader and leaderless setups need an explicit strategy — last-write-wins, CRDTs, or application-level merge.
+- **Concurrent conflicting writes with no resolution policy.** Multi-leader and leaderless setups need an explicit strategy: last-write-wins, CRDTs, or application-level merge.

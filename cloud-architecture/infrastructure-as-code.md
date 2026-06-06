@@ -1,7 +1,7 @@
 # Infrastructure as Code
 
 ## Overview
-Infrastructure as Code (IaC) defines infrastructure — networks, compute, databases, permissions — as versioned, machine-readable files rather than manual console actions. The same files provision every environment, so infrastructure becomes repeatable, reviewable, and auditable.
+Infrastructure as Code (IaC) defines infrastructure (networks, compute, databases, permissions) as versioned, machine-readable files rather than manual console actions. The same files provision every environment, so infrastructure becomes repeatable, reviewable, and auditable.
 
 ---
 
@@ -12,7 +12,7 @@ Infrastructure as Code (IaC) defines infrastructure — networks, compute, datab
 | **Declarative** | The desired end state; the tool computes the steps | Terraform, CloudFormation |
 | **Imperative** | The sequence of steps to reach the state | Scripts, provisioning SDKs |
 
-Declarative IaC is the common default: it converges the real infrastructure toward the described state and can detect **drift** — manual changes that diverge from the definition.
+Declarative IaC is the common default: it converges the real infrastructure toward the described state and can detect **drift**: manual changes that diverge from the definition.
 
 ---
 

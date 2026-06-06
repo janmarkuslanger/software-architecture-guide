@@ -8,7 +8,7 @@ A base class declares an abstract factory method that returns a product object. 
 
 ## Example
 
-A logistics platform needs to plan deliveries. The planning logic (route validation, cost estimation) is the same regardless of transport type — but which transport gets created differs per subclass.
+A logistics platform needs to plan deliveries. The planning logic (route validation, cost estimation) is the same regardless of transport type, but which transport gets created differs per subclass.
 
 ```python
 from abc import ABC, abstractmethod
@@ -61,7 +61,7 @@ logistics.plan_delivery("Rotterdam")
 # Ship sailing to Rotterdam
 ```
 
-The key insight: `plan_delivery` is written once in the base class and never changes. Adding a new transport type (e.g. `AirLogistics`) only requires a new subclass — no existing code is touched.
+The key insight: `plan_delivery` is written once in the base class and never changes. Adding a new transport type (e.g. `AirLogistics`) only requires a new subclass, and no existing code is touched.
 
 ## Simple Factory vs. Factory Method
 
@@ -76,7 +76,7 @@ def create_transport(mode: str) -> Transport:
     raise ValueError(f"Unknown mode: {mode}")
 ```
 
-This is simpler and more direct — but adding a new type requires changing this function. Factory Method is worth the indirection only when real extensibility is needed: when subclasses or external consumers should be able to add new types without touching existing code.
+This is simpler and more direct, but adding a new type requires changing this function. Factory Method is worth the indirection only when real extensibility is needed: when subclasses or external consumers should be able to add new types without touching existing code.
 
 ## When to use
 

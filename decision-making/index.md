@@ -10,7 +10,7 @@ Architecture decisions shape the system for years. Making them explicit reduces 
 - New service design: define problem, constraints, options, and a clear decision.
 - Build vs buy: compare strategic fit, total cost, and operational impact.
 
-## Decision considerations / trade-offs
+## Trade-offs
 - More governance reduces risk but can slow delivery.
 - Documenting decisions adds overhead but prevents repeated debates.
 - Centralized decisions improve alignment but reduce team autonomy.

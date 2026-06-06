@@ -32,7 +32,7 @@ Operability treats system operators (SREs, DevOps engineers) as users with speci
 |---|---|---|
 | Structured logging | Machine-parseable; queryable at scale | More verbose; higher storage cost |
 | Externalized configuration | Operational changes without redeployment | Configuration sprawl; requires a configuration management strategy |
-| Health and readiness endpoints | Enables automation and load balancer integration | Requires accurate health logic — false positives cause unnecessary restarts |
+| Health and readiness endpoints | Enables automation and load balancer integration | Requires accurate health logic: false positives cause unnecessary restarts |
 | Admin API for runtime control | Operators can adjust behaviour without deployment | Security surface; requires authentication and authorisation |
 
 ---

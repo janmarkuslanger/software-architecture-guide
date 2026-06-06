@@ -1,6 +1,6 @@
 # Maintainability
 
-Maintainability describes the degree to which a system can be modified by the intended maintainers. It is the quality characteristic most directly experienced by the engineering team during ongoing development — and one that can degrade under sustained delivery pressure.
+Maintainability describes the degree to which a system can be modified by the intended maintainers. It is the quality characteristic most directly experienced by the engineering team during ongoing development, and one that can degrade under sustained delivery pressure.
 
 ## Sub-characteristics
 

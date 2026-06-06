@@ -45,7 +45,7 @@ Fitness functions can be automated (e.g. run in CI) or manual (e.g. periodic arc
 ---
 
 **Contention**
-Contention occurs when multiple threads, processes, or services compete for the same shared resource at the same time — such as a CPU, a lock, or a database connection. The resource can only serve one at a time, so others have to wait. This waiting is a common cause of latency and poor performance under load.
+Contention occurs when multiple threads, processes, or services compete for the same shared resource at the same time, such as a CPU, a lock, or a database connection. The resource can only serve one at a time, so others have to wait. This waiting is a common cause of latency and poor performance under load.
 
 A typical example is lock contention: two threads both want to write to the same data structure. One acquires the lock and proceeds, the other blocks until the lock is released.
 ```python

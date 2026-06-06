@@ -1,7 +1,7 @@
 # Cloud Architecture
 
 ## Overview
-Cloud architecture is the discipline of designing systems that run on shared, remotely operated infrastructure — rather than servers you own and manage yourself.
+Cloud architecture is the discipline of designing systems that run on shared, remotely operated infrastructure, rather than servers you own and manage yourself.
 
 The shift to cloud is not primarily a technology decision. It is a decision about **who owns which operational concerns**: compute capacity, hardware failures, network redundancy, physical security. Cloud providers absorb those concerns. In return, architects must make intentional choices about how to use the capabilities the cloud exposes.
 
@@ -33,7 +33,7 @@ flowchart TD
 | **Reliability** | What is my tolerance for downtime and data loss? | Redundancy, failover, backups, recovery targets |
 | **Observability** | How do I know my system is healthy? | Logs, metrics, traces, alerts |
 
-Security cuts across all five pillars — it is not a separate concern added at the end, but a property of how each pillar is designed.
+Security cuts across all five pillars. It is not a separate concern added at the end, but a property of how each pillar is designed.
 
 ---
 
@@ -41,10 +41,10 @@ Security cuts across all five pillars — it is not a separate concern added at 
 
 | Topic | Concern |
 |---|---|
-| [Compute](compute.md) | The model that runs a workload — virtual machines, containers, serverless, managed services |
-| [Networking](networking.md) | The path traffic takes to a service — DNS, CDN, load balancers, API gateways, network boundaries |
-| [Data](data.md) | Where state lives and who can reach it — managed stores, object storage, caches, residency |
-| [Reliability](reliability.md) | Designing for failure — availability zones, regions, redundancy, recovery targets |
+| [Compute](compute.md) | The model that runs a workload: virtual machines, containers, serverless, managed services |
+| [Networking](networking.md) | The path traffic takes to a service: DNS, CDN, load balancers, API gateways, network boundaries |
+| [Data](data.md) | Where state lives and who can reach it: managed stores, object storage, caches, residency |
+| [Reliability](reliability.md) | Designing for failure: availability zones, regions, redundancy, recovery targets |
 | [Infrastructure as Code](infrastructure-as-code.md) | Provisioning infrastructure as versioned, repeatable definitions |
 | [Cost](cost.md) | How architectural choices translate into a recurring bill |
 

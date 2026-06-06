@@ -4,7 +4,7 @@
 
 Testability is the degree to which test criteria can be established for a system or component, and tests can be performed to determine whether those criteria have been met. A testable system makes it possible to verify its behaviour in isolation, under controlled conditions, with fast and reliable feedback.
 
-Testability is a property of the design, not of the test suite. A component that is difficult to test in isolation often reflects a design concern — hidden dependencies, unclear responsibilities, or tightly coupled infrastructure.
+Testability is a property of the design, not of the test suite. A component that is difficult to test in isolation often reflects a design concern: hidden dependencies, unclear responsibilities, or tightly coupled infrastructure.
 
 ---
 
@@ -25,7 +25,7 @@ If a component is hard to test, the design is worth reconsidering. Common testab
 
 A test seam is a point in the design where the behaviour of the system can be changed for testing without modifying the code under test. Dependency injection is the primary mechanism: the component declares its dependencies as interfaces; tests inject test doubles.
 
-Without seams, tests must exercise the real implementation of every dependency — making tests slow, fragile, and coupled to external systems.
+Without seams, tests must exercise the real implementation of every dependency, making tests slow, fragile, and coupled to external systems.
 
 ### Test pyramid
 

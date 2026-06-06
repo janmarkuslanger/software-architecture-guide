@@ -1,7 +1,7 @@
 # Risk Analysis
 
 ## Overview
-Identifying risks early allows architects to address them before they become costly. Risk analysis is a proactive practice — not a reaction to failures.
+Identifying risks early allows architects to address them before they become costly. Risk analysis is a proactive practice, not a reaction to failures.
 
 ## Core concepts
 
@@ -34,7 +34,7 @@ Risk storming works best with a diverse group: developers, ops, product, and sec
 - **Transfer**: shift responsibility (e.g., use a managed service, insurance).
 - **Avoid**: change the design to eliminate the risk entirely.
 
-## Decision considerations / trade-offs
+## Trade-offs
 - Thorough risk analysis takes time but prevents expensive surprises late in delivery.
 - Overengineering mitigations for low-probability risks wastes capacity.
 - Risk storming requires psychological safety. participants must feel comfortable raising concerns.

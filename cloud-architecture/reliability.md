@@ -26,7 +26,7 @@ flowchart LR
 
 **Regions** are geographic locations. Multi-region deployment protects against large-scale outages and reduces latency for global users.
 
-The right level of redundancy depends on your **availability target** and **data sensitivity** — not on what is technically possible.
+The right level of redundancy depends on your **availability target** and **data sensitivity**, not on what is technically possible.
 
 ---
 

@@ -26,7 +26,7 @@ Co-existence is achieved through isolation: the degree to which a system's resou
 
 ### Co-existence vs. interoperability
 
-Co-existence concerns whether systems can run alongside each other without interfering. Interoperability concerns whether they can exchange information correctly. A system can co-exist without interoperating — and vice versa.
+Co-existence concerns whether systems can run alongside each other without interfering. Interoperability concerns whether they can exchange information correctly. A system can co-exist without interoperating, and vice versa.
 
 ---
 

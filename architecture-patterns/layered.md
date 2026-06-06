@@ -7,7 +7,7 @@ The most common form has four layers: presentation, application, domain, and inf
 
 ## Topology
 
-Each layer has a single, well-defined responsibility. Dependencies flow strictly downward — upper layers may call lower layers, but never the reverse.
+Each layer has a single, well-defined responsibility. Dependencies flow strictly downward: upper layers may call lower layers, but never the reverse.
 
 ```mermaid
 flowchart TB
@@ -29,7 +29,7 @@ flowchart TB
 - **Infrastructure layer**: handles persistence, external services, messaging, and I/O.
 
 
-## Decision considerations / trade-offs
+## Trade-offs
 
 | | Pro | Con |
 |---|---|---|
@@ -44,7 +44,7 @@ flowchart TB
 - **Avoid when**: many cross-cutting concerns dominate the design.
 - **Avoid when**: teams need independent release cycles for different functional areas.
 
-## Practical examples
+## Examples
 - A REST API with controllers -> service classes -> repositories -> database.
 - A backend application where domain validation never imports from ORM or HTTP frameworks.
 - Starting architecture for a new product before scaling needs are clear.

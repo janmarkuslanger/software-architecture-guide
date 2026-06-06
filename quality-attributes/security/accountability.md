@@ -2,7 +2,7 @@
 
 ## Overview
 
-Accountability is the degree to which the actions of an entity can be traced uniquely to that entity. A system with high accountability makes it possible to determine who performed what action, when, and on which resource — for any action of significance.
+Accountability is the degree to which the actions of an entity can be traced uniquely to that entity. A system with high accountability makes it possible to determine who performed what action, when, and on which resource, for any action of significance.
 
 Accountability is a foundation for security incident response, compliance auditing, and detection of misuse. Without it, breaches and policy violations cannot be investigated effectively.
 
@@ -12,7 +12,7 @@ Accountability is a foundation for security incident response, compliance auditi
 
 ### Identity binding
 
-Accountability requires that every significant action is bound to an authenticated identity — not just a session, IP address, or service name. This means:
+Accountability requires that every significant action is bound to an authenticated identity, not just a session, IP address, or service name. This means:
 - Human actions are attributed to individual user accounts, not shared credentials
 - Service-to-service calls are attributed to specific service identities (not a single shared API key)
 - Actions taken on behalf of a user (by a background job or service) retain the original user identity in the audit trail

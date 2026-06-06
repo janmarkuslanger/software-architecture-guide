@@ -14,15 +14,15 @@ Without authenticity, a system cannot make access decisions or trust the data it
 
 | Factor type | Example | Strength |
 |---|---|---|
-| Something you know | Password, PIN | Low — can be guessed, stolen, or phished |
-| Something you have | TOTP token, hardware key, SMS code | Medium-High — requires physical access or SIM swap |
-| Something you are | Biometric | High — difficult to replicate; privacy implications |
+| Something you know | Password, PIN | Low: can be guessed, stolen, or phished |
+| Something you have | TOTP token, hardware key, SMS code | Medium-High: requires physical access or SIM swap |
+| Something you are | Biometric | High: difficult to replicate; privacy implications |
 
 Multi-factor authentication (MFA) combines factors. Systems handling sensitive data or privileged access commonly require at minimum two factors.
 
 ### Service authenticity
 
-In distributed systems, services must authenticate to each other — not just users to services. Mechanisms:
+In distributed systems, services must authenticate to each other, not just users to services. Mechanisms:
 - **Mutual TLS (mTLS)**: both parties present certificates; identity is verified on both sides
 - **Short-lived service tokens (JWT, SPIFFE/SPIRE)**: services obtain tokens with a bounded lifetime; compromise has limited blast radius
 - **API keys**: simpler but long-lived; rotation is operationally complex

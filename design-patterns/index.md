@@ -1,6 +1,6 @@
 # Design Patterns
 
-Design patterns are proven, reusable solutions to recurring software design problems. They are not code — they are templates for solving a class of problem in a given context.
+Design patterns are proven, reusable solutions to recurring software design problems. They are not code: they are templates for solving a class of problem in a given context.
 
 The canonical catalog comes from the Gang of Four (GoF) book *Design Patterns* (1994) and divides patterns into three categories based on their purpose:
 
@@ -62,13 +62,13 @@ Define how objects interact and distribute responsibility. Focus on algorithms a
 
 ---
 
-## Decision considerations / trade-offs
+## Trade-offs
 
 | | Pro | Con |
 |---|---|---|
 | Shared vocabulary | Patterns give teams a common language ("use a Strategy here") | Overuse leads to pattern-for-pattern's-sake code that obscures intent |
 | Reuse | Tested structure reduces bugs in recurring problems | Applying the wrong pattern creates unnecessary indirection |
-| Extensibility | Open/closed principle — extend without modifying existing code | Additional abstractions increase cognitive load for new team members |
+| Extensibility | Open/closed principle: extend without modifying existing code | Additional abstractions increase cognitive load for new team members |
 | Testability | Interfaces and injection points make units easier to test | Too many patterns can make it hard to trace execution flow |
 
 ---

@@ -2,7 +2,7 @@
 
 ## Overview
 
-Messaging moves data between components asynchronously: a sender hands a message to an intermediary, and a receiver processes it later. This decouples sender and receiver in time — the receiver need not be available when the message is sent — and is the transport that event-driven systems are built on.
+Messaging moves data between components asynchronously: a sender hands a message to an intermediary, and a receiver processes it later. This decouples sender and receiver in time (the receiver need not be available when the message is sent) and is the transport that event-driven systems are built on.
 
 This page covers the transport mechanics: how messages are held, ordered, and delivered. For the architectural style built on top of messaging, see [Event-Driven Architecture](../architecture-patterns/event-driven.md).
 
@@ -33,7 +33,7 @@ flowchart LR
   P -->|key = order-2| B["Partition B\nn1 → n2 (ordered)"]
 ```
 
-A partition key that matches the unit of ordering the domain requires — per order, per account — preserves the order that matters while letting different keys scale out across partitions.
+A partition key that matches the unit of ordering the domain requires, per order or per account, preserves the order that matters while letting different keys scale out across partitions.
 
 ---
 
@@ -47,7 +47,7 @@ No transport can guarantee exactly-once *delivery* end to end, because the sende
 | At-least-once | Retry until acknowledged | Messages can be duplicated |
 | Exactly-once (effective) | At-least-once delivery plus idempotent processing | No duplicate *effects*, achieved in the application |
 
-At-least-once is the common default. "Exactly-once" in practice means at-least-once delivery combined with an idempotent consumer that discards duplicates — the same problem as [idempotency at the API boundary](api-design.md#idempotency).
+At-least-once is the common default. "Exactly-once" in practice means at-least-once delivery combined with an idempotent consumer that discards duplicates: the same problem as [idempotency at the API boundary](api-design.md#idempotency).
 
 ```python
 # Idempotent consumer: dedupe by message id, so re-delivery has no extra effect.
@@ -62,11 +62,11 @@ def handle(message):
 
 ## Failure handling
 
-A message that cannot be processed — malformed, or its downstream dependency is unavailable — blocks the consumer if it is retried forever. A dead-letter queue (DLQ) holds messages that exceed a retry limit, so the rest of the stream proceeds while the failures are inspected and replayed separately. See [Event-Driven Architecture](../architecture-patterns/event-driven.md#patterns-commonly-used-with-eda) for the DLQ and outbox patterns in the context of producing events reliably.
+A message that cannot be processed, because it is malformed or its downstream dependency is unavailable, blocks the consumer if it is retried forever. A dead-letter queue (DLQ) holds messages that exceed a retry limit, so the rest of the stream proceeds while the failures are inspected and replayed separately. See [Event-Driven Architecture](../architecture-patterns/event-driven.md#patterns-commonly-used-with-eda) for the DLQ and outbox patterns in the context of producing events reliably.
 
 ---
 
-## Key trade-offs
+## Trade-offs
 
 | Decision | Benefit | Cost |
 |---|---|---|

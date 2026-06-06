@@ -12,7 +12,7 @@ Replaceability is relevant both at the system level (replacing one service with 
 
 ### Interface contracts as replaceability enablers
 
-A system is replaceable to the degree that its interface is well-defined and its consumers depend only on that interface — not on implementation details. If consumers use only the documented API, a replacement that honours the same contract can substitute the original without requiring consumer changes.
+A system is replaceable to the degree that its interface is well-defined and its consumers depend only on that interface, not on implementation details. If consumers use only the documented API, a replacement that honours the same contract can substitute the original without requiring consumer changes.
 
 Tight coupling to implementation details (database schemas, internal endpoints, binary wire formats, undocumented behaviours) makes replacement difficult even when the functional contract is preserved.
 

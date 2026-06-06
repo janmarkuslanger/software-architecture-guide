@@ -66,7 +66,7 @@ Use an event bus (Kafka) for asynchronous communication between services.
 - Common convention: `docs/decisions/ADR-NNN-title.md`
 - Tools like [adr-tools](https://github.com/npryce/adr-tools) can automate file creation.
 
-## Decision considerations / trade-offs
+## Trade-offs
 - ADRs add upfront writing effort but reduce long-term confusion and re-discussion.
 - Storing ADRs in the repo keeps them versioned; a wiki is more discoverable but can drift.
 - Teams without ADRs tend to revisit the same architectural debates months or years later.

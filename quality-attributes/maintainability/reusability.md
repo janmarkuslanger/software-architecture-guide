@@ -14,15 +14,15 @@ Reusability reduces duplication and the associated cost of maintaining the same 
 
 Not all duplication is a problem. The cost of duplication (maintaining the same logic twice) should be weighed against the cost of the abstraction that would eliminate it. Three instances of similar logic are a signal to consider abstraction. A single instance is generally not sufficient justification to abstract.
 
-A poorly fitting abstraction — a reusable component that does not quite fit any of its use cases — can be more costly than the duplication it was meant to remove.
+A poorly fitting abstraction (a reusable component that does not quite fit any of its use cases) can be more costly than the duplication it was meant to remove.
 
 ### What makes a component reusable
 
 A reusable component:
 - Has a well-defined, stable interface
-- Depends only on what it needs — no unnecessary dependencies that callers must also acquire
-- Has a focused responsibility — a component that solves a general problem is often more reusable than one that solves a specific problem
-- Is documented — callers can understand its contract without reading its implementation
+- Depends only on what it needs: no unnecessary dependencies that callers must also acquire
+- Has a focused responsibility: a component that solves a general problem is often more reusable than one that solves a specific problem
+- Is documented: callers can understand its contract without reading its implementation
 
 ### Library design vs. application design
 

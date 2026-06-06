@@ -2,7 +2,7 @@
 
 ## Overview
 
-Installability is the degree to which a system can be successfully installed or uninstalled in a specified environment. A system with high installability can be deployed to its target environment reliably, reproducibly, and with minimal manual intervention — and can be removed cleanly without leaving residual state.
+Installability is the degree to which a system can be successfully installed or uninstalled in a specified environment. A system with high installability can be deployed to its target environment reliably, reproducibly, and with minimal manual intervention, and can be removed cleanly without leaving residual state.
 
 ---
 
@@ -23,7 +23,7 @@ Installation dependencies (runtime versions, OS packages, network access, creden
 
 ### Clean uninstall
 
-A system with high installability can be removed completely — no orphaned processes, no residual files, no database entries that prevent reinstallation, no configuration that persists across uninstall/reinstall cycles.
+A system with high installability can be removed completely: no orphaned processes, no residual files, no database entries that prevent reinstallation, no configuration that persists across uninstall/reinstall cycles.
 
 ---
 

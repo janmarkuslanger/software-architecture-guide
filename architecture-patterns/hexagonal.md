@@ -1,7 +1,7 @@
 # Hexagonal Architecture (Ports & Adapters)
 
 ## Overview
-Hexagonal architecture isolates core business logic from all external systems — databases, UIs, message brokers, third-party APIs. The core defines *ports* (interfaces), and *adapters* implement those interfaces for specific technologies.
+Hexagonal architecture isolates core business logic from all external systems: databases, UIs, message brokers, third-party APIs. The core defines *ports* (interfaces), and *adapters* implement those interfaces for specific technologies.
 
 This allows the core to be tested and evolved without touching infrastructure, and infrastructure to be swapped without touching the core.
 
@@ -27,8 +27,8 @@ flowchart LR
   AppService -->|"Output Port\n(interface)"| Out
 ```
 
-**Driving adapters** (left): call the core — HTTP controllers, CLI commands, test suites.
-**Driven adapters** (right): called by the core — database, email, external APIs.
+**Driving adapters** (left): call the core (HTTP controllers, CLI commands, test suites).
+**Driven adapters** (right): called by the core (database, email, external APIs).
 **Ports**: interfaces defined by the core, implemented by adapters.
 
 ## Core concepts
@@ -37,7 +37,7 @@ flowchart LR
 - **Dependency rule**: the core never imports from adapters. Adapters import from the core.
 - **Symmetry**: the pattern applies equally to input (driving) and output (driven) sides.
 
-## Decision considerations / trade-offs
+## Trade-offs
 | | Pro | Con |
 |---|---|---|
 | Testability | Core logic tested without infrastructure | More interfaces and classes to maintain |
@@ -52,7 +52,7 @@ flowchart LR
 - **Avoid when**: the team is very small and the system has minimal external integrations.
 - **Avoid when**: a simple layered architecture meets the same need with less overhead.
 
-## Practical examples
+## Examples
 - Payment service where `PaymentGateway` is a port, implemented by `StripeAdapter` and `PaypalAdapter`.
 - Notification service where `NotificationSender` is a port, switchable between email, SMS, or webhook adapters.
 - Test suite that drives the core via the input port without starting an HTTP server.

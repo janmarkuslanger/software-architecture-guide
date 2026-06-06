@@ -27,7 +27,7 @@ A shared glossary reduces misunderstandings across teams. Define key terms expli
 - Make it easy for teams to raise concerns or propose changes.
 - Treat misalignment as a signal that communication or documentation needs improvement.
 
-## Decision considerations / trade-offs
+## Trade-offs
 - More alignment processes add overhead; too little leads to divergence.
 - Central control keeps systems coherent but reduces team ownership.
 - Written documentation scales better than verbal alignment but can go stale.

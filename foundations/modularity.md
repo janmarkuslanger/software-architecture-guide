@@ -34,13 +34,13 @@ Coupling measures how much one module depends on another. Low coupling means mod
 
 | Type | Description | Risk |
 |---|---|---|
-| Content coupling | Module A directly accesses internals of module B | Highest — any internal change breaks A |
-| Common coupling | Modules share global mutable state | High — changes to shared state affect all |
-| External coupling | Modules depend on the same external format or protocol | Medium-high — protocol changes affect all |
-| Control coupling | Module A passes a flag that controls module B's behavior | Medium — B's logic is driven by A |
-| Stamp coupling | Modules share a complex data structure, only use parts of it | Medium — changes to the structure affect both |
-| Data coupling | Modules communicate via simple, minimal data (parameters) | Low — only the interface matters |
-| Message coupling | Modules communicate only via messages or events | Lowest — no shared knowledge |
+| Content coupling | Module A directly accesses internals of module B | Highest: any internal change breaks A |
+| Common coupling | Modules share global mutable state | High: changes to shared state affect all |
+| External coupling | Modules depend on the same external format or protocol | Medium-high: protocol changes affect all |
+| Control coupling | Module A passes a flag that controls module B's behavior | Medium: B's logic is driven by A |
+| Stamp coupling | Modules share a complex data structure, only use parts of it | Medium: changes to the structure affect both |
+| Data coupling | Modules communicate via simple, minimal data (parameters) | Low: only the interface matters |
+| Message coupling | Modules communicate only via messages or events | Lowest: no shared knowledge |
 
 
 ### Coupling dimensions
@@ -65,20 +65,20 @@ It was introduced by Meilir Page-Jones and provides a vocabulary for describing 
 
 | Type | Description | Example |
 |---|---|---|
-| **CoN** — Name | Both agree on the name of something | A method name used in caller and callee |
-| **CoT** — Type | Both agree on the type of something | Passing a `User` object between modules |
-| **CoM** — Meaning | Both agree on the meaning of a value | `status = 1` means "active" in both |
-| **CoP** — Position | Both agree on the order of values | `createUser(name, email)` — order matters |
-| **CoA** — Algorithm | Both must use the same algorithm | Hashing a password the same way on both sides |
+| **CoN**: Name | Both agree on the name of something | A method name used in caller and callee |
+| **CoT**: Type | Both agree on the type of something | Passing a `User` object between modules |
+| **CoM**: Meaning | Both agree on the meaning of a value | `status = 1` means "active" in both |
+| **CoP**: Position | Both agree on the order of values | `createUser(name, email)`, order matters |
+| **CoA**: Algorithm | Both must use the same algorithm | Hashing a password the same way on both sides |
 
 ### Dynamic connascence (only detectable at runtime)
 
 | Type | Description | Example |
 |---|---|---|
-| **CoE** — Execution | Both must execute in a specific order | Must call `init()` before `run()` |
-| **CoTi** — Timing | Both must execute at the same time | Race condition between two threads |
-| **CoV** — Values | Related values must change together | `startDate` and `endDate` must stay consistent |
-| **CoI** — Identity | Both must reference the exact same instance | Two components sharing a mutable object |
+| **CoE**: Execution | Both must execute in a specific order | Must call `init()` before `run()` |
+| **CoTi**: Timing | Both must execute at the same time | Race condition between two threads |
+| **CoV**: Values | Related values must change together | `startDate` and `endDate` must stay consistent |
+| **CoI**: Identity | Both must reference the exact same instance | Two components sharing a mutable object |
 
 ### Connascence strength
 
@@ -123,7 +123,7 @@ flowchart TB
 ```
 
 - High cohesion naturally reduces coupling, a focused module has fewer reasons to touch other modules.
-- Low coupling reduces connascence — fewer dependencies mean fewer things that must change together.
+- Low coupling reduces connascence: fewer dependencies mean fewer things that must change together.
 - Connascence gives you a vocabulary to *identify* and *prioritize* what to refactor.
 
 ---
@@ -131,7 +131,7 @@ flowchart TB
 ## Practical guidelines
 
 - Name modules after what they *do*, not what they *contain* (`OrderPlacer`, not `OrderUtils`).
-- A module that is hard to test in isolation has high coupling — treat this as a design signal.
+- A module that is hard to test in isolation has high coupling; treat this as a design signal.
 - If you cannot describe a module's responsibility in one sentence, it likely has low cohesion.
 - Replace positional arguments (CoP) with typed objects or named parameters.
 - Replace magic values (CoM) with constants or enums with shared names (CoN).

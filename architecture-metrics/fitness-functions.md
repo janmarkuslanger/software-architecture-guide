@@ -7,7 +7,7 @@ A fitness function is an automated check that verifies whether the system still 
 
 | Property | Description |
 |---|---|
-| Automated | Run without human intervention — typically in CI |
+| Automated | Run without human intervention, typically in CI |
 | Objective | Produce a clear pass/fail result |
 | Targeted | Each function checks one specific architectural concern |
 | Living | Evolve alongside the system as requirements change |
@@ -29,7 +29,7 @@ A fitness function is an automated check that verifies whether the system still 
 
 ---
 
-## Example 1 — Module boundary enforcement (Python / pytest)
+## Example 1: Module boundary enforcement (Python / pytest)
 
 This fitness function prevents modules from crossing architectural boundaries. The rule: nothing inside `src/orders/` may import directly from `src/payments/`. The two domains must communicate only through a defined interface.
 
@@ -68,7 +68,7 @@ If a developer adds `from payments.refunds import calculate_refund` inside the o
 
 ---
 
-## Example 2 — Response-time threshold (Python / pytest)
+## Example 2: Response-time threshold (Python / pytest)
 
 This fitness function runs against a deployed staging environment and fails if the 95th-percentile latency of a critical endpoint exceeds 200 ms.
 
@@ -111,10 +111,10 @@ This makes a regression visible the moment it is deployed to staging, long befor
 ## Relation to other practices
 
 - **ADRs**: Write an ADR to record *why* a constraint exists; write a fitness function to *enforce* it automatically.
-- **Quality attributes**: Fitness functions are the operational expression of quality attribute requirements — they translate "the system must be fast" into a concrete, measurable check.
+- **Quality attributes**: Fitness functions are the operational expression of quality attribute requirements: they translate "the system must be fast" into a concrete, measurable check.
 - **Evolutionary architecture**: Fitness functions are the core mechanism that allows architecture to evolve safely. Teams can refactor freely as long as all fitness functions stay green.
 
-## Decision considerations / trade-offs
+## Trade-offs
 - Fitness functions add maintenance cost: they must be updated when thresholds or rules change intentionally.
-- A failing fitness function that blocks the build is generally more effective than one that only warns — a warning that no one acts on provides little value.
+- A failing fitness function that blocks the build is generally more effective than one that only warns. A warning that no one acts on provides little value.
 - Start with the most critical constraints (security, core module boundaries) and add more as violations occur.

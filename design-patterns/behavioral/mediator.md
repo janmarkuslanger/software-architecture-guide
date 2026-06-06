@@ -4,11 +4,11 @@ The Mediator pattern defines a central object that encapsulates how a set of oth
 
 ## How it works
 
-Each participating object holds a reference to the mediator instead of holding references to its peers. When something happens that other objects should know about, the object notifies the mediator. The mediator then decides which other objects to inform and what to do with the information. The participants are decoupled from each other — they only know the mediator.
+Each participating object holds a reference to the mediator instead of holding references to its peers. When something happens that other objects should know about, the object notifies the mediator. The mediator then decides which other objects to inform and what to do with the information. The participants are decoupled from each other; they only know the mediator.
 
 ## Example
 
-A booking form with three controls: a "collect at store" checkbox, an address field, and a submit button. The controls don't reference each other — they all notify the mediator, which holds the coordination logic.
+A booking form with three controls: a "collect at store" checkbox, an address field, and a submit button. The controls don't reference each other; they all notify the mediator, which holds the coordination logic.
 
 ```python
 from __future__ import annotations

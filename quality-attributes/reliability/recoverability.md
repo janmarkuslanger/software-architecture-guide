@@ -4,7 +4,7 @@
 
 Recoverability is the degree to which a system can recover data and re-establish its desired state in the case of an interruption or failure. It covers the restoration of lost state, the correction of corrupted data, and the resumption of processing after an outage.
 
-Availability (MTTR) measures how quickly a system returns to service. Recoverability addresses whether the system returns to the *correct* state — not just that it is reachable again.
+Availability (MTTR) measures how quickly a system returns to service. Recoverability addresses whether the system returns to the *correct* state, not just that it is reachable again.
 
 ---
 
@@ -12,7 +12,7 @@ Availability (MTTR) measures how quickly a system returns to service. Recoverabi
 
 ### Recoverability vs. availability
 
-A system can recover to an available state (reachable, responding) without being in a correct state (consistent data, no lost transactions). Recoverability ensures that after a failure, the system's state accurately reflects what happened before the failure — with no lost writes, no corrupted records, and no inconsistent views across components.
+A system can recover to an available state (reachable, responding) without being in a correct state (consistent data, no lost transactions). Recoverability ensures that after a failure, the system's state accurately reflects what happened before the failure, with no lost writes, no corrupted records, and no inconsistent views across components.
 
 ### Recovery Point Objective (RPO) and Recovery Time Objective (RTO)
 
@@ -62,5 +62,5 @@ RPO and RTO are generally defined before choosing a recovery strategy. A 0 RPO (
 
 - **Untested recovery procedures**: backup and restore processes that are never exercised tend to fail at the worst moment. Regular testing of recovery procedures reduces this risk.
 - **RPO/RTO undefined until after an incident**: without defined targets, recovery architecture lacks a concrete basis. Defining targets before designing the system allows recovery mechanisms to be matched to actual requirements.
-- **Conflating availability with recoverability**: a system that comes back online after a failure but with 2 hours of lost transactions has poor recoverability — regardless of how fast it recovered availability.
+- **Conflating availability with recoverability**: a system that comes back online after a failure but with 2 hours of lost transactions has poor recoverability, regardless of how fast it recovered availability.
 - **No data integrity checks post-recovery**: returning to service without verifying state consistency can propagate corruption silently.

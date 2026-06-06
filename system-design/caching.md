@@ -4,7 +4,7 @@
 
 A cache stores a copy of data in a faster medium or closer to where it is used, so that repeat reads avoid the cost of recomputing or refetching from the source of truth. Caching trades freshness and memory for latency and load: the cached copy can be staler than the source and it consumes memory, in exchange for faster reads and fewer requests to the backing store.
 
-A cache is a second copy of data, so it raises the same problem as any replica — the copy and the source can disagree. Most of the difficulty in caching is keeping that disagreement within acceptable bounds. See [Consistency Models](consistency-models.md).
+A cache is a second copy of data, so it raises the same problem as any replica: the copy and the source can disagree. Most of the difficulty in caching is keeping that disagreement within acceptable bounds. See [Consistency Models](consistency-models.md).
 
 ---
 
@@ -38,7 +38,7 @@ def get_user(user_id):
 A cached entry is removed or refreshed in one of two ways:
 
 - **TTL (time to live):** the entry expires after a fixed time. It needs no coordination with writes and bounds staleness to the TTL; the cost is staleness up to the TTL and a refetch on every expiry.
-- **Explicit invalidation:** a write to the source removes or updates the cached entry. It keeps the cache fresh, but the write path must know every cache key affected — a missed key serves stale data indefinitely.
+- **Explicit invalidation:** a write to the source removes or updates the cached entry. It keeps the cache fresh, but the write path must know every cache key affected, and a missed key serves stale data indefinitely.
 
 These name the two hard problems directly: invalidation is hard because the writer must locate every dependent key, and eviction under memory pressure (LRU, LFU) can remove entries the system still needs.
 
@@ -46,7 +46,7 @@ These name the two hard problems directly: invalidation is hard because the writ
 
 ## Stampede
 
-When a popular entry expires, every concurrent request misses at once and hits the source at the same time, which can overload it — a cache stampede (or thundering herd).
+When a popular entry expires, every concurrent request misses at once and hits the source at the same time, which can overload it: a cache stampede (or thundering herd).
 
 ```mermaid
 flowchart TB
@@ -65,7 +65,7 @@ Mitigations:
 
 ---
 
-## Key trade-offs
+## Trade-offs
 
 | Decision | Benefit | Cost |
 |---|---|---|

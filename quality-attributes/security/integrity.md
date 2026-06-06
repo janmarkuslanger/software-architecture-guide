@@ -4,7 +4,7 @@
 
 Integrity is the degree to which a system prevents unauthorised access to, or modification of, computer programs or data. It covers both deliberate tampering (malicious modification) and accidental corruption (storage errors, partial writes, transmission errors).
 
-A system with high integrity ensures that data and software match their expected state — and that any modification is authorised, complete, and detectable.
+A system with high integrity ensures that data and software match their expected state, and that any modification is authorised, complete, and detectable.
 
 ---
 

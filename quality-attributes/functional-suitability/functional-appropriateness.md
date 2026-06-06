@@ -2,7 +2,7 @@
 
 ## Overview
 
-Functional appropriateness is the degree to which the functions facilitate the accomplishment of specified tasks and objectives. A system is appropriate when its functions directly support user goals — and does not expose unnecessary complexity, irrelevant options, or functions that require users to work around them.
+Functional appropriateness is the degree to which the functions facilitate the accomplishment of specified tasks and objectives. A system is appropriate when its functions directly support user goals and does not expose unnecessary complexity, irrelevant options, or functions that require users to work around them.
 
 Appropriateness is a quality of fit: a technically complete and correct system can still be inappropriate if its functions make users' tasks harder, not easier.
 
@@ -20,7 +20,7 @@ Functions that are more general, more configurable, or more capable than the tas
 
 ### User task alignment
 
-Appropriateness is evaluated relative to the user's mental model of their task. Functions that force users to translate between their mental model and the system's model reduce appropriateness — even if the underlying logic is correct.
+Appropriateness is evaluated relative to the user's mental model of their task. Functions that force users to translate between their mental model and the system's model reduce appropriateness, even if the underlying logic is correct.
 
 ---
 
