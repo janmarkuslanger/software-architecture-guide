@@ -6,7 +6,7 @@ CQRS (Command Query Responsibility Segregation) and Event Sourcing are two disti
 ---
 
 ## CQRS
-In a CRUD model, one model handles both reads and writes. CQRS splits these into a **command side** — which validates and applies state changes through domain logic — and a **query side** — which serves reads from models shaped for querying.
+In a CRUD model, one model handles both reads and writes. CQRS splits these into a **command side**, which validates and applies state changes through domain logic, and a **query side**, which serves reads from models shaped for querying.
 
 ```mermaid
 flowchart LR
@@ -16,9 +16,9 @@ flowchart LR
   Q["Query"] --> RM
 ```
 
-The read model is derived from the write model, often denormalised for the specific shapes a client queries. The two are usually kept in sync asynchronously, which means a read may briefly lag a write — an explicit case of eventual consistency (see [Consistency Models](consistency-models.md)).
+The read model is derived from the write model, often denormalised for the specific shapes a client queries. The two are usually kept in sync asynchronously, which means a read may briefly lag a write: an explicit case of eventual consistency (see [Consistency Models](consistency-models.md)).
 
-CQRS is applied where read and write workloads differ enough to justify separate models — for example, when reads and writes scale independently (see [Capacity](../quality-attributes/performance-efficiency/capacity.md)), or when read shapes are complex enough that one model cannot serve both well.
+CQRS is applied where read and write workloads differ enough to justify separate models, for example when reads and writes scale independently (see [Capacity](../quality-attributes/performance-efficiency/capacity.md)), or when read shapes are complex enough that one model cannot serve both well.
 
 ---
 
@@ -42,7 +42,7 @@ Event sourcing emits a stream of events as state changes; CQRS needs a mechanism
 
 ---
 
-## Decision considerations / trade-offs
+## Trade-offs
 
 | | Pro | Con |
 |---|---|---|

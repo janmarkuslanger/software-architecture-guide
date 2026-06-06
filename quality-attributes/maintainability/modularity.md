@@ -2,7 +2,7 @@
 
 ## Overview
 
-Modularity is the degree to which a system is composed of discrete components such that a change in one component has minimal impact on other components. A modular system can be understood, changed, tested, and deployed in parts — which tends to reduce the cost and risk of individual changes.
+Modularity is the degree to which a system is composed of discrete components such that a change in one component has minimal impact on other components. A modular system can be understood, changed, tested, and deployed in parts, which tends to reduce the cost and risk of individual changes.
 
 Modularity in the ISO 25010 maintainability sense is directly addressed by the foundational concepts in this guide: see [Modularity](../../foundations/modularity.md) for cohesion, coupling, and connascence.
 
@@ -26,7 +26,7 @@ See [Modularity](../../foundations/modularity.md) for the full taxonomy of cohes
 
 ### Package and service boundaries
 
-Modularity applies at multiple levels: within a service (packages, classes), between services (APIs, events), and between deployment units (shared libraries, shared databases). The same principles apply at each level — but violations at higher levels (e.g., shared databases between services) are more costly to fix.
+Modularity applies at multiple levels: within a service (packages, classes), between services (APIs, events), and between deployment units (shared libraries, shared databases). The same principles apply at each level, but violations at higher levels (e.g., shared databases between services) are more costly to fix.
 
 ---
 

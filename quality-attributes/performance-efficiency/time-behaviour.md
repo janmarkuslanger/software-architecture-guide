@@ -2,7 +2,7 @@
 
 ## Overview
 
-Performance describes how fast a system responds to requests (latency) and how much work it can process concurrently (throughput). It is measurable and load-dependent — a system may perform well under low load and degrade significantly under realistic conditions.
+Performance describes how fast a system responds to requests (latency) and how much work it can process concurrently (throughput). It is measurable and load-dependent: a system may perform well under low load and degrade significantly under realistic conditions.
 
 Performance becomes an architectural driver when a naive implementation cannot meet the defined targets under the expected load profile. Optimizing before a baseline exists can consume design budget without clear benefit and often introduces accidental complexity.
 
@@ -21,20 +21,20 @@ Batching is the canonical example of the tension: grouping multiple operations i
 
 ### Percentiles, not averages
 
-Average latency hides the distribution. A p99 of 2s means 1% of users wait at least 2 seconds — which is often where SLA violations occur and where user experience degrades most noticeably.
+Average latency hides the distribution. A p99 of 2s means 1% of users wait at least 2 seconds, which is often where SLA violations occur and where user experience degrades most noticeably.
 
 | Metric | What it tells you |
 |---|---|
-| p50 | Median experience — typical user |
-| p95 | Near-tail — most users including slower cases |
-| p99 | Tail — outliers that often define perceived reliability |
-| p999 | Extreme tail — relevant for high-volume systems |
+| p50 | Median experience: typical user |
+| p95 | Near-tail: most users including slower cases |
+| p99 | Tail: outliers that often define perceived reliability |
+| p999 | Extreme tail: relevant for high-volume systems |
 
-Defining performance targets using percentiles tied to a load profile — for example, "p99 < 200ms at 1,000 concurrent users" — provides a concrete, testable basis for architectural decisions.
+Defining performance targets using percentiles tied to a load profile (for example, "p99 < 200ms at 1,000 concurrent users") provides a concrete, testable basis for architectural decisions.
 
 ### Performance budget
 
-A performance budget translates the system-level target into per-component allocations. If end-to-end p99 is 300ms and there are three sequential hops, each hop must be budgeted explicitly — leaving room for network overhead, serialization, and queueing.
+A performance budget translates the system-level target into per-component allocations. If end-to-end p99 is 300ms and there are three sequential hops, each hop must be budgeted explicitly, leaving room for network overhead, serialization, and queueing.
 
 ---
 

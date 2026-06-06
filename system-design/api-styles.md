@@ -17,7 +17,7 @@ An API style is the model and protocol through which a system exposes its capabi
 ---
 
 ## REST
-REST models a system as resources addressed by URLs and manipulated with HTTP methods. It relies on standard HTTP semantics — status codes, caching, content negotiation — which gives it broad tooling and client support. A known limitation is over-fetching and under-fetching: a fixed resource shape often returns more or less than a given client needs, sometimes requiring multiple round trips.
+REST models a system as resources addressed by URLs and manipulated with HTTP methods. It relies on standard HTTP semantics (status codes, caching, content negotiation), which gives it broad tooling and client support. A known limitation is over-fetching and under-fetching: a fixed resource shape often returns more or less than a given client needs, sometimes requiring multiple round trips.
 
 ## GraphQL
 GraphQL exposes a single endpoint and a schema; clients specify exactly which fields they need in a query. This addresses over- and under-fetching and suits clients with differing data requirements. The trade-offs are that URL-level HTTP caching no longer applies, query cost can be hard to bound (one query may fan out into many resolver calls), and the server must guard against expensive or deeply nested queries.
@@ -40,7 +40,7 @@ flowchart TD
 
 ---
 
-## Decision considerations / trade-offs
+## Trade-offs
 
 | | Pro | Con |
 |---|---|---|

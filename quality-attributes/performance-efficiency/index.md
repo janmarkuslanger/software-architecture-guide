@@ -8,4 +8,4 @@ Performance efficiency describes the relationship between the performance of a s
 |---|---|
 | [Time Behaviour](time-behaviour.md) | Response and processing times and throughput rates when performing its functions |
 | [Resource Utilisation](resource-utilisation.md) | Amounts and types of resources used when performing functions |
-| [Capacity](capacity.md) | Maximum limits of a system parameter that meet requirements — and whether performance holds as load grows |
+| [Capacity](capacity.md) | Maximum limits of a system parameter that meet requirements, and whether performance holds as load grows |

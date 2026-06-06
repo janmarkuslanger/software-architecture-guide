@@ -25,7 +25,7 @@ A system is modifiable to the extent that it can be extended without being modif
 
 ### Dependency direction
 
-Dependencies that point in the wrong direction make the system hard to modify. In a layered architecture, domain logic that depends on infrastructure details (database schemas, HTTP frameworks) is coupled to those details — a change in the infrastructure requires changes in the domain. Inverting these dependencies (the domain defines interfaces; infrastructure implements them) isolates change.
+Dependencies that point in the wrong direction make the system hard to modify. In a layered architecture, domain logic that depends on infrastructure details (database schemas, HTTP frameworks) is coupled to those details: a change in the infrastructure requires changes in the domain. Inverting these dependencies (the domain defines interfaces; infrastructure implements them) isolates change.
 
 ---
 

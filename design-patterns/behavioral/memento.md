@@ -93,5 +93,5 @@ if snapshot:
 ## When not to use
 
 - The object's state is large or changes frequently. Storing full snapshots on every change is expensive in both memory and time.
-- The caretaker needs to inspect or manipulate the snapshot content. A memento should be opaque — if the caretaker needs to understand it, a different mechanism is more appropriate.
+- The caretaker needs to inspect or manipulate the snapshot content. A memento should be opaque. If the caretaker needs to understand it, a different mechanism is more appropriate.
 - Rollback is only needed in exceptional error cases, not as a regular feature. In that case simpler error handling or a transaction boundary is a better fit.

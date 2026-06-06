@@ -4,7 +4,7 @@
 
 Non-repudiation is the degree to which actions or events can be proven to have taken place, such that the events or actions cannot be repudiated later. It ensures that a party that performed an action cannot later credibly deny having performed it.
 
-Non-repudiation is architecturally relevant in any system where the origin or occurrence of actions must be provable — financial transactions, legal document signing, audit-sensitive operations, and regulated workflows.
+Non-repudiation is architecturally relevant in any system where the origin or occurrence of actions must be provable: financial transactions, legal document signing, audit-sensitive operations, and regulated workflows.
 
 ---
 

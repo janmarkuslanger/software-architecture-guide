@@ -4,7 +4,7 @@
 
 Scalability describes whether a system's performance characteristics remain stable as load increases. It is not the same as performance: a system can be fast at low load but fail to maintain that performance as users or data volume grows.
 
-A scalable system can handle more work by adding resources — without requiring fundamental redesign.
+A scalable system can handle more work by adding resources, without requiring fundamental redesign.
 
 ---
 
@@ -16,10 +16,10 @@ A scalable system can handle more work by adding resources — without requiring
 |---|---|---|
 | Mechanism | Larger machines (more CPU, RAM) | More machines of the same size |
 | Limit | Physical ceiling of available hardware | Theoretically unbounded |
-| Complexity | Simple — no application changes needed | Requires stateless design and load distribution |
+| Complexity | Simple: no application changes needed | Requires stateless design and load distribution |
 | Cost | Expensive at the high end | More predictable unit economics |
 
-Vertical scaling is a valid short-term lever, but it has a ceiling. Horizontal scaling is a common approach for systems with growing load — and it requires the application to be designed for it from the start.
+Vertical scaling is a valid short-term lever, but it has a ceiling. Horizontal scaling is a common approach for systems with growing load, and it requires the application to be designed for it from the start.
 
 ### Statelessness
 
@@ -37,10 +37,10 @@ Elasticity is distinct from scalability. A system is scalable if it *can* handle
 
 When a system fails to scale, the bottleneck is typically one of the following, in order of how often they are encountered:
 
-1. **Compute** — CPU or memory saturation on a single instance. Solved by horizontal scaling.
-2. **Shared mutable state** — a distributed lock, a shared counter, or a serialized queue. Solved by partitioning or redesigning the data model.
-3. **Synchronous call chains** — a request must wait for N sequential downstream calls. Solved by async patterns or parallelism.
-4. **Database** — connection limits, single-writer bottleneck, or query performance at scale. A bottleneck that is often encountered late and can be operationally costly to address.
+1. **Compute**: CPU or memory saturation on a single instance. Solved by horizontal scaling.
+2. **Shared mutable state**: a distributed lock, a shared counter, or a serialized queue. Solved by partitioning or redesigning the data model.
+3. **Synchronous call chains**: a request must wait for N sequential downstream calls. Solved by async patterns or parallelism.
+4. **Database**: connection limits, single-writer bottleneck, or query performance at scale. A bottleneck that is often encountered late and can be operationally costly to address.
 
 Identifying the bottleneck before choosing a scaling strategy prevents applying the wrong lever.
 

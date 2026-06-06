@@ -4,7 +4,7 @@
 
 Availability is the fraction of time a system is operational and reachable by its users. It is typically expressed as a service level agreement (SLA) and has direct business consequences: downtime means users cannot complete their goals, which translates into lost revenue, broken trust, or contractual penalties.
 
-Availability is a system-level property. It is affected by every component in the request path — a chain of components is only as available as its least available link.
+Availability is a system-level property. It is affected by every component in the request path: a chain of components is only as available as its least available link.
 
 ---
 
@@ -35,18 +35,18 @@ Each additional nine is an order-of-magnitude harder to achieve. Moving from 99.
 
 Most availability strategies target one of two levers:
 
-**Increasing MTBF** — reduce how often failures occur:
+**Increasing MTBF**, reduce how often failures occur:
 - Redundant hardware and network paths
 - Rigorous testing and gradual rollouts
 - Higher-quality components
 
-**Reducing MTTR** — reduce how long recovery takes:
+**Reducing MTTR**, reduce how long recovery takes:
 - Monitoring and alerting with low detection latency
 - Automated failover
 - Runbooks and incident response procedures
 - Feature flags for rapid rollback
 
-**MTTR can be an effective lever.** Failures cannot be eliminated in complex distributed systems — hardware fails, networks partition, deployments go wrong. Recovery, however, can be automated and made predictable. A system that recovers in 30 seconds consistently is more available than one that fails rarely but takes 2 hours to restore.
+**MTTR can be an effective lever.** Failures cannot be eliminated in complex distributed systems: hardware fails, networks partition, deployments go wrong. Recovery, however, can be automated and made predictable. A system that recovers in 30 seconds consistently is more available than one that fails rarely but takes 2 hours to restore.
 
 ---
 
@@ -61,7 +61,7 @@ Most availability strategies target one of two levers:
 
 ### Availability vs. other attributes
 
-Increasing availability through redundancy adds operational complexity and cost. Active-active setups require careful consistency management — decisions about what happens when two active nodes disagree.
+Increasing availability through redundancy adds operational complexity and cost. Active-active setups require careful consistency management: decisions about what happens when two active nodes disagree.
 
 Availability targets above 99.99% typically require eliminating all single points of failure, including the load balancer, DNS, and the monitoring system itself.
 

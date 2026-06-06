@@ -33,19 +33,19 @@ flowchart TB
   end
 ```
 
-Each module owns its code and data. Cross-module access goes through the public interface only — never via direct schema access or internal imports.
+Each module owns its code and data. Cross-module access goes through the public interface only, never via direct schema access or internal imports.
 
 ## Core concepts
 - **Module boundary**: a hard separation between modules, enforced by code structure or tooling (e.g., package visibility, linting rules, ArchUnit).
 - **Public interface**: the only entry point another module can call. Typically a service class or a defined API contract.
 - **Private internals**: all implementation details, database schemas, and internal models are hidden from other modules.
 - **Single deployment**: all modules compile and deploy together. No network calls between modules.
-- **Shared infrastructure**: modules share the same process, runtime, and often the same database — but not the same schema or tables.
+- **Shared infrastructure**: modules share the same process, runtime, and often the same database, but not the same schema or tables.
 
-## Decision considerations / trade-offs
+## Trade-offs
 | | Pro | Con |
 |---|---|---|
-| Deployment | Simple —> one artifact, no service mesh | Single point of failure |
+| Deployment | Simple: one artifact, no service mesh | Single point of failure |
 | Development | Refactoring across modules is easy in one codebase | Discipline needed to enforce boundaries |
 | Testing | Integration tests without network overhead | No isolation between module failures at runtime |
 | Scalability | Can scale the whole unit vertically | Cannot scale individual modules independently |

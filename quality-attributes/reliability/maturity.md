@@ -16,7 +16,7 @@ A newly deployed system, even with good test coverage, is immature: it has not b
 
 ### Defect escape rate
 
-The primary measure of immaturity is the rate at which defects reach production. A high escape rate indicates gaps in the verification process — insufficient test coverage, missing integration scenarios, or inadequate review. Reducing escape rate is the primary lever for improving maturity.
+The primary measure of immaturity is the rate at which defects reach production. A high escape rate indicates gaps in the verification process: insufficient test coverage, missing integration scenarios, or inadequate review. Reducing escape rate is the primary lever for improving maturity.
 
 ### Software aging
 

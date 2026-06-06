@@ -53,8 +53,8 @@ flowchart LR
 
 | | Broker | Mediator |
 |---|---|---|
-| Coordination | Decentralized — consumers decide what to do | Centralized — mediator controls the flow |
-| Coupling | Low — producer and consumer don't know each other | Medium — mediator knows all steps |
+| Coordination | Decentralized: consumers decide what to do | Centralized: mediator controls the flow |
+| Coupling | Low: producer and consumer don't know each other | Medium: mediator knows all steps |
 | Visibility | Harder to see end-to-end flow | Flow is explicit and auditable in one place |
 | Use when | Fan-out, independent reactions, scalability | Multi-step workflows, ordered processing, error handling across steps |
 
@@ -87,14 +87,14 @@ flowchart TB
 - **Integration events**: events shared across service boundaries. Require stable contracts.
 - **Commands via messaging**: instructions targeted at a specific service. Less decoupled than events.
 
-## Decision considerations / trade-offs
+## Trade-offs
 | | Pro | Con |
 |---|---|---|
 | Decoupling | Producer and consumer deploy independently | Harder to trace end-to-end request flows |
 | Scalability | Consumers scale independently | Event ordering and deduplication require careful design |
 | Resilience | Broker buffers events if consumer is temporarily down | Broker becomes a critical dependency |
 | Auditability | Event log is a natural audit trail | Event schema changes require versioning strategy |
-| Flexibility | Add new consumers without touching producers | Eventual consistency — consumers lag behind producers |
+| Flexibility | Add new consumers without touching producers | Eventual consistency: consumers lag behind producers |
 
 ## When to use / when not to use
 - **Use when**: multiple services react to the same trigger (fan-out).
@@ -105,7 +105,7 @@ flowchart TB
 - **Avoid when**: the team has no tooling to trace events across services or handle failed events.
 - **Avoid when**: eventual consistency is unacceptable for a given operation.
 
-## Practical examples
+## Examples
 - `Orders` publishes `OrderPlaced`; `Billing`, `Inventory`, and `Notifications` each consume it independently.
 - `PaymentService` publishes `PaymentFailed`; a retry workflow is triggered by a consumer.
 - Event log in Kafka used to rebuild read models (projections) for analytics.

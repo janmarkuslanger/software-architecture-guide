@@ -2,7 +2,7 @@
 
 ## Overview
 
-Confidentiality is the degree to which a system ensures that data is accessible only to those authorised to access it. Confidentiality failures expose data to unauthorised parties — whether through direct access, interception, or inference.
+Confidentiality is the degree to which a system ensures that data is accessible only to those authorised to access it. Confidentiality failures expose data to unauthorised parties, whether through direct access, interception, or inference.
 
 ---
 
@@ -24,7 +24,7 @@ Not all data requires the same level of confidentiality protection. A classifica
 Encryption is a primary technical control for confidentiality:
 - **In transit**: TLS for all network communication, including internal service-to-service traffic
 - **At rest**: encrypted storage for sensitive data; field-level encryption for the most sensitive fields
-- **Key management**: encryption is only as strong as key management — keys must be rotated, protected, and revocable
+- **Key management**: encryption is only as strong as key management, so keys must be rotated, protected, and revocable
 
 ### Access control
 

@@ -19,13 +19,13 @@ How state is structured, evolved, and indexed is covered in [Data Architecture](
 
 ## Data residency and sovereignty
 
-Where data physically lives is a legal and architectural constraint, not only a latency concern. Regulations may require that certain data stay within a jurisdiction. Residency requirements influence region selection, replication topology, and which managed services are usable — decide them before choosing products.
+Where data physically lives is a legal and architectural constraint, not only a latency concern. Regulations may require that certain data stay within a jurisdiction. Residency requirements influence region selection, replication topology, and which managed services are usable. Decide them before choosing products.
 
 ---
 
 ## Replication and consistency
 
-Cloud data services replicate data for durability and availability. Replication introduces more than one copy of the same data, which raises the question of what a read guarantees — see [Consistency Models](../system-design/consistency-models.md). Backups and recovery targets are part of [Reliability](reliability.md).
+Cloud data services replicate data for durability and availability. Replication introduces more than one copy of the same data, which raises the question of what a read guarantees (see [Consistency Models](../system-design/consistency-models.md)). Backups and recovery targets are part of [Reliability](reliability.md).
 
 ---
 

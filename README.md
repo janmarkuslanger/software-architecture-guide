@@ -5,7 +5,7 @@
 ---
 
 ## Purpose and scope
-A compact reference on software architecture — concepts, trade-offs, and structural decisions.
+A compact reference on software architecture: concepts, trade-offs, and structural decisions.
 
 
 ## Table of contents

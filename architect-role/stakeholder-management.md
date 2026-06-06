@@ -29,7 +29,7 @@ Each stakeholder has quality attribute priorities that may conflict. The archite
 ### Build ongoing relationships
 Stakeholder management is continuous, not a one-time activity. Regular check-ins prevent surprises and build alignment over time.
 
-## Decision considerations / trade-offs
+## Trade-offs
 - Over-involving stakeholders slows decisions; under-involving them causes rework.
 - Transparency about trade-offs builds trust but may increase scrutiny.
 - Prioritizing one stakeholder group risks alienating others.

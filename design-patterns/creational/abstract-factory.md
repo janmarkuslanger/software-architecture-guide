@@ -4,7 +4,7 @@ The Abstract Factory pattern provides an interface for creating families of rela
 
 ## How it works
 
-An abstract factory interface declares creation methods for each product in the family. A concrete factory implements all of them for one specific variant. Client code receives a factory and only ever calls its creation methods — it never knows which concrete classes are being instantiated.
+An abstract factory interface declares creation methods for each product in the family. A concrete factory implements all of them for one specific variant. Client code receives a factory and only ever calls its creation methods; it never knows which concrete classes are being instantiated.
 
 ## Example
 

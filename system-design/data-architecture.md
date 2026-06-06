@@ -46,7 +46,7 @@ Each step stays compatible with the code running before and after it. This is th
 
 ## Indexing
 
-An index is a secondary data structure that speeds up reads matching a query, at the cost of extra storage and slower writes — the index is updated on every insert, update, or delete.
+An index is a secondary data structure that speeds up reads matching a query, at the cost of extra storage and slower writes, because the index is updated on every insert, update, or delete.
 
 ```sql
 -- Without an index, this scans every row.
@@ -57,14 +57,14 @@ CREATE INDEX idx_orders_customer ON orders (customer_id);
 ```
 
 - An index helps queries that filter or sort on the indexed columns and does nothing for queries on other columns.
-- A composite index on `(a, b)` supports queries on `a` and on `(a, b)`, but not on `b` alone — the leftmost-prefix rule.
+- A composite index on `(a, b)` supports queries on `a` and on `(a, b)`, but not on `b` alone, by the leftmost-prefix rule.
 - Each index adds write cost and storage. An index that no query uses is pure overhead.
 
 ---
 
 ## Replication
 
-Replication keeps copies of data on more than one node. It serves two goals: availability — a replica takes over if the primary fails — and read scalability, by spreading reads across replicas.
+Replication keeps copies of data on more than one node. It serves two goals: availability (a replica takes over if the primary fails) and read scalability, by spreading reads across replicas.
 
 | Model | How it works | Trade-off |
 |---|---|---|
@@ -72,11 +72,11 @@ Replication keeps copies of data on more than one node. It serves two goals: ava
 | Multi-leader | Several nodes accept writes and replicate to each other | Writes survive a node loss; write conflicts must be resolved |
 | Leaderless | Any replica accepts reads and writes, quorums reconcile | High availability; the application handles consistency (quorums, read-repair) |
 
-Replication is asynchronous by default, so followers lag behind the leader. A read served by a lagging follower can return stale data — an instance of eventual consistency, see [Consistency Models](consistency-models.md). Replication copies the whole dataset to each node; splitting the dataset across nodes for scale is *sharding*, covered in [Scalability](scalability.md#sharding-partitioning).
+Replication is asynchronous by default, so followers lag behind the leader. A read served by a lagging follower can return stale data, an instance of eventual consistency, see [Consistency Models](consistency-models.md). Replication copies the whole dataset to each node; splitting the dataset across nodes for scale is *sharding*, covered in [Scalability](scalability.md#sharding-partitioning).
 
 ---
 
-## Key trade-offs
+## Trade-offs
 
 | Decision | Benefit | Cost |
 |---|---|---|

@@ -12,11 +12,11 @@ Completeness failures are often invisible during development and surface at acce
 
 ### Specified vs. implied needs
 
-Completeness applies to both explicitly documented requirements and to needs that are reasonably implied by context. A payment system that processes successful transactions but provides no refund mechanism is functionally incomplete — even if refunds were never explicitly written into a requirement.
+Completeness applies to both explicitly documented requirements and to needs that are reasonably implied by context. A payment system that processes successful transactions but provides no refund mechanism is functionally incomplete, even if refunds were never explicitly written into a requirement.
 
 ### Completeness vs. scope creep
 
-Completeness does not mean implementing everything. It means implementing everything within the agreed scope. Undocumented assumptions on either side — features the team assumed were out of scope that users assumed were included — are the primary source of completeness gaps.
+Completeness does not mean implementing everything. It means implementing everything within the agreed scope. Undocumented assumptions on either side (features the team assumed were out of scope that users assumed were included) are the primary source of completeness gaps.
 
 ### Acceptance criteria as completeness contracts
 

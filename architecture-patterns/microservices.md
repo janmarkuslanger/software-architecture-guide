@@ -3,7 +3,7 @@
 ## Overview
 Microservices is an architectural style where a system is composed of small, independently deployable services. Each service is owned by a single team, has its own data store, and communicates with other services over the network.
 
-The goal is independent deployability, scalability, and team autonomy — not small code size.
+The goal is independent deployability, scalability, and team autonomy, not small code size.
 
 ## Topology
 
@@ -36,12 +36,12 @@ flowchart TB
 ## Core concepts
 - **Single responsibility**: each service covers exactly one business domain and owns the data within it.
 - **Independent deployment**: a service can be deployed without touching anything else.
-- **Data isolation**: each service has its own database —> no shared tables, no direct cross-service queries.
+- **Data isolation**: each service has its own database: no shared tables, no direct cross-service queries.
 - **Network communication**: services talk to each other via HTTP/REST, gRPC, or a message broker.
 - **API Gateway**: the single entry point for clients; handles routing, auth, and rate limiting.
 - **Bounded context**: service boundaries follow business domains, not technical layers.
 
-## Decision considerations / trade-offs
+## Trade-offs
 | | Pro | Con |
 |---|---|---|
 | Deployment | Each service ships on its own schedule | Every service needs its own CI/CD pipeline |
@@ -56,10 +56,10 @@ flowchart TB
 - **Use when**: different parts of the system have significantly different scaling requirements.
 - **Use when**: the team can handle the operational complexity (CI/CD, observability, containers).
 - **Avoid when**: the team is small and the overhead isn't worth it.
-- **Avoid when**: bounded contexts are not yet well understood — wrong boundaries are expensive to fix.
+- **Avoid when**: bounded contexts are not yet well understood. Wrong boundaries are expensive to fix.
 - **Avoid when**: you are building an early-stage product with rapidly changing requirements.
 
-## Practical examples
+## Examples
 - An e-commerce platform where `Orders`, `Billing`, `Inventory`, and `Shipping` are separate services with independent deployments.
 - `Orders` publishes an `OrderPlaced` event; `Billing` and `Notifications` consume it asynchronously.
 - `Inventory` is scaled to 10 instances during peak season; `Notifications` runs at 2 instances.

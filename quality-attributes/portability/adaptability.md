@@ -2,7 +2,7 @@
 
 ## Overview
 
-Adaptability is the degree to which a system can effectively and efficiently be adapted for different or evolving hardware, software, or other operational or usage environments. A highly adaptable system can be moved to a new environment, reconfigured for different operational conditions, or adjusted for new platform requirements — with minimal changes to the system itself.
+Adaptability is the degree to which a system can effectively and efficiently be adapted for different or evolving hardware, software, or other operational or usage environments. A highly adaptable system can be moved to a new environment, reconfigured for different operational conditions, or adjusted for new platform requirements, with minimal changes to the system itself.
 
 ---
 
@@ -28,7 +28,7 @@ The 12-factor app principle of config states: everything that varies between dep
 
 ### Abstraction layers
 
-Adaptability is achieved by abstracting over environment-specific services behind interfaces. Code that calls a database through an interface can be adapted to a different database by providing a new implementation — without changing the calling code. Code that calls AWS S3 directly is coupled to S3.
+Adaptability is achieved by abstracting over environment-specific services behind interfaces. Code that calls a database through an interface can be adapted to a different database by providing a new implementation, without changing the calling code. Code that calls AWS S3 directly is coupled to S3.
 
 The cost of the abstraction must be weighed against the probability and cost of adaptation. Abstracting over a service that will never change is wasted complexity.
 

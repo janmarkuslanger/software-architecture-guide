@@ -32,7 +32,7 @@ The core calls out to plug-ins at defined extension points. Plug-ins implement t
 - **Extension point**: an interface defined by the core that marks where plug-in behavior can be injected. The stability of these interfaces determines how often plug-ins need to change.
 - **Registry**: the mechanism that maps extension points to concrete plug-in implementations at runtime (configuration file, DI container, service locator).
 
-## Decision considerations / trade-offs
+## Trade-offs
 
 | | Pro | Con |
 |---|---|---|
@@ -42,14 +42,14 @@ The core calls out to plug-ins at defined extension points. Plug-ins implement t
 | Changeability | Variable or customer-specific logic lives outside the core | Deciding what belongs in the core vs. a plug-in requires discipline |
 
 ## When to use / when not to use
-- **Use when**: the system has stable core rules but many varying extensions — product variants, customer-specific logic, jurisdiction-specific regulations.
+- **Use when**: the system has stable core rules but many varying extensions: product variants, customer-specific logic, jurisdiction-specific regulations.
 - **Use when**: different feature sets evolve at different speeds and must not block each other.
 - **Use when**: external teams or third parties need to contribute capabilities without access to the core.
 - **Avoid when**: the feature set is fixed and unlikely to grow. The extension-point machinery adds overhead for no benefit.
 - **Avoid when**: plug-ins need to coordinate heavily with each other; strong inter-plug-in coupling defeats the design.
 - **Avoid when**: dynamic plug-in loading conflicts with strict latency or startup-time requirements.
 
-## Practical examples
+## Examples
 - **Insurance platform**: core handles the universal claims process; plug-ins implement product-specific or country-specific calculation rules.
 - **Tax engine**: core drives the calculation workflow; plug-ins provide jurisdiction-specific rules.
 - **IDE** (VS Code, IntelliJ): core manages the editor model; language support, debuggers, and linters are plug-ins.

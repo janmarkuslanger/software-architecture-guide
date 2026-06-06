@@ -1,13 +1,13 @@
 # Cost
 
 ## Overview
-In the cloud, cost is an architectural property. Pay-per-use pricing means design decisions — compute model, redundancy level, data placement, traffic flow — translate directly into a recurring bill. Cost is therefore something to design for, not a number to discover at the end of the month.
+In the cloud, cost is an architectural property. Pay-per-use pricing means design decisions, such as compute model, redundancy level, data placement, and traffic flow, translate directly into a recurring bill. Cost is therefore something to design for, not a number to discover at the end of the month.
 
 ---
 
 ## The cloud cost model
 
-- **Pay-per-use**: you are billed for what you consume — compute time, storage, requests, and data transfer — rather than for owned hardware.
+- **Pay-per-use**: you are billed for what you consume (compute time, storage, requests, and data transfer) rather than for owned hardware.
 - **Scale to zero**: some models (serverless) cost nothing when idle; others (instances) bill continuously whether used or not.
 - **Committed vs on-demand**: reserved or committed capacity is cheaper per unit but trades flexibility for a longer commitment.
 - **Egress**: data leaving a region or the provider's network is billed, often more than people expect. Inbound transfer is usually free.

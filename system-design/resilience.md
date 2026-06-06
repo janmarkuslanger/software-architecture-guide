@@ -21,7 +21,7 @@ In a distributed system, dependencies fail: networks drop packets, services slow
 ---
 
 ## Timeouts and retries
-A timeout bounds how long a caller waits before treating a call as failed, freeing resources for other work. Retries re-attempt a failed call on the assumption that the failure was transient. Retries commonly use **exponential backoff** — increasing the delay between attempts — and **jitter** — randomising the delay — so that many clients do not retry in synchronised waves.
+A timeout bounds how long a caller waits before treating a call as failed, freeing resources for other work. Retries re-attempt a failed call on the assumption that the failure was transient. Retries commonly use **exponential backoff** (increasing the delay between attempts) and **jitter** (randomising the delay) so that many clients do not retry in synchronised waves.
 
 Retries are safe only when the operation is **idempotent**: applying it more than once has the same effect as applying it once (see [API Design](api-design.md#idempotency) and [Messaging](messaging.md#delivery-guarantees)). Retrying a non-idempotent operation can duplicate side effects such as a payment.
 
@@ -59,12 +59,12 @@ stateDiagram-v2
 - **Open**: calls fail fast without reaching the dependency, giving it time to recover.
 - **Half-open**: a limited number of trial calls test whether the dependency has recovered.
 
-A circuit breaker is paired with a fallback: while the circuit is open, the caller needs a defined behaviour — a cached value, a default, or a clear error.
+A circuit breaker is paired with a fallback: while the circuit is open, the caller needs a defined behaviour: a cached value, a default, or a clear error.
 
 ---
 
 ## Isolation and load management
-- **Bulkhead**: resources such as connection or thread pools are partitioned per dependency, so one saturated dependency cannot consume all capacity — analogous to compartments in a ship's hull.
+- **Bulkhead**: resources such as connection or thread pools are partitioned per dependency, so one saturated dependency cannot consume all capacity, analogous to compartments in a ship's hull.
 - **Rate limiting**: a ceiling on accepted requests protects a system from more load than it can serve; excess is rejected (often with HTTP `429`) or delayed.
 - **Backpressure**: when a consumer cannot keep up, it signals the producer to slow down rather than buffering without bound; unbounded buffers turn an overload into memory exhaustion.
 
@@ -75,7 +75,7 @@ These patterns are layered rather than used in isolation. A typical outbound cal
 
 ---
 
-## Decision considerations / trade-offs
+## Trade-offs
 
 | | Pro | Con |
 |---|---|---|

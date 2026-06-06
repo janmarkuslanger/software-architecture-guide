@@ -29,7 +29,7 @@ Before making a change, a developer must be able to assess what the change will 
 - Dependency graphs that can be navigated without deep code reading
 - Test coverage that provides confidence about what breaks when a change is made
 
-Systems with hidden dependencies, implicit coupling, or tangled module graphs make impact analysis difficult and expensive — which can lead to regressions and conservative changes that defer technical debt cleanup.
+Systems with hidden dependencies, implicit coupling, or tangled module graphs make impact analysis difficult and expensive, which can lead to regressions and conservative changes that defer technical debt cleanup.
 
 ### Static analysis
 
