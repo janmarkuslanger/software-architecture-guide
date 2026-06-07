@@ -7,6 +7,11 @@
 ## Purpose and scope
 A compact reference on software architecture: concepts, trade-offs, and structural decisions.
 
+---
+
+**"Architecture represents the significant design decisions that shape a system, where significance is measured by cost of change"** - Grady Booch
+
+---
 
 ## Table of contents
 - [Foundations](foundations/index.md)
