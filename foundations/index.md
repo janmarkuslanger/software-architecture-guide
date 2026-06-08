@@ -1,22 +1,12 @@
 # Foundations
 
 ## What is software architecture?
-There is no single definition, but the most widely used comes from the Software Engineering Institute (SEI), and Bass, Clements, and Kazman in *Software Architecture in Practice*:
+There is no single definition. Three influential approaches each emphasize something the others leave implicit; together they give a fuller picture than any one alone.
 
+### Structures — SEI (Bass, Clements, Kazman)
 > The software architecture of a system is the set of structures needed to reason about the system, which comprise software **elements**, **relations** among them, and **properties** of both.
 
-This is the working definition for this guide. It is precise, technology-neutral, and it hands you a vocabulary: whatever you are describing, you are describing elements, the relations between them, and their properties.
-
-Other definitions sharpen different angles, and they agree more than they differ:
-
-- **ISO/IEC/IEEE 42010**, the international standard, frames architecture as the "fundamental concepts or properties of a system in its environment, embodied in its elements, relationships, and in the principles of its design and evolution" — the same triad, with an explicit nod to *evolution*.
-- **Grady Booch** focuses on significance: architecture represents "the significant design decisions that shape a system, where significant is measured by cost of change." Not every decision is architectural, only the ones that are expensive to reverse.
-- **Martin Fowler / Ralph Johnson** reduce it to "the important stuff, whatever that is," and "the things people perceive as hard to change."
-
-Taken together: architecture is the set of structures (elements, relations, properties) that matter because they are hard and costly to change.
-
-## Elements, relations, and properties
-The SEI triad is the core mental model; everything below is an elaboration of it.
+This approach hands you a vocabulary: whatever you describe, you describe elements, the relations between them, and their properties.
 
 **Elements**
 The building blocks you can reason about and assign work to: modules, components, services, layers. They are abstractions, not necessarily source files.
@@ -27,10 +17,29 @@ How elements connect and interact: who calls whom, what depends on what, how dat
 **Properties**
 The externally visible characteristics of elements and relations: an interface contract, a latency budget, a security boundary, an allowed direction of dependency. Internal implementation is not a property; only what other elements can observe and rely on is.
 
-A system has many structures, not one. How the code is organized, how things interact at runtime, and how software maps to hardware and teams are all valid views of the same architecture. You pick the structures that let you reason about the concerns you actually care about.
+A system has many structures, not one. How the code is organized, how things interact at runtime, and how software maps to hardware and teams are all valid views of the same architecture.
+
+### A system in its environment — ISO/IEC/IEEE 42010
+> Fundamental concepts or properties of a system in its environment, embodied in its elements, relationships, and in the principles of its design and evolution.
+
+The international standard shares the same triad, but adds two things the others leave implicit: the system's **environment** (its context and stakeholders) and the **principles** that guide its design and evolution over time.
+
+### Significance — Booch / Fowler
+> Architecture represents the significant design decisions that shape a system, where significant is measured by cost of change. — Grady Booch
+
+Martin Fowler and Ralph Johnson reduce it further to "the important stuff, whatever that is," and "the things people perceive as hard to change." This approach does not tell you what architecture is made of, but which decisions are worth calling architectural: the ones that are expensive to reverse.
+
+### Putting them together
+The three are complementary, not competing:
+
+- **SEI** tells you what architecture is made of: structures.
+- **ISO 42010** reminds you it lives in an environment and evolves.
+- **Booch / Fowler** tell you which parts matter: the costly-to-change ones.
+
+A working synthesis: architecture is the set of structures (elements, relations, properties) that matter because they are hard and costly to change.
 
 ## Architecture is a set of trade-offs
-A practical reading of the definition: architecture is the sum of architectural characteristics (what the system must do well), architectural decisions (the rules and constraints the system is built on), logical structure (how elements are organized), and design (how those elements interact).
+A practical reading: architecture is the sum of architectural characteristics (what the system must do well), architectural decisions (the rules and constraints the system is built on), logical structure (how elements are organized), and design (how those elements interact).
 
 Every architectural decision involves trade-offs. There is no option without a downside, only choices where the benefits outweigh the costs in a given context. The recurring concerns:
 
