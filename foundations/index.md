@@ -1,17 +1,27 @@
 # Foundations
 
 ## Overview
-There is no single definition of architecture. One useful way to think about it: architecture is the sum of architectural characteristics (what the system must do well), architectural decisions (the rules and constraints the system is built on), logical structure (how components are organized), and design (how those components interact). Every architectural decision involves trade-offs. There is no option without a downside, only choices where the benefits outweigh the costs in a given context.
+There is no single definition of architecture, but one has become canonical. The Software Engineering Institute (SEI), and Bass, Clements, and Kazman in *Software Architecture in Practice*, define it as:
+
+> The software architecture of a system is the set of structures needed to reason about the system, which comprise software **elements**, **relations** among them, and **properties** of both.
+
+Three ideas carry the definition:
+
+- **Elements** are the building blocks you can reason about and assign work to: modules, components, services, layers. They are abstractions, not necessarily source files.
+- **Relations** describe how elements connect and interact: who calls whom, what depends on what, how data flows. Coupling lives here.
+- **Properties** are the externally visible characteristics of elements and relations: an interface contract, a latency budget, a security boundary, an allowed direction of dependency. This is where quality attributes and constraints attach.
+
+A practical reading: architecture is the sum of architectural characteristics (what the system must do well), architectural decisions (the rules and constraints the system is built on), logical structure (how components are organized), and design (how those components interact). Every architectural decision involves trade-offs. There is no option without a downside, only choices where the benefits outweigh the costs in a given context.
 
 ## Core concepts
 
-**Structure**
+**Structure** *(elements)*
 Each module or service owns a clear capability and its data. Users, external systems, regulations, and operational limits all influence where you draw those boundaries.
 
-**Contracts**
+**Contracts** *(relations)*
 Interfaces define stable inputs, outputs, and error behavior. Less coupling (temporal, spatial, or data) means less coordination between teams and services. Functional cohesion is strongest; avoid grouping by technical layer alone.
 
-**Quality & Constraints**
+**Quality & Constraints** *(properties)*
 Quality attributes: scalability, reliability, availability, security, maintainability and performance describe what the system must do well. Constraints like budget, team size, compliance and technology limit what is actually feasible. You cannot maximize all attributes at once; document the chosen balance.
 
 **Evolution**
