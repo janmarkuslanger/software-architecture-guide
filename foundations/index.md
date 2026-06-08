@@ -15,13 +15,13 @@ A practical reading: architecture is the sum of architectural characteristics (w
 
 ## Core concepts
 
-**Structure** *(elements)*
+**Structure**
 Each module or service owns a clear capability and its data. Users, external systems, regulations, and operational limits all influence where you draw those boundaries.
 
-**Contracts** *(relations)*
-Interfaces define stable inputs, outputs, and error behavior. Less coupling (temporal, spatial, or data) means less coordination between teams and services. Functional cohesion is strongest; avoid grouping by technical layer alone.
+**Contracts**
+Interfaces define stable inputs, outputs, and error behavior. A contract is a property in the SEI sense: it is the externally visible behavior of an element, independent of its internal implementation. Less coupling (temporal, spatial, or data) means less coordination between teams and services. Functional cohesion is strongest; avoid grouping by technical layer alone.
 
-**Quality & Constraints** *(properties)*
+**Quality & Constraints**
 Quality attributes: scalability, reliability, availability, security, maintainability and performance describe what the system must do well. Constraints like budget, team size, compliance and technology limit what is actually feasible. You cannot maximize all attributes at once; document the chosen balance.
 
 **Evolution**
