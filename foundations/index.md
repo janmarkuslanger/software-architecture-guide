@@ -38,6 +38,27 @@ The three are complementary, not competing:
 
 A working synthesis: architecture is the set of structures (elements, relations, properties) that matter because they are hard and costly to change.
 
+## Design vs architecture
+Architecture and design are not two separate activities; they are the same activity at different levels of significance. Every architectural decision is also a design decision, but not every design decision is an architectural one. Choosing how to name a variable, how to structure a single function, or which loop to use is design. Choosing how services communicate, where a transactional boundary sits, or whether the system is a monolith or a set of services is architecture *and* design.
+
+The hard question is where the line falls. "Significant" (Booch) and "costly to change" (Fowler) are the right idea but hard to apply in the moment. A more operational rule: a decision is architectural when its **significance is high**, and significance can be estimated as
+
+> **significance ≈ fan-in × effort to change**
+
+- **Fan-in** is how many things depend on the decision: how many components, modules, or teams would have to change with it. (See [fan-in / fan-out](glossary.md) in the glossary.)
+- **Effort to change** is what reversing or replacing the decision costs once the system is built: the work, risk, and coordination involved.
+
+Either factor alone is not enough. A decision with high effort but fan-in of one — a gnarly but self-contained algorithm — is local design: painful to rewrite, but nothing else depends on it. A decision with high fan-in but trivial effort — a constant that is easy to change everywhere — is also just design. It is the **product** that makes something architectural: many dependents *and* expensive to change.
+
+| | low effort to change | high effort to change |
+|---|---|---|
+| **low fan-in** | trivial design | local design |
+| **high fan-in** | convention / cheap to fix | **architecture** |
+
+This is also why the same kind of decision can be architectural in one system and not in another. Picking a database is architectural when dozens of services depend on its query model and migrating means coordinated downtime; it is a mere design detail in a small app hidden behind one repository class. The decision did not change — its fan-in and the effort to change it did.
+
+The practical takeaway: when a decision has high fan-in and is expensive to reverse, treat it as architecture. Slow down, write it down, and weigh the trade-offs deliberately, because you will likely live with it for a long time.
+
 ## Architecture is a set of trade-offs
 A practical reading: architecture is the sum of architectural characteristics (what the system must do well), architectural decisions (the rules and constraints the system is built on), logical structure (how elements are organized), and design (how those elements interact).
 
