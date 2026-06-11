@@ -81,6 +81,26 @@ A seam always has an *enabling point*: the place where you choose which behaviou
 
 ---
 
+**Fan-in / Fan-out**
+Two measures of how an element is connected to the rest of a system.
+
+**Fan-in** counts how many other elements depend on a given element — how many callers, importers, or consumers point *at* it. High fan-in means the element is widely relied upon: a change to its contract ripples out to everything that depends on it. Shared libraries, core domain types, and central services tend to have high fan-in.
+
+**Fan-out** counts how many other elements a given element depends on — how many things it calls, imports, or consumes. High fan-out means the element is sensitive to change *elsewhere*: it can break when any of its many dependencies changes, and it is harder to test and reason about in isolation.
+
+```
+        A   B   C          A depends on X        (X has fan-in 3)
+         \  |  /
+          \ | /
+            X               X depends on P, Q     (X has fan-out 2)
+           / \
+          P   Q
+```
+
+As a rule of thumb, high fan-in elements should be kept stable, because many things depend on them; high fan-out elements should be kept small, because they depend on many things. Fan-in also feeds the notion of architectural significance: a decision with high fan-in affects a large part of the system, so it is more likely to be architectural than local (see [Design vs architecture](index.md#design-vs-architecture)).
+
+---
+
 **Composition Root**
 The single place in an application where all dependencies are wired together. Instead of creating objects throughout the codebase, everything is assembled once at startup. This keeps dependency creation out of business logic and makes the structure of the application easy to see and change in one place.
 
