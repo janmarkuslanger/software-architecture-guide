@@ -15,6 +15,7 @@ A compact reference on software architecture: concepts, trade-offs, and structur
 
 ## Table of contents
 - [Foundations](foundations/index.md)
+  - [Requirements](foundations/requirements.md)
   - [Modularity](foundations/modularity.md)
   - [Component Principles](foundations/component-principles.md)
   - [Glossary](foundations/glossary.md)
