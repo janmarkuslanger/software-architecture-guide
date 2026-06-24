@@ -77,6 +77,7 @@ Quality attributes (scalability, reliability, availability, security, maintainab
 Architecture is not a one-time decision. It evolves iteratively as requirements, team, and context change. Avoid locking in irreversible decisions early, measure actual behavior, and refactor safely. The goal is to keep technical debt low, but no decision is ever perfect. You work with incomplete information and real constraints, so the right call is to make a reasonable choice, document the trade-offs, and revisit when you know more.
 
 ## Topics
+- [Requirements](requirements.md): the four-kind taxonomy and architecturally significant requirements (ASRs)
 - [Modularity](modularity.md): cohesion, coupling, connascence
 - [Component Principles](component-principles.md): REP, CCP, CRP, ADP, SDP, SAP
 - [Glossary](glossary.md)
