@@ -1,6 +1,6 @@
 # Requirements
 
-Requirements shape architecture, but not equally. The historical "functional vs. non-functional" split is too coarse: "non-functional" suggests "optional" and groups several distinct kinds of requirement together. A finer taxonomy (Bass/Clements/Kazman, Rozanski & Woods, iSAQB) distinguishes **four** kinds.
+Requirements shape architecture, but not equally. The common "functional vs. non-functional" split is too coarse: "non-functional" suggests "optional" and groups several distinct kinds of requirement together. A finer taxonomy (Bass/Clements/Kazman, Rozanski & Woods, iSAQB) distinguishes **four** kinds.
 
 ---
 
