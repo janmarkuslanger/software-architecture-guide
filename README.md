@@ -2,6 +2,8 @@
 
 <p align="center"><img src="head.webp" alt="Dog assembling building blocks" width="300" /></p>
 
+> I am currently creating a new guide with (ai only as a helper not creator): https://github.com/janmarkuslanger/software-architecture
+
 ---
 
 ## Purpose and scope
